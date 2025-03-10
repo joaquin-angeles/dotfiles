@@ -3,7 +3,12 @@
 # Define the dotfiles directory (change this if your dotfiles are elsewhere)
 DOTFILES_DIR="$HOME/dotfiles"
 
-# Remove existing config files (Be careful with this!)
+# Backing up existing config files
+echo "Backing up config files.."
+mkdir -p config.bak
+cp -r ~/.config/* ~/config.bak
+
+# Removing config files
 echo "Removing existing config files..."
 rm -rf ~/.config/*
 
@@ -13,6 +18,7 @@ ln -sf $DOTFILES_DIR/.config/* ~/.config/
 
 # Removing existing icon themes
 echo "Removing existing icon themes.."
+mkdir -p ~/.local/share/icons
 rm -rf ~/.local/share/icons/*
 
 # Adding icon themes
