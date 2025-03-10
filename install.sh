@@ -111,8 +111,8 @@ EOF
 # Install AUR helper..
 echo "Installing AUR helper.."
 git clone https://aur.archlinux.org/paru.git
-cd paru/
-makepkg -si
+cd paru && makepkg -si
+cd $DOTFILES_DIR
 
 # Install Zen Browser
 paru -S zen-browser-bin
