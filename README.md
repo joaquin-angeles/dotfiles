@@ -8,3 +8,5 @@ dependencies:
 - hyprland
 
 either download zip or git clone.
+recommended to run install.sh like this:
+sudo ./install.sh
