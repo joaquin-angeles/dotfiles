@@ -3,3 +3,4 @@ optional pacman packages
 - evince
 - gthumb
 - libreoffice-still
+- lazygit
