@@ -114,6 +114,51 @@ git clone https://aur.archlinux.org/paru.git
 cd paru && makepkg -si
 cd $DOTFILES_DIR
 
+# Configuring paru
+echo "Configuring paru.."
+sudo tee /etc/paru.conf > /dev/null << 'EOF'
+#
+# $PARU_CONF
+# /etc/paru.conf
+# ~/.config/paru/paru.conf
+#
+# See the paru.conf(5) manpage for options
+
+#
+# GENERAL OPTIONS
+#
+[options]
+SkipReview
+PgpFetch
+Devel
+Provides
+DevelSuffixes = -git -cvs -svn -bzr -darcs -always -hg -fossil
+AurOnly
+#BottomUp
+#RemoveMake
+#SudoLoop
+#UseAsk
+#SaveChanges
+#CombinedUpgrade
+#CleanAfter
+#UpgradeMenu
+#NewsOnUpgrade
+
+#LocalRepo
+#Chroot
+#Sign
+#SignDb
+#KeepRepoCache
+
+#
+# Binary OPTIONS
+#
+#[bin]
+#FileManager = vifm
+#MFlags = --skippgpcheck
+#Sudo = doas
+EOF
+
 # Install Zen Browser
 paru -S zen-browser-bin
 
