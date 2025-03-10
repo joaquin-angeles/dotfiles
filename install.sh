@@ -167,6 +167,10 @@ echo "Installing zsh.."
 sudo pacman -S zsh
 chsh -s $(which zsh)
 
+# Installing fonts..
+echo "Installing fonts.."
+sudo pacman -S inter-font ttf-jetbrains-mono-nerd
+
 # Install required packages
 echo "Installing required packages.. (MAKE SURE YOU ALREADY HAVE HYPRLAND INSTALLED)"
 sudo pacman -S rofi-wayland waybar mako neovim qt5ct qt6ct nwg-look
