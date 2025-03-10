@@ -1,0 +1,17 @@
+[Default Applications]
+x-scheme-handler/terminal=kitty.desktop
+inode/directory=nemo.desktop
+text/plain=kitty-open.desktop
+text/x-conf=kitty-open.desktop
+text/x-ini=kitty-open.desktop
+text/x-log=kitty-open.desktop
+text/x-c++=kitty-open.desktop
+text/x-c=kitty-open.desktop
+text/x-java=kitty-open.desktop
+text/x-python=kitty-open.desktop
+text/x-shellscript=kitty-open.desktop
+text/x-php=kitty-open.desktop
+text/x-rust=kitty-open.desktop
+text/x-go=kitty-open.desktop
+text/x-markdown=kitty-open.desktop
+text/x-config=kitty-open.desktop

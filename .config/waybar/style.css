@@ -1,0 +1,59 @@
+@import url("./colors.css");
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-size: 13pt;
+    min-height: 0;
+}
+* {
+    color: #FFFFFF;
+}
+window#waybar {
+    background: @background;
+    color: @foreground;
+    border-bottom: 2px solid @background;
+}
+#workspaces button {
+    opacity: 0.9;
+    padding: 0 10px;
+    background: @background;
+    color: @foreground;
+}
+#workspaces button:hover {
+    opacity: 0.9;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+#workspaces button.active {
+    background-image: linear-gradient(0deg, @selection, @background);
+}
+#taskbar button.active {
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+#clock {
+    padding: 0 4px;
+    background: @background;
+}
+
+/* Network Module */
+#network {
+    color: #9dbcd4; /* Pastel blue */
+}
+
+/* Battery Module */
+#battery {
+    color: #9ab69b;
+}
+
+/* PulseAudio Module */
+#pulseaudio {
+    color: #D4B483;
+}
+
+/* Clock Module */
+#clock {
+    color: #B39EB5; /* Pastel purple */
+}
+

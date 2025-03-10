@@ -1,0 +1,74 @@
+<!DOCTYPE Menu PUBLIC '-//freedesktop//DTD Menu 1.0//EN' 'http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd'>
+<Menu>
+ <Menu>
+  <Name>Games</Name>
+  <Include/>
+  <Exclude>
+   <Filename>Indie Games--OMORI--1739700101.040116.desktop</Filename>
+   <Filename>Indie Games--Undertale--1739700099.872074.desktop</Filename>
+   <Filename>Indie Games--Hello Charlotte (EP 1)--1739700103.022015.desktop</Filename>
+   <Filename>DELTARUNE (Chapter 1 &amp; 2 DEMO).desktop</Filename>
+  </Exclude>
+  <Layout>
+   <Merge type="menus"/>
+   <Menuname>Arcade</Menuname>
+   <Menuname>Board</Menuname>
+   <Menuname>Card</Menuname>
+   <Menuname>Kidsgames</Menuname>
+   <Menuname>Logic</Menuname>
+   <Menuname>TacticStrategy</Menuname>
+   <Merge type="files"/>
+   <Filename>Counter-Strike 2.desktop</Filename>
+   <Filename>net.lutris.deltarune-5.desktop</Filename>
+   <Filename>net.lutris.hello-charlotte-episode-1-1.desktop</Filename>
+   <Filename>net.lutris.omori-3.desktop</Filename>
+   <Filename>Proton 9.0.desktop</Filename>
+   <Filename>protonup-qt.desktop</Filename>
+   <Filename>Steam Linux Runtime 3.0 (sniper).desktop</Filename>
+   <Filename>net.lutris.undertale-2.desktop</Filename>
+   <Filename>net.lutris.until-then-4.desktop</Filename>
+   <Filename>net.lutris.Lutris.desktop</Filename>
+   <Filename>io.mrarm.mcpelauncher.desktop</Filename>
+   <Filename>osu-wine.desktop</Filename>
+   <Filename>org.vinegarhq.Sober.desktop</Filename>
+   <Filename>steam.desktop</Filename>
+  </Layout>
+ </Menu>
+ <Menu>
+  <Name>Applications</Name>
+  <Layout/>
+  <Exclude>
+   <Filename>Indie Games--Hello Charlotte (EP 1)--1739700103.022015.desktop</Filename>
+   <Filename>Indie Games--OMORI--1739700101.040116.desktop</Filename>
+   <Filename>Indie Games--Undertale--1739700099.872074.desktop</Filename>
+  </Exclude>
+ </Menu>
+ <Menu>
+  <Name>.hidden</Name>
+  <Include>
+   <Filename>Indie Games--OMORI--1739700101.040116.desktop</Filename>
+   <Filename>Indie Games--Undertale--1739700099.872074.desktop</Filename>
+   <Filename>Indie Games--Hello Charlotte (EP 1)--1739700103.022015.desktop</Filename>
+   <Filename>DELTARUNE (Chapter 1 &amp; 2 DEMO).desktop</Filename>
+  </Include>
+ </Menu>
+ <Layout>
+  <Merge type="menus"/>
+  <Menuname>Development</Menuname>
+  <Menuname>Education</Menuname>
+  <Menuname>Games</Menuname>
+  <Menuname>Graphics</Menuname>
+  <Menuname>Help</Menuname>
+  <Menuname>Internet</Menuname>
+  <Menuname>Multimedia</Menuname>
+  <Menuname>Office</Menuname>
+  <Menuname>Science</Menuname>
+  <Menuname>System</Menuname>
+  <Menuname>Utilities</Menuname>
+  <Menuname>Applications</Menuname>
+ </Layout>
+ <Menu>
+  <Name>wine-wine</Name>
+  <Deleted/>
+ </Menu>
+</Menu>
