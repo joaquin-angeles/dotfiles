@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the dotfiles directory (change this if your dotfiles are elsewhere)
-DOTFILES_DIR="$HOME/.files"
+DOTFILES_DIR="$HOME/dotfiles"
 
 # Remove existing config files (Be careful with this!)
 echo "Removing existing config files..."
@@ -22,6 +22,8 @@ ln -sf $DOTFILES_DIR/.local/share/icons/* ~/.local/share/icons/
 # Optional: Symlink other dotfiles
 echo "Creating symlinks for other dotfiles..."
 ln -sf $DOTFILES_DIR/.icons/* ~/.icons
+mkdir -p .zsh
+ln -sf $DOTFILES_DIR/.zsh/* ~/.zsh
 ln -sf $DOTFILES_DIR/.zshrc ~/.zshrc
 
 # Done
