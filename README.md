@@ -5,6 +5,6 @@ make sure you move the dotfiles to your $HOME directory.
 
 dependencies:
 - git
-- hyprland (or any graphical interface that can launch a web browser) 
+- hyprland
 
 either download zip or git clone.
