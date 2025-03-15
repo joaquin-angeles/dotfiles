@@ -17,9 +17,9 @@
     "battery",
     "custom/blank",
     "pulseaudio",
-    "custom/blank0",
+    "custom/blank",
     "clock",
-    "custom/blank0",
+    "custom/blank",
   ],
   "network": {
     "format-wifi": "  {essid}",
