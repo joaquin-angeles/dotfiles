@@ -6,7 +6,7 @@
         "title",
         {
             "type": "custom",
-            "format": "--------",
+            "format": "--------"
         },
         "os",
         "host",
@@ -21,11 +21,9 @@
         },
         "de",
         "wm",
-<<<<<<< HEAD
         "terminal",
         "cpu",
         "gpu",
-=======
         "theme",
         "icons",
         "terminal",
@@ -34,20 +32,14 @@
             "type": "gpu",
             "format": "{1} {2}"
         },
->>>>>>> af0de44b6 (Overhaul.)
         "memory",
         "disk",
         "break",
         {
             "type": "colors",
-<<<<<<< HEAD
-            "symbol": "circle",
-=======
             "symbol": "circle"
->>>>>>> af0de44b6 (Overhaul.)
-        
         },
-        "break",
-    ]
+        "break"
+    ],
 }
 
