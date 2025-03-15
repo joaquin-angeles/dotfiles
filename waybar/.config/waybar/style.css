@@ -13,21 +13,21 @@ window#waybar {
     border-bottom: 2px solid @background;
 }
 #workspaces button {
-    min-width: 13px;
+    min-width: 13.5px;
     opacity: 0.9;
     padding: 0 10px;
     background: @background;
     color: @foreground;
 }
 #workspaces button:hover {
-    min-width: 13px; 
+    min-width: 13.5px; 
     opacity: 0.9;
     box-shadow: inherit;
     text-shadow: inherit;
     background-image: linear-gradient(0deg, @selection, @background-darker);
 }
 #workspaces button.active {
-    min-width: 13px;
+    min-width: 13.5px;
     background: #383838;
     box-shadow: inset 0 -2.25px 0 #ffffff;
 }
