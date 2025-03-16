@@ -15,7 +15,6 @@ export XDG_DESKTOP_PORTAL=hyprland
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 
-alias spotify=spotify_player
 alias nvidia-run='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
 alias superman='sudo pacman'
 alias dotfiles='git --git-dir=$HOME/.files --work-tree=$HOME'
