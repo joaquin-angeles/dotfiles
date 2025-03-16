@@ -9,75 +9,71 @@
         {
             "type": "os",
             "key": " ",
-            "keyColor": "34",  // = color4
+               // = color4
         },
         {
             "type": "kernel",
             "key": " ",
-            "keyColor": "34",
         },
         {
             "type": "packages",
             "key": " ",
-            "keyColor": "34",  
         },
         {
             "type": "shell",
             "key": " ",
-            "keyColor": "34", 
         },
         {
             "type": "terminal",
             "key": " ",
-            "keyColor": "34", 
         },
         {
             "type": "wm",
             "key": " ",
-            "keyColor": "34", 
+        },
+        {
+            "type": "theme",
+            "key": " ",
+        },
+        {
+            "type": "icons",
+            "key": " ",
         },
         {
             "type": "display",
             "format": "{1}x{2} @ {3}Hz",
             "key": " ",
-            "keyColor": "34"
         },
         {
             "type": "cpu",
             "format": "{1}",
             "key": " ",
-            "keyColor": "34"
         },
         {
             "type": "gpu",
             "format": "{1} {2}",
             "key": " ",
-            "keyColor": "34"
         },
         {
              "type": "memory",
             "key": "﬙ ",
-            "keyColor": "34"
         },
         {
              "type": "swap",
             "key": "󰾴 ",
-            "keyColor": "34"
         },
         {
             "type": "disk",
             "key": " ",
-            "keyColor": "34"
         },
         {
             "type": "uptime",
             "key": " ",
-            "keyColor": "34", 
+
         },
         {
             "type": "command",
             "key": "󱦟 ",
-            "keyColor": "34",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         "break",

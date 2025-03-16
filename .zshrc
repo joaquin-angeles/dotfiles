@@ -22,7 +22,7 @@ alias dotfiles='git --git-dir=$HOME/.files --work-tree=$HOME'
 alias fzf="fzf --preview='cat {}'"
 alias konsole='kitty'
 alias exa='exa --icons'
-alias vim="nvim"
+alias vim=nvim
 alias undertale=~/.config/undertale_remap.sh
 eval "$(starship init zsh)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
