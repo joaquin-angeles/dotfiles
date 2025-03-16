@@ -23,7 +23,7 @@
   ],
   "network": {
     "format-wifi": "  {essid}",
-    "on-click": "env GTK_THEME=MonoThemeDark nm-connection-editor"
+    "on-click": "iwgtk"
   },
   "wlr/taskbar": {
     "on-click": "activate",
@@ -62,7 +62,8 @@
   },
   "clock": {
         "format": "  {:%I:%M %p}",
-        "on-click": "env GTK_THEME=MonoThemeDark merkuro-calendar"
+        "tooltip": true,
+        "tooltip-format": "{:%A, %B %d, %Y}"
   },
 	"tray": {
     "icon-size": 24,
