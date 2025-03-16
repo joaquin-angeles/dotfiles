@@ -1,0 +1,6 @@
+# Custom theme
+theme = Monochrome
+background-opacity = 0.8
+
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 13.5

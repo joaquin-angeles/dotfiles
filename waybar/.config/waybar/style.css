@@ -10,7 +10,6 @@
 window#waybar {
     background: @background;
     color: @foreground;
-    border-bottom: 2px solid @background;
 }
 #workspaces button {
     min-width: 13.5px;
