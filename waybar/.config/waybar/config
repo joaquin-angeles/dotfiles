@@ -4,32 +4,34 @@
   "height": 34,
   "spacing": 6,
   "modules-left": [
-    "hyprland/workspaces",
+    "custom/menu",
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "hyprland/window"
   ],
   "modules-right": [
-    "tray",
-    "custom/blank",
+    "custom/blank0",
     "network",
-    "custom/blank",
+    "custom/blank0",
     "battery",
-    "custom/blank",
+    "custom/blank0",
     "pulseaudio",
-    "custom/blank",
+    "custom/blank0",
     "clock",
-    "custom/blank",
+    "custom/blank0",
+    "tray"
   ],
   "network": {
     "format-wifi": "  {essid}",
-    "on-click": "iwgtk"
+    "on-click": "iwmenu -m rofi",
+    "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}"
   },
   "wlr/taskbar": {
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": [
-      "foot"
+      "foot{capacity}"
     ]
   },
   "wlr/workspaces": {
@@ -55,10 +57,11 @@
           "critical": 15
       }
   },
-
   "pulseaudio": {
-        "format": "  {volume}%",
-        "on-click": "env GTK_THEME=MonoThemeDark pavucontrol",
+        "format": "{icon}  {volume}%",
+        "format-icons": ["", "", ""], 
+        "on-click": "pavucontrol",
+        "tooltip-format": "Open volume mixer"
   },
   "clock": {
         "format": "  {:%I:%M %p}",
@@ -68,6 +71,10 @@
 	"tray": {
     "icon-size": 24,
     "spacing": 6
+  },
+  "custom/menu": {
+        "format": " <span size='large'>\uf303</span> ",
+        "on-click": "rofi -disable-history -show drun"
   },
   "custom/blank": {
         "format": " "
@@ -88,6 +95,5 @@
     "format-pl": "[pl]",
     "format-en": "[us]",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
-  }
+  },
 }
-
