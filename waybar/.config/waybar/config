@@ -4,7 +4,7 @@
   "height": 34,
   "spacing": 6,
   "modules-left": [
-    "custom/menu",
+    "custom/blank",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -24,7 +24,7 @@
   ],
   "network": {
     "format-wifi": "  {essid}",
-    "on-click": "iwmenu -m rofi",
+    "on-click": "iwgtk",
     "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}"
   },
   "wlr/taskbar": {
@@ -77,7 +77,7 @@
         "on-click": "rofi -disable-history -show drun"
   },
   "custom/blank": {
-        "format": " "
+        "format": "​"
   },
   "custom/blank0": {
     "format": " "
