@@ -14,7 +14,6 @@
     "network",
     "battery",
     "pulseaudio",
-    "custom/space",
     "clock"
   ],
     "network": {
