@@ -40,6 +40,10 @@ window#waybar {
     padding: 4px
 }
 
+#tray {
+    padding-right: 6px
+}
+
 /* Battery Module */
 #battery {
     color: #9ab69b;
