@@ -4,7 +4,6 @@
   "height": 34,
   "spacing": 6,
   "modules-left": [
-    "custom/blank",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -22,7 +21,7 @@
         "format-wifi": "󰤨",
         "format-disconnected": "󰤭",
 				"tooltip-format": "Connected to {essid}",
-				"on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
+				"on-click": "iwgtk"
     },
   "wlr/taskbar": {
     "on-click": "activate",
