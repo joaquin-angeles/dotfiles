@@ -37,7 +37,8 @@ window#waybar {
 /* Network Module */
 #network {
     color: #9dbcd4; /* Pastel blue */
-    padding: 4px
+    padding-right: 8px;
+    padding-left: 4px
 }
 
 #tray {
@@ -47,7 +48,7 @@ window#waybar {
 /* Battery Module */
 #battery {
     color: #9ab69b;
-    padding: 4px
+    padding: 8px
 }
 
 #workspaces {
@@ -63,12 +64,12 @@ window#waybar {
 /* PulseAudio Module */
 #pulseaudio {
     color: #D4B483;
-    padding: 4px
+    padding-right: 12px
 }
 
 /* Clock Module */
 #clock {
     color: #B39EB5; /* Pastel purple */
-    padding: 4px
+    padding-left: 1.5px;
+    padding-right: 10px
 }
-

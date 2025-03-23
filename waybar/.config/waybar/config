@@ -11,17 +11,19 @@
     "hyprland/window"
   ],
   "modules-right": [
+    "tray",
     "network",
     "battery",
     "pulseaudio",
-    "clock",
-    "tray"
+    "custom/space",
+    "clock"
   ],
-  "network": {
-    "format-wifi": "  {essid}",
-    "on-click": "iwgtk",
-    "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}"
-  },
+    "network": {
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤭",
+				"tooltip-format": "Connected to {essid}",
+				"on-click": "hyprctl dispatch exec '[float]' '$TERMINAL -e nmtui'"
+    },
   "wlr/taskbar": {
     "on-click": "activate",
     "on-click-middle": "close",
@@ -45,47 +47,35 @@
     "interval": 900
   },
   "battery": {
-      "format": "{icon}  {capacity}%",
-      "format-icons": ["", "", "", "", ""],
-      "states": {
-          "warning": 30,
-          "critical": 15
-      }
+        "format": "{icon}",
+        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
+				"tooltip-format": "{capacity}% capacity"
   },
   "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon}",
         "format-icons": ["", "", ""], 
         "on-click": "pavucontrol",
-        "tooltip-format": "Open volume mixer"
+        "tooltip-format": "{volume}%"
   },
   "clock": {
-        "format": "  {:%I:%M %p}",
+        "format": "{:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%A, %B %d, %Y}"
   },
 	"tray": {
-    "icon-size": 24,
-    "spacing": 6
+    "icon-size": 23,
+    "spacing": 4
   },
   "custom/menu": {
         "format": " <span size='large'>\uf303</span> ",
         "on-click": "rofi -disable-history -show drun"
   },
-  "custom/blank": {
-        "format": "​"
+    "custom/space": {
+        "format": "|"
   },
-  "custom/blank0": {
-    "format": " "
-  },
-  "custom/blank1": {
-    "format": " "
-  },
-  "custom/spacer": {
-    "format": "|"
-  },
-  "custom/space": {
-        "format": "@"  // Adjust the number of spaces as needed
-  },
+
   "hyprland/language": {
     "format-pl": "[pl]",
     "format-en": "[us]",
