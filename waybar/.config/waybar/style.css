@@ -37,28 +37,34 @@ window#waybar {
 /* Network Module */
 #network {
     color: #9dbcd4; /* Pastel blue */
+    padding: 4px
 }
 
 /* Battery Module */
 #battery {
     color: #9ab69b;
+    padding: 4px
 }
 
 #workspaces {
-  color: #EEEEEE
+  color: #EEEEEE;
+  padding: 4px
 }
 
 #window {
   color: #EEEEEE; 
+  padding: 4px
 }
 
 /* PulseAudio Module */
 #pulseaudio {
     color: #D4B483;
+    padding: 4px
 }
 
 /* Clock Module */
 #clock {
     color: #B39EB5; /* Pastel purple */
+    padding: 4px
 }
 

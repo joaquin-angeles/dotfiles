@@ -11,15 +11,10 @@
     "hyprland/window"
   ],
   "modules-right": [
-    "custom/blank0",
     "network",
-    "custom/blank0",
     "battery",
-    "custom/blank0",
     "pulseaudio",
-    "custom/blank0",
     "clock",
-    "custom/blank0",
     "tray"
   ],
   "network": {

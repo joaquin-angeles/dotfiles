@@ -66,7 +66,7 @@ alias undertale=~/.config/undertale_remap.sh
 
 # Directory change improvements
 cd() {
-    builtin cd "$@" && exa --icons -l
+    builtin cd "$@" && exa --icons
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
