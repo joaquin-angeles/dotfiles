@@ -14,7 +14,6 @@
     "network",
     "battery",
     "pulseaudio",
-    "custom/space",
     "clock"
   ],
     "network": {
@@ -65,7 +64,7 @@
   },
 	"tray": {
     "icon-size": 23,
-    "spacing": 4
+    "spacing": 2
   },
   "custom/menu": {
         "format": " <span size='large'>\uf303</span> ",
