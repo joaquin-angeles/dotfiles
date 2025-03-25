@@ -64,10 +64,18 @@ window#waybar {
     color: #D4B483;
     padding-right: 10px
 }
-
+#custom-power {
+  color: #B87C7C;
+  padding-right: 12px
+}
+#custom-menu {
+  color: #A3AABE;
+  padding-right: 4px;
+  padding-left: 4px
+}
 /* Clock Module */
 #clock {
     color: #D8C8DD;
     padding-left: 8px;
-    padding-right: 12px
+    padding-right: 6px
 }

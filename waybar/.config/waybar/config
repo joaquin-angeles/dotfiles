@@ -1,9 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 36,
+  "height": 34,
   "spacing": 6,
   "modules-left": [
+    "custom/menu",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -14,7 +15,8 @@
     "network",
     "battery",
     "pulseaudio",
-    "clock"
+    "clock",
+    "custom/power"
   ],
     "network": {
         "format-wifi": "󰤨",
@@ -66,8 +68,12 @@
     "icon-size": 23,
     "spacing": 2
   },
+    "custom/power": {
+        "format": "<span size='large'>󰐥</span>",
+        "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu"
+  },
   "custom/menu": {
-        "format": " <span size='large'>\uf303</span> ",
+        "format": " <span size='large'>\uf303</span>",
         "on-click": "rofi -disable-history -show drun"
   },
     "custom/space": {
