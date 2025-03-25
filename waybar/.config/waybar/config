@@ -1,7 +1,7 @@
 {
   "layer": "top",
-  "position": "top",
-  "height": 34,
+  "position": "bottom",
+  "height": 36,
   "spacing": 6,
   "modules-left": [
     "hyprland/workspaces"
@@ -35,7 +35,7 @@
     "on-scroll-down": "hyprctl dispatch workspace e+1"
   },
   "hyprland/window": {
-    "max-length": 64
+    "max-length": 80
   },
   "custom/weather": {
     "exec": "bash ~/.config/waybar/wittr.sh",
