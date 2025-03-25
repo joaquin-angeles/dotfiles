@@ -39,7 +39,7 @@ window#waybar {
 }
 #network {
     color: #9dbcd4;
-    padding: 6px;
+    padding-right: 6px;
 }
 
 #tray {
