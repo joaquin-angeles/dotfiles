@@ -35,6 +35,11 @@
     "on-scroll-up": "hyprctl dispatch workspace e-1",
     "on-scroll-down": "hyprctl dispatch workspace e+1"
   },
+  "custom/bluetooth": {
+    "exec": "blueman-applet",
+    "interval": 60,
+    "format": "{output}"
+  },
   "hyprland/window": {
     "max-length": 80
   },

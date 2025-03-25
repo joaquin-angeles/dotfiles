@@ -15,7 +15,7 @@ window#waybar {
     opacity: 0.9;
     padding: 0 8px;
     background: @background;
-    color: #454545;
+    color: #404040;
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -39,7 +39,7 @@ window#waybar {
 }
 #network {
     color: #9dbcd4;
-    padding-right: 6px;
+    padding: 6px;
 }
 
 #tray {
@@ -49,7 +49,7 @@ window#waybar {
 /* Battery Module */
 #battery {
     color: #9ab69b;
-    padding: 6px
+    padding: 7px
 }
 
 #pulseaudio {
