@@ -25,6 +25,7 @@ window#waybar {
 }
 #workspaces button.active {
     min-width: 12px;
+    background: @background;
     color: #ffffff
 }
 #taskbar button.active {
@@ -38,7 +39,7 @@ window#waybar {
 }
 #network {
     color: #9dbcd4;
-    padding: 7px;
+    padding: 6px;
 }
 
 #tray {
@@ -48,7 +49,7 @@ window#waybar {
 /* Battery Module */
 #battery {
     color: #9ab69b;
-    padding: 7px
+    padding: 6px
 }
 
 #pulseaudio {
