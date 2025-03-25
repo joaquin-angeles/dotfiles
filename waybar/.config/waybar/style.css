@@ -13,7 +13,7 @@ window#waybar {
 #workspaces button {
     min-width: 12px;
     opacity: 0.9;
-    padding: 0 10px;
+    padding: 0 8px;
     background: @background;
     color: #454545;
 }
@@ -33,8 +33,8 @@ window#waybar {
 #clock {
     background: @background;
 }
-#window {
-    padding: 0px 
+#workspaces {
+    padding-left: 6px 
 }
 #network {
     color: #9dbcd4;
@@ -49,16 +49,6 @@ window#waybar {
 #battery {
     color: #9ab69b;
     padding: 7px
-}
-
-#workspaces {
-  color: #EEEEEE;
-  padding: 4px
-}
-
-#window {
-  color: #EEEEEE; 
-  padding: 4px
 }
 
 #pulseaudio {
