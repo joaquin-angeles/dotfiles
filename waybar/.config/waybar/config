@@ -74,7 +74,7 @@
   },
     "custom/power": {
         "format": "<span size='large'>󰐥</span>",
-        "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu"
+        "on-click": "wlogout"
   },
   "custom/menu": {
         "format": "<span size='large'>\uf303</span>",
