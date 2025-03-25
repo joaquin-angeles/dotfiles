@@ -38,8 +38,8 @@ window#waybar {
 }
 #network {
     color: #9dbcd4;
-    padding-right: 6px;
-    padding-left: 4px
+    padding-right: 8px;
+    padding-left: 8px
 }
 
 #tray {
