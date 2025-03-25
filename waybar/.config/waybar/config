@@ -73,7 +73,7 @@
         "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu"
   },
   "custom/menu": {
-        "format": " <span size='large'>\uf303</span>",
+        "format": "<span size='large'>\uf303</span>",
         "on-click": "rofi -disable-history -show drun"
   },
     "custom/space": {

@@ -33,7 +33,9 @@ window#waybar {
 #clock {
     background: @background;
 }
-
+#window {
+    padding: 0px 
+}
 #network {
     color: #9dbcd4;
     padding-right: 6px;
@@ -64,18 +66,22 @@ window#waybar {
     color: #D4B483;
     padding-right: 10px
 }
+#custom-space {
+  color: #808080;
+  padding-left: 8px
+}
 #custom-power {
   color: #B87C7C;
-  padding-right: 12px
+  padding-right: 13px
 }
 #custom-menu {
   color: #A3AABE;
-  padding-right: 4px;
-  padding-left: 4px
+  padding-right: 6px;
+  padding-left: 12px
 }
 /* Clock Module */
 #clock {
     color: #D8C8DD;
-    padding-left: 8px;
-    padding-right: 6px
+    padding-left: 6.5px;
+    padding-right: 6.5px
 }
