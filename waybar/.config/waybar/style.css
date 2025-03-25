@@ -38,8 +38,7 @@ window#waybar {
 }
 #network {
     color: #9dbcd4;
-    padding-right: 8px;
-    padding-left: 8px
+    padding: 7px;
 }
 
 #tray {
@@ -49,7 +48,7 @@ window#waybar {
 /* Battery Module */
 #battery {
     color: #9ab69b;
-    padding: 6px
+    padding: 7px
 }
 
 #workspaces {
