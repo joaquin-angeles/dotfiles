@@ -39,7 +39,7 @@ setopt hist_ignore_space
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
 # Environtment variables
 export PATH=/home/joaquin/.local/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rocm/bin
@@ -67,7 +67,7 @@ alias undertale=~/.config/undertale_remap.sh
 
 # Directory change improvements
 cd() {
-    builtin cd "$@" && exa --icons
+    z "$@" && exa --icons
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
