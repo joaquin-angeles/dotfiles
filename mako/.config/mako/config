@@ -1,6 +1,8 @@
 ignore-timeout=1
+width=300
+height=200
 default-timeout=5000
 background-color=#252525
 border-color=#d3d3d3
 border-radius=8
-font=JetBrainsMono Nerd Font Mono 11.25
+font=Inter 12.5
