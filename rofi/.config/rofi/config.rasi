@@ -7,8 +7,8 @@
     fgp-color: #888888FF;
     b-radius: 8px;
     g-padding: 8px;
-    hl-color: #D3D3D3FF;
-    hlt-color: #000000FF;
+    hl-color: #555555;
+    hlt-color: #EEEEEEFF;
     alt-color: #444444CC;
     wbg-color: #252525CC;
     w-border: 2px solid;
@@ -90,7 +90,7 @@ element normal.normal {
 }
 
 element alternate.normal {
-	background-color: @alt-color;
+	background-color: transparent;
 	text-color: @fg-color;
 }
 
