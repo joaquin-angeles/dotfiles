@@ -39,17 +39,17 @@ window#waybar {
 }
 #network {
     color: #9dbcd4;
-    padding: 6px;
+    padding-right: 6px;
 }
 
 #tray {
-    padding-right: 5px
+    padding-right: 6px
 }
 
 /* Battery Module */
 #battery {
     color: #9ab69b;
-    padding: 7px
+    padding: 4px
 }
 
 #pulseaudio {

@@ -1,5 +1,5 @@
 * {
-    font: "JetBrainsMono Nerd Font 13";
+    font: "Inter 13";
     g-spacing: 10px;
     g-margin: 0;
     b-color: #25252525;
@@ -20,7 +20,7 @@ configuration {
     modi:                       "drun,filebrowser,window,run";
     show-icons:                 true;
     icon-theme:                 "Papirus-Dark";
-    display-drun:                " ";
+    display-drun:                "   ";
     display-run:                 " ";
     display-filebrowser:         "  ";
     display-window:              "  ";

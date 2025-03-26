@@ -1,0 +1,217 @@
+* {
+    font: "JetBrainsMono Nerd Font 13.5";
+    g-spacing: 10px;
+    g-margin: 0;
+    b-color: #25252525;
+    fg-color: #EEEEEEEE;
+    fgp-color: #888888FF;
+    b-radius: 8px;
+    g-padding: 8px;
+    hl-color: #D3D3D3FF;
+    hlt-color: #000000FF;
+    alt-color: #444444CC;
+    wbg-color: #252525CC;
+    w-border: 2px solid;
+    w-border-color: #D3D3D3FF;
+    w-padding: 12px;
+}
+
+/* ---- Configuration ---- */
+configuration {
+    modi:                       "drun,filebrowser,window,run";
+    show-icons:                 true;
+    icon-theme:                 "Papirus-Dark";
+    display-drun:                " ";
+    display-run:                 " ";
+    display-filebrowser:         "  ";
+    display-window:              "  ";
+    drun-display-format:        "{name}";
+    hover-select:               false;
+    scroll-method:              1;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+}
+
+// Main //
+window {
+    height:                      750px;
+    width:                       750px;
+    transparency:                "real";
+    fullscreen:                  false;
+    enabled:                     true;
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      2px;
+    border-color:                #EEEEEE;
+    border-radius:               16px;
+    background-color:            #252525;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 vertical;
+    children:                    [ "inputbar" , "listbox" ];
+    background-color:            transparent;
+    background-image:            url("~/dotfiles/mountains.jpg", width);
+}
+
+// Inputs //
+inputbar {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     3em;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+    background-color:            transparent;
+    background-image:            url("~/.config/ml4w/cache/current_wallpaper", width);
+}
+entry {
+    enabled:                     true;
+    border-radius:               2em;
+    spacing:                     1em;
+    padding:                     1em;
+    background-color:            #252525;
+    text-color:                  #EEEEEE;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+// Lists //
+listbox {
+    padding:                     0em;
+    spacing:                     0em;
+    orientation:                 horizontal;
+    children:                    [ "listview" , "mode-switcher" ];
+    background-color:            #252525;
+}
+
+listview {
+    padding:                     1.5em;
+    spacing:                     0.5em;
+    enabled:                     true;
+    columns:                     2;
+    lines:                       3;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  #EEEEEE;
+}
+
+// Modes //
+mode-switcher {
+    orientation:                 vertical;
+    width:                       6.6em;
+    enabled:                     true;
+    padding:                     1.5em;
+    spacing:                     1.5em;
+    background-color:            transparent;
+}
+
+button {
+    cursor:                      pointer;
+    border-radius:               2em;
+    background-color:            #252525;
+    text-color:                  #EEEEEE;
+}
+
+button selected {
+    background-color:            @color11;
+    text-color:                  #EEEEEE;
+}
+
+// Elements //
+element {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0.5em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  #EEEEEE;
+}
+
+element selected.normal {
+    background-color:            @color11;
+    text-color:                  #EEEEEE;
+    border-radius:               1.5em;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element normal.urgent {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element normal.active {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element selected.urgent {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element selected.active {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element alternate.normal {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element alternate.urgent {
+    background-color:            inherit;
+    text-color:                  #EEEEEE;
+}
+
+element alternate.active {
+    background-color:            inherit;
+    text-color:                  #eeeeee;
+}
+
+element-icon {
+    size:                        3em;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.1;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+// Error message //
+error-message {
+    text-color:                  #EEEEEE;
+    background-color:            #252525;
+    text-transform:              capitalize;
+    children:                    [ "textbox" ];
+}
+
+textbox {
+    text-color:                  inherit;
+    background-color:            inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
