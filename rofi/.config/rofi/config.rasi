@@ -17,12 +17,16 @@
 }
 
 configuration {
-    modi:                       "drun,filebrowser,window,run";
+    filebrowser {
+        show-hidden: true;
+    }
+    modi:                       "drun,filebrowser,file-browser-extended,window,run";
     show-icons:                 true;
     icon-theme:                 "Papirus-Dark";
     display-drun:                " ";
     display-run:                 " ";
-    display-filebrowser:         "  ";
+    display-filebrowser:         "   ";
+    display-file-browser-extended:   " ";
     display-window:              "  ";
 }
 
@@ -101,7 +105,7 @@ element selected.normal {
 }
 
 message {
-    background-color: red;
+    background-color: #d3d3d3;
     border: 0px solid;
 }
 
