@@ -20,7 +20,7 @@
     "network": {
         "format-wifi": "󰤨",
         "format-disconnected": "󰤭",
-				"tooltip-format": "Connected to {essid}",
+			  "tooltip-format": "Connected to {essid} via {ifname}",	
 				"on-click": "iwgtk"
     },
   "wlr/taskbar": {
@@ -67,7 +67,7 @@
   "clock": {
         "format": "{:%I:%M %p}",
         "tooltip": true,
-        "tooltip-format": "{:%A, %B %d, %Y}"
+        "tooltip-format": "{:%B %d, %Y (%A)}"
   },
 	"tray": {
     "icon-size": 23,
