@@ -67,7 +67,7 @@
   "clock": {
         "format": "{:%I:%M %p}",
         "tooltip": true,
-        "tooltip-format": "{:%B %d, %Y (%A)}"
+        "tooltip-format": "{:%A, %d %B %Y}"
   },
 	"tray": {
     "icon-size": 23,

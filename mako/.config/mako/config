@@ -1,8 +1,10 @@
 ignore-timeout=1
+anchor=top-center
+text-alignment=center
 width=300
 height=200
 default-timeout=5000
-background-color=#252525
+background-color=#252525CC
 border-color=#d3d3d3
 border-radius=8
-font=Inter 12.5
+font=JetBrains Mono 12.5
