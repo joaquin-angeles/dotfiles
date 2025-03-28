@@ -41,7 +41,10 @@
     "format": "{output}"
   },
   "hyprland/window": {
-    "max-length": 80
+    "format": "{}",
+    "rotate": 0,
+    "separate-outputs": true,
+    "max-length": 64
   },
   "custom/weather": {
     "exec": "bash ~/.config/waybar/wittr.sh",
