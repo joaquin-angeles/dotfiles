@@ -1,10 +1,10 @@
 return {
-  { "ntk148v/habamax.nvim" },
+  { "slugbyte/lackluster.nvim" },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "habamax",
+      colorscheme = "lackluster",
     },
   },
 }
