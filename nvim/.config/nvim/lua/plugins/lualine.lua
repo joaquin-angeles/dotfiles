@@ -2,12 +2,25 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      -- Remove any existing items from lualine_z (including the default clock)
-      opts.sections.lualine_z = {}
-      -- Append custom 12-hour format with AM/PM
-      table.insert(opts.sections.lualine_z, function()
-        return " " .. os.date("%I:%M %p")
-      end)
+      -- Set the Lualine theme to 'lackluster'
+      local custom_theme = require("lualine.themes.lackluster")
+
+      -- Change status line background to #1c1c1c
+      custom_theme.normal.c.bg = "#1c1c1c"
+      custom_theme.insert.c.bg = "#1c1c1c"
+      custom_theme.visual.c.bg = "#1c1c1c"
+      custom_theme.replace.c.bg = "#1c1c1c"
+      custom_theme.command.c.bg = "#1c1c1c"
+      custom_theme.inactive.c.bg = "#1c1c1c"
+
+      opts.options.theme = custom_theme
+
+      -- Configure the lualine_z section with a custom 12-hour clock format
+      opts.sections.lualine_z = {
+        function()
+          return " " .. os.date("%I:%M %p")
+        end,
+      }
     end,
   },
 }

@@ -42,8 +42,6 @@
   },
   "hyprland/window": {
     "format": "{}",
-    "rotate": 0,
-    "separate-outputs": true,
     "max-length": 64
   },
   "custom/weather": {
@@ -69,6 +67,7 @@
   },
   "clock": {
         "format": "{:%I:%M %p}",
+        "on-click": "kitty -e calcure",
         "tooltip": true,
         "tooltip-format": "{:%A, %d %B %Y}"
   },
