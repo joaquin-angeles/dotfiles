@@ -4,7 +4,7 @@
 }
 
 window {
-	background-color: rgba(37, 37, 37, 0.8);
+	background-color: rgba(11, 11, 11, 0.8);
 }
 
 button {
@@ -13,7 +13,7 @@ button {
     border-color: #eeeeee;
 	text-decoration-color: #eeeeee;
     color: #eeeeee;
-	background-color: #252525;
+	background-color: #1c1c1c;
 	border-style: solid;
 	border-width: 2px;
 	background-repeat: no-repeat;

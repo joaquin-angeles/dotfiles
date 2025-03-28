@@ -6,13 +6,13 @@
 
 .background {
     color: white;
-    background-color: #252525;
+    background-color: #1c1c1c;
     transition: 0ms;
 }
 
 .background:backdrop {
     color: rgba(255, 255, 255, 0.5);
-    background-color: #282828;
+    background-color: #1e1e1e;
     transition: 0ms;
 }
 

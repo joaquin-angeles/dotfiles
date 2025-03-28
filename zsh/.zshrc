@@ -41,7 +41,7 @@ setopt hist_ignore_space
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
-# Environtment variables
+# Environment variables
 export PATH=/home/joaquin/.local/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rocm/bin
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
@@ -57,7 +57,7 @@ export XDG_SESSION_TYPE=wayland
 
 # Aliases
 alias cat=bat
-alias nvidia-run='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
+alias prime-run='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
 alias superman='sudo pacman'
 alias dotfiles='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias fzf="fzf --preview='bat {}'"
