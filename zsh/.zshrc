@@ -64,7 +64,6 @@ alias fzf="fzf --preview='bat {}'"
 alias xa='exa --icons'
 alias exa='exa --icons'
 alias vim=nvim
-alias undertale=~/.config/undertale_remap.sh
 
 # Directory change improvements
 cd() {
