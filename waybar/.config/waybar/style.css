@@ -74,7 +74,7 @@ window#waybar {
 /* Clock Module */
 #clock {
     color: #EEEEEE;
-    padding-left: 4px;
-    padding-right: 7.25px
+    padding-left: 3px;
+    padding-right: 6px
 }
 
