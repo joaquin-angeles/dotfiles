@@ -61,6 +61,9 @@ export XDG_SESSION_TYPE=wayland
 
 # Aliases
 alias cat=bat
+alias c=clear
+alias k=kill
+alias pk=pkill
 alias prime-run='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
 alias superman='sudo pacman'
 alias dotfiles='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
