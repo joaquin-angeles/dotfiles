@@ -1,28 +1,46 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+-- vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+vim.o.termguicolors = false
+vim.cmd("colorscheme default")
 
--- Define highlight groups with custom colors
-vim.api.nvim_set_hl(0, "Normal", { fg = "#eeeeee", bg = "#1c1c1c" })
-vim.api.nvim_set_hl(0, "Cursor", { fg = "#1c1c1c", bg = "#eeeeee" })
-vim.api.nvim_set_hl(0, "Visual", { fg = "#3e3e3e", bg = "#c1ddff" })
-vim.api.nvim_set_hl(0, "Comment", { fg = "#555555" })
-vim.api.nvim_set_hl(0, "Constant", { fg = "#be7472" })
-vim.api.nvim_set_hl(0, "String", { fg = "#709772" })
-vim.api.nvim_set_hl(0, "Identifier", { fg = "#708090" })
-vim.api.nvim_set_hl(0, "Function", { fg = "#727399" })
-vim.api.nvim_set_hl(0, "Statement", { fg = "#995c00" })
-vim.api.nvim_set_hl(0, "Operator", { fg = "#9fbdde" })
-vim.api.nvim_set_hl(0, "Type", { fg = "#6fbbbc" })
-vim.api.nvim_set_hl(0, "Special", { fg = "#989abc" })
-vim.api.nvim_set_hl(0, "Error", { fg = "#be7472", bg = "#252525" })
-vim.api.nvim_set_hl(0, "Todo", { fg = "#989772", bg = "#fefdbc", bold = true })
-vim.api.nvim_set_hl(0, "LineNr", { fg = "#555555" })
-vim.api.nvim_set_hl(0, "StatusLine", { fg = "#feffff", bg = "#252525" })
-vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#7f7f7f", bg = "#252525" })
-vim.api.nvim_set_hl(0, "Pmenu", { fg = "#feffff", bg = "#252525" })
-vim.api.nvim_set_hl(0, "PmenuSel", { fg = "#252525", bg = "#9fbdde" })
-vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#be7472" })
-vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#fefdbc" })
-vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#708090" })
-vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#709772" })
+-- In normal mode
+vim.api.nvim_set_keymap("n", "<RightMouse>", "<Nop>", { noremap = true, silent = true })
+
+-- In visual mode
+vim.api.nvim_set_keymap("v", "<RightMouse>", "<Nop>", { noremap = true, silent = true })
+
+-- In insert mode
+vim.api.nvim_set_keymap("i", "<RightMouse>", "<Nop>", { noremap = true, silent = true })
+
+vim.opt.mousemodel = "extend"
+
+vim.cmd("aunmenu PopUp")
+
+-- Disable true color to use terminal colors
+vim.opt.termguicolors = false
+
+-- Set the background color to none to enable terminal transparency
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+
+vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE", fg = "#eeeeee" })
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#3e3e3e", fg = "#c1ddff" })
+
+-- Define custom highlight groups based on terminal colors
+vim.api.nvim_set_hl(0, "Cursor", { ctermfg = 0, ctermbg = 15 }) -- Cursor
+vim.api.nvim_set_hl(0, "Visual", { ctermfg = 0, ctermbg = 12 }) -- Selection
+vim.api.nvim_set_hl(0, "Comment", { ctermfg = 8 }) -- Comments (gray)
+vim.api.nvim_set_hl(0, "Constant", { ctermfg = 9 }) -- Constants (red)
+vim.api.nvim_set_hl(0, "String", { ctermfg = 10 }) -- Strings (green)
+vim.api.nvim_set_hl(0, "Identifier", { ctermfg = 12 }) -- Identifiers (blue)
+vim.api.nvim_set_hl(0, "Function", { ctermfg = 13 }) -- Functions (magenta)
+vim.api.nvim_set_hl(0, "Statement", { ctermfg = 11 }) -- Statements (yellow)
+vim.api.nvim_set_hl(0, "PreProc", { ctermfg = 14 }) -- Preprocessor (cyan)
+vim.api.nvim_set_hl(0, "Type", { ctermfg = 6 }) -- Types (cyan)
+vim.api.nvim_set_hl(0, "Special", { ctermfg = 5 }) -- Special characters (magenta)
+vim.api.nvim_set_hl(0, "Error", { ctermfg = 15, ctermbg = 1 }) -- Errors (white on red)
+vim.api.nvim_set_hl(0, "Todo", { ctermfg = 0, ctermbg = 11 }) -- TODO comments (black on yellow)
+
+-- Optional: Reset syntax highlighting to apply changes
+vim.cmd("syntax on")
