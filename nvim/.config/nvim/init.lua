@@ -12,12 +12,27 @@ vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#EEEEEE' })
 
 vim.api.nvim_set_keymap('n', ';', ':', { noremap = true, silent = false })
-
+vim.keymap.set('n', '<C-p>', ':Neotree filesystem reveal left<CR>', {})
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-e>', builtin.find_files, { desc = 'Find Files' })
 
+vim.opt.clipboard = "unnamedplus"
+
+vim.api.nvim_create_augroup('YankNotify', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = 'YankNotify',
+  pattern = '*',
+  callback = function()
+    local start_line = vim.fn.line("'<")
+    local end_line = vim.fn.line("'>")
+    local num_lines = end_line - start_line + 1
+    vim.notify(num_lines .. ' line(s) yanked to clipboard.', vim.log.levels.INFO)
+  end,
+})
+
 require('lualine').setup({
   options = {
+    disabled_filetypes = { 'snacks_dashboard' },
     section_separators = { left = '', right = '' }, -- Rounded separators
     component_separators = { left = '', right = '' },
     theme = {
