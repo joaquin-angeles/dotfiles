@@ -42,7 +42,6 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # Environment variables
-export PATH=/home/joaquin/.local/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rocm/bin
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
@@ -62,7 +61,6 @@ alias superman='sudo pacman'
 alias dotfiles='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias fzf="fzf --preview='bat {}'"
 alias xa='exa --icons'
-alias exa='exa --icons'
 alias vim=nvim
 
 # Directory change improvements
