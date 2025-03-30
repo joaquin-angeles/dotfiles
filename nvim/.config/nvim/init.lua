@@ -38,8 +38,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup({
   options = {
     disabled_filetypes = { 'snacks_dashboard' },
-    section_separators = { left = '', right = '' }, -- Rounded separators
-    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' }, -- Rounded separators
+    component_separators = { left = '', right = '' },
     theme = {
       normal = {
         a = { fg = '#1c1c1c', bg = '#eeeeee' }, -- NORMAL mode

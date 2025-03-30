@@ -60,6 +60,7 @@ export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 
 # Aliases
+alias r='reboot'
 alias cat=bat
 alias c=clear
 alias k=kill

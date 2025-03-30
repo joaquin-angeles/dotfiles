@@ -1,0 +1,460 @@
+[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:68]: Lua Lsp startup, root: 	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec
+[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:69]: ROOT:	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec
+[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:70]: LOGPATH:	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/log
+[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:71]: METAPATH:	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
+[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:72]: VERSION:	3.13.9
+[08:54:23.870][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[08:54:23.870][info] [#0:script/service/service.lua:145]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 2.258 MB
+        # 00 : 2.258 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[08:54:23.976][info] [#0:script/client.lua:657]: Client init	{
+  capabilities = {
+    general = {
+      positionEncodings = { "utf-8", "utf-16", "utf-32" }
+    },
+    textDocument = {
+      callHierarchy = {
+        dynamicRegistration = false
+      },
+      codeAction = {
+        codeActionLiteralSupport = {
+          codeActionKind = {
+            valueSet = { "", "quickfix", "refactor", "refactor.extract", "refactor.inline", "refactor.rewrite", "source", "source.organizeImports" }
+          }
+        },
+        dataSupport = true,
+        dynamicRegistration = true,
+        isPreferredSupport = true,
+        resolveSupport = {
+          properties = { "edit", "command" }
+        }
+      },
+      codeLens = {
+        dynamicRegistration = false,
+        resolveSupport = {
+          properties = { "command" }
+        }
+      },
+      completion = {
+        completionItem = {
+          commitCharactersSupport = false,
+          deprecatedSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          preselectSupport = false,
+          resolveSupport = {
+            properties = { "additionalTextEdits", "command" }
+          },
+          snippetSupport = true,
+          tagSupport = {
+            valueSet = { 1 }
+          }
+        },
+        completionItemKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 }
+        },
+        completionList = {
+          itemDefaults = { "editRange", "insertTextFormat", "insertTextMode", "data" }
+        },
+        contextSupport = true,
+        dynamicRegistration = false
+      },
+      declaration = {
+        linkSupport = true
+      },
+      definition = {
+        dynamicRegistration = true,
+        linkSupport = true
+      },
+      diagnostic = {
+        dynamicRegistration = false
+      },
+      documentHighlight = {
+        dynamicRegistration = false
+      },
+      documentSymbol = {
+        dynamicRegistration = false,
+        hierarchicalDocumentSymbolSupport = true,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        }
+      },
+      foldingRange = {
+        dynamicRegistration = false,
+        foldingRange = {
+          collapsedText = true
+        },
+        lineFoldingOnly = true
+      },
+      formatting = {
+        dynamicRegistration = true
+      },
+      hover = {
+        contentFormat = { "markdown", "plaintext" },
+        dynamicRegistration = true
+      },
+      implementation = {
+        linkSupport = true
+      },
+      inlayHint = {
+        dynamicRegistration = true,
+        resolveSupport = {
+          properties = { "textEdits", "tooltip", "location", "command" }
+        }
+      },
+      publishDiagnostics = {
+        dataSupport = true,
+        relatedInformation = true,
+        tagSupport = {
+          valueSet = { 1, 2 }
+        }
+      },
+      rangeFormatting = {
+        dynamicRegistration = true,
+        rangesSupport = true
+      },
+      references = {
+        dynamicRegistration = false
+      },
+      rename = {
+        dynamicRegistration = true,
+        prepareSupport = true
+      },
+      semanticTokens = {
+        augmentsSyntaxTokens = true,
+        dynamicRegistration = false,
+        formats = { "relative" },
+        multilineTokenSupport = false,
+        overlappingTokenSupport = true,
+        requests = {
+          full = {
+            delta = true
+          },
+          range = false
+        },
+        serverCancelSupport = false,
+        tokenModifiers = { "declaration", "definition", "readonly", "static", "deprecated", "abstract", "async", "modification", "documentation", "defaultLibrary" },
+        tokenTypes = { "namespace", "type", "class", "enum", "interface", "struct", "typeParameter", "parameter", "variable", "property", "enumMember", "event", "function", "method", "macro", "keyword", "modifier", "comment", "string", "number", "regexp", "operator", "decorator" }
+      },
+      signatureHelp = {
+        dynamicRegistration = false,
+        signatureInformation = {
+          activeParameterSupport = true,
+          documentationFormat = { "markdown", "plaintext" },
+          parameterInformation = {
+            labelOffsetSupport = true
+          }
+        }
+      },
+      synchronization = {
+        didSave = true,
+        dynamicRegistration = false,
+        willSave = true,
+        willSaveWaitUntil = true
+      },
+      typeDefinition = {
+        linkSupport = true
+      }
+    },
+    window = {
+      showDocument = {
+        support = true
+      },
+      showMessage = {
+        messageActionItem = {
+          additionalPropertiesSupport = true
+        }
+      },
+      workDoneProgress = true
+    },
+    workspace = {
+      applyEdit = true,
+      configuration = true,
+      didChangeConfiguration = {
+        dynamicRegistration = false
+      },
+      didChangeWatchedFiles = {
+        dynamicRegistration = false,
+        relativePatternSupport = true
+      },
+      inlayHint = {
+        refreshSupport = true
+      },
+      semanticTokens = {
+        refreshSupport = true
+      },
+      symbol = {
+        dynamicRegistration = false,
+        symbolKind = {
+          valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+        }
+      },
+      workspaceEdit = {
+        resourceOperations = { "rename", "create", "delete" }
+      },
+      workspaceFolders = true
+    }
+  },
+  clientInfo = {
+    name = "Neovim",
+    version = "0.11.0+v0.11.0"
+  },
+  initializationOptions = {},
+  processId = 2615,
+  rootPath = "/home/joaquin/.local/share/nvim/lazy/snacks.nvim",
+  rootUri = "file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim",
+  trace = "off",
+  workDoneToken = "1",
+  workspaceFolders = { {
+      name = "/home/joaquin/.local/share/nvim/lazy/snacks.nvim",
+      uri = "file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim"
+    } }
+}
+[08:54:23.976][info] [#0:script/language.lua:137]: VSC language: nil
+[08:54:23.976][info] [#0:script/language.lua:138]: LS  language: en-us
+[08:54:23.976][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:23.977][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_home_joaquin_.local_share_nvim_lazy_snacks.nvim.log
+[08:54:23.977][info] [#0:script/workspace/workspace.lua:48]: Workspace create: 	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:24.280][warn] [#0:script/config/loader.lua:116]: No config?	{}
+[08:54:24.381][warn] [#0:script/config/loader.lua:116]: No config?	{}
+[08:54:24.381][info] [#0:script/provider/provider.lua:65]: Load config from client	fallback
+[08:54:24.381][info] [#0:script/provider/provider.lua:66]: nil
+[08:54:24.493][info] [#0:script/library.lua:212]: Init builtin library at:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:24.511][info] [#0:script/library.lua:212]: Init builtin library at:	nil
+[08:54:24.621][info] [#0:script/workspace/workspace.lua:324]: Preload start:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:24.623][info] [#0:script/workspace/workspace.lua:330]: Scan files at:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:24.629][info] [#0:script/workspace/workspace.lua:324]: Preload start:	<fallback>
+[08:54:24.631][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[08:54:24.631][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[08:54:24.631][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[08:54:24.632][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[08:54:24.632][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[08:54:24.632][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[08:54:24.632][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[08:54:24.633][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[08:54:24.633][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[08:54:24.634][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[08:54:24.634][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[08:54:24.661][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[08:54:24.661][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[08:54:24.661][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[08:54:24.661][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[08:54:24.661][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[08:54:24.662][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[08:54:24.662][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[08:54:24.662][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[08:54:24.662][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[08:54:24.662][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[08:54:24.662][info] [#0:script/workspace/workspace.lua:353]: Scan library at:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[08:54:24.763][info] [#0:script/workspace/workspace.lua:379]: Found 11 files at:	<fallback>
+[08:54:24.763][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	<fallback>
+[08:54:24.763][info] [#0:script/workspace/workspace.lua:379]: Found 134 files at:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:24.763][info] [#0:script/workspace/loading.lua:160]: Load files from disk:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:24.765][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.364 KB
+[08:54:24.769][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[08:54:24.769][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.386 KB
+[08:54:24.770][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[08:54:24.770][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/utf8.lua
+[08:54:24.770][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/io.lua
+[08:54:24.770][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.590 KB
+[08:54:24.773][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[08:54:24.773][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/coroutine.lua
+[08:54:24.773][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 15.841 KB
+[08:54:24.783][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[08:54:24.783][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 2.944 KB
+[08:54:24.784][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[08:54:24.784][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/basic.lua
+[08:54:24.784][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.302 KB
+[08:54:24.785][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[08:54:24.785][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/builtin.lua
+[08:54:24.785][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/package.lua
+[08:54:24.785][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.542 KB
+[08:54:24.789][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[08:54:24.789][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/math.lua
+[08:54:24.789][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 5.611 KB
+[08:54:24.792][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[08:54:24.792][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[08:54:24.792][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/os.lua
+[08:54:24.792][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 5.260 KB
+[08:54:24.796][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[08:54:24.796][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/string.lua
+[08:54:24.796][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.637 KB
+[08:54:24.805][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[08:54:24.805][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/debug.lua
+[08:54:24.805][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 4.445 KB
+[08:54:24.808][info] [#0:script/workspace/loading.lua:112]: ++++As library of:	file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[08:54:24.808][info] [#0:script/workspace/loading.lua:97]: Skip loaded file: file:///home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/Lua%205.4%20en-us%20utf8/table.lua
+[08:54:24.808][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.047] sec: <fallback>
+[08:54:24.808][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: <fallback>
+[08:54:24.808][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	<fallback>
+[08:54:24.808][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	<fallback>
+[08:54:24.811][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/util_spec.lua , size = 0.974 KB
+[08:54:24.811][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/config_spec.lua , size = 0.739 KB
+[08:54:24.812][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/minit.lua , size = 0.252 KB
+[08:54:24.812][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/picker/util_spec.lua , size = 0.507 KB
+[08:54:24.813][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/picker/minheap_spec.lua , size = 0.700 KB
+[08:54:24.814][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/picker/git_status_spec.lua , size = 1.487 KB
+[08:54:24.815][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/picker/matcher_spec.lua , size = 2.780 KB
+[08:54:24.816][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/terminal_spec.lua , size = 0.679 KB
+[08:54:24.817][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/scope_spec.lua , size = 2.258 KB
+[08:54:24.819][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/tests/gitbrowse_spec.lua , size = 3.381 KB
+[08:54:24.820][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/docs/examples/picker.lua , size = 6.528 KB
+[08:54:24.824][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/docs/examples/init.lua , size = 3.604 KB
+[08:54:24.827][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/docs/examples/dashboard.lua , size = 5.896 KB
+[08:54:24.835][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/plugin/snacks.lua , size = 0.018 KB
+[08:54:24.836][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/dim.lua , size = 3.956 KB
+[08:54:24.839][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/health.lua , size = 4.546 KB
+[08:54:24.842][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/words.lua , size = 4.721 KB
+[08:54:24.845][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/indent.lua , size = 16.561 KB
+[08:54:24.855][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/debug.lua , size = 12.614 KB
+[08:54:24.865][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/compat.lua , size = 0.639 KB
+[08:54:24.866][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/types.lua , size = 4.291 KB
+[08:54:24.869][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/select.lua , size = 1.674 KB
+[08:54:24.879][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/filter.lua , size = 3.527 KB
+[08:54:24.882][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/matcher.lua , size = 14.559 KB
+[08:54:24.893][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/_health.lua , size = 1.647 KB
+[08:54:24.894][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/score.lua , size = 5.562 KB
+[08:54:24.898][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/preview.lua , size = 11.090 KB
+[08:54:24.907][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua , size = 23.430 KB
+[08:54:24.924][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/input.lua , size = 5.579 KB
+[08:54:24.929][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/list.lua , size = 17.778 KB
+[08:54:24.957][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/finder.lua , size = 5.493 KB
+[08:54:24.961][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/actions.lua , size = 3.295 KB
+[08:54:24.963][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/main.lua , size = 2.287 KB
+[08:54:24.965][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/core/frecency.lua , size = 5.227 KB
+[08:54:24.968][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/transform.lua , size = 0.418 KB
+[08:54:24.969][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/format.lua , size = 20.943 KB
+[08:54:24.984][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/preview.lua , size = 12.321 KB
+[08:54:24.993][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/history.lua , size = 1.611 KB
+[08:54:24.995][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/highlight.lua , size = 8.611 KB
+[08:54:25.002][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/async.lua , size = 7.386 KB
+[08:54:25.008][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/db.lua , size = 6.705 KB
+[08:54:25.013][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/kv.lua , size = 1.977 KB
+[08:54:25.015][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/init.lua , size = 16.987 KB
+[08:54:25.028][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/queue.lua , size = 0.734 KB
+[08:54:25.030][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/util/minheap.lua , size = 3.689 KB
+[08:54:25.032][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/actions.lua , size = 18.929 KB
+[08:54:25.066][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/config/highlights.lua , size = 3.263 KB
+[08:54:25.067][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/config/defaults.lua , size = 17.247 KB
+[08:54:25.075][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/config/layouts.lua , size = 4.176 KB
+[08:54:25.077][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/config/sources.lua , size = 22.149 KB
+[08:54:25.087][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/config/init.lua , size = 10.079 KB
+[08:54:25.094][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/sort.lua , size = 1.537 KB
+[08:54:25.095][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/init.lua , size = 2.765 KB
+[08:54:25.097][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/proc.lua , size = 4.799 KB
+[08:54:25.101][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/buffers.lua , size = 1.696 KB
+[08:54:25.102][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/meta.lua , size = 0.997 KB
+[08:54:25.103][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/lazy.lua , size = 1.093 KB
+[08:54:25.104][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/vim.lua , size = 13.596 KB
+[08:54:25.114][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/diagnostics.lua , size = 1.311 KB
+[08:54:25.115][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/help.lua , size = 2.269 KB
+[08:54:25.117][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/system.lua , size = 1.762 KB
+[08:54:25.119][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/explorer.lua , size = 10.338 KB
+[08:54:25.125][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/lines.lua , size = 0.706 KB
+[08:54:25.126][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/treesitter.lua , size = 4.957 KB
+[08:54:25.130][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/grep.lua , size = 3.278 KB
+[08:54:25.132][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/recent.lua , size = 3.521 KB
+[08:54:25.135][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/snacks.lua , size = 0.527 KB
+[08:54:25.136][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/icons.lua , size = 3.228 KB
+[08:54:25.138][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/files.lua , size = 4.925 KB
+[08:54:25.142][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/lsp/init.lua , size = 12.484 KB
+[08:54:25.150][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/lsp/config.lua , size = 7.232 KB
+[08:54:25.155][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/git.lua , size = 11.898 KB
+[08:54:25.163][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/source/qf.lua , size = 2.751 KB
+[08:54:25.165][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/scope.lua , size = 23.087 KB
+[08:54:25.183][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/profiler/core.lua , size = 6.332 KB
+[08:54:25.188][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/profiler/picker.lua , size = 1.648 KB
+[08:54:25.189][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/profiler/loc.lua , size = 4.481 KB
+[08:54:25.193][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/profiler/tracer.lua , size = 6.680 KB
+[08:54:25.198][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/profiler/init.lua , size = 11.348 KB
+[08:54:25.238][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/profiler/ui.lua , size = 8.258 KB
+[08:54:25.244][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/scroll.lua , size = 10.997 KB
+[08:54:25.252][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/notifier.lua , size = 22.286 KB
+[08:54:25.268][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/quickfile.lua , size = 1.118 KB
+[08:54:25.269][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/layout.lua , size = 14.936 KB
+[08:54:25.280][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/notify.lua , size = 1.333 KB
+[08:54:25.281][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/scratch.lua , size = 8.330 KB
+[08:54:25.287][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/toggle.lua , size = 9.292 KB
+[08:54:25.293][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/explorer/diagnostics.lua , size = 0.972 KB
+[08:54:25.294][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/explorer/watch.lua , size = 2.309 KB
+[08:54:25.296][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/explorer/tree.lua , size = 9.479 KB
+[08:54:25.303][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/explorer/actions.lua , size = 8.599 KB
+[08:54:25.309][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/explorer/init.lua , size = 2.863 KB
+[08:54:25.311][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/explorer/git.lua , size = 3.979 KB
+[08:54:25.314][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/input.lua , size = 7.559 KB
+[08:54:25.320][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/win.lua , size = 34.732 KB
+[08:54:25.346][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/gitbrowse.lua , size = 7.676 KB
+[08:54:25.352][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/terminal.lua , size = 8.062 KB
+[08:54:25.357][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/meta/types.lua , size = 2.066 KB
+[08:54:25.359][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/meta/docs.lua , size = 20.120 KB
+[08:54:25.372][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/meta/init.lua , size = 1.937 KB
+[08:54:25.374][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/util/spawn.lua , size = 5.608 KB
+[08:54:25.379][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/util/init.lua , size = 12.609 KB
+[08:54:25.389][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/buf.lua , size = 1.192 KB
+[08:54:25.391][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/doc.lua , size = 12.295 KB
+[08:54:25.400][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/image.lua , size = 4.909 KB
+[08:54:25.404][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/convert.lua , size = 12.121 KB
+[08:54:25.414][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/util.lua , size = 2.729 KB
+[08:54:25.416][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/inline.lua , size = 3.913 KB
+[08:54:25.419][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/terminal.lua , size = 4.718 KB
+[08:54:25.423][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/init.lua , size = 11.894 KB
+[08:54:25.429][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/image/placement.lua , size = 16.097 KB
+[08:54:25.441][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/bufdelete.lua , size = 3.271 KB
+[08:54:25.443][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/lazygit.lua , size = 6.820 KB
+[08:54:25.448][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/bigfile.lua , size = 2.188 KB
+[08:54:25.498][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/rename.lua , size = 3.034 KB
+[08:54:25.501][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/init.lua , size = 5.601 KB
+[08:54:25.505][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/statuscolumn.lua , size = 8.438 KB
+[08:54:25.512][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/git.lua , size = 1.751 KB
+[08:54:25.513][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/animate/easing.lua , size = 9.868 KB
+[08:54:25.521][info] [#0:script/workspace/loading.lua:88]: Skip loaded file: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/dashboard.lua
+[08:54:25.521][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/animate/init.lua , size = 6.342 KB
+[08:54:25.526][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/zen.lua , size = 5.852 KB
+[08:54:25.529][info] [#0:script/workspace/loading.lua:100]: Preload file at: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/trouble/sources/profiler.lua , size = 1.972 KB
+[08:54:25.531][info] [#0:script/workspace/loading.lua:172]: Loaded files takes [0.775] sec: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:25.531][info] [#0:script/workspace/loading.lua:181]: Compile files takes [0.000] sec: file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:25.531][info] [#0:script/workspace/loading.lua:182]: Loaded finish:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:25.531][info] [#0:script/workspace/workspace.lua:381]: Preload finish at:	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
+[08:54:25.568][info] [#0:script/provider/diagnostic.lua:560]: Diagnostics scope [file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim], files count:[134]
+[08:54:25.568][warn] [#0:script/proto/proto.lua:189]: Method [textDocument/didOpen] takes [0.873]sec. {
+  jsonrpc = "2.0",
+  method = "textDocument/didOpen",
+  params = {
+    textDocument = {
+      languageId = "lua",
+      text = '"***"',
+      uri = "file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/dashboard.lua",
+      version = 0
+    }
+  }
+}
+[08:54:25.769][warn] [#0:script/proto/proto.lua:189]: Method [textDocument/semanticTokens/full] takes [1.033]sec. {
+  id = 3,
+  jsonrpc = "2.0",
+  method = "textDocument/semanticTokens/full",
+  params = {
+    textDocument = {
+      uri = "file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim/lua/snacks/dashboard.lua"
+    }
+  }
+}
+[08:54:34.893][info] [#0:script/provider/diagnostic.lua:577]: Diagnostics scope [file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim] finished, takes [4.590] sec.
+[08:54:36.455][warn] [#0:script/pub/report.lua:24]: Load proto error:	Disconnected!

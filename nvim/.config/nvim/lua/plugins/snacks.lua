@@ -3,7 +3,7 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
-    header = {
+    val = {
       enabled = true,  -- Enable the header
       value = {
         "       ████ ██████           █████      ██                     ",
