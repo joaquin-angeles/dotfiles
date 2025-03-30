@@ -1,6 +1,10 @@
--- Transparent background
-for _, group in ipairs({ "Normal", "NonText", "EndOfBuffer" }) do
+-- Transparent background (excluding right-click menus)
+for _, group in ipairs({
+  "Normal", "NonText", "EndOfBuffer", "NormalFloat", "FloatBorder",
+  "WinSeparator", "TelescopeNormal", "TelescopeBorder",
+  "TelescopePromptNormal", "TelescopePromptBorder",
+  "TelescopeResultsNormal", "TelescopeResultsBorder",
+  "TelescopePreviewNormal", "TelescopePreviewBorder"
+}) do
   vim.api.nvim_set_hl(0, group, { bg = "NONE" })
 end
-
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#EEEEEE' })

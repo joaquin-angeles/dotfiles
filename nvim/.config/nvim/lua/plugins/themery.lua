@@ -1,0 +1,3 @@
+return {
+	'zaldih/themery.nvim'
+}

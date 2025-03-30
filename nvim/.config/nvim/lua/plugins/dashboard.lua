@@ -13,6 +13,8 @@ return {
             vim.notify("Alpha dashboard theme failed to load!", vim.log.levels.ERROR)
             return
         end
+	
+	vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#9ab69b" })
 
         -- Restore ASCII Art Header
         dashboard.section.header.val = {
@@ -25,15 +27,18 @@ return {
             " ██████  █████████████████████ ████ █████ █████ ████ ██████  ",
         }
 
+	dashboard.section.header.opts.hl = "AlphaHeader"
+	
         -- Set up buttons
-        dashboard.section.buttons.val = {
-            dashboard.button("r", "󰄉  Recent Files", ":Telescope oldfiles<CR>"),
-            dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),
-            dashboard.button("/", "󰱼  Find Text", ":Telescope live_grep<CR>"),
-            dashboard.button("c", "  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
-            dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
-            dashboard.button("q", "  Quit", ":qa<CR>"),
-        }
+	dashboard.section.buttons.val = {
+    	dashboard.button("n", "  New File", ":ene<CR>"),  -- New File button
+    	dashboard.button("r", "󰄉  Recent Files", ":Telescope oldfiles<CR>"),
+    	dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),
+    	dashboard.button("/", "󰱼  Find Text", ":Telescope live_grep<CR>"),
+    	dashboard.button("c", "  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
+    	dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
+    	dashboard.button("q", "  Quit", ":qa<CR>"),
+}
 
         -- Footer with plugin count and load time
         local function footer()
