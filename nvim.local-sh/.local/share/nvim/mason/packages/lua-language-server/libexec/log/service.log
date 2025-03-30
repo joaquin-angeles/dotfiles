@@ -1,14 +1,14 @@
-[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:68]: Lua Lsp startup, root: 	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec
-[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:69]: ROOT:	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec
-[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:70]: LOGPATH:	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/log
-[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:71]: METAPATH:	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
-[08:54:23.847][info] [#0:/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:72]: VERSION:	3.13.9
-[08:54:23.870][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
-[08:54:23.870][info] [#0:script/service/service.lua:145]: 
+[09:11:09.522][info] [#0:/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:68]: Lua Lsp startup, root: 	/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec
+[09:11:09.522][info] [#0:/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:69]: ROOT:	/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec
+[09:11:09.522][info] [#0:/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:70]: LOGPATH:	/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/log
+[09:11:09.522][info] [#0:/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:71]: METAPATH:	/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/meta
+[09:11:09.523][info] [#0:/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/main.lua:72]: VERSION:	3.13.9
+[09:11:09.553][info] [#0:script/proto/proto.lua:260]: Listen Mode: stdio
+[09:11:09.553][info] [#0:script/service/service.lua:145]: 
 ========= Medical Examination Report =========
     --------------- Memory ---------------
-        Total: 2.258 MB
-        # 00 : 2.258 MB
+        Total: 2.260 MB
+        # 00 : 2.260 MB
         # 01 : 0.000 MB
         # 02 : 0.000 MB
         # 03 : 0.000 MB
@@ -26,7 +26,7 @@
         Holdon:   0
         Waiting:  0
 ==============================================
-[08:54:23.976][info] [#0:script/client.lua:657]: Client init	{
+[09:11:09.659][info] [#0:script/client.lua:657]: Client init	{
   capabilities = {
     general = {
       positionEncodings = { "utf-8", "utf-16", "utf-32" }
@@ -218,17 +218,17 @@
     version = "0.11.0+v0.11.0"
   },
   initializationOptions = {},
-  processId = 2615,
-  rootPath = "/home/joaquin/.local/share/nvim/lazy/snacks.nvim",
-  rootUri = "file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim",
+  processId = 6132,
+  rootPath = "/home/joaquin/dotfiles",
+  rootUri = "file:///home/joaquin/dotfiles",
   trace = "off",
   workDoneToken = "1",
   workspaceFolders = { {
-      name = "/home/joaquin/.local/share/nvim/lazy/snacks.nvim",
-      uri = "file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim"
+      name = "/home/joaquin/dotfiles",
+      uri = "file:///home/joaquin/dotfiles"
     } }
 }
-[08:54:23.976][info] [#0:script/language.lua:137]: VSC language: nil
-[08:54:23.976][info] [#0:script/language.lua:138]: LS  language: en-us
-[08:54:23.976][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/joaquin/.local/share/nvim/lazy/snacks.nvim
-[08:54:23.977][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/joaquin/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_home_joaquin_.local_share_nvim_lazy_snacks.nvim.log
+[09:11:09.659][info] [#0:script/language.lua:137]: VSC language: nil
+[09:11:09.659][info] [#0:script/language.lua:138]: LS  language: en-us
+[09:11:09.659][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/joaquin/dotfiles
+[09:11:09.659][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/joaquin/dotfiles/nvim.local-sh/.local/share/nvim/mason/packages/lua-language-server/libexec/log/file_home_joaquin_dotfiles.log
