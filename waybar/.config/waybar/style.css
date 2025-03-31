@@ -12,9 +12,9 @@ window#waybar {
 }
 #workspaces button {
     min-width: 12px;
-    padding: 0 8px;
+    padding: 0 6px;
     background: @background;
-    color: #383838;
+    color: #444444;
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -24,7 +24,8 @@ window#waybar {
 #workspaces button.active {
     min-width: 12px;
     background: @background;
-    color: #eeeeee
+    color: #eeeeee;
+    font-weight: bold
 }
 #taskbar button.active {
     background-image: linear-gradient(0deg, @selection, @background-darker);

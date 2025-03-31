@@ -10,3 +10,5 @@ map('i', '<C-l>', '<Right>', { noremap = true, silent = true })
 map('n', ';', ':', { noremap = true, silent = false })
 map('n', '<C-p>', ':Neotree filesystem reveal left<CR>', {})
 map('n', '<C-e>', require('telescope.builtin').find_files, { desc = 'Find Files' })
+
+vim.api.nvim_set_keymap("n", "H", ":Neotree toggle hidden<CR>", { noremap = true, silent = true })
