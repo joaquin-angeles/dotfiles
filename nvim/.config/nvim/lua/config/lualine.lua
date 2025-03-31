@@ -1,6 +1,6 @@
 require('lualine').setup({
   options = {
-    disabled_filetypes = { 'alpha', 'neotree' },
+    disabled_filetypes = { 'alpha', 'neo-tree' },
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
     theme = {

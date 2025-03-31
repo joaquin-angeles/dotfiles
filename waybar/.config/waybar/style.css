@@ -14,8 +14,7 @@ window#waybar {
     min-width: 12px;
     padding: 0 8px;
     background: @background;
-    color: #404040;
-    opacity: 0.9
+    color: #383838;
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -25,7 +24,7 @@ window#waybar {
 #workspaces button.active {
     min-width: 12px;
     background: @background;
-    color: #ffffff
+    color: #eeeeee
 }
 #taskbar button.active {
     background-image: linear-gradient(0deg, @selection, @background-darker);
@@ -37,7 +36,7 @@ window#waybar {
     padding-left: 6px 
 }
 #network {
-    color: #9dbcd4;
+    color: #a0aebe;
     padding-right: 6px;
 }
 
@@ -47,14 +46,14 @@ window#waybar {
 
 /* Battery Module */
 #battery {
-    color: #9ab69b;
+    color: #86a48c;
     padding-left: 4px;
     padding-right: 2px
 }
 
 #pulseaudio {
     font-size: 20.5px;
-    color: #D4B483;
+    color: #b8a28a;
     padding-right: 4px;
     padding-left: 4px
 }
@@ -63,7 +62,7 @@ window#waybar {
   padding-left: 8px
 }
 #custom-power {
-  color: #B87C7C;
+  color: #A07F7F;
   padding-right: 13px
 }
 #custom-menu {
