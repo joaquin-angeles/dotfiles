@@ -1,11 +1,6 @@
 sleep 0.01
 fastfetch
 
-# UWSM
-if uwsm check may-start && uwsm select; then
-    exec systemd-cat -t uwsm_start uwsm start default
-fi
-
 # P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -54,6 +49,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export XCURSOR_THEME="Bibata-Modern-Classic"
 export XCURSOR_SIZE=24
+export QT_QPA_PLATFORMTHEME=qt6ct
 export GTK_THEME="MonoThemeDark"
 export XDG_DESKTOP_PORTAL=hyprland
 export XDG_CURRENT_DESKTOP=Hyprland

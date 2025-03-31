@@ -1,6 +1,6 @@
 return {
     "goolord/alpha-nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" }, -- Icons support
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         local status_ok, alpha = pcall(require, "alpha")
         if not status_ok then
@@ -16,7 +16,6 @@ return {
 	
 	vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#9ab69b" })
 
-        -- Restore ASCII Art Header
         dashboard.section.header.val = {
             "       ████ ██████           █████      ██                     ",
             "      ███████████             █████                             ",
@@ -29,7 +28,6 @@ return {
 
 	dashboard.section.header.opts.hl = "AlphaHeader"
 	
-        -- Set up buttons
 	dashboard.section.buttons.val = {
         dashboard.button("e", "  Explorer", ":Neotree reveal left dir=~/<CR>"),
     	dashboard.button("n", "  New File", ":ene<CR>"),
@@ -41,7 +39,6 @@ return {
     	dashboard.button("q", "  Quit", ":qa<CR>"),
 }
 
-        -- Footer with plugin count and load time
         local function footer()
             local stats = require("lazy").stats()
             local ms = math.floor(stats.startuptime * 100) / 100
@@ -50,16 +47,16 @@ return {
         dashboard.section.footer.val = footer()
 
 	dashboard.opts.layout = {
-    	{ type = "padding", val = 8 },  -- Adds space at the top
-    dashboard.section.header,
-    { type = "padding", val = 2 },  -- Space between header and buttons
-    dashboard.section.buttons,
-    { type = "padding", val = 2 },  -- Space between buttons and footer
-    dashboard.section.footer,
-}
+	{ type = "padding", val = 8 },
+	dashboard.section.header,
+	{ type = "padding", val = 2 },
+	dashboard.section.buttons,
+	{ type = "padding", val = 2 },
+	dashboard.section.footer,
+	}
 
-        -- Apply the theme
         alpha.setup(dashboard.opts)
     end,
 }
+
 
