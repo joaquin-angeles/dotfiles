@@ -1,5 +1,5 @@
 * {
-    font: "JetBrainsMono Nerd Font 13";
+    font: "Inter 12.5";
     g-spacing: 10px;
     g-margin: 0;
     b-color: #1C1C1CCC;
@@ -27,7 +27,7 @@ configuration {
     modi:                       "drun,file-browser-extended,run";
     show-icons:                 true;
     icon-theme:                 "Papirus-Dark";
-    display-drun:                " ";
+    display-drun:                "󱡴 ";
     display-run:                 " ";
     display-file-browser-extended:   " ";
 }
