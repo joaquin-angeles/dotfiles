@@ -1,0 +1,22 @@
+[
+  {
+    "type": "item",
+    "label": "Connect to Device",
+    "command": "blueman-manager"
+  },
+  {
+    "type": "item",
+    "label": "Turn Bluetooth Off",
+    "command": "bluetoothctl power off"
+  },
+  {
+    "type": "item",
+    "label": "Turn Bluetooth On",
+    "command": "bluetoothctl power on"
+  },
+  {
+    "type": "item",
+    "label": "Scan for devices...",
+    "command": "bluetoothctl scan on"
+  }
+]

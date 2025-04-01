@@ -2,8 +2,9 @@
   "layer": "top",
   "position": "top",
   "height": 36,
-  "spacing": 6,
+  "spacing": 4,
   "modules-left": [
+    "custom/eye",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -11,7 +12,6 @@
   ],
   "modules-right": [
     "tray",
-    "network",
     "pulseaudio",
     "battery",
     "clock",
@@ -22,8 +22,22 @@
         "format-disconnected": "󰤭",
 			  "tooltip-format": "Connected to {essid} via {ifname}",	
 				"on-click": "iwgtk"
-    },
-  "wlr/taskbar": {
+  },
+ "bluetooth": {
+  "format": "{icon}",
+  "format-icons": {
+    "enabled": "󰂯",
+    "disabled": "󰂲"
+  },
+  	"tooltip-format": "Click to toggle Bluetooth",
+	"tooltip-format-connected": "Connected to {device_alias}",
+	"tooltip-format-no-controller": "Bluetooth adapter not found",
+	"tooltip-format-off": "Bluetooth is off",
+	"tooltip-format-on": "Bluetooth is on",
+	"tooltip-format-enumerate-connected": "{device_alias}",
+	"on-click": "blueman-manager"
+  },
+    "wlr/taskbar": {
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": [
@@ -71,9 +85,10 @@
         "tooltip": true,
         "tooltip-format": "{:%A, %d %B %Y}"
   },
-	"tray": {
-    "icon-size": 23,
-    "spacing": 2
+  "tray": {
+  	"icon-size": 23,
+	"spacing": 4,
+	"reverse-direction": true
   },
     "custom/power": {
         "format": "<span size='large'>󰐥</span>",
@@ -86,7 +101,10 @@
     "custom/space": {
         "format": "|"
   },
-
+"custom/eye": {
+    "format": "",
+    "on-click": "pgrep -x hyprsunset && pkill hyprsunset || hyprsunset"
+},
   "hyprland/language": {
     "format-pl": "[pl]",
     "format-en": "[us]",

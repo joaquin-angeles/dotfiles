@@ -34,37 +34,38 @@ window#waybar {
     background: @background;
 }
 #workspaces {
-    padding-left: 6px 
+    padding-left: 8px 
+}
+#bluetooth {
+    font-size: 18;
+    color: #7D9DB6
 }
 #network {
-    color: #a0aebe;
-    padding-right: 6px;
+    padding-right: 8px;
+    color: #a0aebe
 }
-
 #tray {
-    padding-right: 6px
+	color: #a0aebe
 }
-
-/* Battery Module */
 #battery {
-    color: #86a48c;
     padding-left: 4px;
-    padding-right: 2px
+    padding-right: 4px
 }
-
 #pulseaudio {
     font-size: 20.5px;
-    color: #b8a28a;
     padding-right: 4px;
-    padding-left: 4px
 }
 #custom-space {
   color: #808080;
   padding-left: 8px
 }
+#custom-eye {
+  font-size: 23.25;
+  padding-left: 14px
+}
 #custom-power {
-  color: #A07F7F;
-  padding-right: 13px
+  padding-right: 13px;
+  padding-left: 2px
 }
 #custom-menu {
   color: #A3AABE;
