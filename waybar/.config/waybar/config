@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 32,
+  "height": 36,
   "spacing": 4,
   "modules-left": [
     "hyprland/workspaces"
@@ -104,6 +104,7 @@
   "format": "{icon}",
   "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
   "interval": 2,
+  "on-click": "hyprsunset -t 3750",
   "on-scroll-up": "brightnessctl s +5%",
   "on-scroll-down": "brightnessctl s 5%-",
   "tooltip": true,

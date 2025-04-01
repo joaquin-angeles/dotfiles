@@ -2,14 +2,12 @@
 * {
     border: none;
     border-radius: 0;
-    padding-top: 2px;
-    padding-bottom: 0.01px;
     font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Material Icons";
     font-size: 13pt;
     min-height: 0;
 }
 window#waybar {
-    background: transparent;
+    background: @background;
     padding-left: 2px;
     padding-right: 2px;
     color: @foreground
@@ -31,56 +29,33 @@ window#waybar {
     color: #eeeeee;
     font-weight: bold
 }
-#taskbar button.active {
-    background-image: linear-gradient(0deg, @selection, @background-darker);
-}
-#window {
-    padding-top: 5px
-}
 #workspaces {
-    padding-left: 8px 
-}
-#bluetooth {
-    font-size: 18;
-    color: #7D9DB6
-}
-#network {
-    padding-right: 8px;
-    color: #a0aebe
+	padding-left: 6px
 }
 #tray {
-   padding-bottom: 4px;
-   padding-top: 3px
-}
-#battery {
-    padding-left: 4px;
-    padding-right: 4px
-}
-#backlight {
-    padding-right: 6px;
-    padding-top: 2px
+	padding-bottom: 5px;
+	padding-top: 4px
 }
 #pulseaudio {
-    font-size: 20.5px;
-    padding-right: 6px;
+	padding-bottom: 3px;
+	padding-top: 2px;
+	padding-right: 7px;
+	font-size: 20
 }
-#custom-space {
-  color: #808080;
-  padding-left: 8px
+#backlight {
+	padding-right: 9px
 }
-#custom-power {
-  padding-top: 3.5px;
-  padding-right: 13px;
-  padding-left: 2px
-}
-#custom-menu {
-  color: #A3AABE;
-  padding-right: 6px;
-  padding-left: 12px
+#battery {
+	padding-right: 8px;
+	padding-top: 1px
 }
 #clock {
-    color: #EEEEEE;
-    padding-top: 4px;
-    padding-left: 3px;
-    padding-right: 6px
+	padding-top: 4px;
+	padding-bottom: 2px;
+	padding-right: 8px;
+}
+#custom-power {
+	padding-top: 4px;
+	padding-bottom: 3px;
+	padding-right: 14px
 }

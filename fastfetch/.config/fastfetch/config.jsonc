@@ -8,10 +8,10 @@
     },
 
     "logo": {
-        "source": "~/.config/fastfetch/logo.txt",
+        "source": "/home/joaquin/.config/fastfetch/logo.txt",
         "color": {
             "1": "238;238;238",
-            "2": "37;37;37"
+	    "2": "238;238;238"
         }
     },
 
