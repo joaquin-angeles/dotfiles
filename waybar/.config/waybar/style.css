@@ -37,8 +37,6 @@ window#waybar {
 	padding-top: 4px
 }
 #pulseaudio {
-	padding-bottom: 3px;
-	padding-top: 2px;
 	padding-right: 7px;
 	font-size: 20
 }
@@ -47,7 +45,6 @@ window#waybar {
 }
 #battery {
 	padding-right: 8px;
-	padding-top: 1px
 }
 #clock {
 	padding-top: 4px;
