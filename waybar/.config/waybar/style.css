@@ -2,18 +2,22 @@
 * {
     border: none;
     border-radius: 0;
+    padding-top: 2px;
+    padding-bottom: 0.01px;
     font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Material Icons";
     font-size: 13pt;
     min-height: 0;
 }
 window#waybar {
-    background: @background;
-    color: @foreground;
+    background: transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: @foreground
 }
 #workspaces button {
     min-width: 12px;
     padding: 0 6px;
-    background: @background;
+    background: transparent;
     color: #444444;
 }
 #workspaces button:hover {
@@ -23,15 +27,15 @@ window#waybar {
 }
 #workspaces button.active {
     min-width: 12px;
-    background: @background;
+    background: transparent;
     color: #eeeeee;
     font-weight: bold
 }
 #taskbar button.active {
     background-image: linear-gradient(0deg, @selection, @background-darker);
 }
-#clock {
-    background: @background;
+#window {
+    padding-top: 5px
 }
 #workspaces {
     padding-left: 8px 
@@ -45,25 +49,25 @@ window#waybar {
     color: #a0aebe
 }
 #tray {
-	color: #a0aebe
+   padding-bottom: 3px
 }
 #battery {
     padding-left: 4px;
     padding-right: 4px
 }
+#backlight {
+    padding-right: 6px
+}
 #pulseaudio {
     font-size: 20.5px;
-    padding-right: 4px;
+    padding-right: 6px;
 }
 #custom-space {
   color: #808080;
   padding-left: 8px
 }
-#custom-eye {
-  font-size: 23.25;
-  padding-left: 14px
-}
 #custom-power {
+  padding-top: 3.5px;
   padding-right: 13px;
   padding-left: 2px
 }
@@ -72,10 +76,9 @@ window#waybar {
   padding-right: 6px;
   padding-left: 12px
 }
-/* Clock Module */
 #clock {
     color: #EEEEEE;
+    padding-top: 4px;
     padding-left: 3px;
     padding-right: 6px
 }
-

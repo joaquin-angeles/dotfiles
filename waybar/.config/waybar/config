@@ -1,10 +1,9 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 36,
+  "height": 32,
   "spacing": 4,
   "modules-left": [
-    "custom/eye",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -13,6 +12,7 @@
   "modules-right": [
     "tray",
     "pulseaudio",
+    "backlight",
     "battery",
     "clock",
     "custom/power"
@@ -20,8 +20,7 @@
     "network": {
         "format-wifi": "󰤨",
         "format-disconnected": "󰤭",
-			  "tooltip-format": "Connected to {essid} via {ifname}",	
-				"on-click": "iwgtk"
+	"tooltip-format": "Connected to {essid} via {ifname}",	
   },
  "bluetooth": {
   "format": "{icon}",
@@ -101,9 +100,14 @@
     "custom/space": {
         "format": "|"
   },
-"custom/eye": {
-    "format": "",
-    "on-click": "pgrep -x hyprsunset && pkill hyprsunset || hyprsunset -t 5000"
+"backlight": {
+  "format": "{icon}",
+  "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+  "interval": 2,
+  "on-scroll-up": "brightnessctl s +5%",
+  "on-scroll-down": "brightnessctl s 5%-",
+  "tooltip": true,
+  "tooltip-format": "Current brightness: {percent}%"
 },
   "hyprland/language": {
     "format-pl": "[pl]",
