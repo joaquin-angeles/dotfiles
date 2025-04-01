@@ -103,7 +103,7 @@
   },
 "custom/eye": {
     "format": "",
-    "on-click": "pgrep -x hyprsunset && pkill hyprsunset || hyprsunset"
+    "on-click": "pgrep -x hyprsunset && pkill hyprsunset || hyprsunset -t 5000"
 },
   "hyprland/language": {
     "format-pl": "[pl]",
