@@ -49,14 +49,16 @@ window#waybar {
     color: #a0aebe
 }
 #tray {
-   padding-bottom: 3px
+   padding-bottom: 4px;
+   padding-top: 3px
 }
 #battery {
     padding-left: 4px;
     padding-right: 4px
 }
 #backlight {
-    padding-right: 6px
+    padding-right: 6px;
+    padding-top: 2px
 }
 #pulseaudio {
     font-size: 20.5px;
