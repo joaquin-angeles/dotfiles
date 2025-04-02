@@ -2,12 +2,12 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Inter, JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Material Icons";
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Material Icons";
     font-size: 13pt;
     min-height: 0;
 }
 window#waybar {
-    background: @background;
+    background: transparent;
     padding-left: 2px;
     padding-right: 2px;
     color: @foreground
@@ -16,7 +16,7 @@ window#waybar {
     min-width: 12px;
     padding: 0 6px;
     background: transparent;
-    color: #444444;
+    color: #eeeeee;
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -27,15 +27,16 @@ window#waybar {
     min-width: 12px;
     background: transparent;
     color: #eeeeee;
-    font-weight: bold
+}
+#custom-menu {
+	padding-right: 4px;
+	padding-left: 14px
 }
 #workspaces {
 	padding-left: 6px
 }
-#tray {
-}
 #pulseaudio {
-	padding-right: 7px;
+	padding-right: 8px;
 	font-size: 20
 }
 #backlight {
@@ -46,7 +47,9 @@ window#waybar {
 }
 #clock {
 	padding-right: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px
 }
 #custom-power {
-	padding-right: 14px
+	padding-right: 12px
 }

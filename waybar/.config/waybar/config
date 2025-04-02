@@ -1,9 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 36,
+  "height": 32,
   "spacing": 4,
   "modules-left": [
+    "custom/menu",
     "hyprland/workspaces"
   ],
   "modules-center": [
@@ -42,10 +43,12 @@
       "foot{capacity}"
     ]
   },
-  "wlr/workspaces": {
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e-1",
-    "on-scroll-down": "hyprctl dispatch workspace e+1"
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+    	"default": "󰄰",
+    	"active": "󰪥"
+    }
   },
   "custom/bluetooth": {
     "exec": "blueman-applet",
@@ -54,7 +57,10 @@
   },
   "hyprland/window": {
     "format": "{}",
-    "max-length": 64
+    "max-length": 64,
+    "rewrite": {
+      "(.*) - zsh": "> [$1]"
+    }
   },
   "custom/weather": {
     "exec": "bash ~/.config/waybar/wittr.sh",
@@ -78,8 +84,8 @@
         "tooltip-format": "{volume}%"
   },
   "clock": {
-        "format": "{:%I:%M %p}",
-        "on-click": "kitty -e calcure",
+       "format": "{:%I:%M %p}",
+       "on-click": "kitty -e calcure",
         "tooltip": true,
         "tooltip-format": "{:%A, %d %B %Y}"
   },
