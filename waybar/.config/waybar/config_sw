@@ -4,10 +4,10 @@
   "height": 32,
   "spacing": 4,
   "modules-left": [
-    "hyprland/workspaces"
+    "sway/workspaces"
   ],
   "modules-center": [
-    "hyprland/window"
+    "sway/window"
   ],
   "modules-right": [
     "tray",

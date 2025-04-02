@@ -16,7 +16,7 @@ window#waybar {
     min-width: 12px;
     padding: 0 6px;
     background: transparent;
-    color: #eeeeee;
+    color: #444444;
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -24,7 +24,6 @@ window#waybar {
     text-shadow: inherit;
 }
 #workspaces button.active {
-    min-width: 12px;
     background: transparent;
     color: #eeeeee;
 }

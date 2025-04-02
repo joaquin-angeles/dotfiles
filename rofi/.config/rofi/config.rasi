@@ -21,7 +21,6 @@ configuration {
     kb-row-down: "Down,Control+j";
     kb-accept-entry: "Control+m,Return,KP_Enter";
     kb-remove-to-eol: "Control+Shift+e";
-    /*kb-mode-next: "Shift+Right,Control+Tab,Control+l";*/
     kb-mode-previous: "Shift+Left,Control+Shift+Tab,Control+h";
     kb-remove-char-back: "BackSpace";
     modi:                       "drun,file-browser-extended,run";
@@ -43,6 +42,10 @@ listview {
 }
 
 window {
+    location: north;
+    anchor: north;
+    x-offset: 0;
+    y-offset: 200;
     transparency: "real";
     width: 650px;
     height: 550px;
