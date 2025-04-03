@@ -7,16 +7,29 @@
     min-height: 0;
 }
 window#waybar {
-    background: transparent;
+    background: @background;
     padding-left: 2px;
     padding-right: 2px;
     color: @foreground
+}
+#tray menu {
+    border-radius: 8px;
+    background-color: @background;
+    border: 1px solid @foreground
+}
+#tray menu menuitem {
+    color: @foreground;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+#tray menu menuitem:hover {
+    background-color: #323232;
 }
 #workspaces button {
     min-width: 12px;
     padding: 0 6px;
     background: transparent;
-    color: #444444;
+    color: #404040;
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -26,6 +39,7 @@ window#waybar {
 #workspaces button.active {
     background: transparent;
     color: #eeeeee;
+    font-weight: bold
 }
 #custom-menu {
 	padding-right: 4px;
@@ -46,8 +60,6 @@ window#waybar {
 }
 #clock {
 	padding-right: 8px;
-	padding-top: 2px;
-	padding-bottom: 2px
 }
 #custom-power {
 	padding-right: 12px

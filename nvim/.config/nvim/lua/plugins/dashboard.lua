@@ -29,12 +29,12 @@ return {
 	dashboard.section.header.opts.hl = "AlphaHeader"
 	
 	dashboard.section.buttons.val = {
-        dashboard.button("e", "  Explorer", ":Neotree reveal left dir=~/<CR>"),
-    	dashboard.button("n", "  New File", ":ene<CR>"),
+        dashboard.button("e", "󰝰  Explorer", ":Neotree reveal left dir=~/<CR>"),
+    	dashboard.button("n", "  New File", ":ene<CR>"),
     	dashboard.button("r", "󰄉  Recent Files", ":Telescope oldfiles<CR>"),
-    	dashboard.button("f", "  Find File", ":Telescope find_files hidden=true cwd=~/<CR>"),
-    	dashboard.button("/", "󰱼  Find Text", ":Telescope live_grep<CR>"),
-    	dashboard.button("c", "  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
+    	dashboard.button("f", "󰈞  Find File", ":Telescope find_files hidden=true cwd=~/<CR>"),
+    	dashboard.button("/", "󱎸  Find Text", ":Telescope live_grep<CR>"),
+    	dashboard.button("c", "  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
     	dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
     	dashboard.button("q", "  Quit", ":qa<CR>"),
 }

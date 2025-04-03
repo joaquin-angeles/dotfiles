@@ -57,6 +57,7 @@ export XDG_SESSION_TYPE=wayland
 
 # Aliases
 alias r='reboot'
+alias ff='fastfetch'
 alias cat=bat
 alias c=clear
 alias k=kill
