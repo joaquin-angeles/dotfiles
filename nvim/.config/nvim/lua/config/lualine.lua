@@ -29,3 +29,5 @@ require('lualine').setup({
   },
 })
 
+vim.cmd("highlight StatusLine guibg=NONE")
+vim.cmd("highlight StatusLineNC guibg=NONE")
