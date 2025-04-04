@@ -23,12 +23,12 @@ configuration {
     kb-remove-to-eol: "Control+Shift+e";
     kb-mode-previous: "Shift+Left,Control+Shift+Tab,Control+h";
     kb-remove-char-back: "BackSpace";
-    modi:                       "drun,file-browser-extended,run";
-    show-icons:                 true;
-    icon-theme:                 "Papirus-Dark";
-    display-drun:                "󱡴 ";
-    display-run:                 " ";
-    display-file-browser-extended:   " ";
+    modi: "drun,file-browser-extended,run";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: "󱡴 ";
+    display-run: " ";
+    display-file-browser-extended: " ";
 }
 
 listview {
@@ -36,8 +36,8 @@ listview {
     lines: 7;
     fixed-height: true;
     fixed-columns: true;
-    cycle: false;
     scrollbar: false;
+    cycle: false;
     border: 0px solid;
 }
 

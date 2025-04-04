@@ -1,4 +1,3 @@
--- Transparent background (excluding right-click menus)
 for _, group in ipairs({
   "Normal", "NonText", "EndOfBuffer", "NormalFloat", "FloatBorder",
   "WinSeparator", "TelescopeNormal", "TelescopeBorder",
