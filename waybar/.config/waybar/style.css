@@ -28,6 +28,9 @@ window#waybar {
     color: #eeeeee;
     font-weight: bold
 }
+#tray {
+    padding-right: 2px
+}
 #custom-menu {
 	padding-right: 4px;
 	padding-left: 14px
@@ -36,18 +39,18 @@ window#waybar {
 	padding-left: 6px
 }
 #pulseaudio {
-	padding-right: 8px;
+	padding-right: 10px;
 	font-size: 20;
 }
 #backlight {
 	padding-right: 9px
 }
 #battery {
-	padding-right: 8px;
+	padding-right: 10px;
 }
 #clock {
-	padding-right: 8px;
+	padding-right: 9px;
 }
 #custom-power {
-	padding-right: 12px
+	padding-right: 15px;
 }
