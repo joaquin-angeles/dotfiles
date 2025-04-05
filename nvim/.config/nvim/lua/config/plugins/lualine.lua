@@ -12,7 +12,7 @@ require('lualine').setup({
       insert = { a = { fg = '#1c1c1c', bg = '#9ab69b' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
       visual = { a = { fg = '#1c1c1c', bg = '#d4b483' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
       replace = { a = { fg = '#1c1c1c', bg = '#ff5f5f' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
-      command = { a = { fg = '#1c1c1c', bg = '#9dbcd4' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
+      command = { a = { fg = '#1c1c1c', bg = '#ffcba4' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
       inactive = { a = { fg = '#888888', bg = '#1c1c1c' }, b = { fg = '#888888', bg = '#1c1c1c' }, c = { bg = 'NONE' } },
     },
   },

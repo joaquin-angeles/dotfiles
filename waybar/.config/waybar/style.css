@@ -8,9 +8,9 @@
 }
 window#waybar {
     background: @background;
+    color: @foreground;
     padding-left: 2px;
-    padding-right: 2px;
-    color: @foreground
+    padding-right: 2px
 }
 #workspaces button {
     min-width: 12px;
