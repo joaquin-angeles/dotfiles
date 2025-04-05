@@ -1,13 +1,13 @@
 require('lualine').setup({
   options = {
     disabled_filetypes = { 'alpha', 'neo-tree' },
-    section_separators = { left = '', right = '' },
-    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
+    component_separators = { left = '', right = '' },
     theme = {
       normal = {
         a = { fg = '#1c1c1c', bg = '#eeeeee' },
         b = { fg = '#eeeeee', bg = '#3a3a3a' },
-        c = { bg = 'NONE' },
+	c = { bg = 'NONE' }
       },
       insert = { a = { fg = '#1c1c1c', bg = '#9ab69b' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
       visual = { a = { fg = '#1c1c1c', bg = '#d4b483' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },

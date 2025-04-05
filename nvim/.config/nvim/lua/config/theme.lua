@@ -7,3 +7,11 @@ for _, group in ipairs({
 }) do
   vim.api.nvim_set_hl(0, group, { bg = "NONE" })
 end
+
+vim.cmd([[
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NormalFloat guibg=NONE ctermbg=NONE
+  highlight FloatBorder guibg=NONE ctermbg=NONE
+  highlight NoiceCmdlinePopup guibg=NONE ctermbg=NONE
+  highlight NoiceCmdlinePopupBorder guibg=NONE ctermbg=NONE
+]])
