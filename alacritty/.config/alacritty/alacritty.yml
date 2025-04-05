@@ -1,0 +1,22 @@
+colors:
+  # Normal colors
+  normal:
+    black:   '#1c1c1c'
+    red:     '#865054'
+    green:   '#5f7a5f'
+    yellow:  '#a4965f'
+    blue:    '#5f7a8c'
+    magenta: '#75607a'
+    cyan:    '#5f7a7f'
+    white:   '#eeeeee'
+  # Bright colors
+  bright:
+    black:   '#666666'
+    red:     '#976061'
+    green:   '#729a72'
+    yellow:  '#a49a72'
+    blue:    '#72949a'
+    magenta: '#8c729a'
+    cyan:    '#729a96'
+    white:   '#f1f1f1'
+

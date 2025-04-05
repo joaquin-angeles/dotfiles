@@ -2,7 +2,7 @@ require('lualine').setup({
   options = {
     disabled_filetypes = { 'alpha', 'neo-tree' },
     section_separators = { left = '', right = '' },
-    component_separators = { left = '', right = '' },
+    component_separators = { left = '|', right = '|' },
     theme = {
       normal = {
         a = { fg = '#1c1c1c', bg = '#eeeeee' },
