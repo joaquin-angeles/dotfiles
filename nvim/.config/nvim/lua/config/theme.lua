@@ -15,3 +15,14 @@ vim.cmd([[
   highlight NoiceCmdlinePopup guibg=NONE ctermbg=NONE
   highlight NoiceCmdlinePopupBorder guibg=NONE ctermbg=NONE
 ]])
+
+vim.cmd([[
+  highlight Normal guifg=#eeeeee
+  highlight NormalFloat guifg=#eeeeee
+  highlight FloatBorder guifg=#eeeeee
+  highlight NoiceCmdlinePopup guifg=#eeeeee
+  highlight NoiceCmdlinePopupBorder guifg=#eeeeee
+  highlight NoicePopup guifg=#eeeeee
+  highlight NoicePopupBorder guifg=#eeeeee
+  highlight NoiceCmdline guifg=#eeeeee
+]])
