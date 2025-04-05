@@ -12,19 +12,6 @@ window#waybar {
     padding-right: 2px;
     color: @foreground
 }
-#tray menu {
-    border-radius: 8px;
-    background-color: @background;
-    border: 1px solid @foreground
-}
-#tray menu menuitem {
-    color: @foreground;
-    padding: 6px 12px;
-    border-radius: 6px;
-}
-#tray menu menuitem:hover {
-    background-color: #323232;
-}
 #workspaces button {
     min-width: 12px;
     padding: 0 6px;
@@ -50,7 +37,7 @@ window#waybar {
 }
 #pulseaudio {
 	padding-right: 8px;
-	font-size: 20
+	font-size: 20;
 }
 #backlight {
 	padding-right: 9px

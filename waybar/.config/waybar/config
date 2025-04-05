@@ -66,14 +66,15 @@
         "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
         "format-charging": "󰂄",
         "format-warning": "󰂃",
-				"tooltip-format": "{capacity}% capacity"
+	"tooltip": true,
+	"tooltip-format": "{capacity}% batt."
   },
   "pulseaudio": {
         "format": "{icon}",
         "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
         "format-muted": "󰝟",
         "on-click": "pavucontrol",
-        "tooltip-format": "{volume}%"
+        "tooltip-format": "{volume}% vol."
   },
   "clock": {
        "format": "{:%I:%M %p}",

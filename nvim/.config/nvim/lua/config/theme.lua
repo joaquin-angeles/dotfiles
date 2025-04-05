@@ -15,3 +15,20 @@ vim.cmd([[
   highlight NoiceCmdlinePopup guibg=NONE ctermbg=NONE
   highlight NoiceCmdlinePopupBorder guibg=NONE ctermbg=NONE
 ]])
+
+-- Set background of cmdline popup elements to NONE
+vim.cmd("hi NoiceCmdlinePopup guibg=NONE")
+vim.cmd("hi NoiceCmdlinePopupBorder guibg=NONE")
+vim.cmd("hi NoiceCmdlinePrompt guibg=NONE")
+vim.cmd("hi NoiceCmdlineIcon guibg=NONE")
+
+-- Set background of messages popup elements to NONE
+vim.cmd("hi NoiceMessageView guibg=NONE")
+vim.cmd("hi NoiceMessageViewBorder guibg=NONE")
+
+-- Set background of popupmenu elements to NONE
+vim.cmd("hi NoicePopupmenu guibg=NONE")
+vim.cmd("hi NoicePopupmenuBorder guibg=NONE")
+vim.cmd("hi NoicePopupmenuMatch guibg=NONE")
+vim.cmd("hi NoicePopupmenuSelected guibg=NONE")
+

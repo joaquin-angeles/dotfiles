@@ -30,7 +30,7 @@ return {
 	
 	dashboard.section.buttons.val = {
         dashboard.button("e", "󰝰  Explorer", ":Neotree reveal left dir=~/<CR>"),
-    	dashboard.button("n", "  New File", ":enew | set cmdheight=0<CR>"),
+    	dashboard.button("n", "  New File", ":enew<CR>"),
     	dashboard.button("r", "󰄉  Recent Files", ":Telescope oldfiles<CR>"),
     	dashboard.button("f", "󰈞  Find File", ":Telescope find_files hidden=true cwd=~/<CR>"),
     	dashboard.button("/", "󱎸  Find Text", ":Telescope live_grep<CR>"),
