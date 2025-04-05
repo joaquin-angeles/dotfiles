@@ -16,4 +16,3 @@ return {
     words = { enabled = true },
   },
 }
-

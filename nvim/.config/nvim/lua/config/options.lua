@@ -13,6 +13,8 @@ vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { fg = "#1c1c1c", bg = "#708090" })
 vim.api.nvim_set_hl(0, "NeoTreeCursorLineFile", { fg = "#1c1c1c", bg = "#eeeeee" })
 vim.api.nvim_set_hl(0, "NeoTreeFileIcon", { fg = "#eeeeee" })
 
+vim.opt.cmdheight = 0
+
 vim.cmd([[
   augroup AlphaCmdline
     autocmd!
@@ -29,3 +31,25 @@ vim.api.nvim_create_autocmd("VimLeave", {
     end
   end,
 })
+
+vim.opt.shortmess:append("c")
+
+vim.api.nvim_create_autocmd("RecordingEnter", {
+  callback = function()
+    vim.opt.cmdheight = 1
+  end,
+})
+
+vim.api.nvim_create_autocmd("RecordingLeave", {
+  callback = function()
+    vim.opt.cmdheight = 0
+  end,
+})
+
+vim.api.nvim_create_autocmd({"BufReadPost", "BufNewFile"}, {
+  pattern = "*",
+  callback = function()
+    vim.o.cmdheight = 0
+  end,
+})
+
