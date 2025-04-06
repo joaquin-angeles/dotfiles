@@ -16,7 +16,7 @@ window#waybar {
     min-width: 12px;
     padding: 0 6px;
     background: transparent;
-    color: #444444;
+    color: #404040
 }
 #workspaces button:hover {
     min-width: 12px; 
@@ -36,7 +36,8 @@ window#waybar {
 	padding-left: 14px
 }
 #workspaces {
-	padding-left: 6px
+	padding-left: 6px;
+    font-size: 12px
 }
 #pulseaudio {
 	padding-right: 10px;

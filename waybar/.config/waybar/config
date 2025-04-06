@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 32,
     "spacing": 4,
     "icon-theme": "Papirus-Dark",
     "modules-left": [
@@ -33,6 +33,13 @@
             "(.*) - zsh": "> [$1]"
         }
     },
+    //    "hyprland/workspaces": {
+    //        "format": "{icon}",
+    //        "format-icons": {
+    //            "active": "",
+    //            "default": ""
+    //        }
+    //    },
     "battery": {
         "format": "{icon}",
         "format-icons": [
@@ -51,7 +58,7 @@
         "tooltip-format": "{volume}% vol."
     },
     "clock": {
-        "format": "{:%b %d, %I:%M %p}",
+        "format": "{:%b %d %I:%M %p}",
         "on-click": "kitty -e calcure",
         "tooltip": true,
         "tooltip-format": "{:%A, %d %B %Y}"
