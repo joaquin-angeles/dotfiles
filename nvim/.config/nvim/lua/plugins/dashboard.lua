@@ -13,8 +13,8 @@ return {
             vim.notify("Alpha dashboard theme failed to load!", vim.log.levels.ERROR)
             return
         end
-	
-	vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#9ab69b" })
+
+        vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#9ab69b" })
 
         dashboard.section.header.val = {
             "       ████ ██████           █████      ██                     ",
@@ -24,39 +24,49 @@ return {
             "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
             "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
             " ██████  █████████████████████ ████ █████ █████ ████ ██████  ",
+            "                                                                        ",
         }
 
-	dashboard.section.header.opts.hl = "AlphaHeader"
-	
-	dashboard.section.buttons.val = {
-        dashboard.button("e", "󰝰  Explorer", ":Neotree reveal left dir=~/<CR>"),
-    	dashboard.button("n", "  New File", ":enew<CR>"),
-    	dashboard.button("r", "󰄉  Recent Files", ":Telescope oldfiles<CR>"),
-    	dashboard.button("f", "󰈞  Find File", ":Telescope find_files hidden=true cwd=~/<CR>"),
-    	dashboard.button("/", "󱎸  Find Text", ":Telescope live_grep<CR>"),
-    	dashboard.button("c", "  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
-    	dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
-    	dashboard.button("q", "  Quit", ":qa<CR>"),
-}
+        dashboard.section.header.opts.hl = "AlphaHeader"
+
+        dashboard.section.buttons.val = {
+            dashboard.button("f", "󰈞  Find File", ":Telescope find_files hidden=true cwd=~/<CR>"),
+            dashboard.button("n", "  New File", ":enew | startinsert<CR>"),
+            dashboard.button("r", "󱡤  Recent Files", ":Telescope oldfiles<CR>"),
+            dashboard.button("g", "󱎸  Find Text", ":Telescope live_grep<CR>"),
+            dashboard.button("c", "󰢻  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
+            dashboard.button("s", "  Restore Session", ":SessionRestore<CR>"),
+            dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
+            dashboard.button("q", "  Quit", ":qa<CR>"),
+        }
 
         local function footer()
             local stats = require("lazy").stats()
-            local ms = math.floor(stats.startuptime * 100) / 100
+            local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
             return "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
         end
+
         dashboard.section.footer.val = footer()
 
-	dashboard.opts.layout = {
-	{ type = "padding", val = 8 },
-	dashboard.section.header,
-	{ type = "padding", val = 2 },
-	dashboard.section.buttons,
-	{ type = "padding", val = 2 },
-	dashboard.section.footer,
-	}
+        dashboard.opts.layout = {
+            { type = "padding", val = 8 },
+            dashboard.section.header,
+            { type = "padding", val = 2 },
+            dashboard.section.buttons,
+            { type = "padding", val = 2 },
+            dashboard.section.footer,
+        }
 
         alpha.setup(dashboard.opts)
+
+        -- Optional: Update stats after everything has loaded
+        vim.api.nvim_create_autocmd("User", {
+            pattern = "VeryLazy", -- triggered after all lazy-loaded plugins finish
+            callback = function()
+                dashboard.section.footer.val = footer()
+                pcall(vim.cmd.AlphaRedraw)
+            end,
+        })
     end,
 }
-
 

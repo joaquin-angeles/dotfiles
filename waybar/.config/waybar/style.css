@@ -16,7 +16,7 @@ window#waybar {
     min-width: 12px;
     padding: 0 6px;
     background: transparent;
-    color: #404040;
+    color: #444444;
 }
 #workspaces button:hover {
     min-width: 12px; 

@@ -1,6 +1,7 @@
 -- Set the background of Neovim to transparent
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE")
+vim.cmd("highlight Normal guifg=#eeeeee")
 
 -- For plugins with floating windows or popups
 vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
@@ -20,6 +21,7 @@ vim.cmd("hi TelescopeResultsTitle guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewNormal guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewBorder guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewTitle guibg=NONE ctermbg=NONE")
+vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#eeeeee", bg = "#333333", bold = true })
 
 -- Noice plugin UI transparency
 vim.cmd("hi NoicePopup guibg=NONE ctermbg=NONE")
