@@ -1,115 +1,85 @@
 {
-    "layer": "top",  // Defines the layer position for the bar
-    "position": "top",  // Specifies the position of the bar (top or bottom)
-    "height": 30,  // Sets the height of the bar
-    "spacing": 4,  // Defines spacing between the modules
-    "icon-theme": "Papirus-Dark", 
-
-    // Left side modules
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "icon-theme": "Papirus-Dark",
     "modules-left": [
-        "hyprland/workspaces"  // Shows Hyprland workspaces
+        "custom/power",
+        "hyprland/workspaces"
     ],
-
-    // Center modules
-    // "modules-center": [
-    //    "hyprland/window"  // Displays the window title
-    // ],
-
-    // Right side modules
+    "modules-center": [
+        "clock"
+    ],
     "modules-right": [
-        "tray",  // System tray
-        "pulseaudio",  // Audio controls
-        "battery",  // Battery status
-        "clock",  // Current time
-        "custom/power"  // Power button for logout
+        "tray",
+        "pulseaudio",
+        "battery"
     ],
-
-    // Network settings (Wi-Fi)
     "network": {
-        "format-wifi": "󰤨",  // Icon for connected Wi-Fi
-        "format-disconnected": "󰤭",  // Icon for disconnected Wi-Fi
-        "tooltip-format": "Connected to {essid} via {ifname}"  // Tooltip with Wi-Fi details
+        "format-wifi": "󰤨",
+        "format-disconnected": "󰤭",
+        "tooltip-format": "Connected to {essid} via {ifname}"
     },
-
-    // Bluetooth settings
     "custom/bluetooth": {
-        "exec": "blueman-applet",  // Bluetooth applet to show the icon
-        "interval": 60,  // Interval to update the Bluetooth status
-        "format": "{output}"  // Format of the Bluetooth status
+        "exec": "blueman-applet",
+        "interval": 60,
+        "format": "{output}"
     },
-
-    // Window title settings (Hyprland)
     "hyprland/window": {
-        "format": "{}",  // Format of the window title
-        "max-length": 64,  // Maximum length for the window title
+        "format": "{}",
+        "max-length": 64,
         "rewrite": {
-            "(.*) - zsh": "> [$1]"  // Rewrite rule for window titles containing "zsh"
+            "(.*) - zsh": "> [$1]"
         }
     },
-
-    // Battery settings
     "battery": {
-        "format": "{icon}",  // Display the battery icon
+        "format": "{icon}",
         "format-icons": [
-            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"  // Battery icons for different levels
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-charging": "󰂄",  // Icon while charging
-        "format-warning": "󰂃",  // Warning icon when battery is low
-        "tooltip": true,  // Display battery percentage in the tooltip
-        "tooltip-format": "{capacity}% batt."  // Tooltip format
+        "format-charging": "󰂄",
+        "format-warning": "󰂃",
+        "tooltip": true,
+        "tooltip-format": "{capacity}% batt."
     },
-
-    // Pulseaudio settings
     "pulseaudio": {
-        "format": "{icon}",  // Audio icon
-        "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],  // Audio icons for different levels
-        "format-muted": "󰝟",  // Icon when audio is muted
-        "on-click": "pavucontrol",  // Command to open audio settings
-        "tooltip-format": "{volume}% vol."  // Tooltip showing current volume percentage
+        "format": "{icon}",
+        "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
+        "format-muted": "󰝟",
+        "on-click": "pavucontrol",
+        "tooltip-format": "{volume}% vol."
     },
-
-    // Clock settings
     "clock": {
-        "format": "{:%I:%M %p}",  // Time format (12-hour)
-        "on-click": "kitty -e calcure",  // Command to run when clicking on the clock
-        "tooltip": true,  // Display full date and time in tooltip
-        "tooltip-format": "{:%A, %d %B %Y}"  // Full date format in the tooltip
+        "format": "{:%b %d, %I:%M %p}",
+        "on-click": "kitty -e calcure",
+        "tooltip": true,
+        "tooltip-format": "{:%A, %d %B %Y}"
     },
-
-    // Tray settings
     "tray": {
-        "icon-size": 23,  // Size of the icons in the system tray
-        "spacing": 4,  // Spacing between tray icons
-        "reverse-direction": true  // Reverse the direction of the tray icons
+        "icon-size": 23,
+        "spacing": 4,
+        "reverse-direction": true
     },
-
-    // Custom power button (logout)
     "custom/power": {
-        "format": "<span size='large'>󰐥</span>",  // Logout icon
-        "on-click": "wlogout"  // Command to run when clicking on the power icon
+        "format": "<span size='large'>󰐥</span>",
+        "on-click": "wlogout"
     },
-
-    // Custom menu (application launcher)
     "custom/menu": {
-        "format": "<span size='large'>\uf303</span>",  // Menu icon
-        "on-click": "rofi -disable-history -show drun"  // Command to show Rofi application launcher
+        "format": "<span size='large'>\uf303</span>",
+        "on-click": "rofi -disable-history -show drun"
     },
-
-    // Custom space (used to create space between modules)
     "custom/space": {
-        "format": "|"  // Simple separator
+        "format": "|"
     },
-
-    // Backlight settings
     "backlight": {
-        "format": "{icon}",  // Icon for the backlight
-        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],  // Icons for different backlight levels
-        "interval": 2,  // Interval to update backlight status
-        "on-click": "hyprsunset -t 3750",  // Command to adjust backlight temperature
-        "on-scroll-up": "brightnessctl s +5%",  // Command to increase brightness
-        "on-scroll-down": "brightnessctl s 5%-",  // Command to decrease brightness
-        "tooltip": true,  // Display backlight percentage in the tooltip
-        "tooltip-format": "Current brightness: {percent}%"  // Tooltip format
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+        "interval": 2,
+        "on-click": "hyprsunset -t 3750",
+        "on-scroll-up": "brightnessctl s +5%",
+        "on-scroll-down": "brightnessctl s 5%-",
+        "tooltip": true,
+        "tooltip-format": "Current brightness: {percent}%"
     }
 }
-
