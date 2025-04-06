@@ -1,0 +1,37 @@
+# Colors
+cursor-style = "block"
+background = 1c1c1c
+foreground = eeeeee
+
+# Normal colors
+palette = 0=1c1c1c
+palette = 1=865054
+palette = 2=5f7a5f
+palette = 3=a4965f
+palette = 4=5f7a8c
+palette = 5=75607a
+palette = 6=5f7a7f
+palette = 7=eeeeee
+
+# Bright colors
+palette = 8=666666
+palette = 9=976061
+palette = 10=729a72
+palette = 11=a49a72
+palette = 12=72949a
+palette = 13=8c729a
+palette = 14=729a96
+palette = 15=f1f1f1
+
+# Font settings
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 12.5
+
+# Window opacity
+background-opacity = 0.8
+
+# Disable single instance
+gtk-single-instance = false
+
+# Shell integration
+shell-integration = zsh

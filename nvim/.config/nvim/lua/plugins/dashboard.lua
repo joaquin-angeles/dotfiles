@@ -43,7 +43,7 @@ return {
         local function footer()
             local stats = require("lazy").stats()
             local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
-            return "⚡ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
+            return "󱐋 Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
         end
 
         dashboard.section.footer.val = footer()

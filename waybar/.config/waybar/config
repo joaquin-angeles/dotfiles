@@ -3,18 +3,18 @@
     "position": "top",
     "height": 32,
     "spacing": 4,
-    "icon-theme": "Papirus-Dark",
     "modules-left": [
-        "custom/power",
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock"
+        "hyprland/window"
     ],
     "modules-right": [
         "tray",
         "pulseaudio",
-        "battery"
+        "battery",
+        "clock",
+        "custom/power"
     ],
     "network": {
         "format-wifi": "󰤨",
@@ -58,14 +58,15 @@
         "tooltip-format": "{volume}% vol."
     },
     "clock": {
-        "format": "{:%b %d %I:%M %p}",
+     //    "format": "{:%b %d, %I:%M %p}",
+        "format": "{:%I:%M %p}",
         "on-click": "kitty -e calcure",
         "tooltip": true,
         "tooltip-format": "{:%A, %d %B %Y}"
     },
     "tray": {
         "icon-size": 23,
-        "spacing": 4,
+        "spacing": 5,
         "reverse-direction": true
     },
     "custom/power": {
