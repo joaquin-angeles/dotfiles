@@ -5,11 +5,11 @@ require('lualine').setup({
         component_separators = { left = '', right = '' },
         theme = {
             normal = {
-                a = { fg = '#1c1c1c', bg = '#b0b0b0' },
+                a = { fg = '#1c1c1c', bg = '#eeeeee' },
                 b = { fg = '#eeeeee', bg = '#252525' },
                 c = { bg = 'NONE' }
             },
-            insert = { a = { fg = '#1c1c1c', bg = '#7a8f7a' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
+            insert = { a = { fg = '#1c1c1c', bg = '#8fae8f' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
             visual = { a = { fg = '#1c1c1c', bg = '#d4b483' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
             replace = { a = { fg = '#1c1c1c', bg = '#ff5f5f' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
             command = { a = { fg = '#1c1c1c', bg = '#c17a47' }, b = { fg = '#eeeeee', bg = '#3a3a3a' }, c = { bg = 'NONE' } },
