@@ -3,9 +3,8 @@ require("config.options")
 require("config.keymaps")
 require("config.autocmds")
 require("config.theme")
+require("colors.syntax")
 
 require("config.plugins.telescope")
 require("config.plugins.neo-tree")
 require("config.plugins.lualine")
-
-require("colors.monothemedark")
