@@ -14,7 +14,7 @@ local colors = {
     bright_blue    = "#72949a",
     bright_magenta = "#8c729a",
     bright_cyan    = "#729a96",
-    bright_orange  = "#c87e4b",
+    bright_orange  = "#8f5a33",
     bright_black   = "#404040",
     bright_gray    = "#505050",
     fg             = "#eeeeee"
@@ -24,7 +24,7 @@ local colors = {
 set(0, "Comment",      { fg = colors.bright_black, italic = true })
 set(0, "String",       { fg = colors.green })
 set(0, "Function",     { fg = colors.blue })
-set(0, "Keyword",      { fg = colors.bright_orange, bold = true })
+set(0, "Keyword",      { fg = colors.bright_orange, bold = true, italic = true })
 set(0, "Float",        { fg = colors.yellow })
 set(0, "Identifier",   { fg = colors.red })
 set(0, "Number",       { fg = colors.bright_yellow })
