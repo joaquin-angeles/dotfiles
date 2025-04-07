@@ -17,21 +17,21 @@ local colors = {
   fg             = "#eeeeee",     -- Foreground text
 }
 
--- Standard syntax groups (Neovim's typical color assignments)
-set(0, "Comment",    { fg = colors.bright_black, italic = true })        -- Comments (dark gray)
-set(0, "String",     { fg = colors.green })                             -- Strings (green)
-set(0, "Function",   { fg = colors.blue })                              -- Functions (blue)
-set(0, "Keyword",    { fg = colors.red, bold = true })                  -- Keywords (red)
-set(0, "Identifier", { fg = colors.magenta })                          -- Variables (magenta)
-set(0, "Number",     { fg = colors.bright_yellow })                     -- Numbers (bright yellow)
-set(0, "Boolean",    { fg = colors.bright_red })                        -- Booleans (bright red)
-set(0, "Type",       { fg = colors.yellow })                            -- Types (yellow)
-set(0, "Operator",   { fg = colors.fg })                                -- Operators (white)
-set(0, "Constant",   { fg = colors.bright_green })                      -- Constants (bright green)
-set(0, "PreProc",    { fg = colors.cyan })                              -- Preprocessor directives (cyan)
-set(0, "Title",      { fg = colors.bright_blue })                       -- Titles (bright blue)
+-- Neovim highlight groups
+set(0, "Comment",    { fg = colors.bright_black, italic = true })
+set(0, "String",     { fg = colors.green })
+set(0, "Function",   { fg = colors.blue })
+set(0, "Keyword",    { fg = colors.red, bold = true })
+set(0, "Identifier", { fg = colors.magenta })
+set(0, "Number",     { fg = colors.bright_yellow })
+set(0, "Boolean",    { fg = colors.bright_red })
+set(0, "Type",       { fg = colors.yellow })
+set(0, "Operator",   { fg = colors.fg })
+set(0, "Constant",   { fg = colors.bright_green })
+set(0, "PreProc",    { fg = colors.cyan })
+set(0, "Title",      { fg = colors.bright_blue })
 
--- Treesitter highlight groups (apply your colors to these as well)
+-- Treesitter highlight groups
 set(0, "@comment",            { link = "Comment" })
 set(0, "@string",             { link = "String" })
 set(0, "@number",             { link = "Number" })

@@ -34,8 +34,7 @@ setopt sharehistory
 setopt hist_ignore_space
 
 # Autoload
-# autoload -U compinit && compinit
-# zinit replay -q
+autoload -U compinit && compinit
 
 # Shell integrations
 eval "$(fzf --zsh)"
