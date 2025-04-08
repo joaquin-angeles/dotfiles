@@ -2,15 +2,15 @@
     font: "JetBrainsMono Nerd Font 13";
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #1C1C1CCC;
-    fg-color: #EEEEEEEE;
+    b-color: #171717CC;
+    fg-color: #EEEEEE;
     fgp-color: #888888FF;
     b-radius: 8px;
     g-padding: 8px;
-    hl-color: #383838;
+    hl-color: #262626;
     hlt-color: #EEEEEEFF;
     alt-color: #444444CC;
-    wbg-color: #1C1C1CCC;
+    wbg-color: #171717CC;
     w-border: 2px solid;
     w-border-color: #D3D3D3FF;
     w-padding: 12px;
@@ -21,7 +21,9 @@ configuration {
     kb-row-down: "Down,Control+j";
     kb-accept-entry: "Control+m,Return,KP_Enter";
     kb-remove-to-eol: "Control+Shift+e";
+    kb-mode-complete: "";
     kb-mode-previous: "Shift+Left,Control+Shift+Tab,Control+h";
+    kb-mode-next: "Control+l";
     kb-remove-char-back: "BackSpace";
     modi: "drun,emoji";
     show-icons: true;
@@ -41,10 +43,6 @@ listview {
 }
 
 window {
-    location: north;
-    anchor: north;
-    x-offset: 0;
-    y-offset: 200;
     transparency: "real";
     width: 650px;
     height: 550px;
