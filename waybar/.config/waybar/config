@@ -5,7 +5,8 @@
     "spacing": 4,
     "modules-left": [
         "clock",
-        "hyprland/workspaces"
+        "custom/space",
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "hyprland/window"
@@ -50,20 +51,19 @@
         "tooltip-format": "Volume ({volume}%)"
     },
     "clock": {
-        "format": "{:%I:%M %p} |",
+        "format": "{:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%A, %B %d %Y}"
     },
     "tray": {
-        "icon-size": 23,
-        "spacing": 5,
-        "reverse-direction": true
+        "icon-size": 20,
+        "spacing": 10
     },
     "custom/space": {
-        "format": "|"
+        "format": "•"
     },
     "custom/power": {
-        "format": "<span size='large'>󰐥</span>",
+        "format": "󰐥",
         "tooltip": true,
         "tooltip-format": "Power menu (wlogout)",
         "on-click": "wlogout"

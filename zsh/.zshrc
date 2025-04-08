@@ -45,10 +45,14 @@ eval "$(zoxide init zsh)"
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+export TERMINAL=/usr/bin/kitty
 export XCURSOR_THEME="Bibata-Modern-Classic"
 export XCURSOR_SIZE=24
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt6ct
 export GTK_THEME="MonoThemeDark"
 export XDG_DESKTOP_PORTAL=hyprland
