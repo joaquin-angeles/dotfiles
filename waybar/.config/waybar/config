@@ -1,4 +1,5 @@
 {
+    "include": "~/dotfiles/waybar/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
     "height": 32,
@@ -19,67 +20,4 @@
         "custom/space",
         "custom/power"
     ],
-    "network": {
-        "format-wifi": "󰖩",
-        "format-disconnected": "󰖪",
-        "on-click": "iwgtk",
-        "tooltip-format": "{essid} ({signalStrength}%)",
-        "interface": "wlan0"
-    },
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 64,
-        "rewrite": {
-            "(.*) - zsh": "> [$1]"
-        }
-    },
-    "battery": {
-        "format": "{icon}",
-        "format-icons": [
-            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
-        ],
-        "format-charging": "󰂄",
-        "format-warning": "󰂃",
-        "tooltip": true,
-        "tooltip-format": "Battery ({capacity}%)"
-    },
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
-        "format-muted": "󰝟",
-        "on-click": "pavucontrol",
-        "tooltip-format": "Volume ({volume}%)"
-    },
-    "clock": {
-        "format": "{:%I:%M %p}",
-        "tooltip": true,
-        "tooltip-format": "{:%A, %B %d %Y}"
-    },
-    "tray": {
-        "icon-size": 19,
-        "spacing": 12
-    },
-    "custom/space": {
-        "format": "•"
-    },
-    "custom/power": {
-        "format": "󰐥",
-        "tooltip": true,
-        "tooltip-format": "Power menu (wlogout)",
-        "on-click": "wlogout"
-    },
-    "custom/menu": {
-        "format": "<span size='large'>\uf303</span>",
-        "on-click": "rofi -disable-history -show drun"
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-        "interval": 2,
-        "on-click": "hyprsunset -t 3750",
-        "on-scroll-up": "brightnessctl s +5%",
-        "on-scroll-down": "brightnessctl s 5%-",
-        "tooltip": true,
-        "tooltip-format": "Current brightness: {percent}%"
-    }
 }
