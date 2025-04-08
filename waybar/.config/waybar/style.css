@@ -33,26 +33,26 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #82C782;
+    color: #8ebf66
 }
 
 #tray {
-    padding-left: 4px;
+    padding-right: 2px
 }
 
 /* Network Module */
 #network {
     padding-right: 14px;
-    padding-left: 6px;
+    padding-left: 7px;
     padding-top: 0.5px;
-    color: #6fa0b7;
+    color: #5f8d9e;
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
     font-size: 20px;
     padding-right: 12px;
-    color: #a4965f;
+    color: #8a7a5e;
 }
 
 /* Clock Module */
@@ -66,7 +66,7 @@ window#waybar {
     padding-right: 14px;
     padding-left: 7px;
     font-size: 22;
-    color: #9e4f4f
+    color: #7a3e3e
 }
 
 /* Custom Menu Module */
@@ -79,5 +79,5 @@ window#waybar {
     padding-right: 7px;
     padding-top: 1px;
     padding-bottom: 1px;
-    color: #85b785;
+    color: #6b7c6b;
 }

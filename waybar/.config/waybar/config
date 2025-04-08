@@ -56,8 +56,8 @@
         "tooltip-format": "{:%A, %B %d %Y}"
     },
     "tray": {
-        "icon-size": 20,
-        "spacing": 10
+        "icon-size": 19,
+        "spacing": 12
     },
     "custom/space": {
         "format": "•"
