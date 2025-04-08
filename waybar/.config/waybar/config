@@ -1,93 +1,89 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 32,
-    "spacing": 4,
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-    "modules-center": [
-        "hyprland/window"
-    ],
-    "modules-right": [
-        "tray",
-        "pulseaudio",
-        "battery",
-        "clock",
-        "custom/power"
-    ],
-    "network": {
-        "format-wifi": "󰤨",
-        "format-disconnected": "󰤭",
-        "tooltip-format": "Connected to {essid} via {ifname}"
-    },
-    "custom/bluetooth": {
-        "exec": "blueman-applet",
-        "interval": 60,
-        "format": "{output}"
-    },
-    "hyprland/window": {
-        "format": "{}",
-        "max-length": 64,
-        "rewrite": {
-            "(.*) - zsh": "> [$1]"
-        }
-    },
-    //    "hyprland/workspaces": {
-    //        "format": "{icon}",
-    //        "format-icons": {
-    //            "active": "",
-    //            "default": ""
-    //        }
-    //    },
-    "battery": {
-        "format": "{icon}",
-        "format-icons": [
-            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        "position": "top",
+        "height": 30,
+        "spacing": 8,
+        "modules-left": [
+            "hyprland/workspaces"
         ],
-        "format-charging": "󰂄",
-        "format-warning": "󰂃",
-        "tooltip": true,
-        "tooltip-format": "{capacity}% batt."
-    },
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
-        "format-muted": "󰝟",
-        "on-click": "pavucontrol",
-        "tooltip-format": "{volume}% vol."
-    },
-    "clock": {
-     //    "format": "{:%b %d, %I:%M %p}",
-        "format": "{:%I:%M %p}",
-        "on-click": "kitty -e calcure",
-        "tooltip": true,
-        "tooltip-format": "{:%A, %d %B %Y}"
-    },
-    "tray": {
-        "icon-size": 23,
-        "spacing": 5,
-        "reverse-direction": true
-    },
-    "custom/power": {
-        "format": "<span size='large'>󰐥</span>",
-        "on-click": "wlogout"
-    },
-    "custom/menu": {
-        "format": "<span size='large'>\uf303</span>",
-        "on-click": "rofi -disable-history -show drun"
-    },
-    "custom/space": {
-        "format": "|"
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-        "interval": 2,
-        "on-click": "hyprsunset -t 3750",
-        "on-scroll-up": "brightnessctl s +5%",
-        "on-scroll-down": "brightnessctl s 5%-",
-        "tooltip": true,
-        "tooltip-format": "Current brightness: {percent}%"
-    }
+        "modules-center": [
+            "clock" 
+        ],
+        "modules-right": [
+            "tray",
+        "pulseaudio",
+        "battery"
+        // "clock",
+        ],
+        "network": {
+            "format-wifi": "󰤨",
+            "format-disconnected": "󰤭",
+            "tooltip-format": "Connected to {essid} via {ifname}"
+        },
+        "custom/bluetooth": {
+            "exec": "blueman-applet",
+            "interval": 60,
+            "format": "{output}"
+        },
+        "hyprland/window": {
+            "format": "{}",
+            "max-length": 64,
+            "rewrite": {
+                "(.*) - zsh": "> [$1]"
+            }
+        },
+        //    "hyprland/workspaces": {
+        //        "format": "{icon}",
+        //        "format-icons": {
+        //            "active": "",
+        //            "default": ""
+        //        }
+        //    },
+        "battery": {
+            "format": "{icon}",
+            "format-icons": [
+                "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+            ],
+            "format-charging": "󰂄",
+            "format-warning": "󰂃",
+            "tooltip": true,
+            "tooltip-format": "{capacity}% batt."
+        },
+        "pulseaudio": {
+            "format": "{icon}",
+            "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
+            "format-muted": "󰝟",
+            "on-click": "pavucontrol",
+            "tooltip-format": "{volume}% vol."
+        },
+        "clock": {
+            "format": "{:%b %d, %I:%M %p}",
+            "tooltip": false
+        },
+        "tray": {
+            "icon-size": 23,
+            "spacing": 5,
+            "reverse-direction": true
+        },
+        "custom/power": {
+            "format": "<span size='large'>󰐥</span>",
+            "on-click": "wlogout"
+        },
+        "custom/menu": {
+            "format": "<span size='large'>\uf303</span>",
+            "on-click": "rofi -disable-history -show drun",
+        },
+        "custom/space": {
+            "format": "|"
+        },
+        "backlight": {
+            "format": "{icon}",
+            "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+            "interval": 2,
+            "on-click": "hyprsunset -t 3750",
+            "on-scroll-up": "brightnessctl s +5%",
+            "on-scroll-down": "brightnessctl s 5%-",
+            "tooltip": true,
+            "tooltip-format": "Current brightness: {percent}%"
+        }
 }
