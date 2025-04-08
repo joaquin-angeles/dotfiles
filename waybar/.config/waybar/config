@@ -64,6 +64,8 @@
     },
     "custom/power": {
         "format": "<span size='large'>󰐥</span>",
+        "tooltip": true,
+        "tooltip-format": "Power menu (wlogout)",
         "on-click": "wlogout"
     },
     "custom/menu": {
