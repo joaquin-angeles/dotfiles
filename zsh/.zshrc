@@ -51,13 +51,9 @@ export TERMINAL=/usr/bin/kitty
 export XCURSOR_THEME="Bibata-Modern-Classic"
 export XCURSOR_SIZE=24
 export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_DESKTOP_PORTAL=hyprland
 export XDG_SESSION_TYPE=wayland
 export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt6ct
-export GTK_THEME="Mono_Mod"
-export XDG_DESKTOP_PORTAL=hyprland
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_SESSION_TYPE=wayland
 
 # Aliases
 alias r='reboot'
