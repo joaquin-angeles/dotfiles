@@ -101,6 +101,8 @@ fi
 
 # Sorted list of packages
 packages=(
+    flatpak
+    hyprland
     hyprlock
     hyprpaper
     iwgtk
