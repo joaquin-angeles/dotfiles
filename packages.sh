@@ -106,6 +106,8 @@ packages=(
     iwgtk
     kvantum
     kvantum-qt5
+    libnotify
+    mako
     nemo
     nemo-fileroller
     neovim
