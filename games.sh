@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Installing Steam, Lutris, MCPelauncher, and MCPelauncher UI
-echo "Installing Steam, Lutris, MCPelauncher, and MCPelauncher UI with paru..."
+echo "Installing games with paru..."
 paru -S --noconfirm steam lutris mcpelauncher-linux mcpelauncher-ui
 
 # Check if paru command was successful
 if [ $? -eq 0 ]; then
-  echo "Steam, Lutris, MCPelauncher, and MCPelauncher UI installed successfully."
+  echo "The games installed successfully."
 else
   echo "Error: Installation of Steam, Lutris, MCPelauncher, or MCPelauncher UI failed."
   exit 1
