@@ -37,6 +37,7 @@ window#waybar {
     font-weight: bold
 }
 
+/* System tray */
 #tray {
     padding-right: 2px
 }
