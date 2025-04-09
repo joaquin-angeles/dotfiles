@@ -11,6 +11,10 @@ local function is_empty_buffer()
   return vim.fn.line('$') == 1 and vim.fn.getline(1) == ''
 end
 
+for _, mode in ipairs({ "n", "i", "v" }) do
+  vim.keymap.set(mode, "<F13>", "<Esc>", { noremap = true, silent = true })
+end
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4

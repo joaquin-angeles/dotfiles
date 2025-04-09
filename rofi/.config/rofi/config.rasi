@@ -7,7 +7,7 @@
     fgp-color: #888888FF;
     b-radius: 8px;
     g-padding: 8px;
-    hl-color: #2d2d2dCC;
+    hl-color: #333333CC;
     hlt-color: #EEEEEEFF;
     alt-color: #444444CC;
     wbg-color: #171717CC;
@@ -28,8 +28,8 @@ configuration {
     modi: "drun,emoji";
     show-icons: true;
     icon-theme: "Papirus-Dark";
-    display-drun: " ";
-    display-emoji: "🙂";
+    display-drun: "  ";
+    display-emoji: "  ";
 }
 
 listview {
