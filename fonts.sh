@@ -1,69 +1,82 @@
 #!/bin/bash
 
-# Function to check if a font is installed
-is_font_installed() {
-    fc-list | grep -i "$1" &>/dev/null
-}
+set -e  # Exit on error
 
-# Check if Rubik font is installed
-if is_font_installed "Rubik"; then
-    echo "✅ Rubik font is already installed."
-else
-    # Install Rubik font from the official Google Fonts repository
-    echo "🔧 Installing Rubik font..."
-    font_dir="$HOME/.local/share/fonts"
-    mkdir -p "$font_dir"
-    git clone --depth 1 https://github.com/googlefonts/rubik.git "$font_dir/rubik-font"
-
-    # Copy the TTF files from the variable directory into the fonts directory
-    cp -r "$font_dir/rubik-font/fonts/variable"/*.ttf "$font_dir/Rubik"
-
-    # Delete the rubik-font directory after moving the TTFs
-    rm -rf "$font_dir/rubik-font"
-
-    # Update font cache silently
-    fc-cache -fv &>/dev/null
-    echo "✅ Rubik font installed successfully and rubik-font directory removed."
+# Ensure paru is installed
+if ! command -v paru &>/dev/null; then
+    echo "󰖷 paru not found. Installing paru-bin..."
+    temp_dir=$(mktemp -d)
+    git clone --depth 1 https://aur.archlinux.org/paru-bin.git "$temp_dir" &>/dev/null
+    (
+        cd "$temp_dir"
+        makepkg -si --noconfirm --quiet &>/dev/null
+    )
+    rm -rf "$temp_dir"
+    echo " paru installed successfully."
 fi
 
-# Apply Rubik font for GNOME (using gsettings)
-echo "🔧 Applying Rubik font to GTK..."
-gsettings set org.gnome.desktop.interface font-name 'Rubik 13' &>/dev/null
-
-# Check if JetBrainsMono Nerd Font Mono is installed
-if is_font_installed "JetBrainsMono Nerd Font Mono"; then
-    echo "✅ JetBrainsMono Nerd Font Mono is already installed."
+# Install Rubik font manually if not already present
+if fc-list | grep -i "Rubik" &>/dev/null; then
+    echo " Rubik font is already installed."
 else
-    # Install JetBrainsMono Nerd Font Mono and Apple Color Emoji fonts using paru
-    echo "🔧 Installing JetBrainsMono Nerd Font Mono and Apple Color Emoji fonts..."
-    paru -S --noconfirm ttf-jetbrains-mono-nerd ttf-apple-color-emoji
-
-    # Update font cache again after installation
-    fc-cache -fv &>/dev/null
-    echo "✅ JetBrainsMono Nerd Font Mono and Apple Color Emoji fonts installed successfully."
+    echo "📦 Installing Rubik font..."
+    temp_dir=$(mktemp -d)
+    git clone --depth 1 https://github.com/googlefonts/rubik.git "$temp_dir" &>/dev/null
+    cp -r "$temp_dir/fonts/variable/"*.ttf "$font_dir/Rubik"
+    rm -rf "$temp_dir"
+    fc-cache -r
+    echo " Rubik font installed successfully."
 fi
 
-# Ensure the fontconfig directory exists
+# Apply Rubik font for GNOME if running GNOME
+if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
+    echo "󰖷 Applying Rubik font to GTK..."
+    gsettings set org.gnome.desktop.interface font-name 'Rubik 13' &>/dev/null
+fi
+
+# Sorted list of font packages in alphabetical order
+font_packages=(
+    otf-noto-sans-cjk
+    ttf-apple-emoji
+    ttf-jetbrains-mono-nerd
+    ttf-jetbrains-mono
+)
+
+# Install each font package if not already installed
+for font in "${font_packages[@]}"; do
+    if pacman -Q "$font" &>/dev/null; then
+        echo " $font is already installed."
+    else
+        echo "📦 Installing $font..."
+        if paru -S --noconfirm --quiet "$font" &>/dev/null; then
+            echo " Successfully installed $font."
+        else
+            echo " Failed to install $font." >&2
+        fi
+    fi
+done
+
+# Ensure the fonts directory exists
+font_dir="$HOME/.local/share/fonts"
+mkdir -p "$font_dir"
+
+# Ensure fontconfig directory exists
 fontconfig_dir="$HOME/.config/fontconfig"
 mkdir -p "$fontconfig_dir"
-echo "📁 Ensured that the $fontconfig_dir directory exists."
 
-# Remove the existing fonts.conf file if it exists
-fonts_conf_file="$fontconfig_dir/fonts.conf"
-if [ -f "$fonts_conf_file" ]; then
-    echo "⚠️ Removing existing fonts.conf file..."
-    rm "$fonts_conf_file"
+# Remove the current fonts.conf if it exists
+if [ -f "$fontconfig_dir/fonts.conf" ]; then
+    echo "󰖷 Removing existing fonts.conf file..."
+    rm "$fontconfig_dir/fonts.conf"
 fi
 
-# Apply fonts by modifying fontconfig's fonts.conf
-echo "🔧 Applying fonts to fontconfig..."
-
-# Create the new fonts.conf with the desired fonts
-cat <<EOL > "$fonts_conf_file"
+# Apply the new font configuration
+echo "󰖷 Configuring font settings..."
+cat <<EOL > "$fontconfig_dir/fonts.conf"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE fontconfig PUBLIC "-//Freetype//DTD FONTCONFIG 2.12//EN" "http://www.freedesktop.org/standards/fontconfig/fontconfig.dtd">
 <fontconfig>
-  <match target="pattern">
+  <match>
     <test name="family" qual="any">
       <string>Rubik</string>
     </test>
@@ -71,8 +84,8 @@ cat <<EOL > "$fonts_conf_file"
       <string>Rubik</string>
     </edit>
   </match>
-  
-  <match target="pattern">
+
+  <match>
     <test name="family" qual="any">
       <string>monospace</string>
     </test>
@@ -81,7 +94,7 @@ cat <<EOL > "$fonts_conf_file"
     </edit>
   </match>
 
-  <match target="pattern">
+  <match>
     <test name="family" qual="any">
       <string>emoji</string>
     </test>
@@ -90,7 +103,25 @@ cat <<EOL > "$fonts_conf_file"
     </edit>
   </match>
 
+  <match>
+    <test name="family" qual="any">
+      <string>sans-serif</string>
+    </test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>Noto Sans CJK</string>
+    </edit>
+  </match>
+
+  <match>
+    <test name="family" qual="any">
+      <string>serif</string>
+    </test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>Noto Serif CJK</string>
+    </edit>
+  </match>
 </fontconfig>
 EOL
 
-echo "✅ Fonts applied successfully to fontconfig."
+fc-cache -r
+echo " Font configuration applied successfully."
