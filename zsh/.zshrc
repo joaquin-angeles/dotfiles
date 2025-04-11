@@ -42,6 +42,7 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # Environment variables
+export PATH="$HOME/.cargo/bin:$PATH"
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
@@ -58,7 +59,6 @@ export QT_QPA_PLATFORM=wayland
 # Aliases
 alias r='reboot'
 alias ff='fastfetch'
-alias cat=bat
 alias c=clear
 alias k=kill
 alias pk=pkill
