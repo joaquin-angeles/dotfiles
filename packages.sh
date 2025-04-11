@@ -15,13 +15,11 @@ if ! command -v paru &>/dev/null; then
     echo "✅ paru installed successfully."
 fi
 
-# Sorted list of packages
+# Sorted list of packages in alphabetical order
 packages=(
-    flatpak
     hyprland
     hyprlock
     hyprpaper
-    iwgtk
     kvantum
     kvantum-qt5
     libnotify
@@ -30,12 +28,15 @@ packages=(
     nemo-fileroller
     neovim
     pavucontrol
+    rofi-wayland
     waybar
     wlogout
     zoxide
     zsh
-    zen-browser-bin
 )
+
+# Sort the packages alphabetically
+packages=($(for pkg in "${packages[@]}"; do echo "$pkg"; done | sort))
 
 # Install each package if not already installed
 for package in "${packages[@]}"; do
@@ -50,3 +51,12 @@ for package in "${packages[@]}"; do
         fi
     fi
 done
+
+# Set Zsh as the default shell if not already set
+if [ "$SHELL" != "/usr/bin/zsh" ]; then
+    echo "🔧 Setting Zsh as the default shell..."
+    chsh -s /usr/bin/zsh
+    echo "✅ Zsh has been set as the default shell."
+else
+    echo "✅ Zsh is already the default shell."
+fi
