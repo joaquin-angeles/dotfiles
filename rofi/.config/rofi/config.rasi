@@ -12,7 +12,7 @@
     alt-color: #444444CC;
     wbg-color: #171717CC;
     w-border: 2px solid;
-    w-border-color: #D3D3D3FF;
+    w-border-color: #EEEEEE;
     w-padding: 12px;
 }
 
@@ -56,6 +56,7 @@ inputbar {
 
 entry {
     placeholder: "";
+    placeholder-color: #555555;
     text-color: #eeeeee;
 }
 

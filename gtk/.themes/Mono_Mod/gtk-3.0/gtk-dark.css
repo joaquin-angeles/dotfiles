@@ -640,7 +640,7 @@ iconview,
 iconview text,
 textview text {
     color: white;
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 .view:backdrop,
@@ -675,7 +675,7 @@ iconview:disabled,
 iconview text:disabled,
 textview text:disabled {
     color: rgba(255, 255, 255, 0.5);
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 .view:selected:focus,
@@ -1887,7 +1887,7 @@ scrolledwindow junction {
     border-style: solid none none solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.1);
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 scrolledwindow junction:dir(rtl) {
@@ -1895,7 +1895,7 @@ scrolledwindow junction:dir(rtl) {
 }
 
 scrolledwindow junction:backdrop {
-    background-color: #252525;
+    background-color: #1c1c1c;
     transition: 200ms ease-out;
 }
 
@@ -2214,7 +2214,7 @@ messagedialog.csd .titlebar,
 messagedialog.csd.background {
     border-radius: 0px;
     min-height: 28px;
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 messagedialog.csd .titlebar {
@@ -3827,7 +3827,7 @@ popover.combo list>row:not(:last-child) {
 headerbar {
     padding: 0 6px;
     min-height: 46px;
-    background: #252525;
+    background: #1c1c1c;
     padding-left: 10px;
     padding-right: 15px;
     transition: 0ms;
@@ -5172,7 +5172,7 @@ colorswatch.light {
 }
 
 colorswatch.light overlay {
-    color: #252525;
+    color: #1c1c1c;
 }
 
 colorswatch.light overlay:hover {
@@ -5180,7 +5180,7 @@ colorswatch.light overlay:hover {
 }
 
 colorswatch.light overlay:backdrop {
-    color: #252525;
+    color: #1c1c1c;
 }
 
 colorswatch:drop(active) {
@@ -8435,19 +8435,19 @@ tabbar undershoot {
 }
 
 tabbar undershoot.left {
-    background: linear-gradient(to right, #252525, transparent 20px);
+    background: linear-gradient(to right, #1c1c1c, transparent 20px);
 }
 
 tabbar undershoot.right {
-    background: linear-gradient(to left, #252525, transparent 20px);
+    background: linear-gradient(to left, #1c1c1c, transparent 20px);
 }
 
 tabbar .needs-attention-left undershoot.left {
-    background: linear-gradient(to right, #252525, transparent 20px);
+    background: linear-gradient(to right, #1c1c1c, transparent 20px);
 }
 
 tabbar .needs-attention-right undershoot.right {
-    background: linear-gradient(to left, #252525, transparent 20px);
+    background: linear-gradient(to left, #1c1c1c, transparent 20px);
 }
 
 tabbar tab {
@@ -9672,13 +9672,13 @@ button.titlebutton:not(.suggested-action):not(.destructive-action) {
 button.close.titlebutton:hover:not(.suggested-action):not(.destructive-action) {
     background-image: none;
     background-color: #ed5f5d;
-    color: #252525;
+    color: #1c1c1c;
 }
 
 button.close.titlebutton:active:not(.suggested-action):not(.destructive-action) {
     background-image: none;
     background-color: #cf5251;
-    color: #252525;
+    color: #1c1c1c;
 }
 
 button.minimize.titlebutton:hover:not(.suggested-action):not(.destructive-action),
@@ -9771,7 +9771,7 @@ headerbar.selection-mode button.titlebutton:backdrop,
 
 .terminal,
 .terminal text {
-    background-color: #252525;
+    background-color: #1c1c1c;
     color: white;
     font-family: monospace;
 }
@@ -9794,12 +9794,12 @@ headerbar.selection-mode button.titlebutton:backdrop,
 
 
 .terminator-terminal-window paned>separator {
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 .terminator-terminal-window notebook.frame {
-    border: 1px solid #252525;
-    background-color: #252525;
+    border: 1px solid #1c1c1c;
+    background-color: #1c1c1c;
 }
 
 
@@ -10428,12 +10428,12 @@ XfdesktopIconView.view .rubberband {
 
 
 window.background.chromium {
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 window.background.chromium entry,
 window.background.chromium>button {
-    border: 1px solid #252525;
+    border: 1px solid #1c1c1c;
 }
 
 window.background.chromium>button {
@@ -10478,7 +10478,7 @@ window.background.chromium treeview.view.cell:selected:focus {
 
 window.background.chromium treeview.view button {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 tooltip.background.chromium {
@@ -10506,7 +10506,7 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget.background {
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 #MozillaGtkWidget>widget border {
@@ -10650,7 +10650,7 @@ window.background.caja-navigation-window #Toolbar:backdrop {
 
 
 geary-conversation-viewer#conversation_viewer list.background.conversation-listbox.content {
-    background-color: #252525;
+    background-color: #1c1c1c;
     border: none;
     border-radius: 0;
 }
@@ -10746,7 +10746,7 @@ geary-conversation-viewer#conversation_viewer searchbar>revealer>box {
 }
 
 .deck {
-    background-color: #252525;
+    background-color: #1c1c1c;
 }
 
 .overlay-bar {
@@ -10771,7 +10771,7 @@ button .download_progress trough {
 }
 
 window#guake-terminal notebook header {
-    background: #252525;
+    background: #1c1c1c;
 }
 
 GraniteWidgetsPopOver {
@@ -10781,7 +10781,7 @@ GraniteWidgetsPopOver {
     -GraniteWidgetsPopOver-border-width: 0;
     -GraniteWidgetsPopOver-shadow-size: 12;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: #252525;
+    background: #1c1c1c;
     color: white;
 }
 
@@ -10848,7 +10848,7 @@ terminal-window notebook scrollbar slider {
 }
 
 #Return {
-    background: #252525;
+    background: #1c1c1c;
     color: white;
 }
 
@@ -10863,7 +10863,7 @@ terminal-window notebook scrollbar slider {
 
 sq_view {
     font-size: 1.5em;
-    background-color: #252525;
+    background-color: #1c1c1c;
     box-shadow: none;
 }
 
@@ -10924,7 +10924,7 @@ sq_button.small {
 @define-color borders rgba(255, 255, 255, 0.1);
 
 /*bg of terminal*/
-@define-color text_view_bg #252525;
+@define-color text_view_bg #1c1c1c;
 
 /*text color in terminal*/
 @define-color theme_text_color white;
@@ -10933,12 +10933,12 @@ sq_button.small {
 @define-color theme_base_color rgba(255, 255, 255, 0.05);
 
 /*terminator*/
-@define-color window_bg_color #252525;
-@define-color theme_bg_color #252525;
+@define-color window_bg_color #1c1c1c;
+@define-color theme_bg_color #1c1c1c;
 
 /*evolution*/
 @define-color theme_fg_color white;
-@define-color theme_base_color #252525;
+@define-color theme_base_color #1c1c1c;
 
 /*bg of selections*/
 @define-color theme_selected_bg_color #1b82b3;
