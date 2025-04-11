@@ -41,21 +41,6 @@ eval "$(fzf --zsh)"
 # eval "$(oh-my-posh init zsh --config '~/.config/omp.toml')"
 eval "$(zoxide init zsh)"
 
-# Environment variables
-export PATH="$HOME/.cargo/bin:$PATH"
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
-export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
-export TERMINAL=/usr/bin/kitty
-export XCURSOR_THEME="Bibata-Modern-Classic"
-export XCURSOR_SIZE=24
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_DESKTOP_PORTAL=hyprland
-export XDG_SESSION_TYPE=wayland
-export QT_QPA_PLATFORM=wayland
-
 # Aliases
 alias r='reboot'
 alias ff='fastfetch'
