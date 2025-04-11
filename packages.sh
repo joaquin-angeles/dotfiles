@@ -4,7 +4,7 @@ set -e  # Exit on error
 
 # Ensure paru is installed
 if ! command -v paru &>/dev/null; then
-    echo "🔧 paru not found. Installing paru-bin..."
+    echo "󰖷 paru not found. Installing paru..."
     temp_dir=$(mktemp -d)
     git clone --depth 1 https://aur.archlinux.org/paru-bin.git "$temp_dir" &>/dev/null
     (
@@ -12,7 +12,7 @@ if ! command -v paru &>/dev/null; then
         makepkg -si --noconfirm --quiet &>/dev/null
     )
     rm -rf "$temp_dir"
-    echo "✅ paru installed successfully."
+    echo " paru installed successfully."
 fi
 
 # Sorted list of packages in alphabetical order
@@ -38,13 +38,13 @@ packages=(
 # Install each package if not already installed
 for package in "${packages[@]}"; do
     if pacman -Q "$package" &>/dev/null; then
-        echo "✅ $package is already installed."
+        echo " $package is already installed."
     else
-        echo "📦 Installing $package..."
+        echo " Installing $package..."
         if paru -S --noconfirm --quiet "$package" &>/dev/null; then
-            echo "✅ Successfully installed $package."
+            echo " Successfully installed $package."
         else
-            echo "❌ Failed to install $package." >&2
+            echo " Failed to install $package." >&2
         fi
     fi
 done
@@ -53,7 +53,7 @@ done
 if [ "$SHELL" != "/usr/bin/zsh" ]; then
     echo "🔧 Setting zsh as the default shell..."
     chsh -s /usr/bin/zsh &>/dev/null
-    echo "✅ zsh has been set as the default shell."
+    echo " zsh has been set as the default shell."
 else
-    echo "✅ zsh is already the default shell."
+    echo " zsh is already the default shell."
 fi
