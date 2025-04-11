@@ -16,7 +16,7 @@ else
     git clone --depth 1 https://github.com/googlefonts/rubik.git "$font_dir/rubik-font"
 
     # Copy the TTF files from the variable directory into the fonts directory
-    cp -r "$font_dir/rubik-font/fonts/variable"/*.ttf "$font_dir"
+    cp -r "$font_dir/rubik-font/fonts/variable"/*.ttf "$font_dir/Rubik"
 
     # Delete the rubik-font directory after moving the TTFs
     rm -rf "$font_dir/rubik-font"
