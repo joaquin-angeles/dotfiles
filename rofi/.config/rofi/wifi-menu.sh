@@ -62,7 +62,6 @@ done < <(nmcli -f SSID,SIGNAL device wifi list | awk 'NR>1')
 # Final menu
 menu_items=("$SCAN_ICON" "$TOGGLE_WIFI" "" "${ssid_menu[@]}")
 
-
 # Show Rofi menu
 makoctl dismiss
 selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str 'listview {spacing: 6px;}')
@@ -90,6 +89,20 @@ case "$selection" in
     *)
         ssid_selected=$(echo "$selection" | sed 's/^.* //')
 
+        # Delete the existing connection profile for the SSID
+        nmcli connection delete id "$ssid_selected" > /dev/null 2>&1
+
+        # Prompt for the password
         password=$(rofi -dmenu -p "Enter Password for $ssid_selected:" -password)
         if [[ -z "$password" ]]; then
-            notify-send "Connection Failed"
+            notify-send "Connection Failed" "Password is required to connect to $ssid_selected."
+            exit
+        fi
+
+        # Try connecting with the provided password
+        nmcli device wifi connect "$ssid_selected" password "$password" || {
+            notify-send "Connection Failed" "Failed to connect to $ssid_selected."
+            exit
+        }
+        ;;
+esac
