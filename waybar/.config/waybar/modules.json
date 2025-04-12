@@ -2,7 +2,7 @@
     "network": {
         "format-wifi": "󰖩",
         "format-disconnected": "󰖪",
-        "on-click": "~/.config/rofi/wifi.sh",
+        "on-click": "~/.config/rofi/wifi-menu.sh",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
     },
