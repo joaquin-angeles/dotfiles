@@ -20,6 +20,7 @@ packages=(
     hyprland
     hyprlock
     hyprpaper
+    inotify-tools
     kvantum
     kvantum-qt5
     libnotify
@@ -31,6 +32,9 @@ packages=(
     poweralertd
     rofi-wayland
     rofi-emoji
+    grim
+    slurp
+    swappy
     waybar
     wlogout
     zoxide
