@@ -19,7 +19,7 @@ fi
 if fc-list | grep -i "Rubik" &>/dev/null; then
     echo " Rubik font is already installed."
 else
-    echo "📦 Installing Rubik font..."
+    echo " Installing Rubik font..."
     temp_dir=$(mktemp -d)
     git clone --depth 1 https://github.com/googlefonts/rubik.git "$temp_dir" &>/dev/null
     cp -r "$temp_dir/fonts/variable/"*.ttf "$font_dir/Rubik"

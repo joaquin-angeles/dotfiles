@@ -28,7 +28,9 @@ packages=(
     nemo-fileroller
     neovim
     pavucontrol
+    poweralertd
     rofi-wayland
+    rofi-emoji
     waybar
     wlogout
     zoxide

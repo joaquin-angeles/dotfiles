@@ -23,7 +23,9 @@
         "format-charging": "󰂄",
         "format-warning": "󰂃",
         "tooltip": true,
-        "tooltip-format": "Battery ({capacity}%)"
+        "tooltip-format": "Discharging ({capacity}%)",
+        "tooltip-format-charging": "Charging ({capacity}%)",
+        "tooltip-format-full": "Full ({capacity}%)"
     },
 
     "custom/space": {
@@ -35,7 +37,7 @@
         "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
         "format-muted": "󰝟",
         "on-click": "pavucontrol",
-        "tooltip-format": "Volume ({volume}%)"
+        "tooltip-format": "Volume ({volume}%)",
     },
 
     "custom/space": {
