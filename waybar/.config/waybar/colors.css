@@ -1,2 +1,8 @@
-@define-color background #1c1c1c;
-@define-color foreground #eeeeee;
+@define-color bg         #1c1c1c;
+@define-color fg         #eeeeee;
+@define-color inactive   #454545; 
+@define-color red        #865054;
+@define-color green      #5f7a5f;
+@define-color blue       #5f7a8c;
+@define-color yellow     #a4965f;
+@define-color lime       #6e8f2a; 

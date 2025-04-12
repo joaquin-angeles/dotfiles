@@ -4,15 +4,15 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono";
+    font-family: "JetBrains Mono";
     font-size: 13pt;
     min-height: 0;
 }
 
 /* Waybar Window */
 window#waybar {
-    background: @background;
-    color: @foreground;
+    background: @bg;
+    color: @fg;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -22,7 +22,7 @@ window#waybar {
     min-width: 14px;
     padding: 0 6px;
     background: transparent;
-    color: #404040;
+    color: #454545;
     transition: color 0.3s ease;
 }
 
@@ -33,7 +33,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #6E8F2A;
+    color: @lime;
 }
 
 /* System tray */
@@ -46,14 +46,14 @@ window#waybar {
     padding-right: 14px;
     padding-left: 7px;
     padding-top: 0.5px;
-    color: #5f7a8c;
+    color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
     font-size: 20px;
     padding-right: 12px;
-    color: #a4965f
+    color: @yellow
 }
 
 /* Clock Module */
@@ -64,10 +64,10 @@ window#waybar {
 
 /* Custom Power Module */
 #custom-power {
-    padding-right: 14px;
+    padding-right: 16px;
     padding-left: 7px;
     font-size: 22;
-    color: #865054
+    color: @red
 }
 
 /* Custom Menu Module */
@@ -80,5 +80,5 @@ window#waybar {
     padding-right: 7px;
     padding-top: 1px;
     padding-bottom: 1px;
-    color: #5f7a5f;
+    color: @green;
 }

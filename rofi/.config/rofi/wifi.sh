@@ -31,7 +31,7 @@ elif [[ "$connected" =~ "disabled" ]]; then
 fi
 
 # Use Rofi to select a Wi-Fi network
-chosen_network=$(echo -e "$toggle\n$wifi_list" | rofi -dmenu -i -no-cursor -selected-row 1 -p "                                                 (Network Manager)                                                                                                                ")
+chosen_network=$(echo -e "$toggle\n$wifi_list" | rofi -dmenu -i -no-cursor -selected-row 1 -p "Wi-Fi SSID:")
 
 # Extract the chosen network name
 read -r chosen_id <<< "${chosen_network:3}"
