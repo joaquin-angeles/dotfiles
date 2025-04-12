@@ -62,7 +62,3 @@ cd() {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=/home/joaquin/.local/bin:/home/joaquin/.local/share/zinit/polaris/bin:/home/joaquin/.cargo/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-export PATH=/home/joaquin/.local/bin:/home/joaquin/.local/share/zinit/polaris/bin:/home/joaquin/.cargo/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
-
-export PATH=$PATH:/home/joaquin/.spicetify
