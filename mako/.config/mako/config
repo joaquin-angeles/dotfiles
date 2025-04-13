@@ -1,5 +1,3 @@
-ignore-timeout=1
-layer = top
 anchor=top-center
 text-alignment=center
 width=300
@@ -8,4 +6,4 @@ default-timeout=3000
 background-color=#1c1c1cCC
 border-color=#eeeeee
 border-radius=8
-font=Rubik, JetBrainsMono Nerd Font Mono 13
+font=Rubik, JetBrainsMono Nerd Font 13

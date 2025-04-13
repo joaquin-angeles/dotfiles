@@ -13,9 +13,9 @@ get_volume_bar() {
 	bar=" "
 	for ((i = 0; i < 20; i++)); do
 		if [ $i -lt $blocks ]; then
-			bar+="<span foreground='#5f7a8c'>▄ </span>"
+			bar+="# "
 		else
-			bar+="<span foreground='#303030'>▄ </span>"
+			bar+="<span foreground='#454545'># </span>"
 		fi
 	done
 	bar+=" "
@@ -41,7 +41,8 @@ notify_user() {
     icon=$(get_icon)
     bar=$(get_volume_bar)
     volume=$(get_volume)
-    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Volume ($volume%)" "$bar"
+    notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "$icon Volume ($volume%)
+    " "$bar"
 }
 
 # Increase Volume
