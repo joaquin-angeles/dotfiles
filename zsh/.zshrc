@@ -45,12 +45,12 @@ eval "$(zoxide init zsh)"
 # Aliases
 alias c=clear
 cd() {
-    z "$@" && exa --icons
+    z "$@" && eza
 }
 alias ff='fastfetch'
 alias fzf="fzf --preview='bat {}'"
 alias k=kill
-alias ls='exa --icons'
+alias ls='eza'
 alias pk=pkill
 alias vim=nvim
 

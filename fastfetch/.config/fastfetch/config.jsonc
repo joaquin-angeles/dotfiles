@@ -66,7 +66,6 @@
         {
             "type": "packages",
             "key": " ",
-            "format": "{1} packages installed"
         },
         {
             "type": "shell",
