@@ -43,22 +43,16 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # Aliases
-alias r='reboot'
-alias ff='fastfetch'
 alias c=clear
-alias k=kill
-alias pk=pkill
-alias prime-run='env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia __VK_LAYER_NV_optimus=NVIDIA_only'
-alias superman='sudo pacman'
-alias dotfiles='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias fzf="fzf --preview='bat {}'"
-alias xa='exa --icons'
-alias vim=nvim
-
-# Directory change improvements
 cd() {
     z "$@" && exa --icons
 }
+alias ff='fastfetch'
+alias fzf="fzf --preview='bat {}'"
+alias k=kill
+alias ls='exa --icons'
+alias pk=pkill
+alias vim=nvim
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# P10K configuration. (p10k configure)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
