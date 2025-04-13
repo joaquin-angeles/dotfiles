@@ -17,9 +17,10 @@
 }
 
 configuration {
-    modi: "drun,emoji";
+    modi: "drun";
     show-icons: false;
     display-drun: "Apps:";
+    drun-display-format: "{name}";
     display-emoji: "Emoji:";
 }
 
