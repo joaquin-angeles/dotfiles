@@ -1,5 +1,7 @@
 @define-color bg         #1c1c1c;
+@define-color bg-darker  #121212;
 @define-color fg         #eeeeee;
+@define-color fg-darker  #656565;
 @define-color inactive   #454545; 
 @define-color red        #865054;
 @define-color green      #5f7a5f;

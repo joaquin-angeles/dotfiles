@@ -22,12 +22,12 @@ window#waybar {
     min-width: 14px;
     padding: 0 6px;
     background: transparent;
-    color: #454545;
+    color: @inactive;
     transition: color 0.3s ease;
 }
 
 #workspaces button:hover {
-    color: #9e4f4f;
+    color: @fg-darker;
     box-shadow: inherit;
     text-shadow: inherit;
 }
@@ -66,7 +66,7 @@ window#waybar {
 #custom-power {
     padding-right: 16px;
     padding-left: 7px;
-    font-size: 22;
+    font-size: 22px;
     color: @red
 }
 
