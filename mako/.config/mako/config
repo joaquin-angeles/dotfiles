@@ -1,4 +1,5 @@
 ignore-timeout=1
+layer = top
 anchor=top-center
 text-alignment=center
 width=300
