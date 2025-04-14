@@ -11,7 +11,7 @@ CLIP_HASH_BEFORE=$(wl-paste --no-newline --type image/png 2>/dev/null | sha256su
 # Notify when screenshot is saved
 inotifywait -e create --format '%f' "$SCREENSHOT_DIR" | while read NEWFILE; do
     NEWFILE_PATH="$SCREENSHOT_DIR/$NEWFILE"
-    sleep 0.3  # wait for file to be fully written
+    sleep 0.5
     notify-send -u low -i "$NEWFILE_PATH" "Screenshot Saved" "Saved as $NEWFILE in $SCREENSHOT_DIR"
     break
 done &
