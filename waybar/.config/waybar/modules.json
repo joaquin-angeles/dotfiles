@@ -34,8 +34,8 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "format-icons": ["󰝟", "󰖀", "󰖀", "󰕾"],
-        "format-muted": "󰝟",
+        "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
+        "format-muted": "󰖁",
         "on-click": "pavucontrol",
         "tooltip-format": "Volume ({volume}%)",
     },

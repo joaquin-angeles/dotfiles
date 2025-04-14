@@ -1,6 +1,6 @@
 # Fastfetch on start
 sleep 0.01
-fastfetch
+fastfetch --kitty-direct ~/.config/fastfetch/logos/logo.png
 
 # Enable Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -47,11 +47,13 @@ alias c=clear
 cd() {
     z "$@" && eza
 }
-alias ff='fastfetch'
+alias ff='fastfetch --kitty-direct ~/.config/fastfetch/logos/logo.png'
+alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logos/logo.png'
 alias fzf="fzf --preview='bat {}'"
 alias k=kill
 alias ls='eza'
 alias pk=pkill
+alias x=exit
 alias vim=nvim
 
 # P10K configuration. (p10k configure)
