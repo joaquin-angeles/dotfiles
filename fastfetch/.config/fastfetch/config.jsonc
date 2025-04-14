@@ -4,11 +4,15 @@
         "color": {
             "keys": "238;238;238"
         },
-        "separator": "❯ "
+        "separator": "• "
     },
 
     "logo": {
-        "source": "/home/joaquin/.config/fastfetch/logos/logo.png"
+        "source": "/home/joaquin/.config/fastfetch/logo.png",
+        "color": {
+            "1": "238;238;238",
+            "2": "238;238;238"
+        }
     },
 
     "modules": [

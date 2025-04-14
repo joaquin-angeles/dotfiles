@@ -1,11 +1,17 @@
-# Fastfetch on start
-sleep 0.01
-kitty @ set-spacing padding=5
-fastfetch
+# Kitty configurations
+if [[ $TERM == "xterm-kitty" ]]; then
+  kitty @ set-spacing padding=6
+fi
+
+if [[ $TERM == "xterm-kitty" ]]; then
+    fastfetch --kitty-direct ~/.config/fastfetch/logo.png
+else
+    fastfetch --logo ~/.config/fastfetch/logo.txt
+fi
 
 # Enable Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Plugin manager (Zinit)
@@ -48,9 +54,9 @@ alias c=clear
 cd() {
     z "$@" && eza
 }
-# alias ff='fastfetch --logo ~/.config/fastfetch/logos/logo.png'
-# alias fastfetch='fastfetch --logo ~/.config/fastfetch/logos/logo.png'
+alias ff='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
 alias fzf="fzf --preview='bat {}'"
+alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
 alias k=kill
 alias ls='eza'
 alias pk=pkill
