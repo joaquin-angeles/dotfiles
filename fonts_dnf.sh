@@ -2,19 +2,6 @@
 
 set -e  # Exit on error
 
-# Ensure paru is installed
-if ! command -v paru &>/dev/null; then
-    echo "󰖷 paru not found. Installing paru-bin..."
-    temp_dir=$(mktemp -d)
-    git clone --depth 1 https://aur.archlinux.org/paru-bin.git "$temp_dir" &>/dev/null
-    (
-        cd "$temp_dir"
-        makepkg -si --noconfirm --quiet &>/dev/null
-    )
-    rm -rf "$temp_dir"
-    echo " paru installed successfully."
-fi
-
 # Install Rubik font manually if not already present
 if fc-list | grep -i "Rubik" &>/dev/null; then
     echo " Rubik font is already installed."
@@ -22,7 +9,9 @@ else
     echo " Installing Rubik font..."
     temp_dir=$(mktemp -d)
     git clone --depth 1 https://github.com/googlefonts/rubik.git "$temp_dir" &>/dev/null
-    cp -r "$temp_dir/fonts/variable/"*.ttf "$font_dir/Rubik"
+    font_dir="$HOME/.local/share/fonts"
+    mkdir -p "$font_dir"
+    cp -r "$temp_dir/fonts/variable/"*.ttf "$font_dir/"
     rm -rf "$temp_dir"
     fc-cache -r
     echo " Rubik font installed successfully."
@@ -34,21 +23,22 @@ if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
     gsettings set org.gnome.desktop.interface font-name 'Rubik 13' &>/dev/null
 fi
 
-# Sorted list of font packages in alphabetical order
+# Sorted list of font packages in alphabetical order (using dnf)
 font_packages=(
-    otf-noto-sans-cjk
-    ttf-apple-emoji
-    ttf-jetbrains-mono-nerd
-    ttf-jetbrains-mono
+    google-roboto
+    google-roboto-mono
+    fonts-noto-cjk
+    fonts-apple-emoji
+    fonts-jetbrains-mono
 )
 
 # Install each font package if not already installed
 for font in "${font_packages[@]}"; do
-    if pacman -Q "$font" &>/dev/null; then
+    if rpm -q "$font" &>/dev/null; then
         echo " $font is already installed."
     else
-        echo "📦 Installing $font..."
-        if paru -S --noconfirm --quiet "$font" &>/dev/null; then
+        echo " Installing $font..."
+        if sudo dnf install -y "$font" &>/dev/null; then
             echo " Successfully installed $font."
         else
             echo " Failed to install $font." >&2

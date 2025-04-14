@@ -5,6 +5,8 @@ vim.cmd("highlight Normal guifg=#eeeeee")
 
 -- For plugins with floating windows or popups
 vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
+vim.cmd("hi CursorLine guibg=#282828 ctermbg=NONE")
+vim.cmd("hi CursorLineNr guifg=#6e8f2a gui=bold ctermfg=255 cterm=bold")
 vim.cmd("hi FloatBorder guibg=NONE ctermbg=NONE")
 vim.cmd("hi Pmenu guibg=NONE ctermbg=NONE")
 vim.cmd("hi PmenuSel guibg=NONE ctermbg=NONE")
@@ -41,4 +43,3 @@ vim.cmd("hi UndoTreeNormal guibg=NONE ctermbg=NONE")
 -- Pmenu transparency for completion menu
 vim.cmd("hi Pmenu guibg=NONE ctermbg=NONE")
 vim.cmd("hi PmenuSel guibg=NONE ctermbg=NONE")
-

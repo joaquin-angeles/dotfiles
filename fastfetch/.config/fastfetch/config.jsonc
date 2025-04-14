@@ -8,11 +8,7 @@
     },
 
     "logo": {
-        "source": "/home/joaquin/.config/fastfetch/logos/logo.txt",
-        "color": {
-            "1": "238;238;238",
-	    "2": "238;238;238"
-        }
+        "source": "/home/joaquin/.config/fastfetch/logos/logo.png"
     },
 
     "modules": [

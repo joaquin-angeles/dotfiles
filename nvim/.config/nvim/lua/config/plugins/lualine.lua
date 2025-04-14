@@ -17,15 +17,15 @@ require('lualine').setup({
         },
     },
     sections = {
-        lualine_a = { { 'mode', fmt = function(str) return ' ' .. str end } },
+        lualine_a = { { 'mode', separator = { left = '' }, fmt = function(str) return ' ' .. str end } },
         lualine_b = { 'filename' },
         lualine_c = {},
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = {
             { 'location' },
-            { function() return ' ' .. os.date('%I:%M %p') end },
-        },
+            { function() return ' ' .. os.date('%I:%M %p') end, separator = { right = '' } }
+        }
     },
 })
 

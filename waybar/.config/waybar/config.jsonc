@@ -9,9 +9,9 @@
         "custom/space",
         "hyprland/workspaces",
     ],
-    // "modules-center": [
-    //     "hyprland/window"
-    // ],
+    "modules-center": [
+        "hyprland/window"
+    ],
     "modules-right": [
         "tray",
         "network",

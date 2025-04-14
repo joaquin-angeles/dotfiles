@@ -1,6 +1,7 @@
 # Fastfetch on start
 sleep 0.01
-fastfetch --kitty-direct ~/.config/fastfetch/logos/logo.png
+kitty @ set-spacing padding=5
+fastfetch
 
 # Enable Powerlevel10k instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -47,8 +48,8 @@ alias c=clear
 cd() {
     z "$@" && eza
 }
-alias ff='fastfetch --kitty-direct ~/.config/fastfetch/logos/logo.png'
-alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logos/logo.png'
+# alias ff='fastfetch --logo ~/.config/fastfetch/logos/logo.png'
+# alias fastfetch='fastfetch --logo ~/.config/fastfetch/logos/logo.png'
 alias fzf="fzf --preview='bat {}'"
 alias k=kill
 alias ls='eza'
