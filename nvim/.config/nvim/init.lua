@@ -2,7 +2,7 @@ require("config.lazy")
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
-require("config.theme")
+require("colors.theme")
 require("colors.syntax")
 
 require("config.plugins.telescope")

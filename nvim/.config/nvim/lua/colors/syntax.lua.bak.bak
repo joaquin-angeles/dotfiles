@@ -1,0 +1,86 @@
+-- monochrome_vscode_syntax.lua
+
+local colors = {
+    fg = "#eeeeee",
+    comment = "#454545",
+    red = "#865054",
+    green = "#5f7a5f",
+    yellow = "#a4965f",
+    blue = "#72949a",
+    purple = "#75607a",
+    cyan = "#5f7a7f",
+    orange = "#926e3f",
+}
+
+local highlight_groups = {
+    Normal       = { fg = colors.fg },
+    Comment      = { fg = colors.comment, italic = true },
+    Constant     = { fg = colors.yellow },
+    String       = { fg = colors.green },
+    Character    = { fg = colors.green },
+    Number       = { fg = colors.cyan },
+    Boolean      = { fg = colors.cyan },
+    Float        = { fg = colors.cyan },
+    Identifier   = { fg = colors.blue },
+    Function     = { fg = colors.blue },
+    Statement    = { fg = colors.red },
+    Conditional  = { fg = colors.red },
+    Repeat       = { fg = colors.red },
+    Label        = { fg = colors.orange },
+    Operator     = { fg = colors.fg },
+    Keyword      = { fg = colors.red },
+    Exception    = { fg = colors.red },
+    PreProc      = { fg = colors.purple },
+    Include      = { fg = colors.purple },
+    Define       = { fg = colors.purple },
+    Macro        = { fg = colors.purple },
+    Type         = { fg = colors.green },
+    StorageClass = { fg = colors.green },
+    Structure    = { fg = colors.green },
+    Typedef      = { fg = colors.green },
+    Special      = { fg = colors.orange },
+    Underlined   = { underline = true },
+    Error        = { fg = colors.red, bold = true },
+    Todo         = { fg = colors.orange, bold = true },
+
+    -- UI highlights with no bg override
+    MatchParen   = { fg = colors.green, bold = true },
+    Search       = { fg = colors.yellow },
+    IncSearch    = { fg = colors.orange },
+
+    -- LSP diagnostics
+    DiagnosticError = { fg = colors.red },
+    DiagnosticWarn  = { fg = colors.yellow },
+    DiagnosticInfo  = { fg = colors.blue },
+    DiagnosticHint  = { fg = colors.green },
+
+    -- Git signs
+    GitGutterAdd    = { fg = colors.green },
+    GitGutterChange = { fg = colors.yellow },
+    GitGutterDelete = { fg = colors.red },
+
+    -- Tree-sitter
+    ["@variable"]           = { fg = colors.fg },
+    ["@function"]           = { fg = colors.blue },
+    ["@function.builtin"]   = { fg = colors.purple },
+    ["@method"]             = { fg = colors.blue },
+    ["@parameter"]          = { fg = colors.green },
+    ["@keyword"]            = { fg = colors.red },
+    ["@keyword.function"]   = { fg = colors.red },
+    ["@type"]               = { fg = colors.green },
+    ["@type.definition"]    = { fg = colors.green },
+    ["@string"]             = { fg = colors.green },
+    ["@number"]             = { fg = colors.cyan },
+    ["@constant"]           = { fg = colors.yellow },
+    ["@constant.builtin"]   = { fg = colors.yellow },
+    ["@comment"]            = { fg = colors.comment, italic = true },
+    ["@constructor"]        = { fg = colors.green },
+    ["@operator"]           = { fg = colors.fg },
+    ["@tag"]                = { fg = colors.purple },
+    ["@tag.attribute"]      = { fg = colors.blue },
+    ["@tag.delimiter"]      = { fg = colors.fg },
+}
+
+for group, opts in pairs(highlight_groups) do
+    vim.api.nvim_set_hl(0, group, opts)
+end
