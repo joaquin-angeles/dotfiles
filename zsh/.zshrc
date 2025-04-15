@@ -1,3 +1,4 @@
+sleep 0.01
 source ~/.zsh/autostart.zsh
 source ~/.zsh/newline.zsh
 source ~/.zsh/history.zsh

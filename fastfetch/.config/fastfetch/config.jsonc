@@ -100,8 +100,7 @@
             "type": "colors",
             "symbol": "circle",
             "paddingLeft": 13
-        },
-        "break"
+        }
     ]
 }
 

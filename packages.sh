@@ -28,6 +28,7 @@ packages=(
     nemo
     nemo-fileroller
     neovim
+    oh-my-posh-bin
     pavucontrol
     rofi-wayland
     rofi-emoji

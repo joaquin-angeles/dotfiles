@@ -1,4 +1,3 @@
-# Joaquin's monochromatic dotfiles
+# Joaquin's monochromatic dotfiles for Arch Linux (btw)
 
-use gnu stow to implement dotfiles.
-(sudo pacman -S stow)
+idk how to put image previews so uhm.. fuck me ig.

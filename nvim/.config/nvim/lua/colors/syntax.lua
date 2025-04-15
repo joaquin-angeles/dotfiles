@@ -7,16 +7,16 @@ local colors = {
     blue           = "#5f7a8c",
     magenta        = "#75607a",
     cyan           = "#5f7a7f",
-    orange         = "#c97c3e",
-    bright_red     = "#b85757",
+    orange         = "#926e3f",
+    bright_red     = "#976061",
     bright_green   = "#729a72",
     bright_yellow  = "#a49a72",
     bright_blue    = "#72949a",
     bright_magenta = "#8c729a",
     bright_cyan    = "#729a96",
-    bright_orange  = "#926e3f",
-    bright_black   = "#404040",
-    bright_gray    = "#505050",
+    bright_orange  = "#a49a72",
+    bright_black   = "#666666",
+    bright_gray    = "#666666",
     fg             = "#eeeeee"
 }
 
@@ -24,7 +24,7 @@ local colors = {
 set(0, "Comment",      { fg = colors.bright_black, italic = true })
 set(0, "String",       { fg = colors.green })
 set(0, "Function",     { fg = colors.blue })
-set(0, "Keyword",      { fg = colors.bright_orange, bold = true, italic = true })
+set(0, "Keyword",      { fg = colors.orange, bold = true, italic = true })
 set(0, "Float",        { fg = colors.yellow })
 set(0, "Identifier",   { fg = colors.red })
 set(0, "Number",       { fg = colors.bright_yellow })
@@ -42,6 +42,7 @@ set(0, "@number",              { link = "Number" })
 set(0, "@boolean",             { link = "Boolean" })
 set(0, "@float",               { link = "Number" })
 set(0, "@keyword",             { link = "Keyword" })
+set(0, "@keyword.function",    { fg = colors.bright_orange, bold = true })
 set(0, "@keyword.return",      { link = "Keyword" })
 set(0, "@operator",            { link = "Operator" })
 set(0, "@function",            { link = "Function" })
