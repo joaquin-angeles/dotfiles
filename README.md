@@ -1,3 +1,2 @@
-# Joaquin's monochromatic dotfiles for Arch Linux (btw)
-
-idk how to put image previews so uhm.. fuck me ig.
+# Arch Linux dotfiles
+one of the joaquins in the world's dotfiles.
