@@ -14,5 +14,5 @@ autoload -U compinit && compinit
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(oh-my-posh init zsh --config '~/.config/omp.toml')"
+eval "$(oh-my-posh init zsh --config '~/.config/zsh/omp.toml')"
 eval "$(zoxide init zsh)"
