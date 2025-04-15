@@ -4,7 +4,7 @@
         "color": {
             "keys": "238;238;238"
         },
-        "separator": "• "
+        "separator": " • "
     },
 
     "logo": {
@@ -22,34 +22,34 @@
         },
         {
             "type": "host",
-            "key": "󰌢 ",
+            "key": "󰌢",
             "format": "{1}"
         },
         {
             "type": "display",
             "format": "{1}x{2} @ {3}Hz",
-            "key": "󰹑 "
+            "key": "󰹑"
         },
         {
             "type": "cpu",
-            "key": "󰻠 "
+            "key": "󰻠"
         },
         {
             "type": "gpu",
             "format": "{1} {2}",
-            "key": " "
+            "key": ""
         },
         {
             "type": "memory",
-            "key": " "
+            "key": ""
         },
         {
             "type": "swap",
-            "key": "󰓡 "
+            "key": "󰓡"
         },
         {
             "type": "disk",
-            "key": "󰋊 "
+            "key": "󰋊"
         },
         {
             "type": "custom",
@@ -57,39 +57,39 @@
         },
         {
             "type": "os",
-            "key": " "
+            "key": ""
         },
         {
             "type": "kernel",
-            "key": " "
+            "key": ""
         },
         {
             "type": "packages",
-            "key": " ",
+            "key": "",
         },
         {
             "type": "shell",
-            "key": " "
+            "key": ""
         },
         {
             "type": "terminal",
-            "key": " "
+            "key": ""
         },
         {
             "type": "de",
-            "key": "󰙧 "
+            "key": "󰙧"
         },
         {
             "type": "wm",
-            "key": "󰨡 "
+            "key": "󰨡"
         },
         {
             "type": "uptime",
-            "key": " "
+            "key": ""
         },
         {
             "type": "command",
-            "key": "󱦟 ",
+            "key": "󱦟",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
         {
