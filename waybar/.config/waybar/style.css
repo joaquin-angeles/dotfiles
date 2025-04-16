@@ -4,7 +4,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Rubik", "JetBrains Mono Nerd Font";
+    font-family: "JetBrains Mono Nerd Font";
     font-size: 14pt;
     min-height: 0;
 }
@@ -24,7 +24,6 @@ window#waybar {
     background: transparent;
     color: @inactive;
     transition: color 0.3s ease;
-    font-weight: 400
 }
 
 #workspaces button:hover {
