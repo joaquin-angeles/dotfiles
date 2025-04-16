@@ -9,10 +9,10 @@ require('lualine').setup({
                 b = { fg = '#eeeeee', bg = '#282828' },
                 c = { bg = 'NONE' }
             },
-            insert = { a = { fg = '#1c1c1c', bg = '#5f7a5f' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
-            visual = { a = { fg = '#1c1c1c', bg = '#d4b483' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
+            insert = { a = { fg = '#eeeeee', bg = '#5f7a5f' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
+            visual = { a = { fg = '#1c1c1c', bg = '#a4965f' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
             replace = { a = { fg = '#1c1c1c', bg = '#ff5f5f' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
-            command = { a = { fg = '#1c1c1c', bg = '#926e3f' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
+            command = { a = { fg = '#eeeeee', bg = '#926e3f' }, b = { fg = '#eeeeee', bg = '#282828' }, c = { bg = 'NONE' } },
             inactive = { a = { fg = '#888888', bg = '#1c1c1c' }, b = { fg = '#888888', bg = '#1c1c1c' }, c = { bg = 'NONE' } },
         },
     },
@@ -21,7 +21,6 @@ require('lualine').setup({
             { 
                 'mode',
                 separator = { left = '', right = '' },
-                fmt = function(str) return ' ' .. str end 
             } 
         },
         lualine_b = { 'filename' },
@@ -30,10 +29,7 @@ require('lualine').setup({
         lualine_y = { 'progress' },
         lualine_z = {
             { 'location' },
-            { function() return ' ' .. os.date('%I:%M %p') end, separator = { right = '' } }
+            { function() return '' .. os.date('%I:%M %p') end, separator = { right = '' } }
         }
     },
 })
-
-vim.cmd("highlight StatusLine guibg=NONE")
-vim.cmd("highlight StatusLineNC guibg=NONE")
