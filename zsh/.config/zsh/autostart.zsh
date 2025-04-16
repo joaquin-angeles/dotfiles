@@ -12,6 +12,14 @@ fi
 # Autoload
 autoload -U compinit && compinit
 
+# New line after commands
+precmd() {
+  local last_cmd=$(fc -ln -1 | sed 's/^[ \t]*//;s/[ \t]*$//')
+  if [[ $last_cmd != "clear" && $last_cmd != "c" ]]; then
+    echo
+  fi
+}
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(oh-my-posh init zsh --config '~/.config/zsh/omp.toml')"
