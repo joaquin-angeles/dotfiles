@@ -17,6 +17,7 @@ fi
 
 # Sorted list of packages in alphabetical order
 packages=(
+    eza
     hyprland
     hyprlock
     hyprpaper

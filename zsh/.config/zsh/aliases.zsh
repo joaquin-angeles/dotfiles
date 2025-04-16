@@ -9,7 +9,7 @@ alias cat=bat
 if [[ $TERM == "xterm-kitty" ]]; then
     alias ff='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
 else
-    alias ff='fastfetch --logo ~/.config/fastfetch/logo.txt'
+    alias ff='fastfetch'
 fi
 
 alias fzf="fzf --preview='bat {}'"
@@ -17,7 +17,7 @@ alias fzf="fzf --preview='bat {}'"
 if [[ $TERM == "xterm-kitty" ]]; then
     alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
 else
-    alias fastfetch='fastfetch --logo ~/.config/fastfetch/logo.txt'
+    alias fastfetch='fastfetch'
 fi
 
 alias k=kill

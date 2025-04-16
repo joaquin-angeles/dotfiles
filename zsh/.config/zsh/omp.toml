@@ -13,32 +13,40 @@ background = 'transparent'
 foreground = "blue"
 template = '{{ .Path }}'
 
-      [blocks.segments.properties]
-          style = 'full'
+  [blocks.segments.properties]
+  style = 'full'
 
 [[blocks.segments]]
 type = 'git'
 style = 'plain'
-foreground = 'cyan'
+foreground = '#555555'
 background = 'transparent'
 template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 
-      [blocks.segments.properties]
-            branch_icon=''
-            fetch_status = true
+  [blocks.segments.properties]
+  branch_icon = ''
+  fetch_status = true
+
 [[blocks]]
-  type = 'rprompt'
-  overflow = 'hidden'
+type = 'prompt'
+alignment = 'right'
 
-  [[blocks.segments]]
-    type = 'executiontime'
-    style = 'plain'
-    foreground = 'yellow'
-    background = 'transparent'
-    template = '{{ .FormattedMs }}'
+[[blocks.segments]]
+type = 'executiontime'
+style = 'plain'
+foreground = 'yellow'
+background = 'transparent'
+template = '{{ .FormattedMs }} '
 
-    [blocks.segments.properties]
-      threshold = 5000
+  [blocks.segments.properties]
+  threshold = 5000
+
+[[blocks.segments]]
+type = 'time'
+style = 'plain'
+foreground = 'cyan'
+background = 'transparent'
+template = '{{ .CurrentDate | date "03:04:05 PM" }}'
 
 [[blocks]]
 type = 'prompt'
@@ -49,16 +57,16 @@ newline = true
 type = 'text'
 style = 'plain'
 foreground_templates = [
-    "{{if gt .Code 0}}red{{end}}",
-    "{{if eq .Code 0}}green{{end}}",
+  "{{if gt .Code 0}}red{{end}}",
+  "{{if eq .Code 0}}green{{end}}",
 ]
 background = 'transparent'
 template = '❯'
 
 [transient_prompt]
 foreground_templates = [
-    "{{if gt .Code 0}}red{{end}}",
-    "{{if eq .Code 0}}green{{end}}",
+  "{{if gt .Code 0}}red{{end}}",
+  "{{if eq .Code 0}}green{{end}}",
 ]
 background = 'transparent'
 template = '❯ '
