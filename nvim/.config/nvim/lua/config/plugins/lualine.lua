@@ -1,5 +1,9 @@
+vim.cmd("highlight StatusLine guibg=NONE")
+vim.cmd("highlight StatusLineNC guibg=NONE")
+
 require('lualine').setup({
     options = {
+        icons_enabled = false,
         disabled_filetypes = { 'alpha', 'neo-tree' },
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },
@@ -24,12 +28,16 @@ require('lualine').setup({
             } 
         },
         lualine_b = { 'filename' },
-        lualine_c = {},
-        lualine_x = { 'encoding', 'fileformat', 'filetype' },
-        lualine_y = { 'progress' },
+        lualine_c = {
+        },
+        lualine_x = {
+            'filetype'
+        },
+        lualine_y = {
+            'location'
+        },
         lualine_z = {
-            { 'location' },
-            { function() return '' .. os.date('%I:%M %p') end, separator = { right = '' } }
+            { function() return '' .. os.date('%I:%M %p') end, separator = { left = '', right = '' } }
         }
     },
 })

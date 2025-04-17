@@ -18,6 +18,7 @@ window#waybar {
 }
 
 /* Workspace Buttons */
+
 #workspaces button {
     min-width: 14px;
     padding: 0 6px;
@@ -37,9 +38,6 @@ window#waybar {
 }
 
 /* System tray */
-#tray {
-    padding-right: 2px
-}
 
 /* Network Module */
 #network {

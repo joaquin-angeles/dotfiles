@@ -8533,7 +8533,7 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color error_bg_color error_color;
 @define-color error_fg_color white;
 @define-color window_bg_color #f0f0f0;
-@define-color window_fg_color #333333;
+@define-color window_fg_color #252525;
 @define-color view_bg_color #f0f0f0;
 @define-color view_fg_color #1c1c1c;
 @define-color headerbar_bg_color #f0f0f0;

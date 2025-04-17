@@ -7,14 +7,6 @@
         "interface": "wlan0"
     },
 
-    "hyprland/window": {
-        "max-length": 64
-    },
-
-    "custom/space": {
-        "format": "•"
-    },
-
     "battery": {
         "format": "{icon}",
         "format-icons": [
@@ -40,27 +32,15 @@
         "tooltip-format": "Volume ({volume}%)",
     },
 
-    "custom/space": {
-        "format": "•"
-    },
-
     "clock": {
         "format": "{:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%A, %B %d %Y}"
     },
 
-    "custom/space": {
-        "format": "•"
-    },
-
     "tray": {
         "icon-size": 19,
         "spacing": 11
-    },
-
-    "custom/space": {
-        "format": "•"
     },
 
     "custom/power": {
@@ -70,17 +50,9 @@
         "on-click": "wlogout"
     },
 
-    "custom/space": {
-        "format": "•"
-    },
-
     "custom/menu": {
         "format": "<span size='large'>\uf303</span>",
         "on-click": "rofi -disable-history -show drun"
-    },
-
-    "custom/space": {
-        "format": "•"
     },
 
     "backlight": {

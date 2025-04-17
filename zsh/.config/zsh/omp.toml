@@ -41,13 +41,6 @@ template = '{{ .FormattedMs }} '
   [blocks.segments.properties]
   threshold = 5000
 
-[[blocks.segments]]
-type = 'time'
-style = 'plain'
-foreground = 'cyan'
-background = 'transparent'
-template = '{{ .CurrentDate | date "03:04:05 PM" }}'
-
 [[blocks]]
 type = 'prompt'
 alignment = 'left'

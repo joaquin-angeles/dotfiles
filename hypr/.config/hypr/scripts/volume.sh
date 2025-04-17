@@ -57,7 +57,7 @@ dec_volume() {
 # Toggle Mute
 toggle_mute() {
     if [ "$(pamixer --get-mute)" == "false" ]; then
-        pamixer -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "󰖁   Muted"
+        pamixer -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Volume (muted)" "$bar"
     elif [ "$(pamixer --get-mute)" == "true" ]; then
         pamixer -u && notify_user
     fi
