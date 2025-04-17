@@ -38,6 +38,9 @@ window#waybar {
 }
 
 /* System tray */
+#tray {
+    padding-left: 2px
+}
 
 /* Network Module */
 #network {
