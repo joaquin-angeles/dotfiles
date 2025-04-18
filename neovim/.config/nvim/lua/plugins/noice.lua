@@ -26,9 +26,19 @@ return {
       command_palette = true,
       long_message_to_split = true,
     },
+    routes = {
+      {
+        filter = {
+          event = "cmdline",
+          cond = function()
+            return vim.bo.filetype == "alpha"
+          end,
+        },
+        opts = { skip = true },
+      },
+    },
   },
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
 }
-
