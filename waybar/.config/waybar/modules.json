@@ -26,10 +26,19 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "format-icons": ["󰝟", "󰕿", "󰖀", "󰕾"],
-        "format-muted": "󰖁",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphones": "",
+            "headset": "󱡏",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰖀",
+                "󰕾"
+            ]
+        },
         "on-click": "pavucontrol",
-        "tooltip-format": "Volume ({volume}%)",
+        "tooltip-format": "Volume ({volume}%)"
     },
 
     "clock": {

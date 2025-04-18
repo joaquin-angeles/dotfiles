@@ -14,10 +14,13 @@ autoload -U compinit && compinit
 
 # New line after commands
 precmd() {
-  local last_cmd=$(fc -ln -1 | sed 's/^[ \t]*//;s/[ \t]*$//')
-  if [[ $last_cmd != "clear" && $last_cmd != "c" ]]; then
-    echo
-  fi
+    # Get the last executed command
+    local last_command=$(fc -ln -1)
+
+    # Exclude "clear" and "c"
+    if [[ "$last_command" != "clear" && "$last_command" != "c" ]]; then
+        echo
+    fi
 }
 
 # Shell integrations
