@@ -20,6 +20,7 @@ else
     alias fastfetch='fastfetch'
 fi
 
+alias grep=rg
 alias k=kill
 alias ls='eza'
 alias pk=pkill

@@ -37,11 +37,11 @@
         {
             "type": "gpu",
             "format": "{1} {2}",
-            "key": ""
+            "key": "󱋆"
         },
         {
             "type": "memory",
-            "key": ""
+            "key": "󰍛"
         },
         {
             "type": "swap",
@@ -57,7 +57,7 @@
         },
         {
             "type": "os",
-            "key": ""
+            "key": "󰣇"
         },
         {
             "type": "kernel",
@@ -65,11 +65,11 @@
         },
         {
             "type": "packages",
-            "key": "",
+            "key": "󰏗",
         },
         {
             "type": "shell",
-            "key": ""
+            "key": "󱆃"
         },
         {
             "type": "terminal",
