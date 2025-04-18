@@ -2,7 +2,7 @@
     "network": {
         "format-wifi": "󰖩",
         "format-disconnected": "󰖪",
-        "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
+        "on-click": "~/.config/waybar/scripts/wifi-menu",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
     },
