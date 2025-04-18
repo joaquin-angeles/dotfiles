@@ -2,11 +2,15 @@
 autoload -U compinit && compinit
 
 # New line after commands
-precmd() {
-    # Get the last executed command
-    local last_command=$(fc -ln -1)
+typeset -g __has_prompted_once=false
 
-    # Exclude "clear" and "c"
+precmd() {
+    if [[ $__has_prompted_once == false ]]; then
+        __has_prompted_once=true
+        return
+    fi
+
+    local last_command=$(fc -ln -1)
     if [[ "$last_command" != "clear" && "$last_command" != "c" ]]; then
         echo
     fi

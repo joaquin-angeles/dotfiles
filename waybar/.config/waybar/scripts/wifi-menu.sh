@@ -16,16 +16,17 @@ TOGGLE_WIFI=$([[ "$wifi_status" == "enabled" ]] && echo "$WIFI_ON_ICON" || echo 
 nmcli device wifi rescan > /dev/null 2>&1
 sleep 1
 
-# Build SSID list with signal icons, no duplicates, and check for currently connected
-declare -A seen_ssids
-ssid_menu=()
-
-# Get connected SSID
+# Get currently connected SSID
 connected_ssid=$(nmcli -t -f ACTIVE,SSID device wifi | grep '^yes' | cut -d':' -f2)
 
-while IFS= read -r line; do
-    ssid=$(echo "$line" | awk '{$NF=""; print $0}' | sed 's/ *$//')
-    signal=$(echo "$line" | awk '{print $NF}')
+# Build SSID list
+declare -A seen_ssids
+ssid_menu=()
+ssid_raw=()
+
+while IFS= read -r -d '' line; do
+    ssid=$(echo "$line" | cut -d'|' -f1)
+    signal=$(echo "$line" | cut -d'|' -f2)
 
     # Skip hidden or empty SSIDs
     if [[ -z "$ssid" || "$ssid" == "--" ]]; then
@@ -51,18 +52,18 @@ while IFS= read -r line; do
         icon="󰤯   "
     fi
 
-    # Check for connected SSID and add checkmark
+    # Build menu item
+    display_ssid="$icon $ssid"
     if [[ "$ssid" == "$connected_ssid" ]]; then
-        ssid_menu+=("$CHECKMARK_ICON $icon $ssid")
-    else
-        ssid_menu+=("$icon $ssid")
+        display_ssid="$CHECKMARK_ICON $icon $ssid"
     fi
-done < <(nmcli -f SSID,SIGNAL device wifi list | awk 'NR>1')
+
+    ssid_menu+=("$display_ssid")
+    ssid_raw+=("$ssid")
+done < <(nmcli -t -f SSID,SIGNAL device wifi list | awk 'NR>1' | awk -F: '{OFS="|"; print $1, $2}' | tr '\n' '\0')
 
 # Final menu
 menu_items=("$SCAN_ICON" "$TOGGLE_WIFI" "" "${ssid_menu[@]}")
-
-# Show Rofi menu
 makoctl dismiss
 selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str 'listview {spacing: 6px;}')
 
@@ -87,19 +88,33 @@ case "$selection" in
         exit
         ;;
     *)
-        ssid_selected=$(echo "$selection" | sed 's/^.* //')
+        # Match the selected display item to the SSID
+        match_index=-1
+        for i in "${!ssid_menu[@]}"; do
+            if [[ "${ssid_menu[$i]}" == "$selection" ]]; then
+                match_index=$i
+                break
+            fi
+        done
 
-        # Delete the existing connection profile for the SSID
+        if [[ $match_index -eq -1 ]]; then
+            notify-send "Error" "Could not find SSID match for selection."
+            exit 1
+        fi
+
+        ssid_selected="${ssid_raw[$match_index]}"
+
+        # Delete existing connection (if any)
         nmcli connection delete id "$ssid_selected" > /dev/null 2>&1
 
-        # Prompt for the password
+        # Prompt for password
         password=$(rofi -dmenu -p "Enter Password for $ssid_selected:" -password)
         if [[ -z "$password" ]]; then
             notify-send "Connection Failed" "Password is required to connect to $ssid_selected."
             exit
         fi
 
-        # Try connecting with the provided password
+        # Connect
         nmcli device wifi connect "$ssid_selected" password "$password" || {
             notify-send "Connection Failed" "Failed to connect to $ssid_selected."
             exit
