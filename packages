@@ -38,8 +38,9 @@ packages=(
     swappy
     waybar
     wlogout
-    zoxide
     zsh
+    zoxide
+    zen-browser-bin
 )
 
 # Install each package if not already installed
