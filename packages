@@ -17,11 +17,13 @@ fi
 
 # Sorted list of packages in alphabetical order
 packages=(
+    alacritty
     eza
     hyprland
     hyprlock
     hyprpaper
     inotify-tools
+    kitty
     kvantum
     kvantum-qt5
     libnotify
