@@ -25,7 +25,7 @@ palette = 15=f1f1f1
 
 # Font settings
 font-family = JetBrainsMono Nerd Font Mono
-font-size = 12.5
+font-size = 12
 
 # Window opacity
 background-opacity = 0.8

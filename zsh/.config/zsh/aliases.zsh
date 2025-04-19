@@ -4,22 +4,17 @@ cd() {
     z "$@" && eza
 }
 
-alias cat=bat
-
 if [[ $TERM == "xterm-kitty" ]]; then
     alias ff='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
 else
     alias ff='fastfetch'
 fi
 
-alias fzf="fzf --preview='bat {}'"
-
 if [[ $TERM == "xterm-kitty" ]]; then
     alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
-else
-    alias fastfetch='fastfetch'
 fi
 
+alias cat=bat
 alias grep=rg
 alias k=kill
 alias ls='eza'

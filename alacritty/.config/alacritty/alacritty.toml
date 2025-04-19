@@ -1,33 +1,9 @@
-[colors]
-primary.background = "#1c1c1c"
-primary.foreground = "#eeeeee"
-
-[colors.bright]
-black = "#666666"
-blue = "#72949a"
-cyan = "#729a96"
-green = "#729a72"
-magenta = "#8c729a"
-red = "#976061"
-white = "#f1f1f1"
-yellow = "#a49a72"
-
-[colors.normal]
-black = "#1c1c1c"
-blue = "#5f7a8c"
-cyan = "#5f7a7f"
-green = "#5f7a5f"
-magenta = "#75607a"
-red = "#865054"
-white = "#eeeeee"
-yellow = "#a4965f"
+general.import = [
+    "~/.config/alacritty/themes/dark-mono.toml"
+]
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
-italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
-size = 12.5
+size = 13
 
 [window]
 padding.x = 5
