@@ -19,6 +19,7 @@ fi
 packages=(
     alacritty
     eza
+    grim
     hyprland
     hyprlock
     hyprpaper
@@ -33,16 +34,15 @@ packages=(
     neovim
     oh-my-posh-bin
     pavucontrol
-    rofi-wayland
     rofi-emoji
-    grim
+    rofi-wayland
     slurp
     swappy
     waybar
     wlogout
-    zsh
-    zoxide
     zen-browser-bin
+    zoxide
+    zsh
 )
 
 # Install each package if not already installed
@@ -50,7 +50,7 @@ for package in "${packages[@]}"; do
     if pacman -Q "$package" &>/dev/null; then
         echo " $package is already installed."
     else
-        echo " Installing $package..."
+        echo "󰏗 Installing $package..."
         if paru -S --noconfirm --quiet "$package" &>/dev/null; then
             echo " Successfully installed $package."
         else
