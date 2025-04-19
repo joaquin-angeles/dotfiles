@@ -24,6 +24,34 @@
         "format": "•"
     },
 
+    "custom/fm": {
+        "format": "󰉋",
+        "on-click": "nemo",
+        "tooltip": true,
+        "tooltip-format": "File Manager (Nemo)"
+    },
+
+    "custom/web": {
+        "format": "",
+        "on-click": "zen-browser",
+        "tooltip": true,
+        "tooltip-format": "Web Browser (Zen)"
+    },
+
+    "custom/games": {
+        "format": "󱓞",
+        "on-click": "lutris",
+        "tooltip": true,
+        "tooltip-format": "Game Hub (Lutris)"
+    },
+
+    "custom/terminal": {
+        "format": "󰆍",
+        "on-click": "kitty",
+        "tooltip": true,
+        "tooltip-format": "Terminal (kitty)"
+    },
+
     "pulseaudio": {
         "format": "{icon}",
         "format-muted": "󰝟",
@@ -44,7 +72,7 @@
     "clock": {
         "format": "{:%I:%M %p}",
         "tooltip": true,
-        "tooltip-format": "{:%A, %B %d %Y}"
+        "tooltip-format": "{:%A}"
     },
 
     "tray": {
@@ -60,7 +88,7 @@
     },
 
     "custom/menu": {
-        "format": "<span size='large'>\uf303</span>",
+        "format": "󰣇",
         "on-click": "rofi -disable-history -show drun"
     },
 

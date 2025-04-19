@@ -4,8 +4,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrains Mono";
-    font-size: 13pt;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14pt;
     min-height: 0;
 }
 
@@ -18,12 +18,12 @@ window#waybar {
 }
 
 /* Workspace Buttons */
-
 #workspaces button {
     min-width: 14px;
     padding: 0 6px;
     background: transparent;
     color: @inactive;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
@@ -34,7 +34,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @lime;
+    color: @fg;
+    padding-bottom: 2px
 }
 
 /* System tray */
@@ -46,15 +47,14 @@ window#waybar {
 #network {
     padding-right: 14px;
     padding-left: 7px;
-    padding-top: 0.5px;
-    color: @blue
+    /* color: @blue */
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
     font-size: 20px;
     padding-right: 12px;
-    color: @yellow
+    /* color: @yellow */
 }
 
 /* Clock Module */
@@ -67,19 +67,45 @@ window#waybar {
 #custom-power {
     padding-right: 16px;
     padding-left: 7px;
-    font-size: 22px;
+    padding-top: 2px;
+    font-size: 24px;
     color: @red
 }
 
 /* Custom Menu Module */
 #custom-menu {
-    padding-right: 12px;
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 24px
 }
 
+#custom-fm {
+    padding-top: 3px;
+    padding-right: 14px;
+    font-size: 24px
+}
+
+#custom-web {
+    padding-top: 2px;
+    padding-right: 12px;
+    font-size: 25px
+}
+
+#custom-games {
+    padding-top: 1px;
+    padding-right: 13px;
+    font-size: 20px
+}
+
+#custom-terminal {
+    padding-top: 2px;
+    padding-right: 12px;
+    font-size: 24px
+}
 /* Battery Module */
 #battery {
     padding-right: 7px;
     padding-top: 1px;
     padding-bottom: 1px;
-    color: @green;
+    /* color: @green */
 }
