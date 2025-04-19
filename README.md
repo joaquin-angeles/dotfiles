@@ -1,2 +1,2 @@
-# Arch Linux dotfiles
-one of the joaquins in the world's dotfiles.
+# Hyprland dots for Arch Linux (btw)
+Joaquin's Arch Linux (Hyprland) dotfiles.

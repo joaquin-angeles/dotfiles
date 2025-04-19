@@ -14,7 +14,6 @@ if [[ $TERM == "xterm-kitty" ]]; then
     alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
 fi
 
-alias cat=bat
 alias grep=rg
 alias k=kill
 alias ls='eza'

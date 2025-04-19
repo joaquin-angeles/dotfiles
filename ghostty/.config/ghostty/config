@@ -25,13 +25,10 @@ palette = 15=f1f1f1
 
 # Font settings
 font-family = JetBrainsMono Nerd Font Mono
-font-size = 12
+font-size = 13
 
 # Window opacity
 background-opacity = 0.8
-
-# Disable single instance
-gtk-single-instance = false
 
 # Shell integration
 shell-integration = zsh
