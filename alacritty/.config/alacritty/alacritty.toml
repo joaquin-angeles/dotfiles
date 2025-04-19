@@ -4,6 +4,7 @@ general.import = [
 
 [font]
 size = 13
+builtin_box_drawing = true
 
 [window]
 padding.x = 5
