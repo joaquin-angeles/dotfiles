@@ -1,5 +1,4 @@
 local set = vim.api.nvim_set_hl
-
 local colors = {
     red            = "#865054",
     green          = "#5f7a5f",

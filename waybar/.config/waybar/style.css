@@ -34,7 +34,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @fg;
+    color: @lime;
     padding-bottom: 2px
 }
 

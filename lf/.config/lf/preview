@@ -1,0 +1,28 @@
+#!/bin/sh
+draw() {
+  kitten icat --stdin no --transfer-mode memory --place "${w}x${h}@${x}x${y}" "$1" </dev/null >/dev/tty
+  exit 1
+}
+
+file="$1"
+w="$2"
+h="$3"
+x="$4"
+y="$5"
+
+case "$(file -Lb --mime-type "$file")" in 
+  image/*)
+    draw "$file"
+    ;;
+  video/*)
+    # vidthumb is from here:
+    # https://raw.githubusercontent.com/duganchen/kitty-pistol-previewer/main/vidthumb
+    draw "$(vidthumb "$file")"
+    ;;
+  text/*)
+    bat "$file"
+    exit 1
+    ;;
+esac
+
+pistol "$file"
