@@ -10,13 +10,13 @@
     "logo": {
         "source": "/home/joaquin/.config/fastfetch/logo.txt",
         "color": {
-            "1": "blue"
+            "1": "white",
         }
     },
 
     "modules": [
         "title",
-        "separator",
+        "break",
         {
             "type": "os",
             "key": "~"
@@ -47,16 +47,11 @@
             "type": "uptime",
             "key": "~"
         },
-        // {
-        //     "type": "cpu",
-        //     "format": "{1}",
-        //     "key": "~"
-        // },
-        // {
-        //     "type": "gpu",
-        //     "format": "{1} {2}",
-        //     "key": "~"
-        // },
+        {
+            "type": "cpu",
+            "format": "{1}",
+            "key": "~"
+        },
         {
             "type": "memory",
             "key": "~"
