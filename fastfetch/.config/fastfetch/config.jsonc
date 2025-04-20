@@ -10,7 +10,7 @@
     "logo": {
         "source": "/home/joaquin/.config/fastfetch/logo.txt",
         "color": {
-            "1": "white",
+            "1": "blue",
         }
     },
 
