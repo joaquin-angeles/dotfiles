@@ -20,7 +20,7 @@ window#waybar {
 /* Workspace Buttons */
 #workspaces button {
     min-width: 14px;
-    padding: 0 6px;
+    padding: 0 7px;
     background: transparent;
     color: @inactive;
     font-weight: 400;
@@ -80,26 +80,24 @@ window#waybar {
 }
 
 #custom-fm {
-    padding-top: 3px;
-    padding-right: 14px;
+    padding-top: 2px;
+    padding-right: 19px;
+    padding-left: 8px;
     font-size: 24px
 }
 
 #custom-web {
-    padding-top: 2px;
-    padding-right: 12px;
-    font-size: 25px
+    padding-right: 16px;
+    font-size: 26px
 }
 
 #custom-games {
-    padding-top: 1px;
-    padding-right: 13px;
+    padding-right: 20px;
     font-size: 20px
 }
 
 #custom-terminal {
-    padding-top: 2px;
-    padding-right: 12px;
+    padding-right: 8px;
     font-size: 24px
 }
 /* Battery Module */

@@ -39,7 +39,7 @@
     },
 
     "custom/games": {
-        "format": "󱓞",
+        "format": "",
         "on-click": "lutris",
         "tooltip": true,
         "tooltip-format": "Game Hub (Lutris)"
