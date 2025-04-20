@@ -20,7 +20,7 @@ case "$(file -Lb --mime-type "$file")" in
     draw "$(vidthumb "$file")"
     ;;
   text/*)
-    bat "$file"
+    cat "$file"
     exit 1
     ;;
 esac
