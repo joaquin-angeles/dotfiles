@@ -2,6 +2,7 @@
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE")
 vim.cmd("hi Normal guifg=#eeeeee")
+vim.cmd("hi Visual guibg=#323232 guifg=NONE gui=NONE")
 
 -- For plugins with floating windows or popups
 vim.cmd("hi StatusLine guibg=NONE")
@@ -23,7 +24,7 @@ vim.cmd("hi TelescopeResultsTitle guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewNormal guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewBorder guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewTitle guibg=NONE ctermbg=NONE")
-vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#eeeeee", bg = "#333333", bold = true })
+vim.cmd('hi TelescopeSelection guifg=#eeeeee guibg=#333333 gui=bold')
 
 -- Noice plugin UI transparency
 vim.cmd("hi NoicePopup guibg=NONE ctermbg=NONE")

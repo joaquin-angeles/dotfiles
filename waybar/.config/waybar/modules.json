@@ -25,7 +25,7 @@
     },
 
     "custom/fm": {
-        "format": "󰉋",
+        "format": "󰝰",
         "on-click": "nemo",
         "tooltip": true,
         "tooltip-format": "File Manager (Nemo)"

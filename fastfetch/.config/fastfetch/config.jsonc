@@ -4,102 +4,71 @@
         "color": {
             "keys": "238;238;238"
         },
-        "separator": " • "
+        "separator": " "
     },
 
     "logo": {
         "source": "/home/joaquin/.config/fastfetch/logo.txt",
         "color": {
-            "1": "238;238;238",
-            "2": "238;238;238"
+            "1": "blue"
         }
     },
 
     "modules": [
-        {
-            "type": "custom",
-            "format": "┌───────── Hardware Information ─────────┐"
-        },
-        {
-            "type": "host",
-            "key": "󰌢",
-            "format": "{1}"
-        },
-        {
-            "type": "display",
-            "format": "{1}x{2} @ {3}Hz",
-            "key": "󰹑"
-        },
-        {
-            "type": "cpu",
-            "key": "󰻠"
-        },
-        {
-            "type": "gpu",
-            "format": "{1} {2}",
-            "key": "󱋆"
-        },
-        {
-            "type": "memory",
-            "key": "󰍛"
-        },
-        {
-            "type": "swap",
-            "key": "󰓡"
-        },
-        {
-            "type": "disk",
-            "key": "󰋊"
-        },
-        {
-            "type": "custom",
-            "format": "├───────── Software Information ─────────┤"
-        },
+        "title",
+        "separator",
         {
             "type": "os",
-            "key": "󰣇"
+            "key": "~"
         },
         {
             "type": "kernel",
-            "key": ""
+            "key": "~",
+            "format": "{2}"
         },
         {
             "type": "packages",
-            "key": "󰏗",
+            "key": "~",
+            "format": "{1} packages are installed"
         },
         {
             "type": "shell",
-            "key": "󱆃"
-        },
-        {
-            "type": "terminal",
-            "key": ""
+            "key": "~"
         },
         {
             "type": "de",
-            "key": "󰙧"
+            "key": "~"
         },
         {
             "type": "wm",
-            "key": "󰨡"
+            "key": "~"
         },
         {
             "type": "uptime",
-            "key": ""
+            "key": "~"
+        },
+        // {
+        //     "type": "cpu",
+        //     "format": "{1}",
+        //     "key": "~"
+        // },
+        // {
+        //     "type": "gpu",
+        //     "format": "{1} {2}",
+        //     "key": "~"
+        // },
+        {
+            "type": "memory",
+            "key": "~"
         },
         {
-            "type": "command",
-            "key": "󱦟",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+            "type": "swap",
+            "key": "~"
         },
-        {
-            "type": "custom",
-            "format": "└────────────────────────────────────────┘"
-        },
+        "break",
         {
             "type": "colors",
             "symbol": "circle",
-            "paddingLeft": 13
         }
     ]
 }
