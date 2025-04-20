@@ -5,7 +5,7 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 14pt;
+    font-size: 13pt;
     min-height: 0;
 }
 
@@ -48,14 +48,14 @@ window#waybar {
 #network {
     padding-right: 14px;
     padding-left: 7px;
-    /* color: @blue */
+    color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
     font-size: 20px;
     padding-right: 12px;
-    /* color: @yellow */
+    color: @yellow
 }
 
 /* Clock Module */
@@ -66,10 +66,10 @@ window#waybar {
 
 /* Custom Power Module */
 #custom-power {
+    padding-left: 4px;
     padding-right: 16px;
     padding-left: 7px;
-    padding-top: 2px;
-    font-size: 24px;
+    font-size: 22px;
     color: @red
 }
 
@@ -106,5 +106,5 @@ window#waybar {
     padding-right: 7px;
     padding-top: 1px;
     padding-bottom: 1px;
-    /* color: @green */
+    color: @green
 }

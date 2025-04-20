@@ -843,7 +843,7 @@ check:checked:hover,
 check:indeterminate:hover,
 radio:checked:hover,
 radio:indeterminate:hover {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 check:checked:active,
@@ -965,7 +965,7 @@ switch:checked {
 
 switch:checked:hover {
     transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 switch:backdrop {
@@ -2280,7 +2280,7 @@ messagedialog.csd .dialog-action-area button.suggested-action {
 }
 
 messagedialog.csd .dialog-action-area button.suggested-action:hover {
-    background-color: #2094c9;
+    background-color: #865054;
     box-shadow: none;
 }
 
@@ -2292,7 +2292,7 @@ messagedialog.csd .dialog-action-area button.suggested-action:active {
 }
 
 messagedialog.csd .dialog-action-area button.suggested-action:checked {
-    background-color: #2094c9;
+    background-color: #865054;
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -3426,7 +3426,7 @@ combobox:drop(active) {
 }
 
 .entry-tag:hover {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 :backdrop .entry-tag {
@@ -6471,7 +6471,7 @@ button.suggested-action.flat {
 button.suggested-action:hover {
     color: white;
     outline-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     box-shadow: none;
 }
 
@@ -6484,7 +6484,7 @@ button.suggested-action:active {
 button.suggested-action:checked {
     color: white;
     outline-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -6495,7 +6495,7 @@ button.suggested-action:active:hover {
 }
 
 button.suggested-action:checked:hover {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 button.suggested-action:backdrop,
@@ -6568,7 +6568,7 @@ button.suggested-action:disabled:checked {
 .osd button.suggested-action:hover {
     color: white;
     border-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     background-clip: padding-box;
     outline-color: transparent;
 }
@@ -6586,7 +6586,7 @@ button.suggested-action:disabled:checked {
 .osd button.suggested-action:checked {
     color: white;
     border-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     background-clip: padding-box;
     outline-color: transparent;
 }
@@ -6853,7 +6853,7 @@ headerbar button.suggested-action:hover:not(.titlebutton),
 .titlebar button.suggested-action:hover:not(.titlebutton) {
     color: white;
     outline-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     box-shadow: none;
 }
 
@@ -6925,7 +6925,7 @@ headerbar button.suggested-action:checked:not(.titlebutton),
 .titlebar button.suggested-action:checked:not(.titlebutton) {
     color: white;
     outline-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -6990,7 +6990,7 @@ headerbar viewswitcher button.suggested-action.radio:checked:hover,
 .titlebar viewswitcher button.suggested-action.radio:checked:hover,
 headerbar button.suggested-action:checked:hover:not(.titlebutton),
 .titlebar button.suggested-action:checked:hover:not(.titlebutton) {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 popover.background button.suggested-action:backdrop,
@@ -7401,7 +7401,7 @@ headerbar.selection-mode button.suggested-action {
 headerbar.selection-mode button.suggested-action:hover {
     color: white;
     outline-color: transparent;
-    background-color: #2094c9;
+    background-color: #865054;
     border-color: transparent;
     box-shadow: none;
 }
@@ -7508,7 +7508,7 @@ button:visited>label:hover,
 button:hover:link,
 button:hover:visited,
 *:link:hover {
-    color: #2094c9;
+    color: #865054;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -7517,7 +7517,7 @@ button:hover:visited,
 *:selected button:hover:link,
 *:selected button:hover:visited,
 *:selected *:link:hover {
-    color: #2094c9;
+    color: #865054;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -7572,7 +7572,7 @@ button:selected:visited,
 *:selected button:visited,
 *:link:selected,
 *:selected *:link {
-    color: #2094c9;
+    color: #865054;
 }
 
 button:link,
@@ -8547,7 +8547,7 @@ tabbar tab,
 
 tabbar tab.needs-attention,
 .tab-drag-icon tab.needs-attention {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 tabbar tab .tab-close-button,

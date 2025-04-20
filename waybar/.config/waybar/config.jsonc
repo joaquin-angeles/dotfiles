@@ -2,19 +2,19 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "bottom",
     "position": "bottom",
-    "height": 36,
+    "height": 30,
     "spacing": 4,
     "modules-left": [
         "clock",
         "custom/space",
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "custom/fm",
-        "custom/web",
-        "custom/games",
-        "custom/terminal"
-    ],
+    // "modules-center": [
+    //     "custom/fm",
+    //     "custom/web",
+    //     "custom/games",
+    //     "custom/terminal"
+    // ],
     "modules-right": [
         "tray",
         "network",

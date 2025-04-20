@@ -564,7 +564,7 @@ check:checked:hover,
 check:indeterminate:hover,
 radio:checked:hover,
 radio:indeterminate:hover {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 check:checked:active,
@@ -753,7 +753,7 @@ popover.menu check:checked:hover,
 popover.menu check:indeterminate:hover,
 popover.menu radio:checked:hover,
 popover.menu radio:indeterminate:hover {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
     color: white;
 }
 
@@ -844,7 +844,7 @@ switch:checked {
 
 switch:checked:hover {
     transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 switch:checked:active {
@@ -1832,7 +1832,7 @@ calendar>grid>label.today {
 calendar>grid>label.today:selected {
     box-shadow: none;
     color: white;
-    background-image: image(#2094c9);
+    background-image: image(#865054);
     border-radius: 9999px;
     transition: 200ms;
 }
@@ -2038,7 +2038,7 @@ window.dialog.message .dialog-action-area>button.destructive-action {
 }
 
 window.dialog.message .dialog-action-area>button.suggested-action:hover {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 window.dialog.message .dialog-action-area>button.suggested-action:active {
@@ -2046,7 +2046,7 @@ window.dialog.message .dialog-action-area>button.suggested-action:active {
 }
 
 window.dialog.message .dialog-action-area>button.suggested-action:checked {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 window.dialog.message .dialog-action-area>button.suggested-action:backdrop {
@@ -6364,7 +6364,7 @@ menubutton.suggested-action>button:hover,
 menubutton.destructive-action>button:hover,
 menubutton.opaque>button:hover,
 button.opaque:hover {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 actionbar>revealer>box menubutton.suggested-action>button.keyboard-activating:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
@@ -6441,7 +6441,7 @@ menubutton.suggested-action>button:checked,
 menubutton.destructive-action>button:checked,
 menubutton.opaque>button:checked,
 button.opaque:checked {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 actionbar>revealer>box menubutton.suggested-action>button:checked:hover:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
@@ -6466,7 +6466,7 @@ menubutton.suggested-action>button:checked:hover,
 menubutton.destructive-action>button:checked:hover,
 menubutton.opaque>button:checked:hover,
 button.opaque:checked:hover {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 actionbar>revealer>box menubutton.suggested-action>button:checked.keyboard-activating:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
@@ -6493,7 +6493,7 @@ menubutton.opaque>button:checked.keyboard-activating,
 button.suggested-action:checked.keyboard-activating,
 button.destructive-action:checked.keyboard-activating,
 button.opaque:checked.keyboard-activating {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 actionbar>revealer>box menubutton.suggested-action>button:checked:active:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
@@ -6564,7 +6564,7 @@ button.suggested-action {
 }
 
 button.suggested-action:hover {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 button.suggested-action:active {
@@ -6572,7 +6572,7 @@ button.suggested-action:active {
 }
 
 button.suggested-action:checked {
-    background-color: #2094c9;
+    background-color: #865054;
 }
 
 button.suggested-action:backdrop {
@@ -7249,7 +7249,7 @@ button.link:visited {
 
 link:hover,
 button.link:hover {
-    color: #2094c9;
+    color: #865054;
     background-color: rgba(255, 255, 255, 0.1);
     transition: 200ms;
 }
@@ -7770,7 +7770,7 @@ tabbar tab.needs-attention {
 
 tabbar tab.needs-attention:hover,
 tabbar tab.needs-attention:active {
-    background-image: image(#2094c9);
+    background-image: image(#865054);
 }
 
 tabbar .start-action,
@@ -8435,7 +8435,7 @@ window.messagedialog .response-area>box>button.suggested {
 }
 
 window.messagedialog .response-area>box>button.suggested:hover {
-    background-color: #2094c9;
+    background-color: #865054;
     color: white;
 }
 
@@ -8445,7 +8445,7 @@ window.messagedialog .response-area>box>button.suggested:active {
 }
 
 window.messagedialog .response-area>box>button.suggested:checked {
-    background-color: #2094c9;
+    background-color: #865054;
     color: white;
 }
 

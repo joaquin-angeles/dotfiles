@@ -21,7 +21,8 @@
     },
 
     "custom/space": {
-        "format": "•"
+        "format": "•",
+        "tooltip": false
     },
 
     "custom/fm": {
@@ -77,7 +78,7 @@
     },
 
     "tray": {
-        "icon-size": 22,
+        "icon-size": 19,
         "spacing": 12
     },
 
