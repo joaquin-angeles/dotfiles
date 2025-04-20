@@ -20,7 +20,7 @@ window#waybar {
 /* Workspace Buttons */
 #workspaces button {
     min-width: 14px;
-    padding: 0 7px;
+    padding: 0 6px;
     background: transparent;
     color: @inactive;
     font-weight: 400;
@@ -81,13 +81,13 @@ window#waybar {
 
 #custom-fm {
     padding-top: 2px;
-    padding-right: 19px;
+    padding-right: 18px;
     padding-left: 8px;
     font-size: 24px
 }
 
 #custom-web {
-    padding-right: 16px;
+    padding-right: 14px;
     font-size: 26px
 }
 

@@ -1,9 +1,9 @@
 general.import = [
-    "~/.config/alacritty/themes/dark-mono.toml"
+    "~/.config/alacritty/themes/jqn-mono.toml"
 ]
 
 [font]
-size = 13
+size = 13.5
 builtin_box_drawing = true 
 
 [window]

@@ -4,19 +4,11 @@ cd() {
     z "$@" && eza
 }
 
-if [[ $TERM == "xterm-kitty" ]]; then
-    alias ff='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
-else
-    alias ff='fastfetch'
-fi
-
-if [[ $TERM == "xterm-kitty" ]]; then
-    alias fastfetch='fastfetch --kitty-direct ~/.config/fastfetch/logo.png'
-fi
-
+alias ff='fastfetch'
 alias grep=rg
 alias k=kill
 alias ls='eza'
 alias pk=pkill
+alias flatpak='flatpak --user'
 alias x=exit
 alias vim=nvim

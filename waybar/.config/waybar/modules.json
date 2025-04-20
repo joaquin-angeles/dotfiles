@@ -71,8 +71,9 @@
 
     "clock": {
         "format": "{:%I:%M %p}",
+        "on-click": "rofi -disable-history -show drun",
         "tooltip": true,
-        "tooltip-format": "{:%A}"
+        "tooltip-format": "{:%d %B, %Y on a %A}"
     },
 
     "tray": {
