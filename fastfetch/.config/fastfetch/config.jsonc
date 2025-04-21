@@ -10,7 +10,7 @@
     "logo": {
         "source": "/home/joaquin/.config/fastfetch/logo.txt",
         "color": {
-            "1": "white",
+            "1": "blue",
         }
     },
 
@@ -23,7 +23,10 @@
                 "host": "white"
             }
         },
-        "separator",
+        {
+            "type": "custom",
+            "format": "─────────────────"
+        },
         {
             "type": "os",
             "key": "~"
@@ -36,28 +39,31 @@
         {
             "type": "packages",
             "key": "~",
-            "format": "{1} packages are installed"
+            "format": "{1} packages installed"
         },
         {
             "type": "shell",
-            "key": "~"
+            "key": "~",
+            "format": "{3} {4} ({2})"
         },
         {
             "type": "de",
-            "key": "~"
+            "key": "~",
+            "format": "{1}"
         },
         {
             "type": "wm",
-            "key": "~"
+            "key": "~",
+            "format": "{2} ({3})"
         },
         {
             "type": "uptime",
             "key": "~"
         },
         {
-            "type": "cpu",
-            "format": "{1}",
-            "key": "~"
+            "type": "disk",
+            "key": "~",
+            "format": "{1} / {2} ({3})"
         },
         {
             "type": "memory",
@@ -67,6 +73,14 @@
             "type": "swap",
             "key": "~"
         },
+        {
+            "type": "custom",
+            "format": "───────────────"
+        },
+        {
+            "type": "colors",
+            "symbol": "circle"
+        }
     ]
 }
 

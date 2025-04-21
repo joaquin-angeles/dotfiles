@@ -74,15 +74,15 @@
     },
 
     "clock": {
-        "format": "{:%d-%m-%y • %I:%M %p}",
+        "format": "{:%I:%M %p}",
         "on-click": "rofi -disable-history -show drun",
         "tooltip": true,
         "tooltip-format": "{:%d %B, %Y on a %A}"
     },
 
     "tray": {
-        "icon-size": 19,
-        "spacing": 12
+        "icon-size": 18,
+        "spacing": 14
     },
 
     "custom/power": {

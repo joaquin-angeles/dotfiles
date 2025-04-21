@@ -11,6 +11,10 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 
 # Plugins (Zinit)
+zinit light romkatv/powerlevel10k # P10K
 zinit light zsh-users/zsh-syntax-highlighting # Syntax highlighting
 zinit light zsh-users/zsh-completions # Autocompletion
 zinit light zsh-users/zsh-autosuggestions # Suggesting past commands 
+
+# Configurations
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh # P10K
