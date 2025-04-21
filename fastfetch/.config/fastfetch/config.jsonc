@@ -25,7 +25,7 @@
         },
         {
             "type": "custom",
-            "format": "─────────────────"
+            "format": "•••••••••••••••••"
         },
         {
             "type": "os",
@@ -75,11 +75,11 @@
         },
         {
             "type": "custom",
-            "format": "───────────────"
+            "format": "•••••••••••••••"
         },
         {
             "type": "colors",
-            "symbol": "circle"
+            "symbol": "circle",
         }
     ]
 }

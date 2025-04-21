@@ -4,9 +4,10 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13.115pt;
-    min-height: 0;
+    font-family: "Rubik", "JetBrainsMono Nerd Font";
+    font-size: 14pt;
+    font-weight: 400;
+    min-height: 0
 }
 
 /* Waybar Window */
@@ -41,7 +42,7 @@ window#waybar {
 /* System tray */
 #tray {
     padding-top: 2px;
-    padding-right: 5px
+    padding-right: 2px
 }
 
 /* Network Module */

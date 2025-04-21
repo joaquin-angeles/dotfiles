@@ -3,6 +3,7 @@ anchor=top-center
 text-alignment=center
 width=300
 height=200
+margin=5,10,0,0
 default-timeout=3000
 background-color=#1c1c1ccc
 border-color=#eeeeee

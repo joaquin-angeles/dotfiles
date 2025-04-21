@@ -1,8 +1,8 @@
 {
     "include": "~/.config/waybar/modules.json",
-    "layer": "bottom",
-    "position": "bottom",
-    "height": 30,
+    "layer": "top",
+    "position": "top",
+    "height": 32,
     "spacing": 4,
     "modules-left": [
         "clock",
@@ -10,6 +10,7 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
+        "hyprland/window"
     ],
     "modules-right": [
         "tray",
