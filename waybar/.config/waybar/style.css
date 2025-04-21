@@ -47,6 +47,7 @@ window#waybar {
 
 /* Network Module */
 #network {
+    padding-top: 1px;
     padding-right: 16px;
     padding-left: 7px;
     color: @blue
@@ -54,7 +55,6 @@ window#waybar {
 
 /* Pulseaudio Module */
 #pulseaudio {
-    padding-bottom: 1px;
     font-size: 20px;
     padding-right: 14px;
     color: @yellow

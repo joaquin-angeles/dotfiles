@@ -1,4 +1,7 @@
 {
+    "hyprland/window": {
+        "max-length": 64
+    },
     "network": {
         "format": "{icon}",
         "format-icons": [
