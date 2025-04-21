@@ -6,19 +6,26 @@ fi
 # List of commands to exclude from updating the window title
 excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history")
 
+# List of commands to exclude from updating the window title
+excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history")
+
 # Function to set the terminal window title
 function set_window_title() {
   local cmd="$1"
   local dir="${PWD/#$HOME/\~}"  # Replace $HOME with ~
-  
-  # Check if the command matches any of the excluded commands
+
+  # Check if the command starts with a space (to exclude it)
+  if [[ "$cmd" =~ ^\  ]]; then
+    return 0  # Skip updating the title if the command starts with a space
+  fi
+
+  # Check if the command is in the excluded list
   for excluded in "${excluded_commands[@]}"; do
-    # Use a regular expression to check if the base command matches
-    if [[ "$cmd" =~ ^$excluded ]]; then
+    if [[ "$cmd" == "$excluded"* ]]; then
       return 0  # Skip updating the title if it's an excluded command
     fi
   done
-  
+
   # Show window title with the command executed (only if not excluded)
   if [[ -n "$cmd" ]]; then
     print -Pn "\e]0;${USER}@${HOST}:${dir} (${cmd})\a"
@@ -28,9 +35,9 @@ function set_window_title() {
   fi
 }
 
-# Update title before executing a command (ensure the command and arguments are passed)
+# Update title before executing a command
 preexec() {
-  set_window_title "$1"  # Pass the command (and its arguments) to the function
+  set_window_title "$1"
 }
 
 # Reset title after executing a command
