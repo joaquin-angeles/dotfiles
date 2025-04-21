@@ -9,12 +9,9 @@
         "custom/space",
         "hyprland/workspaces"
     ],
-    // "modules-center": [
-    //     "custom/fm",
-    //     "custom/web",
-    //     "custom/games",
-    //     "custom/terminal"
-    // ],
+    "modules-center": [
+
+    ],
     "modules-right": [
         "tray",
         "network",
