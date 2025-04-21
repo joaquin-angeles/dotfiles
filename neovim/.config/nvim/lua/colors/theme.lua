@@ -13,6 +13,13 @@ vim.cmd("hi CursorLineNr guifg=#6e8f2a gui=bold ctermfg=255 cterm=bold")
 vim.cmd("hi FloatBorder guibg=NONE ctermbg=NONE")
 
 -- Specific plugin UIs
+vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", { fg = "#5f7a7f" })
+vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { fg = "#5f7a7f" })
+vim.api.nvim_set_hl(0, "NeoTreeFileNameOpened", { fg = "#5f7a7f", bold = true })
+vim.api.nvim_set_hl(0, "NeoTreeFileNameOpened", { fg = "#eeeeee", bold = true })
+vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { fg = "#1c1c1c", bg = "#5f7a7f" })
+vim.api.nvim_set_hl(0, "NeoTreeCursorLineFile", { fg = "#1c1c1c", bg = "#eeeeee" })
+vim.api.nvim_set_hl(0, "NeoTreeFileIcon", { fg = "#eeeeee" })
 vim.cmd("hi TelescopeNormal guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopeBorder guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePromptNormal guibg=NONE ctermbg=NONE")

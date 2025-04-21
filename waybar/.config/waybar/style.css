@@ -41,32 +41,41 @@ window#waybar {
 /* System tray */
 #tray {
     padding-top: 2px;
-    padding-right: 2px
+    padding-right: 4px
 }
 
 /* Network Module */
 #network {
-    padding-right: 14px;
+    padding-top: 1px;
+    padding-right: 16px;
     padding-left: 7px;
     color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
+    padding-top: 1px;
+    padding-bottom: 1px;
     font-size: 20px;
-    padding-right: 12px;
+    padding-right: 14px;
     color: @yellow
 }
 
 /* Clock Module */
 #clock {
+    padding-top: 2px;
     padding-right: 7px;
     padding-left: 16px
 }
 
+#custom-space {
+    padding-top: 1px
+}
+
 /* Custom Power Module */
 #custom-power {
-    padding-left: 4px;
+    padding-top: 1px;
+    padding-left: 8px;
     padding-right: 16px;
     padding-left: 7px;
     font-size: 22px;
@@ -75,8 +84,8 @@ window#waybar {
 
 /* Custom Menu Module */
 #custom-menu {
-    padding-right: 14px;
-    padding-left: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
     font-size: 24px
 }
 
@@ -103,8 +112,7 @@ window#waybar {
 }
 /* Battery Module */
 #battery {
-    padding-right: 7px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-right: 9px;
+    font-size: 18px;
     color: @green
 }

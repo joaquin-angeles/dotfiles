@@ -1,7 +1,10 @@
 {
     "network": {
-        "format-wifi": "󰖩",
-        "format-disconnected": "󰖪",
+        "format": "{icon}",
+        "format-icons": [
+            "󱚵", "󱛂", "󰖩" 
+        ],
+        "format-disconnected": "󰤭",
         "on-click": "~/.config/waybar/scripts/wifi-menu",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
@@ -71,7 +74,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%d-%m-%y • %I:%M %p}",
         "on-click": "rofi -disable-history -show drun",
         "tooltip": true,
         "tooltip-format": "{:%d %B, %Y on a %A}"
@@ -90,7 +93,7 @@
     },
 
     "custom/menu": {
-        "format": "󰣇",
+        "format": "󰍜",
         "on-click": "rofi -disable-history -show drun"
     },
 
