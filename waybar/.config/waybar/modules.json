@@ -5,7 +5,7 @@
     "network": {
         "format": "{icon}",
         "format-icons": [
-            "󱚵", "󱛂", "󰖩" 
+           "󰤠", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
         "on-click": "~/.config/waybar/scripts/wifi-menu",
@@ -61,7 +61,7 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "format-muted": "󰝟",
+        "format-muted": "󰖁",
         "format-icons": {
             "headphones": "",
             "headset": "󱡏",
