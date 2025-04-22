@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Define the power menu options
+OPTIONS="Lock\nReboot\nShutdown\nLogout"
+
+# Show Rofi without the search bar (no-combi and no-display-combi)
+CHOICE=$(echo -e "$OPTIONS" | rofi -dmenu -p "Power Menu" -no-display-combi -theme-str 'window {width: 25em;} listview {lines: 4;}')
+
+# Perform the action based on the user's choice
+case $CHOICE in
+    "Lock")
+        hyprlock # Lock the screen (Hyprland specific lock)
+        ;;
+    "Reboot")
+        systemctl reboot # Reboot the system
+        ;;
+    "Shutdown")
+        systemctl poweroff # Shutdown the system
+        ;;
+    "Logout")
+        pkill -KILL -u $USER # Log out by killing the user's session
+        ;;
+    *)
+        exit 1
+        ;;
+esac
