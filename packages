@@ -32,10 +32,9 @@ packages=(
     nemo
     nemo-fileroller
     neovim
-    oh-my-posh-bin
     pavucontrol
-    rofi-emoji
     rofi-wayland
+    rofi-emoji
     slurp
     swappy
     waybar
