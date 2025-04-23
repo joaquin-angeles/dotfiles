@@ -12,12 +12,12 @@ while read -r line; do
 
             if [ "$new_state" = "discharging" ]; then
                 hyprctl keyword monitor ",1920x1080@60,auto,1.0"
-                brightnessctl set 50%
+                brightnessctl set 40%
                 brightnessctl --device="$KBD_DEVICE" set 0
                 notify-send "Battery Mode" "Switched to 60Hz, 50% brightness, keyboard backlight OFF"
             else
                 hyprctl keyword monitor ",1920x1080@144,auto,1.0"
-                brightnessctl set 100%
+                brightnessctl set 80%
                 brightnessctl --device="$KBD_DEVICE" set 100%
                 notify-send "Plugged In" "Switched to 144Hz, 100% brightness, keyboard backlight ON"
             fi

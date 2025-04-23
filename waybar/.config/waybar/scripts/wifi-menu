@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 notify-send "Wi-Fi scan..." "Getting network list..." &
 
@@ -72,17 +72,13 @@ selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:"
 case "$selection" in
     "$SCAN_ICON")
         nmcli device wifi rescan > /dev/null 2>&1
-        notify-send "Wi-Fi Scan" "Scanning for available networks..." -i network-wireless
         exec "$0"
         ;;
     "$WIFI_ON_ICON")
         nmcli radio wifi off
-        notify-send "Wi-Fi Disabled" "Wi-Fi has been disabled." -i network-wireless-disconnected
-        exec "$0"
         ;;
     "$WIFI_OFF_ICON")
         nmcli radio wifi on
-        notify-send "Wi-Fi Enabled" "Wi-Fi is now enabled." -i network-wireless
         exec "$0"
         ;;
     "")
