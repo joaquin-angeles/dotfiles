@@ -6,7 +6,7 @@ mkdir -p "$SCREENSHOT_DIR"
 CLIP_HASH_BEFORE=$(wl-paste --no-newline --type image/png 2>/dev/null | sha256sum || true)
 
 # Screenshot command
-( wayfreeze --hide-cursor --after-freeze-cmd 'grim -g "$(slurp)" -;killall wayfreeze' | swappy -f - ) &
+( wayfreeze --hide-cursor --after-freeze-cmd 'grim -g "$(slurp)" -; killall wayfreeze' | swappy -f - ) &
 
 # Notify when screenshot is saved
 inotifywait -e create --format '%f' "$SCREENSHOT_DIR" | while read NEWFILE; do
