@@ -3,7 +3,7 @@ alias c=clear
 cd() {
     z "$@" && eza
 }
-
+alias cat=bat
 alias ff='fastfetch'
 alias grep=rg
 alias k=kill
