@@ -38,6 +38,7 @@ packages=(
     slurp
     swappy
     waybar
+    wayfreeze-git
     wlogout
     zen-browser-bin
     zoxide
