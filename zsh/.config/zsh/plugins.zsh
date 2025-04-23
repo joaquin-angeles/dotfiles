@@ -18,3 +18,17 @@ zinit light zsh-users/zsh-autosuggestions # Suggesting past commands
 
 # Configurations
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh # P10K
+
+sudo() {
+  if ! /usr/bin/sudo -n true 2>/dev/null; then
+    printf "[sudo] password for %s: 󰌾 \e[?25l" "$USER"
+    command /usr/bin/sudo -p '' "$@"
+    printf "\e[?25h"
+  else
+    command /usr/bin/sudo "$@"
+  fi
+}
+
+cd() {
+    z "$@" && eza
+}
