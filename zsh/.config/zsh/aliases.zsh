@@ -9,6 +9,6 @@ alias grep=rg
 alias k=kill
 alias ls='eza'
 alias pk=pkill
-alias 'flatpak install'='flatpak --user install'
+alias flatpak='flatpak --user'
 alias x=exit
 alias vim=nvim

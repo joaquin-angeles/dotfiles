@@ -11,7 +11,7 @@
 
 /* Waybar Window */
 window#waybar {
-    background: @bg;
+    background-color: #1c1c1c;
     color: @fg;
     padding-left: 2px;
     padding-right: 2px;
