@@ -50,13 +50,7 @@ prompt {
 }
 
 inputbar {
-    children: ["prompt", "entry"];
-    spacing: @g-spacing;
-    padding: 14px 20px;
-    border-radius: 7px;
-    border: 2px solid;
-    border-color: #eeeeee;
-    background-color: #282828CC;
+    enabled: false;
 }
 
 entry {
@@ -66,10 +60,7 @@ entry {
 }
 
 mainbox {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    children: ["inputbar", "listview", "message"];
+    children: [listview];
 }
 
 element {

@@ -46,14 +46,15 @@ window#waybar {
 /* Network Module */
 #network {
     padding-right: 16px;
-    padding-left: 7px;
+    padding-left: 8px;
     color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
-    font-size: 20px;
+    font-size: 19px;
     padding-right: 14px;
+    padding-bottom: 1px;
     color: @yellow
 }
 

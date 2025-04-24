@@ -63,10 +63,11 @@ while IFS= read -r -d '' line; do
 done < <(nmcli -t -f SSID,SIGNAL device wifi list | awk 'NR>1' | awk -F: '{OFS="|"; print $1, $2}' | tr '\n' '\0')
 
 # Final menu
-SPACER="─────────── Available networks ────────────"
+SPACER="───────── Available networks ──────────"
 menu_items=("$SCAN_ICON" "$TOGGLE_WIFI" "$SPACER" "${ssid_menu[@]}")
 makoctl dismiss
-selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str 'listview {spacing: 6px;}')
+selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str 'inputbar { enabled: false; } listview { spacing: 6px; } mainbox { children: [listview]; } window { width: 550px; height: 550px; }')
+
 
 # Handle selection
 case "$selection" in
