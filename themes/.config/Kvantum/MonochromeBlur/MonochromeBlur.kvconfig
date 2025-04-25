@@ -67,10 +67,10 @@ reduce_menu_opacity=0
 respect_DE=true
 
 [GeneralColors]
-window.color=#1e1e20
-base.color=#1e1e20
-alt.base.color=#1e1e20
-button.color=#1e1e20
+window.color=#1c1c1c
+base.color=#1c1c1c
+alt.base.color=#1c1c1c
+button.color=#1c1c1c
 light.color=#464648
 mid.light.color=#323234
 dark.color=#141416

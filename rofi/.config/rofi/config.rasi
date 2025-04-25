@@ -17,8 +17,8 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun: "Apps:";
-    display-emoji: "Emoji:";
+    display-drun: "Applications:";
+    display-emoji: "Emoji list:";
 }
 
 listview {
