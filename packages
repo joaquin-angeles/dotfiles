@@ -17,7 +17,7 @@ fi
 
 # Sorted list of packages in alphabetical order
 packages=(
-    alacritty
+    brightnessctl
     eza
     grim
     hyprland
