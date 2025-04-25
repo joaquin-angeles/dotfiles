@@ -6,6 +6,7 @@ cd() {
 alias cat=bat
 alias ff='fastfetch'
 alias grep=rg
+alias paru='paru --skipreview'
 alias k=kill
 alias ls='eza'
 alias pk=pkill
