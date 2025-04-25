@@ -17,6 +17,7 @@ fi
 
 # Sorted list of packages in alphabetical order
 packages=(
+    adwsteamgtk
     brightnessctl
     eza
     grim
