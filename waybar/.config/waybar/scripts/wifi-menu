@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+notify-send "Wi-Fi scan in progress.." "Getting available networks.." &
 
 # Icons
 SCAN_ICON="󰐷   Scan"
