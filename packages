@@ -33,10 +33,11 @@ packages=(
     nemo-fileroller
     neovim
     pavucontrol
-    rofi-wayland
     rofi-emoji
+    rofi-wayland
     slurp
     swappy
+    upower
     waybar
     wayfreeze-git
     wlogout
