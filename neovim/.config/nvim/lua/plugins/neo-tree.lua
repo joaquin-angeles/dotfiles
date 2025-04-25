@@ -7,7 +7,6 @@ return {
   config = function()
         require("neo-tree").setup({
             close_if_last_window = true,
-            popup_border_style = "rounded",
             sources = { "filesystem", "buffers", "git_status" },
             filesystem = {
                 follow_current_file = { enabled = true },
@@ -17,7 +16,7 @@ return {
                     hide_dotfiles = true,
                 },
                 window = {
-                    position = "float",
+                    width = "100%",
                     mappings = {
                         ["."] = "toggle_hidden",
                     },

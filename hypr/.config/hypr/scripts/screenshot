@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
 mkdir -p "$SCREENSHOT_DIR"
 
 CLIP_HASH_BEFORE=$(wl-paste --no-newline --type image/png 2>/dev/null | sha256sum || true)
+SCREENSHOT_SAVED=false
 
 # Screenshot command
 ( wayfreeze --hide-cursor --after-freeze-cmd 'grim -g "$(slurp)" -; killall wayfreeze' | swappy -f - ) &
@@ -12,7 +13,10 @@ CLIP_HASH_BEFORE=$(wl-paste --no-newline --type image/png 2>/dev/null | sha256su
 inotifywait -e create --format '%f' "$SCREENSHOT_DIR" | while read NEWFILE; do
     NEWFILE_PATH="$SCREENSHOT_DIR/$NEWFILE"
     sleep 0.5
-    notify-send -u low -i "$NEWFILE_PATH" "Screenshot Saved" "Saved as $NEWFILE in $SCREENSHOT_DIR"
+    if ! $SCREENSHOT_SAVED; then
+        notify-send -u low -i "$NEWFILE_PATH" "Screenshot Saved" "Saved as $NEWFILE in $SCREENSHOT_DIR"
+        SCREENSHOT_SAVED=true
+    fi
     break
 done &
 
@@ -23,8 +27,10 @@ while true; do
     if [[ "$CLIP_HASH_AFTER" != "$CLIP_HASH_BEFORE" ]]; then
         TMP_IMG="$(mktemp --suffix .png)"
         wl-paste --type image/png > "$TMP_IMG"
-        notify-send -u low -i "$TMP_IMG" "Screenshot Copied" "Image copied to clipboard"
+        if ! $SCREENSHOT_SAVED; then
+            notify-send -u low -i "$TMP_IMG" "Screenshot Copied" "Image copied to clipboard"
+        fi
         (sleep 5 && rm -f "$TMP_IMG") &
         break
     fi
-done &
+done
