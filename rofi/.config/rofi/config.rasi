@@ -2,10 +2,9 @@
     font: "Rubik 13";
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #1c1c1cD9;
+    b-color: #1c1c1cCC;
     fg-color: #555555;
     fgp-color: #888888FF;
-    g-padding: 8px;
     hl-color: transparent;
     hlt-color: #eeeeee;
     alt-color: #444444CC;
@@ -19,12 +18,11 @@ configuration {
     modi: "drun";
     show-icons: false;
     display-drun: "Apps:";
-    drun-display-format: "{name}";
     display-emoji: "Emoji:";
 }
 
 listview {
-    columns: 2;
+    columns: 1;
     lines: 7;
     fixed-height: true;
     fixed-columns: false;
@@ -36,13 +34,13 @@ listview {
 
 window {
     transparency: "real";
-    width: 620px;
+    width: 550px;
     height: 550px;
-    border-radius: 7px;
+    border-radius: 8px;
     background-color: @wbg-color;
-    border: @w-border;
-    border-color: @w-border-color;
-    padding: @w-padding;
+    border: 2px solid;
+    border-color: #eeeeee;
+    padding: 8px;
 }
 
 prompt {
@@ -52,11 +50,11 @@ prompt {
 inputbar {
     children: ["prompt", "entry"];
     spacing: @g-spacing;
-    padding: 14px 20px;
+    padding: 12px 14px;
     border-radius: 7px;
     border: 2px solid;
-    border-color: #eeeeee;
-    background-color: #282828CC;
+    border-color: #525252;
+    background-color: #252525;
 }
 
 entry {
@@ -68,14 +66,14 @@ entry {
 mainbox {
     spacing: @g-spacing;
     margin: @g-margin;
-    padding: @g-padding;
+    padding: 8px;
     children: ["inputbar", "listview", "message"];
 }
 
 element {
     spacing: @g-spacing;
     margin: @g-margin;
-    padding: @g-padding;
+    padding: 8px;
 }
 
 element normal.normal {
