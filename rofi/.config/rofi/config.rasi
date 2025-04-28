@@ -1,5 +1,7 @@
 * {
     font: "Rubik 13";
+    text-color: #eeeeee;
+    foreground: #865054;
     g-spacing: 10px;
     g-margin: 0;
     b-color: #1c1c1cCC;
@@ -10,7 +12,7 @@
     alt-color: #444444CC;
     wbg-color: #171717CC;
     w-border: 2px solid;
-    w-border-color: #EEEEEE;
+    w-border-color: #eeeeee;
     w-padding: 12px;
 }
 
@@ -53,7 +55,7 @@ inputbar {
     padding: 12px 14px;
     border-radius: 7px;
     border: 2px solid;
-    border-color: #525252;
+    border-color: #454545;
     background-color: #252525;
 }
 

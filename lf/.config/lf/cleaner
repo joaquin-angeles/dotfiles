@@ -1,5 +1,19 @@
 #!/bin/bash
-TMP_DIR="${XDG_RUNTIME_DIR:-/tmp}/lf"
-if [ -d "$TMP_DIR" ]; then
-  rm -rf "$TMP_DIR"/*
-fi
+
+CLEAN_DIRS=(
+  "$HOME/.cache"
+  "$HOME/.local/share/gnome-shell"
+  "/tmp"
+)
+CLEAN_FILES=(
+  "*.log"
+  "*.bak"
+  "*.tmp"
+)
+
+for DIR in "${CLEAN_DIRS[@]}"; do
+  echo "Cleaning directory: $DIR"
+  find "$DIR" -type f -name "*.log" -exec rm -f {} \;  # Example: Remove log files
+  find "$DIR" -type f -name "*.bak" -exec rm -f {} \;  # Example: Remove backup files
+  find "$DIR" -type f -name "*.tmp" -exec rm -f {} \;  # Example: Remove temp files
+done
