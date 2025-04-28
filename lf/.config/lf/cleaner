@@ -1,0 +1,5 @@
+#!/bin/bash
+TMP_DIR="${XDG_RUNTIME_DIR:-/tmp}/lf"
+if [ -d "$TMP_DIR" ]; then
+  rm -rf "$TMP_DIR"/*
+fi
