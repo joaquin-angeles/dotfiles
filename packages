@@ -19,6 +19,7 @@ fi
 packages=(
     adwsteamgtk
     brightnessctl
+    chafa
     eza
     grim
     hyprland
@@ -29,6 +30,7 @@ packages=(
     kvantum
     kvantum-qt5
     libnotify
+    lf
     mako
     nemo
     nemo-fileroller
