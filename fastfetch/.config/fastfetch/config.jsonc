@@ -24,59 +24,52 @@
             }
         },
         {
-            "type": "custom",
-            "format": "•••••••••••••••••"
-        },
-        {
             "type": "os",
-            "key": "~"
+            "key": "os    "
         },
         {
             "type": "kernel",
-            "key": "~",
+            "key": "kernel",
             "format": "{2}"
         },
         {
             "type": "packages",
-            "key": "~",
-            "format": "{1} packages installed"
+            "key": "pkgs  ",
+            "format": "{1}"
         },
         {
             "type": "shell",
-            "key": "~",
+            "key": "sh    ",
             "format": "{3} {4} ({2})"
         },
         {
             "type": "de",
-            "key": "~",
+            "key": "de    ",
             "format": "{1}"
         },
         {
             "type": "wm",
-            "key": "~",
+            "key": "wm    ",
             "format": "{2} ({3})"
         },
         {
             "type": "uptime",
-            "key": "~"
+            "key": "uptime"
         },
         {
             "type": "disk",
-            "key": "~",
+            "key": "disk  ",
             "format": "{1} / {2} ({3})"
         },
         {
             "type": "memory",
-            "key": "~"
+            "key": "memory"
         },
         {
             "type": "swap",
-            "key": "~"
+            "key": "swap  "
         },
-        {
-            "type": "custom",
-            "format": "•••••••••••••••"
-        },
+        "break",
         {
             "type": "colors",
             "symbol": "circle",

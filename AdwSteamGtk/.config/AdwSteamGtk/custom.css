@@ -11,9 +11,9 @@
 	--adw-destructive-rgb: 241, 112, 121 !important;
 
 	/* Levelbars, entries, labels and infobars. These don't need text colors */
-	--adw-success-bg-rgb: 139, 186, 82 !important;
+	--adw-success-bg-rgb: 122, 158, 52 !important;
 	--adw-success-fg-rgb: 238, 238, 238 !important;
-	--adw-success-rgb: 139, 186, 82 !important;
+	--adw-success-rgb: 122, 158, 52 !important;
 
 	--adw-warning-bg-rgb: 255, 246, 63 !important;
 	--adw-warning-fg-rgb: 238, 238, 238 !important;
