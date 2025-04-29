@@ -24,6 +24,7 @@ packages=(
     grim
     hyprland
     hyprlock
+    hyprshot
     hyprpaper
     inotify-tools
     kitty
@@ -39,10 +40,8 @@ packages=(
     rofi-emoji
     rofi-wayland
     slurp
-    swappy
     upower
     waybar
-    wayfreeze-git
     wlogout
     xdg-desktop-portal-wlr
     xdg-desktop-portal-hyprland
