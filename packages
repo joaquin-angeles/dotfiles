@@ -21,6 +21,7 @@ packages=(
     brightnessctl
     chafa
     eza
+    flameshot-git
     grim
     hyprland
     hyprlock
@@ -44,6 +45,8 @@ packages=(
     waybar
     wayfreeze-git
     wlogout
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-hyprland
     zen-browser-bin
     zoxide
     zsh

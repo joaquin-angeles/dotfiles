@@ -2,7 +2,19 @@ set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 set sixel true
 cmd open-shell : &file "$f" | head -n 1 | grep -q "^#!.*bash" && nvim "$f" || xdg-open "$f"
-map o open-shell
-map <enter> open
 map . set hidden!
 map D delete
+map p paste
+map x cut
+map y copy
+map a push $touch<space>
+map A push $mkdir<space>-p<space>
+map e $nvim "$f"
+map <enter> open
+map chx !chmod +x "$1"
+map r rename
+map H top
+map L bottom
+map R reload
+map U clear
+map u unselect
