@@ -19,6 +19,7 @@ fi
 packages=(
     adwsteamgtk
     brightnessctl
+    bibata-cursor-theme-bin
     chafa
     eza
     grim
