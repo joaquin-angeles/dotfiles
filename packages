@@ -21,7 +21,6 @@ packages=(
     brightnessctl
     chafa
     eza
-    flameshot-git
     grim
     hyprland
     hyprlock

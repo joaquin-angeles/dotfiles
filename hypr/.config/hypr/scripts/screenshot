@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
 mkdir -p "$SCREENSHOT_DIR"
