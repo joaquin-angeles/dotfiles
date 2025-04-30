@@ -80,6 +80,7 @@ window#waybar {
     font-size: 24px
 }
 
+/* Application icons */
 #custom-fm {
     padding-top: 2px;
     padding-right: 18px;
@@ -101,6 +102,7 @@ window#waybar {
     padding-right: 8px;
     font-size: 24px
 }
+
 /* Battery Module */
 #battery {
     padding-right: 8px;
