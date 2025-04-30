@@ -34,7 +34,7 @@ return {
             dashboard.button("n", "  New File", ":enew | startinsert<CR>"),
             dashboard.button("r", "  Recent Files", ":Telescope oldfiles<CR>"),
             dashboard.button("g", "󱎸  Find Text", ":Telescope live_grep<CR>"),
-            dashboard.button("c", "󰢻  Config", ":Neotree filesystem reveal left dir=~/.config/nvim<CR>"),
+            dashboard.button("c", "󰢻  Config", ":Neotree filesystem reveal dir=~/.config/nvim<CR>"),
             dashboard.button("s", "  Restore Session", ":SessionRestore<CR>"),
             dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
             dashboard.button("Q", "  Quit", ":qa<CR>"),
