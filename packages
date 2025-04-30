@@ -1,8 +1,7 @@
 #!/bin/bash
 
-set -e  # Exit on error
+set -e
 
-# Ensure paru is installed
 if ! command -v paru &>/dev/null; then
     echo "󰖷 paru not found. Installing paru..."
     temp_dir=$(mktemp -d)
@@ -15,7 +14,6 @@ if ! command -v paru &>/dev/null; then
     echo " paru installed successfully."
 fi
 
-# Sorted list of packages in alphabetical order
 packages=(
     adwsteamgtk
     brightnessctl
@@ -51,7 +49,6 @@ packages=(
     zsh
 )
 
-# Install each package if not already installed
 for package in "${packages[@]}"; do
     if pacman -Q "$package" &>/dev/null; then
         echo " $package is already installed."
@@ -65,7 +62,6 @@ for package in "${packages[@]}"; do
     fi
 done
 
-# Set Zsh as the default shell if not already set
 if [ "$SHELL" != "/usr/bin/zsh" ]; then
     echo "󰖷 Setting zsh as the default shell.."
     echo -n "[sudo] password for $USER: "

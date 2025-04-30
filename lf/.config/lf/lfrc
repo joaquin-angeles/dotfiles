@@ -11,7 +11,6 @@ map a push $touch<space>
 map A push $mkdir<space>-p<space>
 map e $nvim "$f"
 map <enter> open
-map chx !chmod +x "$1"
 map r rename
 map H top
 map L bottom

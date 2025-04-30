@@ -7,6 +7,6 @@ size = 13.15
 builtin_box_drawing = true 
 
 [window]
-padding.x = 6
-padding.y = 6
+padding.x = 8
+padding.y = 8
 opacity = 0.8
