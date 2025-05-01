@@ -54,7 +54,7 @@ foreground_templates = [
   "{{if eq .Code 0}}green{{end}}",
 ]
 background = 'transparent'
-template = '❯'
+template = '$'
 
 [transient_prompt]
 foreground_templates = [
