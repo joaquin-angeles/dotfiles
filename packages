@@ -65,7 +65,7 @@ done
 if [ "$SHELL" != "/usr/bin/zsh" ]; then
     echo "󰖷 Setting zsh as the default shell.."
     echo -n "[sudo] password for $USER: "
-    chsh -s /usr/bin/zsh &>/dev/null
+    chsh -s $(which zsh) &>/dev/null
     echo -e "\n  zsh has been set as the default shell."
 else
     echo -e " zsh is already the default shell."
