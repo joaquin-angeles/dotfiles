@@ -69,7 +69,10 @@
             "type": "swap",
             "key": "swap  "
         },
-        "break",
+        {
+            "type": "custom",
+            "format": "───────────────"
+        },
         {
             "type": "colors",
             "symbol": "circle",

@@ -1,6 +1,7 @@
 * {
 	background-image: none;
 	box-shadow: none;
+    font-family: 'JetBrains Mono'
 }
 
 window {
@@ -22,7 +23,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: #323232;
+	background-color: #282828;
 	outline-style: none;
 }
 
