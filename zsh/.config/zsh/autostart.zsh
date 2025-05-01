@@ -45,7 +45,6 @@ precmd() {
     set_window_title ""
 }
 
-
 # Autoload
 autoload -U compinit && compinit
 
