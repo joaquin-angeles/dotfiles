@@ -5,7 +5,7 @@ return {
         require('lualine').setup({
             options = {
                 icons_enabled = false,
-                disabled_filetypes = { 'alpha', 'neo-tree' },
+                disabled_filetypes = { 'alpha', 'NvimTree' },
                 section_separators = { left = '', right = '' },
                 component_separators = { left = '', right = '' },
                 theme = {
