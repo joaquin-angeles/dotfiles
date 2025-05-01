@@ -1,7 +1,20 @@
+# Preview and cleaner
 set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
+
+# Sixel support
 set sixel true
-cmd open-shell : &file "$f" | head -n 1 | grep -q "^#!.*bash" && nvim "$f" || xdg-open "$f"
+
+# Custom functions
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        application/x-executable) "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+# Keymaps
 map . set hidden!
 map D delete
 map p paste
