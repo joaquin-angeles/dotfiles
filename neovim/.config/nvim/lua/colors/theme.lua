@@ -8,7 +8,7 @@ vim.cmd("hi Visual guibg=#323232 guifg=NONE gui=NONE")
 vim.cmd("hi StatusLine guibg=NONE")
 vim.cmd("hi StatusLineNC guibg=NONE")
 vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
-vim.cmd("hi CursorLine guibg=#252525 ctermbg=NONE")
+vim.cmd("hi CursorLine guibg=#282828 ctermbg=NONE")
 vim.cmd("hi CursorLineNr guifg=#6e8f2a gui=bold ctermfg=255 cterm=bold")
 vim.cmd("hi FloatBorder guibg=NONE ctermbg=NONE")
 
@@ -32,8 +32,6 @@ vim.cmd("hi TelescopePreviewNormal guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewBorder guibg=NONE ctermbg=NONE")
 vim.cmd("hi TelescopePreviewTitle guibg=NONE ctermbg=NONE")
 vim.cmd('hi TelescopeSelection guifg=#eeeeee guibg=#333333 gui=bold')
-
--- Noice plugin UI transparency
 vim.cmd("hi NoicePopup guibg=NONE ctermbg=NONE")
 vim.cmd("hi NoicePopupBorder guibg=NONE ctermbg=NONE")
 vim.cmd("hi NoiceMessage guibg=NONE ctermbg=NONE")

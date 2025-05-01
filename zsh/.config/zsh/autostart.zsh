@@ -1,3 +1,4 @@
+# Fetch utility
 fastfetch
 echo ""
 
