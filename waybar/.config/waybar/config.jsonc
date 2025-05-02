@@ -2,7 +2,7 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 36,
+    "height": 33,
     "spacing": 4,
     "modules-left": [
         "clock",
