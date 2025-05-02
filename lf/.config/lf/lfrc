@@ -16,13 +16,12 @@ cmd open ${{
 
 # Keymaps
 map . set hidden!
-map D delete
+map d delete
 map p paste
 map x cut
 map y copy
 map a push $touch<space>
 map A push $mkdir<space>-p<space>
-map E $nvim "$f"
 map <enter> open
 map r rename
 map H top

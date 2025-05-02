@@ -7,4 +7,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.notify(num_lines .. ' line(s) yanked to clipboard.', vim.log.levels.INFO, { timeout = 1000 })
   end,
 })
-

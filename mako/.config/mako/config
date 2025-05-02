@@ -1,4 +1,5 @@
 layer=overlay
+height=125
 text-alignment=center
 default-timeout=3000
 background-color=#1c1c1ccc
