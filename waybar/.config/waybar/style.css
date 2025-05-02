@@ -40,12 +40,12 @@ window#waybar {
 
 /* System tray */
 #tray {
-    padding-right: 2px
+    padding-right: 3.5px
 }
 
 /* Network Module */
 #network {
-    padding-right: 18px;
+    padding-right: 20px;
     padding-left: 8px;
     font-size: 18.25px;
     color: @blue
@@ -53,9 +53,9 @@ window#waybar {
 
 /* Pulseaudio Module */
 #pulseaudio {
-    font-size: 19px;
-    padding-right: 16px;
-    padding-bottom: 1px;
+    font-size: 19.25px;
+    padding-right: 17px;
+    padding-bottom: 1.5px;
     color: @yellow
 }
 

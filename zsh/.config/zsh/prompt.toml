@@ -1,6 +1,10 @@
-console_title_template = '{{ .Shell }} in {{ .Folder }}'
+# Oh my posh
+
 version = 3
 final_space = true
+
+[shell]
+disable_title = true
 
 [[blocks]]
 type = 'prompt'
@@ -61,5 +65,6 @@ foreground_templates = [
   "{{if gt .Code 0}}red{{end}}",
   "{{if eq .Code 0}}green{{end}}",
 ]
+command = "[[ \"$ZSH_LAST_COMMAND\" == \"clear\" || \"$ZSH_LAST_COMMAND\" == \"c\" ]] && echo -n || echo"
 background = 'transparent'
 template = '❯ '

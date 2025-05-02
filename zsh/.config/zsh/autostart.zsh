@@ -1,8 +1,3 @@
-# P10K Instant Prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # List of commands to exclude from updating the window title
 excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history" "fastfetch" "ff" "pkill" "pk" "sleep")
 
@@ -32,13 +27,21 @@ function set_window_title() {
     fi
 }
 
-# Update title before executing a command
-preexec() {
+# Window title configurations and newline
+LAST_COMMAND=""
+
+function preexec() {
+    LAST_COMMAND="$1"
     set_window_title "$1"
 }
-
-precmd() {
+function precmd() {
     set_window_title ""
+    if [[ -n "$LAST_COMMAND" ]]; then
+        case "$LAST_COMMAND" in
+            clear|c) ;;
+            *) print ;;
+        esac
+    fi
 }
 
 # Autoload
@@ -46,4 +49,5 @@ autoload -U compinit && compinit
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/zsh/prompt.toml)"
 eval "$(zoxide init zsh)"
