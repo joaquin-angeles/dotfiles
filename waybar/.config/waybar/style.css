@@ -7,23 +7,20 @@
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13.5pt;
     min-height: 0;
-    padding-top: 1px;
-    padding-left: 2px;
-    padding-right: 3px
 }
 
 /* Waybar Window */
 window#waybar {
     color: @fg;
-    background: rgba(0,0,0,0);
+    background: @bg;
     padding-left: 2px;
     padding-right: 2px;
 }
 
 /* Workspace Buttons */
 #workspaces button {
-    min-width: 12px;
-    padding: 0 4px;
+    min-width: 14px;
+    padding: 0 7px;
     background: transparent;
     color: @inactive;
     font-weight: 400;
