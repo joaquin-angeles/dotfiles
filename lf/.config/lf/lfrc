@@ -19,7 +19,7 @@ cmd open ${{
 
 # Keymaps
 map . set hidden!
-map d delete
+map D delete
 map p paste
 map x cut
 map y copy
