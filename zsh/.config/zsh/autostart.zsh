@@ -43,6 +43,7 @@ precmd() {
 
 # Autoload
 autoload -U compinit && compinit
+printf '\e[1 q'
 
 # Shell integrations
 eval "$(fzf --zsh)"

@@ -7,3 +7,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.notify(num_lines .. ' line(s) yanked to clipboard.', vim.log.levels.INFO, { timeout = 1000 })
   end,
 })
+
+vim.api.nvim_create_autocmd("VimLeave", {
+  pattern = "*",
+  command = "set guicursor=a:block-blinkon500-blinkoff500-blinkwait100"
+})
