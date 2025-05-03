@@ -5,6 +5,7 @@ cd() {
 }
 
 alias cat=bat
+alias 'vim .'='sh ~/.config/lf/lfrun'
 alias lf='sh ~/.config/lf/lfrun'
 alias ff=fastfetch
 alias grep=rg

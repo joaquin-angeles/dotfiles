@@ -18,6 +18,10 @@ window#waybar {
 }
 
 /* Workspace Buttons */
+#workspaces {
+    padding-left: 2px
+}
+
 #workspaces button {
     min-width: 14px;
     padding: 0 7px;
@@ -61,14 +65,14 @@ window#waybar {
 
 /* Clock Module */
 #clock {
-    padding-right: 8px;
+    padding-right: 10px;
     padding-left: 16px
 }
 
 /* Custom Power Module */
 #custom-power {
     padding-right: 16px;
-    padding-left: 8px;
+    padding-left: 10px;
     font-size: 22px;
     color: @red
 }
@@ -107,6 +111,6 @@ window#waybar {
 /* Battery Module */
 #battery {
     font-size: 18.215px;
-    padding-right: 9px;
+    padding-right: 11px;
     color: @green
 }

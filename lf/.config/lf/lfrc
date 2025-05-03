@@ -7,11 +7,14 @@ set sixel true
 
 # Custom functions
 cmd open ${{
-    case $(file --mime-type "$f" -bL) in
-        text/*|application/json) $EDITOR "$f";;
-        application/x-executable) "$f";;
-        *) xdg-open "$f" ;;
-    esac
+    if bat --plain --paging=never "$f" > /dev/null 2>&1; then
+        nvim "$f"
+    else
+        case $(file --mime-type "$f" -bL) in
+            application/x-executable) "$f" ;;
+            *) xdg-open "$f" ;;
+        esac
+    fi
 }}
 
 # Keymaps
