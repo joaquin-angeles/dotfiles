@@ -4,15 +4,13 @@ cd() {
     z "$@" && eza
 }
 
-alias cat=bat
-alias 'vim .'='sh ~/.config/lf/lfrun'
-alias lf='sh ~/.config/lf/lfrun'
 alias ff=fastfetch
-alias grep=rg
-alias paru='paru --skipreview'
-alias k=kill
-alias ls=eza
-alias pk=pkill
 alias flatpak='flatpak --user'
+alias grep=rg
+alias k=kill
+alias lf='sh ~/.config/lf/lfrun'
+alias ls=eza
+alias paru='paru --skipreview'
+alias pk=pkill
 alias vim='nvim'
 alias vi='nvim'
