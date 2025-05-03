@@ -6,14 +6,8 @@ image() {
 }
 
 batorcat() {
-	file="$1"
-	shift
-	if command -v bat > /dev/null 2>&1
-	then
-		bat --color=always --style=plain --pager=never "$file" "$@"
-	else
-		cat "$file"
-	fi
+    file="$1"
+    cat "$file"
 }
 
 glowormdcat() {
