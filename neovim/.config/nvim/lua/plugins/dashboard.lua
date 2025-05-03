@@ -30,14 +30,14 @@ return {
         dashboard.section.header.opts.hl = "AlphaHeader"
 
         dashboard.section.buttons.val = {
-            dashboard.button("/", "  Find File", ":Telescope find_files hidden=true cwd=~/<CR>"),
-            dashboard.button("n", "  New File", ":enew | startinsert<CR>"),
-            dashboard.button("r", "  Recent Files", ":Telescope oldfiles<CR>"),
-            dashboard.button("g", "󱎸  Find Text", ":Telescope live_grep<CR>"),
-            dashboard.button("c", "󰢻  Config", ":Neotree filesystem reveal dir=~/.config/nvim<CR>"),
-            dashboard.button("s", "  Restore Session", ":SessionRestore<CR>"),
-            dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
-            dashboard.button("Q", "  Quit", ":qa<CR>"),
+            dashboard.button("/", "  Find File", "<cmd>Telescope find_files hidden=true cwd=~/<CR>"),
+            dashboard.button("n", "  New File", "<cmd>enew | startinsert<CR>"),
+            dashboard.button("r", "  Recent Files", "<cmd>Telescope oldfiles<CR>"),
+            dashboard.button("g", "󱎸  Find Text", "<cmd>Telescope live_grep<CR>"),
+            dashboard.button("c", "󰢻  Config", "<cmd>Neotree filesystem reveal dir=~/.config/nvim<CR>"),
+            dashboard.button("s", "  Restore Session", "<cmd>SessionRestore<CR>"),
+            dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>"),
+            dashboard.button("Q", "  Quit", "<cmd>qa<CR>"),
         }
 
         local function footer()

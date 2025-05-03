@@ -10,6 +10,18 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
+-- Define the undo directory path
+local undodir = vim.fn.stdpath("cache") .. "/nvim/undodir"
+
+-- Check if the directory exists; if not, create it
+if vim.fn.isdirectory(undodir) == 0 then
+  vim.fn.mkdir(undodir, "p", 0700)
+end
+
+-- Enable persistent undo and set the undo directory
+vim.opt.undofile = true
+vim.opt.undodir = undodir
+
 -- Cursor adjustments
 vim.opt.guicursor = {
     "n-v-c:block-blinkwait100-blinkon500-blinkoff500",

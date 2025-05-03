@@ -14,5 +14,5 @@ alias k=kill
 alias ls=eza
 alias pk=pkill
 alias flatpak='flatpak --user'
-alias vim=nvim
-alias vi=nvim
+alias vim='nvim'
+alias vi='nvim'

@@ -2,7 +2,7 @@ local map = vim.keymap.set
 local unmap = vim.api.nvim_del_keymap
 
 map('n', ';', ':', { noremap = true, silent = false })
-map('n', '<leader>e', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
+map('n', '<leader>e', ':Neotree reveal left<CR>', { noremap = true, silent = true })
 map('n', '.', function()
   if vim.fn.exists(':NvimTreeToggle') == 2 then
     vim.cmd('NvimTreeToggle')
