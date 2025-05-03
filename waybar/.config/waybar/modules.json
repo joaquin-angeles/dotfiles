@@ -1,16 +1,34 @@
 {
     "hyprland/window": {
-        "max-length": 68
+        "max-length": 64
     },
+
     "network": {
         "format": "{icon}",
         "format-icons": [
-           "󰤠", "󰤢", "󰤥", "󰤨" 
+            "󰤠", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
         "on-click": "~/.config/waybar/scripts/wifi-menu",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "headphones": "",
+            "headset": "󱡏",
+            "default": [
+                "󰝟",
+                "󰖀",
+                "󰝝",
+                "󰕾"
+            ]
+        },
+        "on-click": "GTK_THEME=JQN-Mono pavucontrol",
+        "tooltip-format": "Volume ({volume}%)"
     },
 
     "battery": {
@@ -31,51 +49,6 @@
         "tooltip": false
     },
 
-    "custom/fm": {
-        "format": "󰝰",
-        "on-click": "nemo",
-        "tooltip": true,
-        "tooltip-format": "File Manager (Nemo)"
-    },
-
-    "custom/web": {
-        "format": "",
-        "on-click": "zen-browser",
-        "tooltip": true,
-        "tooltip-format": "Web Browser (Zen)"
-    },
-
-    "custom/games": {
-        "format": "",
-        "on-click": "lutris",
-        "tooltip": true,
-        "tooltip-format": "Game Hub (Lutris)"
-    },
-
-    "custom/terminal": {
-        "format": "󰆍",
-        "on-click": "kitty",
-        "tooltip": true,
-        "tooltip-format": "Terminal (kitty)"
-    },
-
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-muted": "󰖁",
-        "format-icons": {
-            "headphones": "",
-            "headset": "󱡏",
-            "default": [
-                "󰝟",
-                "󰖀",
-                "󰝝",
-                "󰕾"
-            ]
-        },
-        "on-click": "pavucontrol",
-        "tooltip-format": "Volume ({volume}%)"
-    },
-
     "clock": {
         "format": "{:%I:%M %p}",
         "on-click": "rofi -disable-history -show drun",
@@ -84,7 +57,7 @@
     },
 
     "tray": {
-        "icon-size": 18,
+        "icon-size": 20,
         "spacing": 14
     },
 

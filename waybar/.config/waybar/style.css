@@ -49,24 +49,23 @@ window#waybar {
 
 /* Network Module */
 #network {
+    font-size: 20px;
     padding-right: 20px;
     padding-left: 8px;
-    font-size: 18.25px;
     color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
-    font-size: 19.25px;
-    padding-right: 17px;
-    padding-bottom: 1.5px;
+    font-size: 21px;
+    padding-right: 18px;
     color: @yellow
 }
 
 /* Clock Module */
 #clock {
     padding-right: 10px;
-    padding-left: 16px
+    padding-left: 14px
 }
 
 /* Custom Power Module */
@@ -110,7 +109,7 @@ window#waybar {
 
 /* Battery Module */
 #battery {
-    font-size: 18.215px;
-    padding-right: 11px;
+    padding-right: 10px;
+    font-size: 20px;
     color: @green
 }

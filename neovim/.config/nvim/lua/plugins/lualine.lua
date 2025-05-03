@@ -35,6 +35,7 @@ return {
                     'filetype'
                 },
                 lualine_y = {
+                    '%p%%',
                     'location'
                 },
                 lualine_z = {
