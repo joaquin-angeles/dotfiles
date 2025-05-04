@@ -50,15 +50,15 @@ window#waybar {
 
 /* Network Module */
 #network {
-    font-size: 19.5px;
-    padding-right: 20px;
+    font-size: 20.75px;
+    padding-right: 23px;
     color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
-    font-size: 20.5px;
-    padding-right: 18px;
+    font-size: 20.75px;
+    padding-right: 20px;
     color: @yellow
 }
 
@@ -72,7 +72,7 @@ window#waybar {
 #custom-power {
     padding-right: 16px;
     padding-left: 10px;
-    font-size: 22px;
+    font-size: 22.5px;
     color: @red
 }
 
@@ -110,6 +110,6 @@ window#waybar {
 /* Battery Module */
 #battery {
     padding-right: 10px;
-    font-size: 19.5px;
+    font-size: 20.75px;
     color: @green
 }
