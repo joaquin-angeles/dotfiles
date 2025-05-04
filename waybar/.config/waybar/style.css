@@ -57,7 +57,7 @@ window#waybar {
 
 /* Pulseaudio Module */
 #pulseaudio {
-    font-size: 20.75px;
+    font-size: 21.25px;
     padding-right: 20px;
     color: @yellow
 }
