@@ -10492,7 +10492,7 @@ tooltip.background.chromium {
 
 
 #MozillaGtkWidget {
-    background-color: #333333;
+    background-color: #252525;
 }
 
 #MozillaGtkWidget.background button {
@@ -10510,7 +10510,7 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget>widget border {
-    border-color: #1b82b3;
+    border-color: #606060;
 }
 
 #MozillaGtkWidget>widget>scrolledwindow>textview text:selected,

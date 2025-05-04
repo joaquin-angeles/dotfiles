@@ -457,7 +457,7 @@ list .h4 {
 avatar {
     border-radius: 9999px;
     font-weight: bold;
-    border: 3px solid #1c1c1c;
+    border: 3px solid #1b82b3;
 }
 
 avatar.color1 {
@@ -10514,7 +10514,7 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget>widget border {
-    border-color: #1b82b3;
+    border-color: #606060;
 }
 
 #MozillaGtkWidget>widget>scrolledwindow>textview text:selected,

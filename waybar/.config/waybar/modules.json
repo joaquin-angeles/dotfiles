@@ -27,7 +27,7 @@
                 "󰕾"
             ]
         },
-        "on-click": "GTK_THEME=JQN-Mono pavucontrol",
+        "on-click": "pavucontrol",
         "tooltip-format": "Volume ({volume}%)"
     },
 
@@ -37,6 +37,7 @@
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
         "format-charging": "󰂄",
+        "format-full": "󱟢",
         "format-warning": "󰂃",
         "tooltip": true,
         "tooltip-format": "Discharging ({capacity}%)",
@@ -57,8 +58,8 @@
     },
 
     "tray": {
-        "icon-size": 19,
-        "spacing": 14
+        "icon-size": 20,
+        "spacing": 16
     },
 
     "custom/power": {

@@ -44,13 +44,12 @@ window#waybar {
 
 /* System tray */
 #tray {
-    padding-right: 11px;
-    padding-top: 2.5px
+    padding-right: 12px;
 }
 
 /* Network Module */
 #network {
-    font-size: 20.75px;
+    font-size: 20.5px;
     padding-right: 23px;
     color: @blue
 }
@@ -110,6 +109,6 @@ window#waybar {
 /* Battery Module */
 #battery {
     padding-right: 10px;
-    font-size: 20.75px;
+    font-size: 20.25px;
     color: @green
 }
