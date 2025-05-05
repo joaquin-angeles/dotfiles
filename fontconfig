@@ -1,16 +1,21 @@
 #!/bin/bash
 
 set -e  # Exit on error
+temp_dir=$(mktemp -d)
+font_dir=~/.local/share/fonts
 
-# Clone the Paru repository
-echo "Installing paru.."
-git clone https://aur.archlinux.org/paru-bin.git > /dev/null 2>&1
-cd paru-bin > /dev/null 2>&1
-makepkg -si --noconfirm > /dev/null 2>&1
-cd .. > /dev/null 2>&1
-rm -rf paru-bin > /dev/null 2>&1
-mkdir -p ~/.config/paru > /dev/null 2>&1
-echo "Paru installation complete!"
+# Clone the paru repository
+if command -v paru >/dev/null 2>&1; then
+    echo "paru is already installed."
+else
+    echo "Installing paru.."
+    git clone https://aur.archlinux.org/paru-bin.git >/dev/null 2>&1
+    cd paru-bin >/dev/null 2>&1
+    makepkg -si --noconfirm >/dev/null 2>&1
+    cd .. >/dev/null 2>&1
+    rm -rf paru-bin >/dev/null 2>&1
+    echo "paru installation complete!"
+fi
 
 # Install Rubik font manually if not already present
 if fc-list | grep -i "Rubik" &>/dev/null; then
@@ -19,6 +24,7 @@ else
     echo " Installing Rubik font..."
     temp_dir=$(mktemp -d)
     git clone --depth 1 https://github.com/googlefonts/rubik.git "$temp_dir" &>/dev/null
+    mkdir -p "$font_dir/Rubik"
     cp -r "$temp_dir/fonts/variable/"*.ttf "$font_dir/Rubik"
     rm -rf "$temp_dir"
     fc-cache -r
