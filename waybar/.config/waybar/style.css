@@ -49,14 +49,14 @@ window#waybar {
 
 /* Network Module */
 #network {
-    font-size: 20.75px;
+    font-size: 15.5pt;
     padding-right: 23px;
     color: @blue
 }
 
 /* Pulseaudio Module */
 #pulseaudio {
-    font-size: 21.25px;
+    font-size: 16pt;
     padding-right: 20px;
     color: @yellow
 }
@@ -75,40 +75,9 @@ window#waybar {
     color: @red
 }
 
-/* Custom Menu Module */
-#custom-menu {
-    padding-top: 2px;
-    padding-right: 16px;
-    padding-left: 16px;
-    font-size: 24px
-}
-
-/* Application icons */
-#custom-fm {
-    padding-top: 2px;
-    padding-right: 18px;
-    padding-left: 8px;
-    font-size: 24px
-}
-
-#custom-web {
-    padding-right: 14px;
-    font-size: 26px
-}
-
-#custom-games {
-    padding-right: 20px;
-    font-size: 20px
-}
-
-#custom-terminal {
-    padding-right: 8px;
-    font-size: 24px
-}
-
 /* Battery Module */
 #battery {
-    padding-right: 10px;
-    font-size: 20.35px;
+    padding-right: 15.5pt;
+    font-size: 20px;
     color: @green
 }

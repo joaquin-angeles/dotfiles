@@ -22,7 +22,7 @@
             "headset": "󱡏",
             "default": [
                 "󰝟",
-                "󰕿",
+                "󱄡",
                 "󰖀",
                 "󰕾"
             ]
@@ -67,11 +67,6 @@
         "tooltip": true,
         "tooltip-format": "Power menu (wlogout)",
         "on-click": "wlogout"
-    },
-
-    "custom/menu": {
-        "format": "󰍜",
-        "on-click": "rofi -disable-history -show drun"
     },
 
     "backlight": {
