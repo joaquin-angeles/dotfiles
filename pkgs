@@ -19,12 +19,11 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
 
     echo " Chaotic AUR added successfully."
 else
-    echo " Chaotic AUR is already configured."
+    echo "󰋑 Chaotic AUR is already implemented."
 fi
 
 # List of packages to install
 packages=(
-    auto-cpufreq
     brightnessctl
     bibata-cursor-theme
     chafa
@@ -61,7 +60,7 @@ packages=(
 # Install packages
 for package in "${packages[@]}"; do
     if pacman -Q "$package" &>/dev/null; then
-        echo " $package is already installed."
+        echo "󰋑 $package is already installed."
     else
         echo "󰏗 Installing $package..."
         if sudo pacman -S --noconfirm --quiet --overwrite='*' "$package"; then
@@ -79,5 +78,5 @@ if [ "$SHELL" != "/usr/bin/zsh" ]; then
     chsh -s $(which zsh) &>/dev/null
     echo -e "\n  zsh has been set as the default shell."
 else
-    echo -e " zsh is already the default shell."
+    echo -e "󰋑 zsh is already the default shell."
 fi
