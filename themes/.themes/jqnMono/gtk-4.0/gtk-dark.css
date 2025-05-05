@@ -48,6 +48,7 @@
 
 /*BACKGROUND*/
 
+
 .background {
     color: white;
     background-color: #1c1c1c;
@@ -55,7 +56,7 @@
 
 .background:backdrop {
     color: rgba(255, 255, 255, 0.5);
-    background-color: #1e1e1e;
+    background-color: #282828;
 }
 
 .background.csd {
@@ -147,7 +148,7 @@ window.solid-csd {
 
 window.solid-csd:backdrop {
     box-shadow: none;
-    background-color: #202020;
+    background-color: #282828;
 }
 
 window.popup {
@@ -340,7 +341,7 @@ dnd {
 avatar {
     border-radius: 9999px;
     font-weight: bold;
-    border: 3px solid #1c1c1c;
+    border: 3px solid #606060;
 }
 
 
@@ -1968,7 +1969,7 @@ messagedialog.csd .titlebar {
 
 window.dialog.message.csd.background:backdrop,
 window.dialog.message.csd .titlebar:backdrop {
-    background-color: #202020;
+    background-color: #282828;
 }
 
 window.dialog.message box.dialog-vbox.vertical {
@@ -8504,11 +8505,11 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color borders rgba(255, 255, 255, 0.2);
 @define-color theme_unfocused_bg_color #1c1c1c;
 @define-color theme_unfocused_fg_color rgba(255, 255, 255, 0.5);
-@define-color theme_unfocused_base_color #202020;
+@define-color theme_unfocused_base_color #282828;
 @define-color theme_unfocused_text_color white;
 @define-color theme_unfocused_selected_bg_color #1b82b3;
 @define-color theme_unfocused_selected_fg_color white;
-@define-color unfocused_insensitive_color #202020;
+@define-color unfocused_insensitive_color #282828;
 @define-color unfocused_borders rgba(255, 255, 255, 0.1);
 
 @define-color accent_color #1b82b3;
@@ -8527,13 +8528,13 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color error_bg_color error_color;
 @define-color error_fg_color white;
 @define-color window_bg_color #1c1c1c;
-@define-color window_fg_color #333333;
+@define-color window_fg_color #909090;
 @define-color view_bg_color #1c1c1c;
 @define-color view_fg_color white;
 @define-color headerbar_bg_color #1c1c1c;
 @define-color headerbar_fg_color white;
 @define-color headerbar_border_color rgba(255, 255, 255, 0.1);
-@define-color headerbar_backdrop_color #202020;
+@define-color headerbar_backdrop_color #282828;
 @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
 @define-color card_bg_color rgba(255, 255, 255, 0.05);
 @define-color card_fg_color white;

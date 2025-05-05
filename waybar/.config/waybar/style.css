@@ -49,7 +49,7 @@ window#waybar {
 
 /* Network Module */
 #network {
-    font-size: 20.5px;
+    font-size: 20.75px;
     padding-right: 23px;
     color: @blue
 }
@@ -109,6 +109,6 @@ window#waybar {
 /* Battery Module */
 #battery {
     padding-right: 10px;
-    font-size: 20.25px;
+    font-size: 20.35px;
     color: @green
 }

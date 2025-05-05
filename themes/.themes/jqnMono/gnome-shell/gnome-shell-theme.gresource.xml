@@ -21,5 +21,6 @@
 		<file>toggle-on.svg</file>
 		<file>view-app-grid.svg</file>
 		<file>arrow.svg</file>
+		<file>arrow-light.svg</file>
     </gresource>
 </gresources>

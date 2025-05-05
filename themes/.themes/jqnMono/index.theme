@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=jqnMono
+Comment=index.theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=jqnMono
+ButtonLayout=close,minimize,maximize:menu

@@ -341,7 +341,7 @@ dnd {
 avatar {
     border-radius: 9999px;
     font-weight: bold;
-    border: 3px solid #1c1c1c;
+    border: 3px solid #606060;
 }
 
 
@@ -2238,7 +2238,7 @@ notebook>header>tabs>tab:hover:not(:checked) {
 
 notebook>header>tabs>tab:checked {
     color: #1c1c1c;
-    background-color: rgba(23, 23, 23, 0.1);
+    background-color: rgba(40, 40, 40, 0.1);
 }
 
 notebook>header>tabs>tab:checked:backdrop {
@@ -8533,7 +8533,7 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color error_bg_color error_color;
 @define-color error_fg_color white;
 @define-color window_bg_color #f0f0f0;
-@define-color window_fg_color #252525;
+@define-color window_fg_color #333333;
 @define-color view_bg_color #f0f0f0;
 @define-color view_fg_color #1c1c1c;
 @define-color headerbar_bg_color #f0f0f0;

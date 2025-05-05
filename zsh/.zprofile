@@ -1,5 +1,5 @@
 # Theming
-export GTK_THEME=JQN-Mono
+export GTK_THEME=jqnMono:dark
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 # Env vars
