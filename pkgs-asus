@@ -46,11 +46,19 @@ for package in "${packages[@]}"; do
     case "$package" in
         auto-cpufreq)
             echo "󰈆 Enabling and starting auto-cpufreq..."
-            systemctl enable --now auto-cpufreq
+            systemctl enable --now auto-cpufreq &>/dev/null
+            ;;
+        asusctl)
+            echo "󰈆 Enabling and starting asusd..."
+            systemctl enable --now asusd &>/dev/null
+            ;;
+        supergfxctl)
+            echo "󰈆 Enabling and starting asusd..."
+            systemctl enable --now supergfxd &>/dev/null
             ;;
         tlp)
             echo "󰈆 Enabling and starting tlp..."
-            systemctl enable --now tlp
+            systemctl enable --now tlp &>/dev/null
             ;;
     esac
 else
