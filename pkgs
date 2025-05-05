@@ -1,0 +1,83 @@
+#!/bin/bash
+
+set -e
+
+if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
+    echo "󰖷 Setting up Chaotic AUR..."
+
+    # Import and sign the Chaotic AUR key
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    sudo pacman-key --lsign-key 3056513887B78AEB
+
+    # Install the keyring and mirrorlist
+    sudo pacman -U --noconfirm --needed \
+      'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
+      'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+    # Add chaotic-aur to pacman.conf if not already present
+    echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
+
+    echo " Chaotic AUR added successfully."
+else
+    echo " Chaotic AUR is already configured."
+fi
+
+# List of packages to install
+packages=(
+    auto-cpufreq
+    brightnessctl
+    bibata-cursor-theme
+    chafa
+    eza
+    grim
+    hyprland
+    hyprlock
+    hyprshot
+    hyprpaper
+    inotify-tools
+    kvantum
+    kvantum-qt5
+    libnotify
+    lf
+    mako
+    nemo
+    nemo-fileroller
+    neovim
+    pavucontrol
+    rofi-emoji
+    rofi-wayland
+    slurp
+    tlp
+    upower
+    waybar
+    wlogout
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-hyprland
+    zen-browser-bin
+    zoxide
+    zsh
+)
+
+# Install packages
+for package in "${packages[@]}"; do
+    if pacman -Q "$package" &>/dev/null; then
+        echo " $package is already installed."
+    else
+        echo "󰏗 Installing $package..."
+        if sudo pacman -S --noconfirm --quiet --overwrite='*' "$package"; then
+            echo " Successfully installed $package."
+        else
+            echo " Failed to install $package." >&2
+        fi
+    fi
+done
+
+# Set zsh as the default shell if it's not already set
+if [ "$SHELL" != "/usr/bin/zsh" ]; then
+    echo "󰖷 Setting zsh as the default shell..."
+    echo -n "[sudo] password for $USER: "
+    chsh -s $(which zsh) &>/dev/null
+    echo -e "\n  zsh has been set as the default shell."
+else
+    echo -e " zsh is already the default shell."
+fi
