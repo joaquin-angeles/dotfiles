@@ -31,15 +31,14 @@ window#waybar {
     transition: color 0.3s ease;
 }
 
+#workspaces button.active {
+    color: @lime;
+}
+
 #workspaces button:hover {
     color: @fg-darker;
     box-shadow: inherit;
     text-shadow: inherit;
-}
-
-#workspaces button.active {
-    color: @lime;
-    padding-bottom: 1px
 }
 
 /* System tray */
