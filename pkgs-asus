@@ -50,7 +50,7 @@ for package in "${packages[@]}"; do
         echo "󰋑 $package is already installed."
     else
         echo "󰏗 Installing $package..."
-        if paru -S --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
+        if paru -Scc --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
             echo " Successfully installed $package."
 
     # Enable services if needed

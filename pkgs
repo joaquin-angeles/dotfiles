@@ -75,7 +75,7 @@ for package in "${packages[@]}"; do
         echo "󰋑 $package is already installed."
     else
         echo "󰏗 Installing $package..."
-        if sudo pacman -S --noconfirm --quiet --overwrite='*' "$package"; then
+        if paru -Scc --noconfirm --quiet --overwrite='*' "$package"; then
             echo " Successfully installed $package."
         else
             echo " Failed to install $package." >&2
