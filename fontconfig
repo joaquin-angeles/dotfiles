@@ -2,18 +2,15 @@
 
 set -e  # Exit on error
 
-# Ensure paru is installed
-if ! command -v paru &>/dev/null; then
-    echo "󰖷 paru not found. Installing paru-bin..."
-    temp_dir=$(mktemp -d)
-    git clone --depth 1 https://aur.archlinux.org/paru-bin.git "$temp_dir" &>/dev/null
-    (
-        cd "$temp_dir"
-        makepkg -si --noconfirm --quiet &>/dev/null
-    )
-    rm -rf "$temp_dir"
-    echo " paru installed successfully."
-fi
+# Clone the Paru repository
+echo "Installing paru.."
+git clone https://aur.archlinux.org/paru-bin.git > /dev/null 2>&1
+cd paru-bin > /dev/null 2>&1
+makepkg -si --noconfirm > /dev/null 2>&1
+cd .. > /dev/null 2>&1
+rm -rf paru-bin > /dev/null 2>&1
+mkdir -p ~/.config/paru > /dev/null 2>&1
+echo "Paru installation complete!"
 
 # Install Rubik font manually if not already present
 if fc-list | grep -i "Rubik" &>/dev/null; then
