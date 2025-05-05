@@ -2,6 +2,23 @@
 
 set -e
 
+if [[ $EUID -ne 0 ]]; then
+    echo " This script must be run with sudo or as root." >&2
+    exit 1
+fi
+
+# AUR Setup
+if command -v paru >/dev/null 2>&1; then
+    echo "󰋑 paru is already installed."
+else
+    echo "󰏗 Installing paru.."
+    git clone https://aur.archlinux.org/paru-bin.git >/dev/null 2>&1
+    cd paru-bin >/dev/null 2>&1
+    makepkg -si --noconfirm >/dev/null 2>&1
+    cd .. >/dev/null 2>&1
+    rm -rf paru-bin >/dev/null 2>&1
+    echo " paru installation complete."
+fi
 if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
     echo "󰖷 Setting up Chaotic AUR..."
 
@@ -19,7 +36,7 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
 
     echo " Chaotic AUR added successfully."
 else
-    echo "󰋑 Chaotic AUR is already implemented."
+    echo "󰋑 Chaotic AUR is already configured."
 fi
 
 # List of packages to install
