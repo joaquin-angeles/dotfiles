@@ -2,6 +2,11 @@
 
 set -e
 
+if [[ $EUID -ne 0 ]]; then
+    echo " This script must be run with sudo or as root." >&2
+    exit 1
+fi
+
 # AUR Setup
 if command -v paru >/dev/null 2>&1; then
     echo "󰋑 paru is already installed."
@@ -50,7 +55,7 @@ for package in "${packages[@]}"; do
         echo "󰋑 $package is already installed."
     else
         echo "󰏗 Installing $package..."
-        if paru -Scc --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
+        if sudo pacman -Scc --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
             echo " Successfully installed $package."
 
     # Enable services if needed
