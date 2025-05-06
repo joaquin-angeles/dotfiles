@@ -9,9 +9,22 @@
             "󰤠", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
-        "on-click": "~/.config/waybar/scripts/wifi-menu",
+        "on-click": "~/.config/scripts/wifi-menu",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
+    },
+
+    "bluetooth": {
+        "format": "{icon}",
+        "format-icons": "󰂯",
+        "format-connected": "󰂯",
+        "format-disconnected": "󰂲",
+        "format-disabled": "󰂲",
+        "tooltip-format": "Disconnected (on)",
+        "tooltip-format-disabled": "Disconnected (off)",
+        "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)",
+        "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
+        "on-click": "blueman-manager"
     },
 
     "pulseaudio": {

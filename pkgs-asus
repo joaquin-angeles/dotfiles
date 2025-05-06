@@ -56,7 +56,7 @@ for package in "${packages[@]}"; do
     else
         echo "󰏗 Installing $package..."
         if sudo pacman -Scc --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
-            echo " Successfully installed $package."
+            echo -e " Successfully installed $package.\n"
 
     # Enable services if needed
     case "$package" in

@@ -28,11 +28,13 @@ return {
                         separator = { left = '', right = '' },
                     } 
                 },
-                lualine_b = { 'filename' },
+                lualine_b = {
+                    'filename',
+                    'filetype'
+                },
                 lualine_c = {
                 },
                 lualine_x = {
-                    'filetype'
                 },
                 lualine_y = {
                     '%p%%',

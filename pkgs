@@ -81,7 +81,7 @@ for package in "${packages[@]}"; do
     else
         echo "󰏗 Installing $package..."
         if sudo pacman -Scc --noconfirm --quiet --overwrite='*' "$package"; then
-            echo " Successfully installed $package."
+            echo -e " Successfully installed $package.\n"
         else
             echo " Failed to install $package." >&2
         fi
