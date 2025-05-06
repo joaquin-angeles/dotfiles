@@ -1,6 +1,7 @@
 {
     "hyprland/window": {
-        "max-length": 64
+        "max-length": 64,
+        "format": "{}"
     },
 
     "network": {
@@ -59,7 +60,7 @@
     },
 
     "custom/space": {
-        "format": "•",
+        "format": " ",
         "tooltip": false
     },
 
