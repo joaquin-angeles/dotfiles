@@ -76,7 +76,7 @@ window#waybar {
 
 /* Battery Module */
 #battery {
-    padding-right: 15.5pt;
-    font-size: 20px;
+    padding-right: 16px;
+    font-size: 15.5pt;
     color: @green
 }
