@@ -82,11 +82,12 @@ window#waybar {
 
 #custom-power {
     background-color: @red;
-    padding-right: 14px;
-    padding-left: 12px;
+    color: @bg;
+    padding-right: 12px;
+    padding-left: 10px;
     font-size: 22px;
-    border-radius: 7px;
-    color: @bg
+    border: 2px solid #4e3335;
+    border-radius: 8px
 }
 
 #battery {
