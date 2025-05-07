@@ -2,8 +2,8 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 30,
-    "width": 1905,
+    "height": 32,
+    "width": 1902,
     "margin": "7 0 0 0",
     "spacing": 4,
     "modules-left": [

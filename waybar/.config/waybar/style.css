@@ -2,7 +2,7 @@
 
 * {
     font-family: "Rubik", "JetBrainsMono Nerd Font";
-    font-size: 14.25pt;
+    font-size: 14.5pt;
     font-weight: 400;
 }
 
@@ -14,23 +14,28 @@ window#waybar {
     background-color: transparent
 }
 
+#window {
+    padding-bottom: 1px
+}
+
 #system {
     background: @bg;
     border-radius: 7px;
-    border: 2px solid #454545;
+    border: 2px solid @inactive;
 }
 
 #workspaces {
     background: @bg;
-    border: 2px solid #454545;
+    border: 2px solid @inactive;
     border-radius: 7px;
-    padding-left: 5px;
-    padding-right: 5px
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px
 }
 
 #workspaces button {
     min-width: 14px;
-    padding: 0 6px;
+    padding: 0 7px;
     color: @inactive;
     transition: color 0.3s ease;
 }
@@ -52,20 +57,20 @@ window#waybar {
 
 #network {
     padding-left: 12px;
-    font-size: 15.5pt;
+    font-size: 15pt;
     padding-right: 24px;
     color: @cyan
 }
 
 #bluetooth {
-    font-size: 15.25pt;
+    font-size: 15pt;
     padding-right: 18px;
     color: @blue;
 }
 
 #pulseaudio {
-    font-size: 15.5pt;
-    padding-right: 22px;
+    font-size: 15pt;
+    padding-right: 23px;
     color: @yellow
 }
 
@@ -73,6 +78,7 @@ window#waybar {
     background: @bg;
     border: 2px solid @inactive;
     border-radius: 7px;
+    padding-bottom: 1px;
     padding-right: 10px;
     padding-left: 10px
 }
@@ -82,13 +88,13 @@ window#waybar {
     color: @bg;
     padding-right: 10px;
     padding-left: 8px;
-    font-size: 22px;
+    font-size: 15pt;
     border: 2px solid #4e3335;
     border-radius: 7px
 }
 
 #battery {
     padding-right: 13px;
-    font-size: 15.5pt;
+    font-size: 15pt;
     color: @green
 }
