@@ -2,9 +2,9 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 36,
-    "width": 1900,
-    "margin": "8 0 0 0",
+    "height": 30,
+    "width": 1905,
+    "margin": "7 0 0 0",
     "spacing": 4,
     "modules-left": [
         "clock",
@@ -20,8 +20,4 @@
         "custom/space",
         "custom/power"
     ],
-    "group/system": {
-        "orientation": "horizontal",
-        "modules": [ "network", "bluetooth", "pulseaudio", "battery" ]
-    },
 }
