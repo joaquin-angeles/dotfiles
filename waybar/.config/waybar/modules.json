@@ -84,8 +84,8 @@
     "custom/power": {
         "format": "󰐥",
         "tooltip": true,
-        "tooltip-format": "Power menu (wlogout)",
-        "on-click": "wlogout"
+        "tooltip-format": "Power menu",
+        "on-click": "~/.config/scripts/power-menu"
     },
 
     "backlight": {

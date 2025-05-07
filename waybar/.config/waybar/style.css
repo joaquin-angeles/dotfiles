@@ -1,8 +1,9 @@
 @import url("./colors.css");
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 13.5pt;
+    font-family: "Rubik", "JetBrainsMono Nerd Font";
+    font-size: 14.25pt;
+    font-weight: 400;
 }
 
 window#waybar {
@@ -23,8 +24,8 @@ window#waybar {
     background: @bg;
     border: 2px solid #454545;
     border-radius: 7px;
-    padding-left: 4px;
-    padding-right: 4px
+    padding-left: 5px;
+    padding-right: 5px
 }
 
 #workspaces button {
@@ -70,7 +71,7 @@ window#waybar {
 
 #clock {
     background: @bg;
-    border: 2px solid #454545;
+    border: 2px solid @inactive;
     border-radius: 7px;
     padding-right: 10px;
     padding-left: 10px
