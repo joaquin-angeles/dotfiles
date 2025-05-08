@@ -58,19 +58,19 @@ window#waybar {
 #network {
     padding-left: 12px;
     font-size: 15pt;
-    padding-right: 24px;
+    padding-right: 22px;
     color: @cyan
 }
 
 #bluetooth {
     font-size: 15pt;
-    padding-right: 18px;
+    padding-right: 16px;
     color: @blue;
 }
 
 #pulseaudio {
-    font-size: 15pt;
-    padding-right: 23px;
+    font-size: 15.5pt;
+    padding-right: 20px;
     color: @yellow
 }
 
@@ -94,7 +94,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 13px;
+    padding-right: 12.5px;
     font-size: 15pt;
     color: @green
 }

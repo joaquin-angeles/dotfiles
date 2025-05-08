@@ -39,6 +39,7 @@
         "format-icons": {
             "headphones": "󰋋",
             "headset": "󰋋",
+            "headset-muted": "󰋋",
             "default": [
                 "󰝟",
                 "󱄡",
