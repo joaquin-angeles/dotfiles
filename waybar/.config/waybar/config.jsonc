@@ -8,7 +8,7 @@
     "spacing": 4,
     "modules-left": [
         "clock",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "hyprland/window"

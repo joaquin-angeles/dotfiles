@@ -8,7 +8,6 @@
 
 window#waybar {
     color: @fg;
-    border-radius: 7px;
     padding-left: 2px;
     padding-right: 2px;
     background-color: transparent
@@ -52,7 +51,11 @@ window#waybar {
 }
 
 #tray {
-    padding-right: 8px;
+    background-color: #303030;
+    border: 2px solid @inactive;
+    border-radius: 7px;
+    padding-left: 7px;
+    padding-right: 7px
 }
 
 #network {
@@ -69,7 +72,7 @@ window#waybar {
 }
 
 #pulseaudio {
-    font-size: 15.5pt;
+    font-size: 15pt;
     padding-right: 20px;
     color: @yellow
 }

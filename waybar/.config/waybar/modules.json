@@ -78,8 +78,8 @@
     },
 
     "tray": {
-        "icon-size": 22,
-        "spacing": 12
+        "icon-size": 24,
+        "spacing": 10
     },
 
     "custom/power": {
