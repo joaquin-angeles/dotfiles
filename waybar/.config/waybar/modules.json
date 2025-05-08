@@ -9,6 +9,11 @@
         "modules": [ "network", "bluetooth", "pulseaudio", "battery" ]
     },
 
+    "group/systray": {
+        "orientation": "horizontal",
+        "modules": [ "tray", "custom/clipboard" ]
+    },
+
     "network": {
         "format": "{icon}",
         "format-icons": [
@@ -65,9 +70,11 @@
         "tooltip-format-full": "Full ({capacity}%)"
     },
 
-    "custom/space": {
-        "format": " ",
-        "tooltip": false
+    "custom/clipboard": {
+        "format": "",
+        "on-click": "cliphist list | rofi -dmenu -p 'Clipboard history:' | cliphist decode | wl-copy",
+        "tooltip": true,
+        "tooltip-format": "Clipboard history"
     },
 
     "clock": {

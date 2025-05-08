@@ -14,7 +14,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "tray",
+        "group/systray",
         "group/system",
         "custom/power"
     ],

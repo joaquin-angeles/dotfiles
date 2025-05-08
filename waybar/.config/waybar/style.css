@@ -17,6 +17,17 @@ window#waybar {
     padding-bottom: 1px
 }
 
+#custom-clipboard {
+    padding-left: 6px;
+    padding-right: 12px
+}
+
+#systray {
+    background: @bg;
+    border-radius: 7px;
+    border: 2px solid @inactive;
+}
+
 #system {
     background: @bg;
     border-radius: 7px;
@@ -51,10 +62,7 @@ window#waybar {
 }
 
 #tray {
-    background-color: @bg;
-    border: 2px solid @inactive;
-    border-radius: 7px;
-    padding-left: 7px;
+    padding-left: 8px;
     padding-right: 7px
 }
 
