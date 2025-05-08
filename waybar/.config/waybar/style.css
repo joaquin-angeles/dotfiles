@@ -51,7 +51,7 @@ window#waybar {
 }
 
 #tray {
-    background-color: #303030;
+    background-color: @bg;
     border: 2px solid @inactive;
     border-radius: 7px;
     padding-left: 7px;
@@ -59,7 +59,7 @@ window#waybar {
 }
 
 #network {
-    padding-left: 12px;
+    padding-left: 10px;
     font-size: 15pt;
     padding-right: 22px;
     color: @cyan
@@ -89,8 +89,8 @@ window#waybar {
 #custom-power {
     background-color: @red;
     color: @bg;
-    padding-right: 10px;
-    padding-left: 8px;
+    padding-right: 11px;
+    padding-left: 9px;
     font-size: 15pt;
     border: 2px solid #4e3335;
     border-radius: 7px
