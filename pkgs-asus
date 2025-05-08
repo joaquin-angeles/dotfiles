@@ -55,7 +55,7 @@ for package in "${packages[@]}"; do
         echo "󰋑 $package is already installed."
     else
         echo "󰏗 Installing $package..."
-        if sudo pacman -Scc --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
+        if sudo pacman -S --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
             echo -e " Successfully installed $package.\n"
 
     # Enable services if needed

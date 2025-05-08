@@ -18,7 +18,7 @@ window#waybar {
 }
 
 #custom-clipboard {
-    padding-left: 8px;
+    padding-left: 12px;
     padding-right: 14px
 }
 
@@ -63,7 +63,7 @@ window#waybar {
 
 #tray {
     padding-left: 10px;
-    padding-right: 7px
+    padding-right: 2px
 }
 
 #network {

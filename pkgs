@@ -7,18 +7,6 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# AUR Setup
-if command -v paru >/dev/null 2>&1; then
-    echo "󰋑 paru is already installed."
-else
-    echo "󰏗 Installing paru.."
-    git clone https://aur.archlinux.org/paru-bin.git >/dev/null 2>&1
-    cd paru-bin >/dev/null 2>&1
-    makepkg -si --noconfirm >/dev/null 2>&1
-    cd .. >/dev/null 2>&1
-    rm -rf paru-bin >/dev/null 2>&1
-    echo " paru installation complete."
-fi
 if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
     echo "󰖷 Setting up Chaotic AUR..."
 
@@ -80,7 +68,7 @@ for package in "${packages[@]}"; do
         echo "󰋑 $package is already installed."
     else
         echo "󰏗 Installing $package..."
-        if sudo pacman -Scc --noconfirm --quiet --overwrite='*' "$package"; then
+        if sudo pacman -S --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
             echo -e " Successfully installed $package.\n"
         else
             echo " Failed to install $package." >&2
