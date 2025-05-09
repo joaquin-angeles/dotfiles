@@ -9,11 +9,6 @@
         "modules": [ "network", "bluetooth", "pulseaudio", "battery" ]
     },
 
-    "group/systray": {
-        "orientation": "horizontal",
-        "modules": [ "tray", "custom/clipboard" ]
-    },
-
     "network": {
         "format": "{icon}",
         "format-icons": [
@@ -84,8 +79,8 @@
     },
 
     "tray": {
-        "icon-size": 19,
-        "spacing": 13
+        "icon-size": 20,
+        "spacing": 12
     },
 
     "custom/power": {

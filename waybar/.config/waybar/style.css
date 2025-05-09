@@ -22,12 +22,6 @@ window#waybar {
     padding-right: 14px
 }
 
-#systray {
-    background: @bg;
-    border-radius: 7px;
-    border: 2px solid @inactive;
-}
-
 #system {
     background: @bg;
     border-radius: 7px;
@@ -62,8 +56,8 @@ window#waybar {
 }
 
 #tray {
-    padding-left: 12px;
-    padding-right: 4px
+    padding-top: 2px;
+    padding-right: 6px
 }
 
 #network {
