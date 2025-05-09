@@ -18,8 +18,8 @@ window#waybar {
 }
 
 #custom-clipboard {
-    padding-left: 12px;
-    padding-right: 14px
+    padding-left: 14px;
+    padding-right: 16px
 }
 
 #systray {
@@ -62,7 +62,7 @@ window#waybar {
 }
 
 #tray {
-    padding-left: 10px;
+    padding-left: 12px;
     padding-right: 2px
 }
 
