@@ -30,10 +30,10 @@ return {
                 },
                 lualine_b = {
                     'filename',
-                    'branch',
+                    'filetype'
                 },
                 lualine_c = {
-                    'filetype',
+                    'branch'
                 },
                 lualine_x = {
                     'diff'
