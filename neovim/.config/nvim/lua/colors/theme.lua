@@ -2,7 +2,7 @@
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE")
 vim.cmd("hi Normal guifg=#eeeeee")
-vim.cmd("hi Visual guibg=#454545 guifg=NONE gui=NONE")
+vim.cmd("hi Visual guibg=#353535 guifg=NONE gui=NONE")
 
 -- For plugins with floating windows or popups
 vim.cmd("hi StatusLine guibg=NONE")
