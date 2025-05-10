@@ -19,22 +19,22 @@ local colors = {
     fg             = "#eeeeee"
 }
 
--- Standard
+-- Standard (VSCode-inspired)
 set(0, "Comment",    { fg = colors.bright_gray, italic = true })
 set(0, "String",     { fg = colors.green })
-set(0, "Function",   { fg = colors.blue })
+set(0, "Function",   { fg = colors.bright_blue })
 set(0, "Keyword",    { fg = colors.bright_orange, bold = true })
-set(0, "Float",      { fg = colors.yellow })
+set(0, "Float",      { fg = colors.bright_yellow })
 set(0, "Identifier", { fg = colors.red })
 set(0, "Number",     { fg = colors.bright_yellow })
 set(0, "Boolean",    { fg = colors.red })
-set(0, "Type",       { fg = colors.green })
+set(0, "Type",       { fg = colors.bright_blue })
 set(0, "Operator",   { fg = colors.red })
 set(0, "Constant",   { fg = colors.yellow })
 set(0, "PreProc",    { fg = colors.yellow })
 set(0, "Title",      { fg = colors.orange })
 
--- Tree-sitter core
+-- Tree-sitter core (VSCode-inspired)
 set(0, "@comment",           { link = "Comment" })
 set(0, "@string",            { link = "String" })
 set(0, "@string.escape",     { fg = colors.bright_green, italic = true })
@@ -69,12 +69,12 @@ set(0, "@punctuation.delimiter",  { fg = colors.bright_black })
 set(0, "@punctuation.bracket",    { fg = colors.bright_black })
 set(0, "@punctuation.special",    { fg = colors.bright_gray })
 
--- Tags
+-- Tags (VSCode-inspired)
 set(0, "@tag",             { fg = colors.red })
 set(0, "@tag.attribute",   { fg = colors.yellow })
 set(0, "@tag.delimiter",   { fg = colors.bright_black })
 
--- Control flow
+-- Control flow (VSCode-inspired)
 set(0, "@conditional",     { fg = colors.orange, bold = true })
 set(0, "@repeat",          { fg = colors.orange })
 set(0, "@exception",       { fg = colors.red, bold = true })

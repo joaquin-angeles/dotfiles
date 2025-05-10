@@ -113,7 +113,7 @@ case "$selection" in
         # Connect
         nmcli device wifi connect "$ssid_selected" password "$password" || {
             notify-send "Connection Failed" "Failed to connect to $ssid_selected."
-            exit
-        }
-        ;;
-esac
+                    exit
+                }
+            ;;
+    esac
