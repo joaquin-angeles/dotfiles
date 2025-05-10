@@ -123,6 +123,7 @@ cd() {
     z "$@" && eza
 }
 alias ff=fastfetch
+alias fzf="fzf --preview 'bat {}'"
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
@@ -132,3 +133,12 @@ alias paru='paru --skipreview'
 alias pk=pkill
 alias vim='nvim'
 alias vi='nvim'
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
