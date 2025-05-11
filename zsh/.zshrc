@@ -1,3 +1,6 @@
+# Autoload
+autoload -U compinit && compinit
+printf '\e[1 q'
 fastfetch
 echo ''
 
@@ -6,87 +9,35 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# List of commands to exclude from updating the window title
-excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history" "fastfetch" "ff" "pkill" "pk" "sleep")
-
-# Function to set the terminal window title
-function set_window_title() {
-    local cmd="$1"
-    local dir="${PWD/#$HOME/\~}"  # Replace $HOME with ~
-
-    # Check if the command starts with a space (to exclude it)
-    if [[ "$cmd" =~ ^\  ]]; then
-        return 0  # Skip updating the title if the command starts with a space
-    fi
-
-    # Check if the command is in the excluded list
-    for excluded in "${excluded_commands[@]}"; do
-        if [[ "$cmd" == "$excluded"* ]]; then
-            return 0  # Skip updating the title if it's an excluded command
-        fi
-    done
-
-    # Show window title with the command executed (only if not excluded)
-    if [[ -n "$cmd" ]]; then
-        print -Pn "\e]0;${USER}@${HOST}:${dir} (${cmd})\a"
-    else
-        # Show window title without parentheses when idle
-        print -Pn "\e]0;${USER}@${HOST}:${dir}\a"
-    fi
-}
-
-# Update title before executing a command
-preexec() {
-    set_window_title "$1"
-}
-
-precmd() {
-    set_window_title ""
-}
-
-# Autoload
-autoload -U compinit && compinit
-printf '\e[1 q'
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
-# List of commands to exclude from updating the window title
-excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history" "fastfetch" "ff" "pkill" "pk" "sleep")
-
-# Function to set the terminal window title
-function set_window_title() {
-    local cmd="$1"
-    local dir="${PWD/#$HOME/\~}"  # Replace $HOME with ~
-
-    # Check if the command starts with a space (to exclude it)
-    if [[ "$cmd" =~ ^\  ]]; then
-        return 0  # Skip updating the title if the command starts with a space
-    fi
-
-    # Check if the command is in the excluded list
-    for excluded in "${excluded_commands[@]}"; do
-        if [[ "$cmd" == "$excluded"* ]]; then
-            return 0  # Skip updating the title if it's an excluded command
-        fi
-    done
-
-    # Show window title with the command executed (only if not excluded)
-    if [[ -n "$cmd" ]]; then
-        print -Pn "\e]0;${USER}@${HOST}:${dir} (${cmd})\a"
-    else
-        # Show window title without parentheses when idle
-        print -Pn "\e]0;${USER}@${HOST}:${dir}\a"
-    fi
-}
-
-# Window title configurations and newline
+# Set window titles
 preexec() {
     set_window_title "$1"
 }
 precmd() {
     set_window_title ""
+}
+excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history" "fastfetch" "ff" "pkill" "pk" "sleep")
+function set_window_title() {
+    local cmd="$1"
+    local dir="${PWD/#$HOME/\~}"
+    if [[ "$cmd" =~ ^\  ]]; then
+        return 0
+    fi
+    for excluded in "${excluded_commands[@]}"; do
+        if [[ "$cmd" == "$excluded"* ]]; then
+            return 0
+        fi
+    done
+    if [[ -n "$cmd" ]]; then
+        print -Pn "\e]0;${USER}@${HOST}:${dir} (${cmd})\a"
+    else
+        print -Pn "\e]0;${USER}@${HOST}:${dir}\a"
+    fi
 }
 
 # Autoload
@@ -111,8 +62,8 @@ zinit snippet OMZP::command-not-found
 # Plugins (Zinit)
 zinit light romkatv/powerlevel10k # P10K
 zinit light zsh-users/zsh-syntax-highlighting # Syntax highlighting
-zinit light zsh-users/zsh-completions # Autocompletion
-zinit light zsh-users/zsh-autosuggestions # Suggesting past commands 
+zinit light zsh-users/zsh-completions # Auto-completion
+zinit light zsh-users/zsh-autosuggestions # Auto-suggest past commands 
 
 # P10K configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -132,7 +83,6 @@ alias ls=eza
 alias paru='paru --skipreview'
 alias pk=pkill
 alias vim='nvim'
-alias vi='nvim'
 
 # History
 HISTSIZE=5000
