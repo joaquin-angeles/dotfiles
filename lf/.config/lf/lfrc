@@ -17,7 +17,7 @@ cmd open ${{
     fi
 }}
 
-# Keymaps
+# Keymaps and options
 map . set hidden!
 map D delete
 map p paste

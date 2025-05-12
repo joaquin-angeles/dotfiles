@@ -9,7 +9,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
@@ -74,15 +73,19 @@ cd() {
     z "$@" && eza
 }
 alias ff=fastfetch
-alias fzf="fzf --preview 'bat {}'"
+alias fzf="fzf --preview 'cat {}'"
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
-alias lf='sh ~/.config/lf/lfrun'
+alias lf='~/.config/lf/lfrun'
 alias ls=eza
+alias lsa='eza -a'
+alias ll='eza -l'
+alias lla='eza -la'
 alias paru='paru --skipreview'
 alias pk=pkill
 alias vim='nvim'
+alias view='swayimg'
 
 # History
 HISTSIZE=5000

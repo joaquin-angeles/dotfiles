@@ -1,3 +1,4 @@
+vim.opt.mouse = ""
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
 vim.opt.shiftwidth = 4

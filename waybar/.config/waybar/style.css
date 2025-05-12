@@ -61,7 +61,7 @@ window#waybar {
 }
 
 #network {
-    padding-left: 10px;
+    padding-left: 11px;
     font-size: 15pt;
     padding-right: 22px;
     color: @cyan
@@ -99,7 +99,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 12.5px;
+    padding-right: 12px;
     font-size: 15pt;
     color: @green
 }
