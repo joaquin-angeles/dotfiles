@@ -1,4 +1,4 @@
-# Autoload
+# Auto-start
 autoload -U compinit && compinit
 printf '\e[1 q'
 fastfetch
@@ -14,37 +14,12 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # Set window titles
-preexec() {
-    set_window_title "$1"
-}
 precmd() {
-    set_window_title ""
+    print -Pn "\e]0;%n@%m:%~\a"
 }
-excluded_commands=("git commit" "git add" "clear" "c" "ls" "pwd" "exit" "history" "fastfetch" "ff" "pkill" "pk" "sleep")
-function set_window_title() {
-    local cmd="$1"
-    local dir="${PWD/#$HOME/\~}"
-    if [[ "$cmd" =~ ^\  ]]; then
-        return 0
-    fi
-    for excluded in "${excluded_commands[@]}"; do
-        if [[ "$cmd" == "$excluded"* ]]; then
-            return 0
-        fi
-    done
-    if [[ -n "$cmd" ]]; then
-        print -Pn "\e]0;${USER}@${HOST}:${dir} (${cmd})\a"
-    else
-        print -Pn "\e]0;${USER}@${HOST}:${dir}\a"
-    fi
+preexec() {
+    print -Pn "\e]0;${1}\a"
 }
-
-# Autoload
-autoload -U compinit && compinit
-
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
 
 # Zinit (Plugin Manager)
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -63,6 +38,7 @@ zinit light romkatv/powerlevel10k # P10K
 zinit light zsh-users/zsh-syntax-highlighting # Syntax highlighting
 zinit light zsh-users/zsh-completions # Auto-completion
 zinit light zsh-users/zsh-autosuggestions # Auto-suggest past commands 
+zinit light zsh-users/zsh-history-substring-search # History search
 
 # P10K configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -72,8 +48,14 @@ alias c=clear
 cd() {
     z "$@" && eza
 }
+alias fzf="command fzf --preview '
+if [ -d {} ]; then
+eza -l --color=always {} || ls -la {}
+else
+cat {}
+fi
+'"
 alias ff=fastfetch
-alias fzf="fzf --preview 'cat {}'"
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill

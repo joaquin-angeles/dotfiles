@@ -7,7 +7,7 @@ set sixel true
 
 # Custom functions
 cmd open ${{
-    if bat --plain --paging=never "$f" > /dev/null 2>&1; then
+    if cat "$f" > /dev/null 2>&1; then
         nvim "$f"
     else
         case $(file --mime-type "$f" -bL) in
