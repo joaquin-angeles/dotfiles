@@ -3,10 +3,10 @@
 notify-send "Wi-Fi scan in progress.." "Getting available networks.." &
 
 # Icons
-SCAN_ICON="󰐷   Scan"
-WIFI_ON_ICON="󰖪   Disable Wi-Fi"
-WIFI_OFF_ICON="󱚽   Enable Wi-Fi"
-CHECKMARK_ICON="󰁔 "
+SCAN_ICON="Scan"
+WIFI_ON_ICON="Disable Wi-Fi"
+WIFI_OFF_ICON="Enable Wi-Fi"
+CHECKMARK_ICON=">  "
 
 # Check Wi-Fi status
 wifi_status=$(nmcli radio wifi)

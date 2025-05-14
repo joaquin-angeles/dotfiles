@@ -13,10 +13,6 @@ window#waybar {
     background-color: transparent
 }
 
-#window {
-    padding-bottom: 1px
-}
-
 #custom-clipboard {
     padding-left: 13px;
     padding-right: 14px
@@ -32,7 +28,6 @@ window#waybar {
     background: @bg;
     border: 2px solid @inactive;
     border-radius: 7px;
-    padding-bottom: 1px;
     padding-left: 4px;
     padding-right: 4px
 }
@@ -83,7 +78,6 @@ window#waybar {
     background: @bg;
     border: 2px solid @inactive;
     border-radius: 7px;
-    padding-bottom: 1px;
     padding-right: 10px;
     padding-left: 10px
 }
