@@ -16,8 +16,8 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
 
     # Install the keyring and mirrorlist
     sudo pacman -U --noconfirm --needed \
-      'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
-      'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+        'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
+        'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
     # Add chaotic-aur to pacman.conf if not already present
     echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
@@ -38,6 +38,7 @@ packages=(
     hyprlock
     hyprshot
     hyprpaper
+    hyprpolkitagent
     inotify-tools
     kvantum
     kvantum-qt5
@@ -67,11 +68,19 @@ for package in "${packages[@]}"; do
     if pacman -Q "$package" &>/dev/null; then
         echo "󰋑 $package is already installed."
     else
-        echo "󰏗 Installing $package..."
+        echo -e "\n 󰏗 Installing $package..."
         if sudo pacman -S --noconfirm --quiet --overwrite='*' "$package" &>/dev/null; then
             echo -e " Successfully installed $package.\n"
-        else
-            echo " Failed to install $package." >&2
+
+    # Enable services if needed
+    case "$package" in
+        auto-cpufreq)
+            echo "󰈆 Enabling and starting hyprpolkitagent..."
+            systemctl --user enable --now hyprpolkitagent.service &>/dev/null
+            ;;
+    esac
+else
+    echo " Failed to install $package." >&2
         fi
     fi
 done
