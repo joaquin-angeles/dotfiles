@@ -24,13 +24,13 @@ vim.opt.undodir = undodir
 
 -- Cursor adjustments
 vim.opt.guicursor = {
-    "n-v-c:block-blinkwait100-blinkon500-blinkoff500",
-    "i-ci-ve:ver25-blinkwait100-blinkon500-blinkoff500",
+    "n-v-c:block",
+    "i-ci-ve:block-blinkwait100-blinkon500-blinkoff500",
     "r-cr:hor20-blinkwait100-blinkon500-blinkoff500",
     "o:hor50-blinkwait100-blinkon500-blinkoff500"
 }
 
 vim.api.nvim_create_autocmd("VimLeave", {
     pattern = "*",
-    command = "set guicursor=a:block"
+    command = "set guicursor=a:ver25"
 })
