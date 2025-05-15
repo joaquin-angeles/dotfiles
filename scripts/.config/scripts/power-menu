@@ -2,12 +2,12 @@
 
 # Power menu options
 options=(
-  "⏻ Shutdown"
-  " Reboot"
-  " Lock"
-  " Suspend"
-  " Logout"
-  " Cancel"
+  "⏻   SHUTDOWN"
+  "   REBOOT"
+  "   LOCK"
+  "   SUSPEND"
+  "   LOGOUT"
+  "   EXIT"
 )
 
 # Show Rofi with two columns, no input bar, and large font
@@ -17,7 +17,7 @@ choice="$(printf '%s\n' "${options[@]}" | rofi -dmenu \
   -filter "" \
   -theme-str '
     * {
-      font: "JetBrainsMono Nerd Font 15";
+      font: "Rubik 14";
     }
     entry {
       enabled: false;
@@ -28,7 +28,7 @@ choice="$(printf '%s\n' "${options[@]}" | rofi -dmenu \
       columns: 2;
     }
     element {
-      padding: 10px;
+      padding: 12px;
       horizontal-align: 0.5;
     }
     mainbox {

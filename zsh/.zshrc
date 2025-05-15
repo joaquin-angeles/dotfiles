@@ -67,7 +67,6 @@ alias lla='eza -la'
 alias paru='paru --skipreview'
 alias pk=pkill
 alias vim='nvim'
-alias view='swayimg'
 
 # History
 HISTSIZE=5000
