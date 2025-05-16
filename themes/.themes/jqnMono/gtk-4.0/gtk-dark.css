@@ -56,7 +56,7 @@
 
 .background:backdrop {
     color: rgba(255, 255, 255, 0.5);
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
 }
 
 .background.csd {
@@ -148,7 +148,7 @@ window.solid-csd {
 
 window.solid-csd:backdrop {
     box-shadow: none;
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
 }
 
 window.popup {
@@ -1969,7 +1969,7 @@ messagedialog.csd .titlebar {
 
 window.dialog.message.csd.background:backdrop,
 window.dialog.message.csd .titlebar:backdrop {
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
 }
 
 window.dialog.message box.dialog-vbox.vertical {
@@ -8505,11 +8505,11 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color borders rgba(255, 255, 255, 0.2);
 @define-color theme_unfocused_bg_color #1c1c1c;
 @define-color theme_unfocused_fg_color rgba(255, 255, 255, 0.5);
-@define-color theme_unfocused_base_color #1f1f1f;
+@define-color theme_unfocused_base_color #1c1c1c;
 @define-color theme_unfocused_text_color white;
 @define-color theme_unfocused_selected_bg_color #1b82b3;
 @define-color theme_unfocused_selected_fg_color white;
-@define-color unfocused_insensitive_color #1f1f1f;
+@define-color unfocused_insensitive_color #1c1c1c;
 @define-color unfocused_borders rgba(255, 255, 255, 0.1);
 
 @define-color accent_color #1b82b3;
@@ -8534,7 +8534,7 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color headerbar_bg_color #1c1c1c;
 @define-color headerbar_fg_color white;
 @define-color headerbar_border_color rgba(255, 255, 255, 0.1);
-@define-color headerbar_backdrop_color #1f1f1f;
+@define-color headerbar_backdrop_color #1c1c1c;
 @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
 @define-color card_bg_color rgba(255, 255, 255, 0.05);
 @define-color card_fg_color white;

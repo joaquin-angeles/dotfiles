@@ -3,8 +3,7 @@
     "layer": "top",
     "position": "top",
     "height": 32,
-    "width": 1910,
-    "margin": "5 0 0 0",
+    "margin": "5 5 0 5",
     "spacing": 4,
     "modules-left": [
         "clock",
