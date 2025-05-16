@@ -34,7 +34,7 @@ window#waybar {
 
 #workspaces button {
     min-width: 14px;
-    padding: 0 6px;
+    padding: 0 7px;
     color: @inactive;
     transition: color 0.3s ease;
 }
