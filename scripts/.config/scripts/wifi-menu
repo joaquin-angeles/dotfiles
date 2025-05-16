@@ -1,45 +1,37 @@
 #!/usr/bin/env bash
 
-notify-send "Wi-Fi scan in progress.." "Getting available networks.." &
+# Check dependencies
+command -v nmcli >/dev/null 2>&1 || { notify-send -i error "Error" "nmcli not found."; exit 1; }
+command -v rofi >/dev/null 2>&1 || { notify-send -i error "Error" "rofi not found."; exit 1; }
 
 # Icons
 SCAN_ICON="Scan"
 WIFI_ON_ICON="Disable Wi-Fi"
 WIFI_OFF_ICON="Enable Wi-Fi"
 CHECKMARK_ICON="> "
+DISCONNECT_ICON="Disconnect"
+
+# Find Wi-Fi interface
+wifi_interface=$(nmcli device | grep wifi | awk '{print $1}' | head -n1)
+[[ -z "$wifi_interface" ]] && { notify-send -i network-error "Error" "No Wi-Fi interface found."; exit 1; }
 
 # Check Wi-Fi status
 wifi_status=$(nmcli radio wifi)
 TOGGLE_WIFI=$([[ "$wifi_status" == "enabled" ]] && echo "$WIFI_ON_ICON" || echo "$WIFI_OFF_ICON")
 
-# Rescan networks
-nmcli device wifi rescan > /dev/null 2>&1
-sleep 1
-
 # Get currently connected SSID
-connected_ssid=$(nmcli -t -f ACTIVE,SSID device wifi | grep '^yes' | cut -d':' -f2)
+connected_ssid=$(nmcli -t -f GENERAL.CONNECTION device show "$wifi_interface" | cut -d':' -f2)
 
 # Build SSID list
 declare -A seen_ssids
 ssid_menu=()
 ssid_raw=()
 
-while IFS= read -r -d '' line; do
-    ssid=$(echo "$line" | cut -d'|' -f1)
-    signal=$(echo "$line" | cut -d'|' -f2)
-
-    # Skip hidden or empty SSIDs
-    if [[ -z "$ssid" || "$ssid" == "--" ]]; then
-        continue
-    fi
-
-    # Skip duplicates
-    if [[ -n "${seen_ssids[$ssid]}" ]]; then
-        continue
-    fi
+while IFS=':' read -r ssid signal _; do
+    [[ -z "$ssid" || "$ssid" == "--" ]] && continue
+    [[ -n "${seen_ssids[$ssid]}" ]] && continue
     seen_ssids["$ssid"]=1
 
-    # Choose signal icon
     if (( signal == 100 )); then
         icon="󰤨 "
     elif (( signal >= 76 )); then
@@ -52,20 +44,18 @@ while IFS= read -r -d '' line; do
         icon="󰤯 "
     fi
 
-    # Build menu item
     display_ssid="$icon $ssid"
-    if [[ "$ssid" == "$connected_ssid" ]]; then
-        display_ssid="$CHECKMARK_ICON $icon $ssid"
-    fi
+    [[ "$ssid" == "$connected_ssid" ]] && display_ssid="$CHECKMARK_ICON $icon $ssid"
 
     ssid_menu+=("$display_ssid")
     ssid_raw+=("$ssid")
-done < <(nmcli -t -f SSID,SIGNAL device wifi list | awk 'NR>1' | awk -F: '{OFS="|"; print $1, $2}' | tr '\n' '\0')
+done < <(nmcli -t -f SSID,SIGNAL device wifi list --rescan no)
 
 # Final menu
-menu_items=("$TOGGLE_WIFI" "$SCAN_ICON" "${ssid_menu[@]}")
-selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str '* { font: "JetBrainsMono Nerd Font 13.5"; } inputbar { enabled: false; } listview { spacing: 6px; } mainbox { children: [listview]; } window { width: 450px; height: 450; }' )
-
+menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
+[[ -n "$connected_ssid" ]] && menu_items+=("$DISCONNECT_ICON")
+menu_items+=("${ssid_menu[@]}")
+selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str '* { font: "JetBrainsMono Nerd Font 13.5"; } inputbar { enabled: false; } listview { spacing: 3px; } mainbox { children: [listview]; } window { width: 450px; height: 450; }' )
 
 # Handle selection
 case "$selection" in
@@ -75,16 +65,21 @@ case "$selection" in
         ;;
     "$WIFI_ON_ICON")
         nmcli radio wifi off
+        exit
         ;;
     "$WIFI_OFF_ICON")
         nmcli radio wifi on
         exec "$0"
         ;;
+    "$DISCONNECT_ICON")
+        nmcli device disconnect "$wifi_interface"
+        notify-send -i network-wireless-disconnected "Disconnected" "Disconnected from $connected_ssid."
+        exit
+        ;;
     "")
         exit
         ;;
     *)
-        # Match the selected display item to the SSID
         match_index=-1
         for i in "${!ssid_menu[@]}"; do
             if [[ "${ssid_menu[$i]}" == "$selection" ]]; then
@@ -93,27 +88,26 @@ case "$selection" in
             fi
         done
 
-        if [[ $match_index -eq -1 ]]; then
-            notify-send "Error" "Could not find SSID match for selection."
-            exit 1
-        fi
+        [[ $match_index -eq -1 ]] && { notify-send -i network-error "Error" "Could not find SSID match."; exit 1; }
 
         ssid_selected="${ssid_raw[$match_index]}"
 
-        # Delete existing connection (if any)
-        nmcli connection delete id "$ssid_selected" > /dev/null 2>&1
-
-        # Prompt for password
-        password=$(rofi -dmenu -p "Enter Password for $ssid_selected:" -password)
-        if [[ -z "$password" ]]; then
-            notify-send "Connection Failed" "Password is required to connect to $ssid_selected."
-            exit
+        if nmcli connection show "$ssid_selected" > /dev/null 2>&1; then
+            nmcli connection up "$ssid_selected" && {
+                notify-send -i network-wireless-connected "Connected" "Successfully connected to $ssid_selected."
+                exit
+            }
         fi
 
-        # Connect
-        nmcli device wifi connect "$ssid_selected" password "$password" || {
-            notify-send "Connection Failed" "Failed to connect to $ssid_selected."
-                    exit
-                }
-            ;;
-    esac
+        password=$(rofi -dmenu -p "Enter Password for $ssid_selected:" -password)
+        [[ -z "$password" ]] && { notify-send -i network-error "Connection Failed" "Password required."; exit 1; }
+
+        nmcli device wifi connect "$(printf '%q' "$ssid_selected")" password "$(printf '%q' "$password")" && {
+            notify-send -i network-wireless-connected "Connected" "Successfully connected to $ssid_selected."
+            exit
+        } || {
+            notify-send -i network-error "Connection Failed" "Failed to connect to $ssid_selected."
+            exit 1
+        }
+        ;;
+esac
