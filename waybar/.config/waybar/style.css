@@ -44,7 +44,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: @fg-darker;
+    color: #757575;
     box-shadow: inherit;
     text-shadow: inherit;
     background: transparent

@@ -55,12 +55,12 @@ done < <(nmcli -t -f SSID,SIGNAL device wifi list --rescan no)
 menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
 [[ -n "$connected_ssid" ]] && menu_items+=("$DISCONNECT_ICON")
 menu_items+=("${ssid_menu[@]}")
-selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str '* { font: "JetBrainsMono Nerd Font 13.5"; } inputbar { enabled: false; } listview { spacing: 3px; } mainbox { children: [listview]; } window { width: 450px; height: 450; }' )
+selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str '* { font: "JetBrainsMono Nerd Font 13.5"; } inputbar { enabled: false; } listview { spacing: 3px; } mainbox { children: [listview]; } window { width: 350px; height: 450; location: northeast; anchor: northeast; x-offset: -5; y-offset: 5; background-color: #1c1c1c; border: 2px; border-color: #404040; }' )
 
 # Handle selection
 case "$selection" in
     "$SCAN_ICON")
-        nmcli device wifi rescan > /dev/null 2>&1
+        nmcli device wifi rescan
         exec "$0"
         ;;
     "$WIFI_ON_ICON")
@@ -95,8 +95,8 @@ case "$selection" in
         if nmcli connection show "$ssid_selected" > /dev/null 2>&1; then
             nmcli connection up "$ssid_selected" && {
                 notify-send -i network-wireless-connected "Connected" "Successfully connected to $ssid_selected."
-                exit
-            }
+                            exit
+                        }
         fi
 
         password=$(rofi -dmenu -p "Enter Password for $ssid_selected:" -password)
@@ -104,10 +104,10 @@ case "$selection" in
 
         nmcli device wifi connect "$(printf '%q' "$ssid_selected")" password "$(printf '%q' "$password")" && {
             notify-send -i network-wireless-connected "Connected" "Successfully connected to $ssid_selected."
-            exit
-        } || {
-            notify-send -i network-error "Connection Failed" "Failed to connect to $ssid_selected."
-            exit 1
-        }
-        ;;
-esac
+                    exit
+                } || {
+                    notify-send -i network-error "Connection Failed" "Failed to connect to $ssid_selected."
+                                    exit 1
+                                }
+                            ;;
+                    esac
