@@ -2,13 +2,13 @@
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE")
 vim.cmd("hi Normal guifg=#eeeeee")
-vim.cmd("hi Visual guibg=#353535 guifg=NONE gui=NONE")
+vim.cmd("hi Visual guibg=#303030 guifg=NONE gui=NONE")
 
 -- For plugins with floating windows or popups
 vim.cmd("hi StatusLine guibg=NONE")
 vim.cmd("hi StatusLineNC guibg=NONE")
 vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
-vim.cmd("hi CursorLine guibg=#282828 ctermbg=NONE")
+vim.cmd("hi CursorLine guibg=#292929 ctermbg=NONE")
 vim.cmd("hi CursorLineNr guifg=#6e8f2a gui=bold ctermfg=255 cterm=bold")
 vim.cmd("hi FloatBorder guibg=NONE ctermbg=NONE")
 

@@ -6,7 +6,7 @@ notify-send "Wi-Fi scan in progress.." "Getting available networks.." &
 SCAN_ICON="Scan"
 WIFI_ON_ICON="Disable Wi-Fi"
 WIFI_OFF_ICON="Enable Wi-Fi"
-CHECKMARK_ICON=">  "
+CHECKMARK_ICON="> "
 
 # Check Wi-Fi status
 wifi_status=$(nmcli radio wifi)
@@ -41,15 +41,15 @@ while IFS= read -r -d '' line; do
 
     # Choose signal icon
     if (( signal == 100 )); then
-        icon="󰤨   "
+        icon="󰤨 "
     elif (( signal >= 76 )); then
-        icon="󰤥   "
+        icon="󰤥 "
     elif (( signal >= 51 )); then
-        icon="󰤢   "
+        icon="󰤢 "
     elif (( signal >= 26 )); then
-        icon="󰤟   "
+        icon="󰤟 "
     else
-        icon="󰤯   "
+        icon="󰤯 "
     fi
 
     # Build menu item
@@ -64,7 +64,7 @@ done < <(nmcli -t -f SSID,SIGNAL device wifi list | awk 'NR>1' | awk -F: '{OFS="
 
 # Final menu
 menu_items=("$TOGGLE_WIFI" "$SCAN_ICON" "${ssid_menu[@]}")
-selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str 'inputbar { enabled: false; } listview { spacing: 6px; } mainbox { children: [listview]; } window { width: 450px; height: 450; }' )
+selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "Network Manager:" -theme-str '* { font: "JetBrainsMono Nerd Font 13.5"; } inputbar { enabled: false; } listview { spacing: 6px; } mainbox { children: [listview]; } window { width: 450px; height: 450; }' )
 
 
 # Handle selection

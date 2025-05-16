@@ -2,80 +2,80 @@
 
 # Power menu options
 options=(
-  "⏻   SHUTDOWN"
-  "   REBOOT"
-  "   LOCK"
-  "   SUSPEND"
-  "   LOGOUT"
-  "   EXIT"
+    "⏻ Shutdown"
+    " Reboot"
+    " Lock"
+    " Suspend"
+    " Logout"
+    " Cancel"
 )
 
 # Show Rofi with two columns, no input bar, and large font
 choice="$(printf '%s\n' "${options[@]}" | rofi -dmenu \
-  -p 'Power menu' \
-  -no-custom \
-  -filter "" \
-  -theme-str '
-    * {
-      font: "Rubik 14";
-    }
-    entry {
-      enabled: false;
-    }
-    listview {
-      spacing: 10px;
-      lines: 7;
-      columns: 2;
-    }
-    element {
-      padding: 12px;
-      horizontal-align: 0.5;
-    }
-    mainbox {
-      children: [listview];
-    }
-    window {
-      width: 350px;
-      height: 215px;
-      border: 2px;
-    }
-  ')"
+    -p 'Power menu' \
+    -no-custom \
+    -filter "" \
+    -theme-str '
+* {
+    font: "JetBrainsMono Nerd Font Mono 15";
+}
+entry {
+    enabled: false;
+}
+listview {
+    spacing: 6px;
+    lines: 7;
+    columns: 2;
+}
+element {
+    padding: 12px;
+    horizontal-align: 0.5;
+}
+mainbox {
+    children: [listview];
+}
+window {
+    width: 350px;
+    height: 215px;
+    border: 2px;
+}
+')"
 
 case "$choice" in
-  "⏻ Shutdown")
-    systemctl poweroff
-    ;;
-  " Reboot")
-    systemctl reboot
-    ;;
-  " Lock")
-    if command -v gtklock >/dev/null; then
-      gtklock
-    elif command -v hyprlock >/dev/null; then
-      hyprlock
-    elif command -v i3lock >/dev/null; then
-      i3lock
-    elif command -v betterlockscreen >/dev/null; then
-      betterlockscreen -l
-    else
-      notify-send "No lock utility found."
-    fi
-    ;;
-  " Suspend")
-    systemctl suspend
-    ;;
-  " Logout")
-    if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-      if command -v hyprctl >/dev/null; then
-        hyprctl dispatch exit
-      elif command -v swaymsg >/dev/null; then
-        swaymsg exit
-      fi
-    else
-      pkill -KILL -u "$USER"
-    fi
-    ;;
-  " Cancel")
-    exit 0
-    ;;
+    "⏻ Shutdown")
+        systemctl poweroff
+        ;;
+    " Reboot")
+        systemctl reboot
+        ;;
+    " Lock")
+        if command -v gtklock >/dev/null; then
+            gtklock
+        elif command -v hyprlock >/dev/null; then
+            hyprlock
+        elif command -v i3lock >/dev/null; then
+            i3lock
+        elif command -v betterlockscreen >/dev/null; then
+            betterlockscreen -l
+        else
+            notify-send "No lock utility found."
+        fi
+        ;;
+    " Suspend")
+        systemctl suspend
+        ;;
+    " Logout")
+        if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+            if command -v hyprctl >/dev/null; then
+                hyprctl dispatch exit
+            elif command -v swaymsg >/dev/null; then
+                swaymsg exit
+            fi
+        else
+            pkill -KILL -u "$USER"
+        fi
+        ;;
+    " Cancel")
+        exit 0
+        ;;
 esac

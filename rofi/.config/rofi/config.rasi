@@ -20,11 +20,12 @@ configuration {
     modi: "drun";
     show-icons: false;
     display-drun: "Applications:";
-    display-emoji: "Emoji list:";
+    display-emoji: "Emojis:";
 }
 
 listview {
     columns: 1;
+    spacing: 6px;
     lines: 7;
     fixed-height: true;
     fixed-columns: false;

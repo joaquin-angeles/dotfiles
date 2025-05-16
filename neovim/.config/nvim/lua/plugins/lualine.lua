@@ -39,14 +39,11 @@ return {
                     'diff'
                 },
                 lualine_y = {
-                    '%p%%'
+                    '%p%%',
+                    'location'
                 },
                 lualine_z = {
-                    { 
-                        'location',
-                        separator = { left = '', right = '' }
-                    } 
-                    -- { function() return '' .. os.date('%I:%M %p') end, separator = { left = '', right = '' } }
+                    { function() return '' .. os.date('%I:%M %p') end, separator = { left = '', right = '' } }
                 }
             },
         })
