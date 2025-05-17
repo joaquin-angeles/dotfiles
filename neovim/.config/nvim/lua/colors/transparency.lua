@@ -27,6 +27,3 @@ vim.api.nvim_set_hl(0, 'NoiceCmdlinePrompt', { bg = nil })
 vim.api.nvim_set_hl(0, 'NoiceCmdlineIcon', { bg = nil })
 vim.api.nvim_set_hl(0, 'NoiceCmdlinePopup', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupBorder', { bg = nil, cterm = { bg = nil } })
-
--- lf.nvim
-vim.api.nvim_set_hl(0, 'Lf', { bg = nil, cterm = { bg = nil } })
