@@ -6,18 +6,20 @@ image() {
 }
 
 batorcat() {
-    file="$1"
-    cat "$file"
+    if command -v bat >/dev/null 2>&1; then
+        bat --theme=base16 --color=always --style=plain "$1"
+    else
+        cat "$1"
+    fi
 }
 
 glowormdcat() {
-    file="$1"
     shift
     if command -v glow > /dev/null 2>&1
     then
-        glow "$file"
+        glow "$1"
     else
-        mdcat "$file"
+        mdcat "$1"
     fi
 }
 

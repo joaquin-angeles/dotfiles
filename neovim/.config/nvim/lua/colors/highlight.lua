@@ -4,7 +4,6 @@ local colors = {
     red            = "#865054",
     green          = "#5f7a5f",
     yellow         = "#a4965f",
-    orange         = "#b37f5f",
     blue           = "#5f7a8c",
     magenta        = "#75607a",
     cyan           = "#5f7a7f",
@@ -13,7 +12,6 @@ local colors = {
     bright_red     = "#976061",
     bright_green   = "#729a72",
     bright_yellow  = "#a49a72",
-    bright_orange  = "#d4a27a",
     bright_blue    = "#72949a",
     bright_magenta = "#8c729a",
     bright_cyan    = "#729a96",
@@ -24,16 +22,16 @@ local colors = {
 local standard_highlights = {
     Boolean   = { fg = colors.red },
     Comment   = { fg = colors.gray, italic = true },
-    Constant  = { fg = colors.yellow }, -- was magenta
-    Float     = { fg = colors.bright_yellow }, -- was bright_magenta
+    Constant  = { fg = colors.magenta }, -- was yellow, now magenta
+    Float     = { fg = colors.bright_magenta }, -- was bright_yellow, now bright_magenta
     Function  = { fg = colors.bright_blue },
     Identifier= { fg = colors.cyan },
-    Keyword   = { fg = colors.orange, bold = true },
-    Number    = { fg = colors.bright_yellow }, -- was bright_magenta
+    Keyword   = { fg = colors.yellow, bold = true }, -- was orange, now magenta
+    Number    = { fg = colors.bright_magenta }, -- was bright_yellow, now bright_magenta
     Operator  = { fg = colors.red },
-    PreProc   = { fg = colors.yellow }, -- was magenta
+    PreProc   = { fg = colors.magenta }, -- was yellow, now magenta
     String    = { fg = colors.green },
-    Title     = { fg = colors.yellow }, -- was magenta
+    Title     = { fg = colors.magenta }, -- was yellow, now magenta
     Type      = { fg = colors.bright_blue },
 }
 
@@ -45,15 +43,15 @@ local ts_highlights = {
     ["@comment"]              = { link = "Comment" },
     ["@conditional"]          = { fg = colors.bright_red, bold = true },
     ["@constant"]             = { link = "Constant" },
-    ["@constant.builtin"]     = { fg = colors.yellow }, -- was magenta
-    ["@constructor"]          = { fg = colors.yellow }, -- was magenta
+    ["@constant.builtin"]     = { fg = colors.magenta }, -- was yellow, now magenta
+    ["@constructor"]          = { fg = colors.magenta }, -- was yellow, now magenta
     ["@exception"]            = { fg = colors.red, bold = true },
-    ["@field"]                = { fg = colors.bright_yellow }, -- was bright_magenta
+    ["@field"]                = { fg = colors.bright_magenta }, -- was bright_yellow, now bright_magenta
     ["@float"]                = { link = "Float" },
     ["@function"]             = { link = "Function" },
     ["@function.builtin"]     = { fg = colors.bright_blue },
     ["@function.call"]        = { link = "Function" },
-    ["@include"]              = { fg = colors.yellow }, -- was magenta
+    ["@include"]              = { fg = colors.magenta }, -- was yellow, now magenta
     ["@interface"]            = { fg = colors.bright_blue },
     ["@keyword"]              = { link = "Keyword" },
     ["@keyword.function"]     = { fg = colors.bright_red, bold = true },
@@ -71,9 +69,9 @@ local ts_highlights = {
     ["@punctuation.bracket"]  = { fg = colors.gray },
     ["@punctuation.delimiter"]= { fg = colors.gray },
     ["@punctuation.special"]  = { fg = colors.bright_fg },
-    ["@repeat"]               = { fg = colors.yellow }, -- was magenta
+    ["@repeat"]               = { fg = colors.magenta }, -- was yellow, now magenta
     ["@string"]               = { link = "String" },
-    ["@string.escape"]        = { fg = colors.bright_yellow, italic = true }, -- was bright_magenta
+    ["@string.escape"]        = { fg = colors.bright_magenta, italic = true }, -- was bright_yellow, now bright_magenta
     ["@string.regex"]         = { fg = colors.bright_green },
     ["@tag"]                  = { fg = colors.red },
     ["@tag.attribute"]        = { fg = colors.bright_orange },
@@ -82,10 +80,10 @@ local ts_highlights = {
     ["@text.emphasis"]        = { fg = colors.fg, italic = true },
     ["@text.literal"]         = { fg = colors.green },
     ["@text.strong"]          = { fg = colors.fg, bold = true },
-    ["@text.title"]           = { fg = colors.magenta, bold = true }, -- was orange
+    ["@text.title"]           = { fg = colors.yellow, bold = true }, -- was magenta, now yellow
     ["@text.uri"]             = { fg = colors.cyan, underline = true },
     ["@type"]                 = { link = "Type" },
-    ["@type.builtin"]         = { fg = colors.yellow }, -- was magenta
+    ["@type.builtin"]         = { fg = colors.magenta }, -- was yellow, now magenta
     ["@variable"]             = { fg = colors.fg },
     ["@variable.builtin"]     = { fg = colors.red },
     ["@variable.global"]      = { fg = colors.red },

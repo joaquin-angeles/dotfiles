@@ -7,7 +7,7 @@ set sixel true
 
 # Custom functions
 cmd open ${{
-    if cat "$f" > /dev/null 2>&1; then
+    if (command -v bat >/dev/null 2>&1 && bat "$f" > /dev/null 2>&1) || cat "$f" > /dev/null 2>&1; then
         nvim "$f"
     else
         case $(file --mime-type "$f" -bL) in

@@ -59,7 +59,6 @@ alias ff=fastfetch
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
-alias lf='~/.config/lf/lfrun'
 alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'
