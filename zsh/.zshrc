@@ -44,6 +44,8 @@ zinit light zsh-users/zsh-history-substring-search # History search
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
+alias bat='bat --color=always --theme=base16 --style=plain'
+alias cat='bat --color=always --theme=base16 --style=plain'
 alias c=clear
 cd() {
     z "$@" && eza
@@ -52,13 +54,14 @@ alias fzf="command fzf --preview '
 if [ -d {} ]; then
 eza -l --color=always {} || ls -la {}
 else
-cat {}
+bat --color=always --theme=base16 --style=plain {}
 fi
 '"
 alias ff=fastfetch
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
+alias lf=~/.config/lf/lfrun
 alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'

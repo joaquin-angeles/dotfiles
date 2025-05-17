@@ -29,6 +29,7 @@ fi
 
 # List of packages to install
 packages=(
+    bat
     brightnessctl
     bibata-cursor-theme
     chafa
