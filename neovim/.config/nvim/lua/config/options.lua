@@ -1,7 +1,11 @@
+-- Indentations 
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
-vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
+-- General options
+vim.opt.statuscolumn = "%s%l "
 vim.opt.expandtab = true
 vim.opt.showmode = false
 vim.opt.clipboard = "unnamedplus"

@@ -2,10 +2,11 @@
 vim.api.nvim_set_hl(0, 'Normal', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = nil, cterm = { bg = nil } })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#282828', cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'StatusLine', { bg = nil })
 vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = nil })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#7a9e34' })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#292929', cterm = { bg = nil } })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#555555' })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = '#555555' })
 
 -- noice.nvim
 vim.api.nvim_set_hl(0, 'NoiceCmdline', { bg = nil, cterm = { bg = nil } })
