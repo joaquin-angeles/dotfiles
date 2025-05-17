@@ -51,12 +51,12 @@
 
 .background {
     color: white;
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
 }
 
 .background:backdrop {
     color: rgba(255, 255, 255, 0.5);
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
 }
 
 .background.csd {
@@ -142,13 +142,13 @@ window.solid-csd {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 0;
     margin: 0;
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
     box-shadow: none;
 }
 
 window.solid-csd:backdrop {
     box-shadow: none;
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
 }
 
 window.popup {
@@ -1950,7 +1950,7 @@ window.dialog.message.csd.background,
 window.dialog.message.csd .titlebar {
     border-radius: 12px;
     min-height: 28px;
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
 }
 
 messagedialog.csd.background {
@@ -1969,7 +1969,7 @@ messagedialog.csd .titlebar {
 
 window.dialog.message.csd.background:backdrop,
 window.dialog.message.csd .titlebar:backdrop {
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
 }
 
 window.dialog.message box.dialog-vbox.vertical {
@@ -3611,13 +3611,13 @@ windowcontrols>button:not(.suggested-action):not(.destructive-action):active {
 
 windowcontrols>button:not(.suggested-action):not(.destructive-action).close:hover {
     background-color: #ed5f5d;
-    color: #1c1c1c;
+    color: #1e1e20;
     transition: 200ms;
 }
 
 windowcontrols>button:not(.suggested-action):not(.destructive-action).close:active {
     background-color: #cf5251;
-    color: #1c1c1c;
+    color: #1e1e20;
     transition: 200ms;
 }
 
@@ -3789,7 +3789,7 @@ colorswatch.dark overlay:hover {
 }
 
 colorswatch.light>overlay {
-    color: #1c1c1c;
+    color: #1e1e20;
     border-color: transparent;
 }
 
@@ -4213,7 +4213,7 @@ menubutton.circular>button {
 
 filechooser {
     box-shadow: transparent;
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
     border-radius: 0 0 12px 12px;
 }
 
@@ -7706,19 +7706,19 @@ tabbar undershoot {
 }
 
 tabbar undershoot.left {
-    background: linear-gradient(to right, #1c1c1c, transparent 20px);
+    background: linear-gradient(to right, #1e1e20, transparent 20px);
 }
 
 tabbar: undershoot.right {
-    background: linear-gradient(to left, #1c1c1c, transparent 20px);
+    background: linear-gradient(to left, #1e1e20, transparent 20px);
 }
 
 tabbar .needs-attention-left undershoot.left {
-    background: linear-gradient(to right, #1c1c1c, transparent 20px);
+    background: linear-gradient(to right, #1e1e20, transparent 20px);
 }
 
 tabbar .needs-attention-right undershoot.right {
-    background: linear-gradient(to left, #1c1c1c, transparent 20px);
+    background: linear-gradient(to left, #1e1e20, transparent 20px);
 }
 
 tabbar tabbox>background {
@@ -8379,7 +8379,7 @@ window.about .subpage>clamp>textview {
 
 
 window.messagedialog {
-    background-color: #1c1c1c;
+    background-color: #1e1e20;
     color: white;
 }
 
@@ -8495,21 +8495,21 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 /* COLORS */
 @define-color theme_bg_color #333333;
 @define-color theme_fg_color white;
-@define-color theme_base_color #1c1c1c;
+@define-color theme_base_color #1e1e20;
 @define-color theme_text_color white;
 @define-color theme_selected_bg_color #1b82b3;
 @define-color theme_selected_fg_color white;
-@define-color insensitive_bg_color #1c1c1c;
+@define-color insensitive_bg_color #1e1e20;
 @define-color insensitive_fg_color rgba(255, 255, 255, 0.5);
 @define-color insensitive_base_color white;
 @define-color borders rgba(255, 255, 255, 0.2);
-@define-color theme_unfocused_bg_color #1c1c1c;
+@define-color theme_unfocused_bg_color #1e1e20;
 @define-color theme_unfocused_fg_color rgba(255, 255, 255, 0.5);
-@define-color theme_unfocused_base_color #1c1c1c;
+@define-color theme_unfocused_base_color #1e1e20;
 @define-color theme_unfocused_text_color white;
 @define-color theme_unfocused_selected_bg_color #1b82b3;
 @define-color theme_unfocused_selected_fg_color white;
-@define-color unfocused_insensitive_color #1c1c1c;
+@define-color unfocused_insensitive_color #1e1e20;
 @define-color unfocused_borders rgba(255, 255, 255, 0.1);
 
 @define-color accent_color #1b82b3;
@@ -8523,23 +8523,23 @@ window.messagedialog .response-area>box>button.destructive:disabled {
 @define-color success_fg_color white;
 @define-color warning_color #ffb83d;
 @define-color warning_bg_color warning_color;
-@define-color warning_fg_color #1c1c1c;
+@define-color warning_fg_color #1e1e20;
 @define-color error_color #ed5f5d;
 @define-color error_bg_color error_color;
 @define-color error_fg_color white;
-@define-color window_bg_color #1c1c1c;
+@define-color window_bg_color #1e1e20;
 @define-color window_fg_color #909090;
-@define-color view_bg_color #1c1c1c;
+@define-color view_bg_color #1e1e20;
 @define-color view_fg_color white;
-@define-color headerbar_bg_color #1c1c1c;
+@define-color headerbar_bg_color #1e1e20;
 @define-color headerbar_fg_color white;
 @define-color headerbar_border_color rgba(255, 255, 255, 0.1);
-@define-color headerbar_backdrop_color #1c1c1c;
+@define-color headerbar_backdrop_color #1e1e20;
 @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
 @define-color card_bg_color rgba(255, 255, 255, 0.05);
 @define-color card_fg_color white;
 @define-color card_shade_color rgba(0, 0, 0, 0.36);
-@define-color dialog_bg_color #1c1c1c;
+@define-color dialog_bg_color #1e1e20;
 @define-color dialog_fg_color white;
 @define-color popover_bg_color #333333;
 @define-color popover_fg_color white;

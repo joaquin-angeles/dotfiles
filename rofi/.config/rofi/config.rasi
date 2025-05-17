@@ -4,7 +4,7 @@
     foreground: #865054;
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #1c1c1cCC;
+    b-color: #1e1e20cc;
     fg-color: #555555;
     fgp-color: #888888FF;
     hl-color: transparent;
