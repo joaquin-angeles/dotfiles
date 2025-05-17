@@ -1,5 +1,5 @@
 [colors]
-primary.background = "#1c1c1c"
+primary.background = "#1e1e20"
 primary.foreground = "#eeeeee"
 
 [colors.bright]
@@ -13,7 +13,7 @@ white = "#f1f1f1"
 yellow = "#a49a72"
 
 [colors.normal]
-black = "#1c1c1c"
+black = "#1e1e20"
 blue = "#5f7a8c"
 cyan = "#5f7a7f"
 green = "#5f7a5f"
