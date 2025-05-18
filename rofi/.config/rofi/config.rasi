@@ -57,7 +57,7 @@ inputbar {
     border-radius: 7px;
     border: 2px solid;
     border-color: #454545;
-    background-color: #252525;
+    background-color: #262628;
 }
 
 entry {

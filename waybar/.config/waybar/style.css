@@ -1,8 +1,8 @@
 @import url("./colors.css");
 
 * {
-    font-family: "Rubik";
-    font-size: 14pt;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13.5pt;
     font-weight: 400;
 }
 
@@ -57,19 +57,19 @@ window#waybar {
 
 #network {
     padding-left: 11px;
-    font-size: 14.25pt;
+    font-size: 13.75pt;
     padding-right: 22px;
     color: @cyan
 }
 
 #bluetooth {
-    font-size: 14.25pt;
+    font-size: 13.75pt;
     padding-right: 16px;
     color: @blue;
 }
 
 #pulseaudio {
-    font-size: 14.25pt;
+    font-size: 13.75pt;
     padding-right: 20px;
     color: @yellow
 }
@@ -87,13 +87,13 @@ window#waybar {
     color: @bg;
     padding-right: 11px;
     padding-left: 9px;
-    font-size: 14.25pt;
+    font-size: 13.75pt;
     border: 2px solid #4e3335;
     border-radius: 7px
 }
 
 #battery {
     padding-right: 12px;
-    font-size: 14.25pt;
+    font-size: 13.75pt;
     color: @green
 }
