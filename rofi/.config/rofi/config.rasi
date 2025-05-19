@@ -4,13 +4,13 @@
     foreground: #865054;
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #1e1e20cc;
+    b-color: #1e1e20;
     fg-color: #555555;
     fgp-color: #888888FF;
     hl-color: transparent;
     hlt-color: #eeeeee;
     alt-color: #444444CC;
-    wbg-color: #171717CC;
+    wbg-color: #1e1e20cc;
     w-border: 2px solid;
     w-border-color: #eeeeee;
     w-padding: 12px;
