@@ -1,9 +1,8 @@
 layer=overlay
-height=120
 margin=5,5,5,10
 text-alignment=center
 default-timeout=3000
-background-color=#1c1c1cCC
-border-color=#eeeeee
-border-radius=7
+background-color=#1e1e20CC
+border-color=#404040
+border-radius=10
 font=Rubik, JetBrainsMono Nerd Font 13
