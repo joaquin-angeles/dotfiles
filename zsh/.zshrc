@@ -17,9 +17,6 @@ eval "$(zoxide init zsh)"
 precmd() {
     print -Pn "\e]0;%n@%m:%~\a"
 }
-preexec() {
-    print -Pn "\e]0;${1}\a"
-}
 
 # Zinit (Plugin Manager)
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"

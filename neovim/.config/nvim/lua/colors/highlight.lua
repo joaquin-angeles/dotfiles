@@ -19,7 +19,7 @@ local colors = {
     bright_yellow  = "#a49a72",
     bright_orange  = "#c6844a",
     bright_blue    = "#72949a",
-    bright_magentafor = "#8c729a",
+    bright_magenta = "#8c729a",
     bright_cyan    = "#729a96",
     bright_fg      = "#f1f1f1",
 }
