@@ -28,8 +28,7 @@ window#waybar {
     background: @bg;
     border: 2px solid @inactive;
     border-radius: 10px;
-    padding-left: 6px;
-    padding-right: 6px
+    padding: 0 5 0 5px;
 }
 
 #workspaces button {
@@ -56,9 +55,9 @@ window#waybar {
 }
 
 #network {
+    padding-right: 22px;
     padding-left: 13px;
     font-size: 13.75pt;
-    padding-right: 22px;
     color: @cyan
 }
 
@@ -78,8 +77,8 @@ window#waybar {
     background: @bg;
     border: 2px solid @inactive;
     border-radius: 10px;
-    padding-right: 12px;
-    padding-left: 12px
+    padding-right: 10px;
+    padding-left: 10px
 }
 
 #custom-power {
