@@ -20,14 +20,14 @@ window#waybar {
 
 #system {
     background: @bg;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 2px solid @inactive
 }
 
 #workspaces {
     background: @bg;
     border: 2px solid @inactive;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 0 6 0 6px;
 }
 
@@ -76,16 +76,16 @@ window#waybar {
 #clock {
     background: @bg;
     border: 2px solid @inactive;
-    border-radius: 8px;
+    border-radius: 12px;
     padding-right: 10px;
     padding-left: 10px
 }
 
 #custom-power {
-    background-color: @red;
-    color: @bg;
+    background-color: @bg;
+    color: @red;
     border: 2px solid #573437;
-    border-radius: 100%;  
+    border-radius: 12px;  
     padding-right: 10px;
     padding-left: 8px;
     font-size: 13.75pt;
