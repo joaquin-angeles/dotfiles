@@ -20,15 +20,15 @@ window#waybar {
 
 #system {
     background: @bg;
-    border-radius: 18px;
+    border-radius: 8px;
     border: 2px solid @inactive
 }
 
 #workspaces {
     background: @bg;
     border: 2px solid @inactive;
-    border-radius: 18px;
-    padding: 0 8 0 8px;
+    border-radius: 8px;
+    padding: 0 6 0 6px;
 }
 
 #workspaces button {
@@ -76,9 +76,9 @@ window#waybar {
 #clock {
     background: @bg;
     border: 2px solid @inactive;
-    border-radius: 18px;
-    padding-right: 12px;
-    padding-left: 12px
+    border-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px
 }
 
 #custom-power {

@@ -1,9 +1,5 @@
--- highlight.lua: Custom Neovim highlight configuration
--- Defines color scheme and highlight groups for standard Vim and Tree-sitter
-
 local set = vim.api.nvim_set_hl
 
--- Color palette
 local colors = {
     red            = "#865054",
     green          = "#5f7a5f",
@@ -13,7 +9,7 @@ local colors = {
     magenta        = "#75607a",
     cyan           = "#5f7a7f",
     fg             = "#eeeeee",
-    gray           = "#505050",
+    gray           = "#505052",
     bright_red     = "#976061",
     bright_green   = "#729a72",
     bright_yellow  = "#a49a72",
@@ -24,28 +20,26 @@ local colors = {
     bright_fg      = "#f1f1f1",
 }
 
--- Standard Vim highlight groups
 local function standard_highlights()
     return {
         Boolean      = { fg = colors.red },
         Comment      = { fg = colors.gray, italic = true },
-        Constant     = { fg = colors.magenta },
-        Float        = { fg = colors.bright_magenta },
+        Constant     = { fg = colors.yellow },
+        Float        = { fg = colors.bright_yellow },
         Function     = { fg = colors.bright_blue },
         Identifier   = { fg = colors.cyan },
-        Keyword      = { fg = colors.yellow, bold = true },
-        Number       = { fg = colors.bright_magenta },
+        Keyword      = { fg = colors.magenta, bold = true },
+        Number       = { fg = colors.bright_yellow },
         Operator     = { fg = colors.red },
-        PreProc      = { fg = colors.magenta },
+        PreProc      = { fg = colors.yellow },
         String       = { fg = colors.green },
-        Title        = { fg = colors.magenta },
+        Title        = { fg = colors.yellow },
         Type         = { fg = colors.bright_blue },
         Error        = { fg = colors.bright_red, bold = true },
-        Todo         = { fg = colors.bright_yellow, bold = true },
+        Todo         = { fg = colors.bright_magenta, bold = true },
     }
 end
 
--- Tree-sitter highlight groups
 local function ts_highlights()
     return {
         ["@attribute"]            = { fg = colors.bright_red },
@@ -54,15 +48,15 @@ local function ts_highlights()
         ["@comment"]              = { link = "Comment" },
         ["@conditional"]          = { fg = colors.bright_red, bold = true },
         ["@constant"]             = { link = "Constant" },
-        ["@constant.builtin"]     = { fg = colors.magenta },
-        ["@constructor"]          = { fg = colors.magenta },
+        ["@constant.builtin"]     = { fg = colors.yellow },
+        ["@constructor"]          = { fg = colors.yellow },
         ["@exception"]            = { fg = colors.red, bold = true },
-        ["@field"]                = { fg = colors.bright_magenta },
+        ["@field"]                = { fg = colors.bright_yellow },
         ["@float"]                = { link = "Float" },
         ["@function"]             = { link = "Function" },
         ["@function.builtin"]     = { fg = colors.bright_blue },
         ["@function.call"]        = { link = "Function" },
-        ["@include"]              = { fg = colors.magenta },
+        ["@include"]              = { fg = colors.yellow },
         ["@interface"]            = { fg = colors.bright_blue },
         ["@keyword"]              = { link = "Keyword" },
         ["@keyword.function"]     = { fg = colors.bright_red, bold = true },
@@ -80,9 +74,9 @@ local function ts_highlights()
         ["@punctuation.bracket"]  = { fg = colors.gray },
         ["@punctuation.delimiter"]= { fg = colors.gray },
         ["@punctuation.special"]  = { fg = colors.bright_fg },
-        ["@repeat"]               = { fg = colors.magenta },
+        ["@repeat"]               = { fg = colors.yellow },
         ["@string"]               = { link = "String" },
-        ["@string.escape"]        = { fg = colors.bright_magenta, italic = true },
+        ["@string.escape"]        = { fg = colors.bright_yellow, italic = true },
         ["@string.regex"]         = { fg = colors.bright_green },
         ["@tag"]                  = { fg = colors.red },
         ["@tag.attribute"]        = { fg = colors.bright_orange },
@@ -94,28 +88,24 @@ local function ts_highlights()
         ["@text.title"]           = { fg = colors.yellow, bold = true },
         ["@text.uri"]             = { fg = colors.cyan, underline = true },
         ["@type"]                 = { link = "Type" },
-        ["@type.builtin"]         = { fg = colors.magenta },
+        ["@type.builtin"]         = { fg = colors.yellow },
         ["@variable"]             = { fg = colors.fg },
         ["@variable.builtin"]     = { fg = colors.red },
         ["@variable.global"]      = { fg = colors.red },
     }
 end
 
--- Apply highlights
 local function apply_highlights()
     local standards = standard_highlights()
     local treesitter = ts_highlights()
 
-    -- Apply standard highlights
     for group, opts in pairs(standards) do
         set(0, group, opts)
     end
 
-    -- Apply Tree-sitter highlights
     for group, opts in pairs(treesitter) do
         set(0, group, opts)
     end
 end
 
--- Initial application of highlights
 apply_highlights()

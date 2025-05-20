@@ -29,15 +29,48 @@ return {
 
         dashboard.section.header.opts.hl = "AlphaHeader"
 
+        vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#606062" })
         dashboard.section.buttons.val = {
-            dashboard.button("/", "  Find File", "<cmd>Telescope find_files hidden=true cwd=~/<CR>"),
-            dashboard.button("n", "  New File", "<cmd>enew | startinsert<CR>"),
-            dashboard.button("r", "  Recent Files", "<cmd>Telescope oldfiles<CR>"),
-            dashboard.button("g", "󱎸  Find Text", "<cmd>Telescope live_grep<CR>"),
-            dashboard.button("c", "󰢻  Config", "<cmd>Lf ~/.config/nvim/<CR>"),
-            dashboard.button("s", "  Restore Session", "<cmd>SessionRestore<CR>"),
-            dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>"),
-            dashboard.button("Q", "  Quit", "<cmd>qa<CR>"),
+            (function()
+                local b = dashboard.button("/", "  Find File", "<cmd>Telescope find_files hidden=true cwd=~/<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("n", "  New File", "<cmd>enew | startinsert<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("r", "  Recent Files", "<cmd>Telescope oldfiles<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("g", "󱎸  Find Text", "<cmd>Telescope live_grep<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("c", "󰢻  Config", "<cmd>Lf ~/.config/nvim/<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("s", "  Restore Session", "<cmd>SessionRestore<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
+            (function()
+                local b = dashboard.button("Q", "  Quit", "<cmd>qa<CR>")
+                b.opts.hl_shortcut = "AlphaShortcut"
+                return b
+            end)(),
         }
 
         local function footer()
