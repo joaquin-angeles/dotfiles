@@ -5,12 +5,12 @@
     g-spacing: 10px;
     g-margin: 0;
     b-color: #1e1e20;
-    fg-color: #555555;
+    fg-color: #3f4044;
     fgp-color: #888888FF;
     hl-color: transparent;
     hlt-color: #eeeeee;
     alt-color: #444444CC;
-    wbg-color: #1e1e20cc;
+    wbg-color: #1e1e20;
     w-border: 2px solid;
     w-border-color: #eeeeee;
     w-padding: 12px;
@@ -39,10 +39,10 @@ window {
     transparency: "real";
     width: 550px;
     height: 550px;
-    border-radius: 7px;
+    border-radius: 12px;
     background-color: @wbg-color;
     border: 2px solid;
-    border-color: #eeeeee;
+    border-color: #3f4044;
     padding: 8px;
 }
 
@@ -53,10 +53,10 @@ prompt {
 inputbar {
     children: ["prompt", "entry"];
     spacing: @g-spacing;
-    padding: 12px 14px;
-    border-radius: 7px;
+    padding: 14px 16px;
+    border-radius: 24px;
     border: 2px solid;
-    border-color: #3f4044;
+    border-color: #757575;
     background-color: #262628;
 }
 
