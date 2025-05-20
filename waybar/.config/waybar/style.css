@@ -86,8 +86,8 @@ window#waybar {
     color: @red;
     border: 2px solid #573437;
     border-radius: 7px;  
-    padding-right: 10px;
-    padding-left: 8px;
+    padding-right: 11px;
+    padding-left: 9px;
     font-size: 13.75pt;
 }
 

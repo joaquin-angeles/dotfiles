@@ -7,7 +7,7 @@ vim.opt.shiftwidth = 4
 -- General options
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.opt.statuscolumn = ""
+vim.opt.statuscolumn = "%s%l "
 vim.opt.expandtab = true
 vim.opt.showmode = false
 vim.opt.clipboard = "unnamedplus"
