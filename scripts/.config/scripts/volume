@@ -13,32 +13,17 @@ get_volume_bar() {
 	bar=" "
 	for ((i = 0; i < 20; i++)); do
 		if [ $i -lt $blocks ]; then
-			bar+="<span foreground='#5f7a8c'>▄ </span>"
+			bar+="<span foreground='#a4965f'>▄ </span>"
 		else
-			bar+="<span foreground='#303030'>▄ </span>"
+			bar+="<span foreground='#3f4044'>▄ </span>"
 		fi
 	done
 	bar+=" "
 	echo "$bar"
 }
 
-# Get Volume Icon
-get_icon() {
-    volume=$(get_volume)
-    if [ "$volume" -eq 0 ]; then
-        echo "󰝟  "  # Mute
-    elif [ "$volume" -le 30 ]; then
-        echo "󰕿  "  # Low
-    elif [ "$volume" -le 60 ]; then
-        echo "󰖀  "  # Medium
-    else
-        echo "󰕾  "  # High
-    fi
-}
-
 # Notify
 notify_user() {
-    icon=$(get_icon)
     bar=$(get_volume_bar)
     volume=$(get_volume)
     notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Volume ($volume%)" "$bar"

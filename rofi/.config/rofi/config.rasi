@@ -39,7 +39,7 @@ window {
     transparency: "real";
     width: 550px;
     height: 550px;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: @wbg-color;
     border: 2px solid;
     border-color: #3f4044;

@@ -1,7 +1,7 @@
 @import url("./colors.css");
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Rubik";
     font-size: 13.5pt;
     font-weight: 400;
 }
@@ -43,10 +43,14 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: #757575;
+    min-width: 14px;
+    padding: 0 7px;
+    color: #757577;
+    transition: color 0.3s ease;
     box-shadow: inherit;
     text-shadow: inherit;
-    background: transparent
+    background: transparent;
+    border: 1px solid @bg
 }
 
 #tray {
