@@ -3,7 +3,7 @@
 */
 
 @define-color accent_bg_color @blue_3;
-@define-color accent_fg_color white;
+@define-color accent_fg_color #eeeeee;
 
 /* add a bg color to notebook headers */
 notebook > header {
@@ -16,6 +16,7 @@ notebook > header {
   --accent-teal: #6a8b8b;
   --accent-green: #5f7a5f;
   --accent-yellow: #a4965f;
+  --accent-orange: #ed5b00;
   --accent-red: #865054;
   --accent-pink: #d56199;
   --accent-purple: #9141ac;
