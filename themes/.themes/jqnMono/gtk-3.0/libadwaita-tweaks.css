@@ -3,7 +3,7 @@
 */
 
 @define-color accent_bg_color @blue_3;
-@define-color accent_fg_color #eeeeee;
+@define-color accent_fg_color white;
 
 /* add a bg color to notebook headers */
 notebook > header {
@@ -12,12 +12,12 @@ notebook > header {
 }
 
 :root {
-  --accent-blue: #5f7a8c;
-  --accent-teal: #6a8b8b;
-  --accent-green: #5f7a5f;
-  --accent-yellow: #a4965f;
+  --accent-blue: #3584e4;
+  --accent-teal: #2190a4;
+  --accent-green: #3a944a;
+  --accent-yellow: #c88800;
   --accent-orange: #ed5b00;
-  --accent-red: #865054;
+  --accent-red: #e62d42;
   --accent-pink: #d56199;
   --accent-purple: #9141ac;
   --accent-slate: #6f8396;

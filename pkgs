@@ -46,8 +46,8 @@ packages=(
     libnotify
     lf
     mako
-    nemo
-    nemo-fileroller
+    nautilus
+    file-roller
     neovim
     pavucontrol
     rofi-emoji
@@ -56,8 +56,8 @@ packages=(
     tlp
     upower
     waybar
-    wlogout
     xdg-desktop-portal-wlr
+    xdg-desktop-portal-gnome
     xdg-desktop-portal-hyprland
     zen-browser-bin
     zoxide
