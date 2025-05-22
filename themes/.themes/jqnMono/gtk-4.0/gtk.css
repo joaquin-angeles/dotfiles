@@ -17,62 +17,114 @@
 
 /* New base background and foreground colors */
 @define-color window_bg_color #1e1e20;
-@define-color window_fg_color #eeeeee;
+@define-color window_fg_color white;
 
 @define-color view_bg_color #1e1e20;         /* slightly darker than window_bg */
-@define-color view_fg_color #eeeeee;
+@define-color view_fg_color white;
 
 @define-color headerbar_bg_color #1e1e20;   /* a step lighter */
-@define-color headerbar_fg_color #eeeeee;
+@define-color headerbar_fg_color white;
 @define-color headerbar_border_color #1e1e20;  /* subtle border */
 @define-color headerbar_backdrop_color #1e1e20;
 @define-color headerbar_shade_color #1e1e20;
 @define-color headerbar_darker_shade_color #1e1e20;
 
 @define-color sidebar_bg_color #1e1e20;
-@define-color sidebar_fg_color #eeeeee;
+@define-color sidebar_fg_color white;
 @define-color sidebar_backdrop_color #1f1f21;
 @define-color sidebar_shade_color #3f4044;
 @define-color sidebar_border_color #3f4044;
 
 @define-color secondary_sidebar_bg_color #222224;
-@define-color secondary_sidebar_fg_color #eeeeee;
+@define-color secondary_sidebar_fg_color white;
 @define-color secondary_sidebar_backdrop_color #1f1f21;
 @define-color secondary_sidebar_shade_color RGB(0 0 6 / 20%);
 @define-color secondary_sidebar_border_color RGB(0 0 6 / 30%);
 
 @define-color card_bg_color RGB(255 255 255 / 6%); /* semi-transparent card */
-@define-color card_fg_color #eeeeee;
+@define-color card_fg_color white;
 @define-color card_shade_color RGB(0 0 6 / 30%);
 
 @define-color dialog_bg_color #2a2a2e;
-@define-color dialog_fg_color #eeeeee;
+@define-color dialog_fg_color white;
 
 @define-color popover_bg_color #2a2a2e;
-@define-color popover_fg_color #eeeeee;
+@define-color popover_fg_color white;
 @define-color popover_shade_color RGB(0 0 6 / 20%);
 
 @define-color thumbnail_bg_color #2e2e30;
-@define-color thumbnail_fg_color #eeeeee;
+@define-color thumbnail_fg_color white;
 
 @define-color shade_color RGB(0 0 6 / 20%);
 @define-color scrollbar_outline_color RGB(0 0 12 / 90%);
 
 * {
-    color: #eeeeee;
+    color: white;
+}
+
+windowcontrols {
+    border-spacing: 6px;
+    margin-right: 10px;
+}
+
+windowcontrols>.icon {
+    margin: 9px;
+}
+
+windowcontrols.start:not(.empty):dir(ltr),
+windowcontrols.end:not(.empty):dir(rtl) {
+    margin-right: 8px;
+}
+
+windowcontrols.start:not(.empty):dir(rtl),
+windowcontrols.end:not(.empty):dir(ltr) {
+    margin-left: 8px;
+}
+
+windowcontrols>button {
+    min-width: 24px;
+    margin: 0;
+    padding: 5px;
+    box-shadow: none;
+}
+
+windowcontrols>button>image {
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 2px;
+    transition: none;
+}
+
+windowcontrols button.close,
+windowcontrols button.maximize,
+windowcontrols button.minimize {
+    min-width: 16px;
+    min-height: 16px;
+    padding: 3px;
+    margin: 0;
+    margin-right: -4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-color: transparent;
+    border-radius: 9999px;
+    transition: 200ms;
+    color: #252525;
 }
 
 :root {
-  --standalone-color-oklab: max(l, 0.85) a b;
-  --accent-color: oklab(from var(--accent-bg-color) var(--standalone-color-oklab));
-  --destructive-color: oklab(from var(--destructive-bg-color) var(--standalone-color-oklab));
-  --success-color: oklab(from var(--success-bg-color) var(--standalone-color-oklab));
-  --warning-color: oklab(from var(--warning-bg-color) var(--standalone-color-oklab));
-  --error-color: oklab(from var(--error-bg-color) var(--standalone-color-oklab));
+    --standalone-color-oklab: max(l, 0.85) a b;
+    --accent-color: oklab(from var(--accent-bg-color) var(--standalone-color-oklab));
+    --destructive-color: oklab(from var(--destructive-bg-color) var(--standalone-color-oklab));
+    --success-color: oklab(from var(--success-bg-color) var(--standalone-color-oklab));
+    --warning-color: oklab(from var(--warning-bg-color) var(--standalone-color-oklab));
+    --error-color: oklab(from var(--error-bg-color) var(--standalone-color-oklab));
 
-  --active-toggle-bg-color: rgb(255 255 255 / 15%);
-  --active-toggle-fg-color: #eeeeee;
-  --overview-bg-color: #222224;
-  --overview-fg-color: #eeeeee;
+    --active-toggle-bg-color: rgb(255 255 255 / 15%);
+    --active-toggle-fg-color: white;
+    --overview-bg-color: #1d1d19;
+    --overview-fg-color: white;
 }
+
+@import '../gtk-3.0/libadwaita.css';
 @import '../gtk-3.0/libadwaita-tweaks.css';

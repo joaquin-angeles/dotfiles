@@ -453,7 +453,7 @@ list .h4 {
 avatar {
     border-radius: 9999px;
     font-weight: bold;
-    border: 3px solid #505050;
+    border: 3px solid #555555;
 }
 
 avatar.color1 {
@@ -572,7 +572,7 @@ spinbutton:not(.vertical) selection,
 treeview.view:selected:focus,
 treeview.view:selected {
     color: white;
-    background-color: #505050;
+    background-color: #555555;
 }
 
 label:selected,
@@ -693,7 +693,7 @@ textview text:selected:focus,
 iconview text:selected,
 textview text:selected {
     border-radius: 6px;
-    background-color: #505050;
+    background-color: #555555;
 }
 
 iconview:selected:focus,
@@ -707,7 +707,7 @@ textview text:selected:focus,
 iconview text:selected,
 textview text:selected {
     border-radius: 6px;
-    background-color: #505050;
+    background-color: #555555;
 }
 
 textview border {
@@ -10510,13 +10510,13 @@ tooltip.background.chromium {
 }
 
 #MozillaGtkWidget>widget border {
-    border-color: #505050;
+    border-color: #555555;
 }
 
 #MozillaGtkWidget>widget>scrolledwindow>textview text:selected,
 #MozillaGtkWidget>widget>scrolledwindow>textview text:selected:focus,
 #MozillaGtkWidget>widget>scrolledwindow>textview text selection {
-    background-color: #505050;
+    background-color: #555555;
     color: white;
 }
 

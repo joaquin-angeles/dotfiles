@@ -46,8 +46,8 @@ packages=(
     libnotify
     lf
     mako
-    nautilus
-    file-roller
+    nemo
+    nemo-fileroller
     neovim
     pavucontrol
     rofi-emoji
