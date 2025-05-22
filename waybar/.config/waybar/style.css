@@ -43,14 +43,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    min-width: 14px;
-    padding: 0 7px;
     color: #757577;
-    transition: color 0.3s ease;
-    box-shadow: inherit;
-    text-shadow: inherit;
     background: transparent;
-    border: 1px solid @bg
 }
 
 #tray {
