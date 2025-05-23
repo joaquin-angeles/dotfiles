@@ -18,7 +18,7 @@ return {
                     visual = { a = { fg = '#1e1e20', bg = '#7a8a4f' }, b = { fg = '#eeeeee', bg = '#2a2a2e' }, c = { bg = 'NONE' } },
                     replace = { a = { fg = '#1e1e20', bg = '#865054' }, b = { fg = '#eeeeee', bg = '#2a2a2e' }, c = { bg = 'NONE' } },
                     command = { a = { fg = '#eeeeee', bg = '#a4965f' }, b = { fg = '#eeeeee', bg = '#2a2a2e' }, c = { bg = 'NONE' } },
-                    inactive = { a = { fg = '#888888', bg = '#1e1e20' }, b = { fg = '#888888', bg = '#1e1e20' }, c = { bg = 'NONE' } },
+                    inactive = { a = { fg = '#909090', bg = '#1e1e20' }, b = { fg = '#909090', bg = '#1e1e20' }, c = { bg = 'NONE' } },
                 },
             },
             sections = {

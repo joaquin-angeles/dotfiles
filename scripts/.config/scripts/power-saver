@@ -4,21 +4,23 @@ BATTERY_DEVICE=$(upower -e | grep BAT)
 KBD_DEVICE="asus::kbd_backlight"
 current_state=""
 
-while read -r line; do
-    if echo "$line" | grep -q "changed"; then
-        new_state=$(upower -i "$BATTERY_DEVICE" | awk '/state:/ {print $2}')
-        if [ "$new_state" != "$current_state" ]; then
-            current_state="$new_state"
-
-            if [ "$new_state" = "discharging" ]; then
-                hyprctl keyword monitor ",1920x1080@60,auto,1.0"
+upower --monitor | grep --line-buffered "changed.*$BATTERY_DEVICE" | while read -r line; do
+    new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
+    if [ "$new_state" != "$current_state" ]; then
+        current_state="$new_state"
+        current_brightness=$(brightnessctl get)
+        if [ "$new_state" = "discharging" ]; then
+            if [ "$current_brightness" != "40" ]; then
                 brightnessctl set 40%
                 brightnessctl --device="$KBD_DEVICE" set 0
-            else
-                hyprctl keyword monitor ",1920x1080@144,auto,1.0"
+            fi
+            hyprctl keyword monitor ",1920x1080@60,auto,1.0"
+        else
+            if [ "$current_brightness" != "80" ]; then
                 brightnessctl set 80%
                 brightnessctl --device="$KBD_DEVICE" set 80%
             fi
+            hyprctl keyword monitor ",1920x1080@144,auto,1.0"
         fi
     fi
-done < <(upower --monitor)
+done &
