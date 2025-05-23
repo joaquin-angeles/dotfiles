@@ -1,0 +1,14 @@
+[manager]
+border_symbol = " "
+
+[icon]
+globs = []
+dirs  = []
+files = []
+exts  = []
+conds = []
+
+[style]
+directory = { fg = "blue", bold = true }
+symlink = { fg = "cyan", italic = true }
+executable = { fg = "green", bold = true }

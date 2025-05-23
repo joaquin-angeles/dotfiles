@@ -44,7 +44,6 @@ packages=(
     kvantum
     kvantum-qt5
     libnotify
-    lf
     mako
     nemo
     nemo-fileroller
@@ -62,6 +61,7 @@ packages=(
     zen-browser-bin
     zoxide
     zsh
+    yazi
 )
 
 # Install packages
