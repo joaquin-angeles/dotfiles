@@ -65,7 +65,8 @@ alias ll='eza -l'
 alias lla='eza -la'
 alias paru='paru --skipreview'
 alias pk=pkill
-alias vim='nvim'
+alias vim=nvim
+alias yz=yazi
 
 # History
 HISTSIZE=5000

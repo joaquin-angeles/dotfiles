@@ -29,21 +29,23 @@ return {
                     } 
                 },
                 lualine_b = {
+                    'branch'
+                },
+                lualine_c = {
                     'filename',
                     'filetype'
                 },
-                lualine_c = {
-                    'branch'
-                },
                 lualine_x = {
-                    'diff'
+                    'diff',
                 },
                 lualine_y = {
-                    '%p%%',
-                    'location'
+                    '%p%%'
                 },
                 lualine_z = {
-                    { function() return '' .. os.date('%I:%M %p') end, separator = { left = '', right = '' } }
+                    { 
+                        'location',
+                        separator = { left = '', right = '' },
+                    } 
                 }
             },
         })

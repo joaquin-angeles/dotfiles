@@ -1,10 +1,10 @@
--- Neovim UI
+-- Ne vim UI
 vim.api.nvim_set_hl(0, 'Normal', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'StatusLine', { bg = nil })
 vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = nil })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#292929', cterm = { bg = nil } })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#2a2a2c', cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#7a8a4f' })
 
 -- telescope.nvim
@@ -19,7 +19,7 @@ vim.api.nvim_set_hl(0, 'TelescopeResultsTitle', { bg = nil, cterm = { bg = nil }
 vim.api.nvim_set_hl(0, 'TelescopePreviewNormal', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'TelescopePreviewBorder', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'TelescopePreviewTitle', { bg = nil, cterm = { bg = nil } })
-vim.api.nvim_set_hl(0, 'TelescopeSelection', { fg = '#eeeeee', bg = '#333333', bold = true })
+vim.api.nvim_set_hl(0, 'TelescopeSelection', { fg = '#eeeeee', bg = '#353537', bold = true })
 
 -- noice.nvim
 vim.api.nvim_set_hl(0, 'NoiceCmdline', { bg = nil, cterm = { bg = nil } })
