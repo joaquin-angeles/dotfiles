@@ -6,7 +6,7 @@ return {
             options = {
                 icons_enabled = false,
                 disabled_filetypes = { 'alpha', 'neo-tree' },
-                section_separators = { left = '', right = '' },
+                section_separators = { left = '', right = '' },
                 component_separators = { left = '::', right = '::' },
                 theme = {
                     normal = {
@@ -33,7 +33,7 @@ return {
                     },
 
                     command = {
-                        a = { fg = '#eeeeee', bg = '#a4965f' },
+                        a = { fg = '#1e1e20', bg = '#a4965f' },
                         b = { fg = '#eeeeee', bg = '#2a2a2e' },
                         c = { bg = 'NONE' },
                     },
@@ -47,7 +47,10 @@ return {
             },
             sections = {
                 lualine_a = {
-                    'mode'
+                    {
+                        'mode',
+                        separator = { left = '', right = '' }
+                    }
                 },
                 lualine_b = {
                     'branch'
@@ -63,7 +66,10 @@ return {
                     '%p%%'
                 },
                 lualine_z = {
-                    'location'
+                    {
+                        'location',
+                        separator = { left = '', right = '' }
+                    }
                 }
             },
         })

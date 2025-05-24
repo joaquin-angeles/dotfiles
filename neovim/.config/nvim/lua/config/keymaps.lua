@@ -3,7 +3,6 @@ local unmap = vim.api.nvim_del_keymap
 
 -- Maps and remaps
 map('n', ';', ':', { noremap = true, silent = false })
-map('n', '<leader>e', ':Neotree reveal left<CR>', { noremap = true, silent = true })
 map('n', '<leader>fn', ':Telescope find_files hidden=true <CR>', { noremap = true, silent = true })
 
 -- Navigation

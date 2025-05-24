@@ -8,6 +8,11 @@ files = []
 exts  = []
 conds = []
 
+[status]
+progress_label  = { bold = true }
+progress_normal = { fg = "blue", bg = "black" }
+progress_error  = { fg = "red", bg = "black" }
+
 [style]
 directory = { fg = "blue", bold = true }
 symlink = { fg = "cyan", italic = true }
