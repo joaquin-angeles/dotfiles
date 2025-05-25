@@ -45,7 +45,7 @@
 @define-color dark_5 #000000;
 @define-color accent_bg_color @blue_3;
 @define-color accent_fg_color white;
-@define-color accent_color #757579;
+@define-color accent_color #78aeed;
 @define-color destructive_bg_color @red_4;
 @define-color destructive_fg_color white;
 @define-color destructive_color #ff7b63;
@@ -58,27 +58,27 @@
 @define-color error_bg_color @red_4;
 @define-color error_fg_color white;
 @define-color error_color #ff7b63;
-@define-color window_bg_color #1e1e20;
+@define-color window_bg_color #242426;
 @define-color window_fg_color white;
 @define-color view_bg_color #1e1e20;
 @define-color view_fg_color white;
-@define-color headerbar_bg_color #1e1e20;
+@define-color headerbar_bg_color #242426;
 @define-color headerbar_fg_color white;
 @define-color headerbar_border_color white;
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_shade_color rgba(0, 0, 6, 0.36);
 @define-color headerbar_darker_shade_color rgba(0, 0, 6, 0.9);
-@define-color sidebar_bg_color #1e1e20;
+@define-color sidebar_bg_color #242426;
 @define-color sidebar_fg_color white;
-@define-color sidebar_backdrop_color #1f1f22;
+@define-color sidebar_backdrop_color #28282c;
 @define-color sidebar_shade_color rgba(0, 0, 6, 0.25);
 @define-color sidebar_border_color rgba(0, 0, 6, 0.36);
 @define-color card_bg_color rgba(255, 255, 255, 0.08);
 @define-color card_fg_color white;
 @define-color card_shade_color rgba(0, 0, 6, 0.36);
-@define-color dialog_bg_color #252527;
+@define-color dialog_bg_color #36363a;
 @define-color dialog_fg_color white;
-@define-color popover_bg_color #252527;
+@define-color popover_bg_color #36363a;
 @define-color popover_fg_color white;
 @define-color popover_shade_color rgba(0, 0, 6, 0.25);
 @define-color thumbnail_bg_color #39393d;
@@ -87,7 +87,6 @@
 @define-color scrollbar_outline_color rgba(0, 0, 12, 0.95);
 @define-color incognito_bg_color #1c2438;
 @define-color new_title_bg_color #303030;
-
 * { padding: 0; -GtkToolButton-icon-spacing: 4; -GtkTextView-error-underline-color: @error_bg_color; -GtkScrolledWindow-scrollbar-spacing: 0; -GtkToolItemGroup-expander-size: 11; -GtkWidget-text-handle-width: 20; -GtkWidget-text-handle-height: 24; -GtkDialog-button-spacing: 4; -GtkDialog-action-area-border: 0; outline-color: alpha(currentColor,0.3); outline-style: dashed; outline-offset: -3px; outline-width: 1px; -gtk-outline-radius: 7px; -gtk-secondary-caret-color: @accent_bg_color; }
 
 .background { color: @window_fg_color; background-color: @window_bg_color; }
