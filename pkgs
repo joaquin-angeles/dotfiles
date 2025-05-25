@@ -48,7 +48,11 @@ packages=(
     nemo
     nemo-fileroller
     neovim
+    nwg-look
+    nwg-display
     pavucontrol
+    qt5ct
+    qt6ct
     rofi-emoji
     rofi-wayland
     slurp

@@ -8,6 +8,7 @@
 @define-color error_bg_color @red_4;
 @define-color error_fg_color white;
 @define-color accent_color oklab(from #5f7a8c max(l, 0.85) a b);
+@define-color accent_bg_color oklab(from #5f7a8c max(l, 0.85) a b);
 @define-color destructive_color oklab(from @destructive_bg_color max(l, 0.85) a b);
 @define-color success_color oklab(from @success_bg_color max(l, 0.85) a b);
 @define-color warning_color oklab(from @warning_bg_color max(l, 0.85) a b);

@@ -45,7 +45,7 @@
 @define-color dark_5 #000000;
 @define-color accent_bg_color @blue_3;
 @define-color accent_fg_color white;
-@define-color accent_color #78aeed;
+@define-color accent_color #757579;
 @define-color destructive_bg_color @red_4;
 @define-color destructive_fg_color white;
 @define-color destructive_color #ff7b63;
@@ -87,6 +87,7 @@
 @define-color scrollbar_outline_color rgba(0, 0, 12, 0.95);
 @define-color incognito_bg_color #1c2438;
 @define-color new_title_bg_color #303030;
+
 * { padding: 0; -GtkToolButton-icon-spacing: 4; -GtkTextView-error-underline-color: @error_bg_color; -GtkScrolledWindow-scrollbar-spacing: 0; -GtkToolItemGroup-expander-size: 11; -GtkWidget-text-handle-width: 20; -GtkWidget-text-handle-height: 24; -GtkDialog-button-spacing: 4; -GtkDialog-action-area-border: 0; outline-color: alpha(currentColor,0.3); outline-style: dashed; outline-offset: -3px; outline-width: 1px; -gtk-outline-radius: 7px; -gtk-secondary-caret-color: @accent_bg_color; }
 
 .background { color: @window_fg_color; background-color: @window_bg_color; }
