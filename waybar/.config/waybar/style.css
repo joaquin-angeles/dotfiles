@@ -31,12 +31,12 @@ window#waybar {
 #system {
     background: @bg-light;
     border-radius: 7px;
-    border: 2px solid @bg-light
+    border: 1px solid #47474a;
 }
 
 #workspaces {
     background: @bg-light;
-    border: 2px solid @bg-light;
+    border: 1px solid #47474a;
     border-radius: 7px;
     padding: 0 4 0 4px;
 }
@@ -83,7 +83,7 @@ window#waybar {
 
 #clock {
     background: @bg-light;
-    border: 2px solid @bg-light;
+    border: 1px solid #47474a;
     margin-left: 5px;
     border-radius: 7px;
     padding-right: 10px;
@@ -93,11 +93,11 @@ window#waybar {
 #custom-power {
     background-color: @bg;
     color: @red;
-    border: 2px solid #303032;
+    border: 1px solid #573437;
     margin-right: 5px;
     border-radius: 7px;  
-    padding-right: 10px;
-    padding-left: 8px;
+    padding-right: 11px;
+    padding-left: 9px;
     font-size: 13.25pt;
 }
 
