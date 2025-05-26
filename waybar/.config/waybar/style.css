@@ -53,7 +53,6 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: #656567;
     background: transparent;
 }
 
@@ -71,7 +70,7 @@ window#waybar {
 
 #bluetooth {
     font-size: 13.25pt;
-    padding-right: 12px;
+    padding-right: 15px;
     color: @blue;
 }
 
@@ -83,7 +82,6 @@ window#waybar {
 
 #clock {
     background: @bg-light;
-    border: 1px solid @bg-light;
     margin-left: 5px;
     border-radius: 12px;
     padding-right: 10px;
@@ -97,7 +95,7 @@ window#waybar {
     margin-right: 5px;
     border-radius: 12px;  
     padding-right: 10px;
-    padding-left: 8px;
+    padding-left: 9px;
     font-size: 13.25pt;
 }
 
