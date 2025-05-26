@@ -9,10 +9,6 @@
         "modules": [ "network", "bluetooth", "pulseaudio", "battery" ]
     },
 
-    "custom/space": {
-        "format": ""
-    },
-
     "network": {
         "format": "{icon}",
         "format-icons": [
@@ -77,7 +73,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "󰅐 {:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%d %B, %Y on a %A}"
     },
