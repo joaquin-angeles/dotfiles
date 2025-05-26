@@ -19,7 +19,8 @@ window#waybar {
     color: @fg;
     padding-left: 2px;
     padding-right: 2px;
-    background-color: rgba(30,30,32,0.8)
+    /* background-color: rgba(30,30,32,0.8) */
+    background-color: @bg
 }
 
 #custom-clipboard {
