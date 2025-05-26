@@ -19,7 +19,7 @@ window#waybar {
     color: @fg;
     padding-left: 2px;
     padding-right: 2px;
-    background-color: #1e1e20
+    background-color: rgba(30,30,32,0.8)
 }
 
 #custom-clipboard {
@@ -64,18 +64,18 @@ window#waybar {
 #network {
     padding-right: 22px;
     padding-left: 11px;
-    font-size: 13.75pt;
+    font-size: 13.25pt;
     color: @cyan
 }
 
 #bluetooth {
-    font-size: 13.75pt;
+    font-size: 13.25pt;
     padding-right: 16px;
     color: @blue;
 }
 
 #pulseaudio {
-    font-size: 13.75pt;
+    font-size: 13.5pt;
     padding-right: 20px;
     color: @yellow
 }
@@ -95,13 +95,13 @@ window#waybar {
     border: 2px solid #303032;
     margin-right: 5px;
     border-radius: 7px;  
-    padding-right: 11px;
-    padding-left: 9px;
-    font-size: 13.75pt;
+    padding-right: 10px;
+    padding-left: 8px;
+    font-size: 13.25pt;
 }
 
 #battery {
     padding-right: 12px;
-    font-size: 13.75pt;
+    font-size: 13.25pt;
     color: @green
 }
