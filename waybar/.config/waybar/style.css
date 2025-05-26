@@ -6,6 +6,15 @@
     font-weight: 400;
 }
 
+tooltip {
+    background-color: #2a2a2c; /* Tooltip background */
+    color: @bg;
+    border: 1px solid #383839;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
 window#waybar {
     color: @fg;
     padding-left: 2px;
