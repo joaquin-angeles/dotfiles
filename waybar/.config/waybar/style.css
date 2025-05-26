@@ -1,14 +1,14 @@
 @import url("./colors.css");
 
 * {
-    font-family: "Rubik";
-    font-size: 13.5pt;
-    font-weight: 400;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13pt;
+    font-weight: 400
 }
 
 tooltip {
     background-color: #2a2a2c; /* Tooltip background */
-    color: @bg;
+    color: @bg-light;
     border: 1px solid #383839;
     border-radius: 8px;
     padding: 5px 10px;
@@ -19,7 +19,7 @@ window#waybar {
     color: @fg;
     padding-left: 2px;
     padding-right: 2px;
-    background-color: transparent
+    background-color: #1e1e20
 }
 
 #custom-clipboard {
@@ -28,14 +28,14 @@ window#waybar {
 }
 
 #system {
-    background: @bg;
+    background: @bg-light;
     border-radius: 7px;
-    border: 2px solid @inactive
+    border: 2px solid @bg-light
 }
 
 #workspaces {
-    background: @bg;
-    border: 2px solid @inactive;
+    background: @bg-light;
+    border: 2px solid @bg-light;
     border-radius: 7px;
     padding: 0 4 0 4px;
 }
@@ -81,8 +81,9 @@ window#waybar {
 }
 
 #clock {
-    background: @bg;
-    border: 2px solid @inactive;
+    background: @bg-light;
+    border: 2px solid @bg-light;
+    margin-left: 5px;
     border-radius: 7px;
     padding-right: 10px;
     padding-left: 10px
@@ -91,7 +92,8 @@ window#waybar {
 #custom-power {
     background-color: @bg;
     color: @red;
-    border: 2px solid #573437;
+    border: 2px solid #303032;
+    margin-right: 5px;
     border-radius: 7px;  
     padding-right: 11px;
     padding-left: 9px;

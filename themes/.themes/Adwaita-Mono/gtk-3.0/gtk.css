@@ -1770,9 +1770,9 @@ infobar selection { background-color: shade(@window_bg_color,0.9); }
 
 infobar *:link { color: @accent_color; }
 
-tooltip { padding: 4px; border-radius: 5px; box-shadow: none; text-shadow: 0 1px black; }
+tooltip { padding: 4px; border-radius: 8px; box-shadow: none; text-shadow: 0 1px black; }
 
-tooltip.background { background-color: rgba(0, 0, 0, 0.8); background-clip: padding-box; border: 1px solid rgba(255, 255, 255, 0.1); }
+tooltip.background { background-color: #2a2a2c; background-clip: padding-box; border: 1px solid #383839; }
 
 tooltip decoration { background-color: transparent; }
 

@@ -2,10 +2,10 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 32,
-    "margin": "5 5 0 5",
+    "height": 30,
     "spacing": 4,
     "modules-left": [
+        "custom/space",
         "clock",
         "hyprland/workspaces",
     ],

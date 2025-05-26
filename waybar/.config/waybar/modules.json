@@ -9,6 +9,10 @@
         "modules": [ "network", "bluetooth", "pulseaudio", "battery" ]
     },
 
+    "custom/space": {
+        "format": ""
+    },
+
     "network": {
         "format": "{icon}",
         "format-icons": [
