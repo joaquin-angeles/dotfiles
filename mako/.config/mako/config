@@ -1,5 +1,5 @@
 layer=overlay
-margin=5,5,5,10
+margin=6,6,6,10
 height=250
 text-alignment=center
 default-timeout=3000

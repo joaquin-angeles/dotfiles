@@ -57,7 +57,8 @@ window#waybar {
 
 #tray {
     padding-top: 2px;
-    padding-right: 6px
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #network {
@@ -81,17 +82,17 @@ window#waybar {
 
 #clock {
     background: @bg-light;
-    margin-left: 5px;
+    margin-left: 6px;
     border-radius: 12px;
     padding-right: 10px;
     padding-left: 10px
 }
 
 #custom-power {
-    background-color: @bg;
+    background-color: @bg-light;
     color: @red;
     border: 2px solid #573437;
-    margin-right: 5px;
+    margin-right: 6px;
     border-radius: 12px;  
     padding-right: 10px;
     padding-left: 9px;

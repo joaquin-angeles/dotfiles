@@ -2,8 +2,8 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 32,
-    "spacing": 4,
+    "height": 30,
+    "spacing": 6,
     "modules-left": [
         "custom/space",
         "clock",
