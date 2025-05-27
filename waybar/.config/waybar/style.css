@@ -3,7 +3,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13.15pt;
-    font-weight: 400
+    font-weight: 400;
 }
 
 tooltip {
@@ -85,7 +85,7 @@ window#waybar {
     margin-left: 6px;
     border-radius: 12px;
     padding-right: 10px;
-    padding-left: 10px
+    padding-left: 10px;
 }
 
 #custom-power {
