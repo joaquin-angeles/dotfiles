@@ -12,6 +12,15 @@ fi
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+
+# Binds 
+bindkey "^a" beginning-of-line
+bindkey "^e" end-of-line
+bindkey "^k" kill-line
+bindkey "^J" history-search-forward
+bindkey "^K" history-search-backward
+bindkey "^R" fzf-history-widget
 
 # Set window titles
 precmd() {
@@ -70,7 +79,7 @@ alias yz=yazi
 
 # History
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.zhistory
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory

@@ -1,25 +1,22 @@
 #!/usr/bin/env bash
 
+# Trigger an initial Wi-Fi rescan
+nmcli dev wifi rescan
+
 # Check dependencies
 command -v nmcli >/dev/null 2>&1 || { notify-send -i error "Error" "nmcli not found. Please install NetworkManager."; exit 1; }
 command -v rofi >/dev/null 2>&1 || { notify-send -i error "Error" "rofi not found. Please install rofi."; exit 1; }
 
 # Configuration
-CACHE_DIR="$HOME/.cache/wifi_manager"
-LAST_SCAN_FILE="$CACHE_DIR/last_scan"
-RESCAN_INTERVAL=30  # Seconds before rescan is needed
 CONNECTION_TIMEOUT=10  # Seconds to wait for connection
 
 # Icons
-SCAN_ICON="Scan Networks"
+SCAN_ICON="Scan for networks.."
 WIFI_ON_ICON="Disable Wi-Fi"
 WIFI_OFF_ICON="Enable Wi-Fi"
 CHECKMARK_ICON="> "
 DISCONNECT_ICON="Disconnect"
 ERROR_ICON=""
-
-# Create cache directory
-mkdir -p "$CACHE_DIR"
 
 # Find Wi-Fi interface
 wifi_interface=$(nmcli device | grep wifi | awk '{print $1}' | head -n1)
@@ -33,24 +30,6 @@ TOGGLE_WIFI=$([[ "$wifi_status" == "enabled" ]] && echo "$WIFI_ON_ICON" || echo 
 connected_ssid=$(nmcli -t -f GENERAL.CONNECTION device show "$wifi_interface" | cut -d':' -f2)
 prompt="Network Manager"
 [[ -n "$connected_ssid" ]] && prompt="Network Manager (Connected: $connected_ssid)"
-
-# Check if rescan is needed
-rescan_needed=0
-if [[ -f "$LAST_SCAN_FILE" ]]; then
-    last_scan=$(cat "$LAST_SCAN_FILE")
-    current_time=$(date +%s)
-    if (( current_time - last_scan > RESCAN_INTERVAL )); then
-        rescan_needed=1
-    fi
-else
-    rescan_needed=1
-fi
-
-# Perform rescan if needed
-if [[ $rescan_needed -eq 1 ]]; then
-    nmcli device wifi rescan >/dev/null 2>&1
-    date +%s > "$LAST_SCAN_FILE"
-fi
 
 # Build SSID list sorted by signal strength
 declare -A seen_ssids
@@ -92,7 +71,7 @@ selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "$prompt" -theme-s
 # Handle selection
 case "$selection" in
     "$SCAN_ICON")
-        rm -f "$LAST_SCAN_FILE"
+        nmcli dev wifi rescan
         exec "$0"
         ;;
     "$WIFI_ON_ICON")
@@ -108,27 +87,27 @@ case "$selection" in
     "$DISCONNECT_ICON")
         nmcli device disconnect "$wifi_interface" && {
             notify-send -i network-wireless-disconnected "Disconnected" "Disconnected from $connected_ssid."
-                    exit
-                } || {
-                    notify-send -i network-error "Error" "Failed to disconnect from $connected_ssid."
-                                    exit 1
-                                }
-                            ;;
-                        "")
-                            exit
-                            ;;
-                        *)
-                            match_index=-1
-                            for i in "${!ssid_menu[@]}"; do
-                                if [[ "${ssid_menu[$i]}" == "$selection" ]]; then
-                                    match_index=$i
-                                    break
-                                fi
-                            done
+            exit
+        } || {
+            notify-send -i network-error "Error" "Failed to disconnect from $connected_ssid."
+            exit 1
+        }
+        ;;
+    "")
+        exit
+        ;;
+    *)
+        match_index=-1
+        for i in "${!ssid_menu[@]}"; do
+            if [[ "${ssid_menu[$i]}" == "$selection" ]]; then
+                match_index=$i
+                break
+            fi
+        done
 
-                            [[ $match_index -eq -1 ]] && { notify-send -i network-error "Error" "Could not find SSID match."; exit 1; }
+        [[ $match_index -eq -1 ]] && { notify-send -i network-error "Error" "Could not find SSID match."; exit 1; }
 
-                            ssid_selected="${ssid_raw[$match_index]}"
+        ssid_selected="${ssid_raw[$match_index]}"
 
         # Try connecting to existing profile
         if nmcli connection show "$ssid_selected" >/dev/null 2>&1; then
@@ -142,7 +121,7 @@ case "$selection" in
         fi
 
         # Prompt for password
-        password=$(rofi -dmenu -p "Enter Password for $ssid_selected:" -password)
+        password=$(rofi -dmenu -p "Password ($ssid_selected):" -password -theme-str '* { font: "Rubik 12"; } window { width: 600px; height: 100px; location: north; anchor: north; x-offset: -4; y-offset: 6; }')
         [[ -z "$password" ]] && { notify-send -i network-error "Connection Failed" "Password required."; exit 1; }
 
         # Connect with new password
