@@ -6,6 +6,8 @@ set cleaner ~/.config/lf/cleaner
 # Sixel support
 set sixel true
 
+set drawbox true
+
 # Custom functions
 cmd open ${{
     if (command -v bat >/dev/null 2>&1 && bat "$f" > /dev/null 2>&1) || cat "$f" > /dev/null 2>&1; then

@@ -66,7 +66,28 @@ done < <(nmcli -t -f SSID,SIGNAL device wifi list --rescan no | sort -t: -k2 -nr
 menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
 [[ -n "$connected_ssid" ]] && menu_items+=("$DISCONNECT_ICON")
 menu_items+=("${ssid_menu[@]}")
-selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "$prompt" -theme-str '* { font: "JetBrainsMono Nerd Font 13.5"; } inputbar { enabled: false; } listview { spacing: 3px; } mainbox { children: [listview]; } window { width: 350px; height: 450; location: northeast; anchor: northeast; x-offset: -5; y-offset: 5; }')
+selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "$prompt" -theme-str '
+* {
+    font: "JetBrainsMono Nerd Font 13.5";
+}
+inputbar {
+    enabled: false;
+}
+listview {
+    spacing: 3px;
+}
+mainbox {
+    children: [listview];
+}
+window {
+    width: 350px;
+    height: 450;
+    location: northeast;
+    anchor: northeast;
+    x-offset: -4;
+    y-offset: 6;
+}
+')
 
 # Handle selection
 case "$selection" in

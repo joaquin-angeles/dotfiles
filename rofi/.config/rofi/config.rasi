@@ -19,7 +19,7 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun: "Applications:";
+    display-drun: "Apps:";
     display-emoji: "Emojis:";
 }
 
@@ -37,7 +37,7 @@ listview {
 
 window {
     transparency: "real";
-    width: 550px;
+    width: 510px;
     height: 550px;
     border-radius: 12px;
     background-color: @wbg-color;
