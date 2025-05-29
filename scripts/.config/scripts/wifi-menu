@@ -1,22 +1,28 @@
 #!/usr/bin/env bash
 
-# Trigger an initial Wi-Fi rescan
+# Notify-send and network rescan
+notify-send "Wi-Fi scan in progress.." "Checking for available connections.."
 nmcli dev wifi rescan
+
+# Configuration
+CONNECTION_TIMEOUT=10  # Seconds to wait for connection
+RESCAN_TIMEOUT=2       # Reduced timeout for quick rescan
+RETRY_ATTEMPTS=2       # Number of retry attempts for scanning
+CACHE_FILE="/tmp/wifi_scan_cache"
+CACHE_TIMEOUT=10       # Seconds before cache is considered stale
+
+# Icons (original glyphs)
+SCAN_ICON="Scan for networks.."
+WIFI_ON_ICON="Disable Wi-Fi"
+WIFI_OFF_ICON="Enable Wi-Fi"
+CHECKMARK_ICON="* "
+DISCONNECT_ICON="Disconnect"
+ERROR_ICON=" "
+LOCK_ICON="󰌾  "
 
 # Check dependencies
 command -v nmcli >/dev/null 2>&1 || { notify-send -i error "Error" "nmcli not found. Please install NetworkManager."; exit 1; }
 command -v rofi >/dev/null 2>&1 || { notify-send -i error "Error" "rofi not found. Please install rofi."; exit 1; }
-
-# Configuration
-CONNECTION_TIMEOUT=10  # Seconds to wait for connection
-
-# Icons
-SCAN_ICON="Scan for networks.."
-WIFI_ON_ICON="Disable Wi-Fi"
-WIFI_OFF_ICON="Enable Wi-Fi"
-CHECKMARK_ICON="> "
-DISCONNECT_ICON="Disconnect"
-ERROR_ICON=""
 
 # Find Wi-Fi interface
 wifi_interface=$(nmcli device | grep wifi | awk '{print $1}' | head -n1)
@@ -31,36 +37,86 @@ connected_ssid=$(nmcli -t -f GENERAL.CONNECTION device show "$wifi_interface" | 
 prompt="Network Manager"
 [[ -n "$connected_ssid" ]] && prompt="Network Manager (Connected: $connected_ssid)"
 
+# Get list of saved connection profiles
+declare -A saved_profiles
+while IFS= read -r profile; do
+    saved_profiles["$profile"]=1
+done < <(nmcli -t -f NAME connection show | grep -v '^$' | sort -u)
+
+# Function to perform Wi-Fi scan with caching
+scan_wifi() {
+    local output
+    # Check if cache exists and is recent
+    if [[ -f "$CACHE_FILE" && -n "$(find "$CACHE_FILE" -newerct "-$CACHE_TIMEOUT seconds")" ]]; then
+        output=$(cat "$CACHE_FILE")
+        if [[ -n "$output" && $(echo "$output" | wc -l) -gt 1 ]]; then
+            echo "$output"
+            return 0
+        fi
+    fi
+
+    local attempt=1
+    while [ $attempt -le $RETRY_ATTEMPTS ]; do
+        # Trigger asynchronous rescan in the background
+        nmcli dev wifi rescan >/dev/null 2>&1 &
+        sleep "$RESCAN_TIMEOUT"  # Reduced wait time
+
+        # Get Wi-Fi list
+        output=$(nmcli -t -f SSID,SIGNAL,SECURITY device wifi list --rescan no)
+        if [[ -n "$output" && $(echo "$output" | wc -l) -gt 1 ]]; then
+            echo "$output" > "$CACHE_FILE"  # Cache results
+            echo "$output"
+            return 0
+        fi
+        notify-send -i network-error "Warning" "Wi-Fi scan attempt $attempt failed. Retrying..."
+        ((attempt++))
+    done
+    notify-send -i network-error "Error" "Failed to retrieve Wi-Fi networks after $RETRY_ATTEMPTS attempts."
+    exit 1
+}
+
 # Build SSID list sorted by signal strength
 declare -A seen_ssids
 ssid_menu=()
 ssid_raw=()
 signal_strength=()
 
-while IFS=':' read -r ssid signal _; do
-    [[ -z "$ssid" || "$ssid" == "--" ]] && continue
-    [[ -n "${seen_ssids[$ssid]}" ]] && continue
+while IFS=':' read -r ssid signal security; do
+    [[ -z "$ssid" || "$ssid" == "--" ]] && continue  # Skip hidden or invalid SSIDs
+    [[ -n "${seen_ssids[$ssid]}" ]] && continue      # Skip duplicates
     seen_ssids["$ssid"]=1
 
-    if (( signal == 100 )); then
-        icon="󰤨 "
-    elif (( signal >= 76 )); then
-        icon="󰤥 "
-    elif (( signal >= 51 )); then
-        icon="󰤢 "
-    elif (( signal >= 26 )); then
-        icon="󰤟 "
+    # Set icon based on connection status and profile (original glyphs)
+    if [[ "$ssid" == "$connected_ssid" || -n "${saved_profiles[$ssid]}" ]]; then
+        if (( signal == 100 )); then
+            icon="󰤨   "
+        elif (( signal >= 76 )); then
+            icon="󰤥   "
+        elif (( signal >= 51 )); then
+            icon="󰤢   "
+        elif (( signal >= 26 )); then
+            icon="󰤟   "
+        else
+            icon="󰤯   "
+        fi
     else
-        icon="󰤯 "
+        icon="$LOCK_ICON"
     fi
 
-    display_ssid="$icon $ssid"
-    [[ "$ssid" == "$connected_ssid" ]] && display_ssid="$CHECKMARK_ICON $icon $ssid"
+    # Add signal strength to display
+    display_ssid="$icon $ssid ($signal%)"
+    [[ "$ssid" == "$connected_ssid" ]] && display_ssid="$CHECKMARK_ICON $icon $ssid ($signal%)"
 
     ssid_menu+=("$display_ssid")
     ssid_raw+=("$ssid")
     signal_strength+=("$signal")
-done < <(nmcli -t -f SSID,SIGNAL device wifi list --rescan no | sort -t: -k2 -nr)
+done < <(scan_wifi | sort -t: -k2 -nr)
+
+# Check if no networks were found
+if [ ${#ssid_menu[@]} -eq 0 ]; then
+    notify-send -i network-error "Error" "No Wi-Fi networks found. Try rescanning."
+    exit 1
+fi
 
 # Final menu
 menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
@@ -68,7 +124,7 @@ menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
 menu_items+=("${ssid_menu[@]}")
 selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "$prompt" -theme-str '
 * {
-    font: "JetBrainsMono Nerd Font 13.5";
+    font: "Rubik 13.15";
 }
 inputbar {
     enabled: false;
@@ -80,8 +136,8 @@ mainbox {
     children: [listview];
 }
 window {
-    width: 350px;
-    height: 450;
+    width: 380px;
+    height: 500px;
     location: northeast;
     anchor: northeast;
     x-offset: -4;
@@ -92,22 +148,25 @@ window {
 # Handle selection
 case "$selection" in
     "$SCAN_ICON")
-        nmcli dev wifi rescan
+        rm -f "$CACHE_FILE"  # Clear cache to force new scan
         exec "$0"
         ;;
     "$WIFI_ON_ICON")
         nmcli radio wifi off
         notify-send -i network-wireless-disconnected "Wi-Fi Disabled" "Wi-Fi has been turned off."
+        rm -f "$CACHE_FILE"
         exit
         ;;
     "$WIFI_OFF_ICON")
         nmcli radio wifi on
         notify-send -i network-wireless-connected "Wi-Fi Enabled" "Wi-Fi has been turned on."
+        rm -f "$CACHE_FILE"
         exec "$0"
         ;;
     "$DISCONNECT_ICON")
         nmcli device disconnect "$wifi_interface" && {
             notify-send -i network-wireless-disconnected "Disconnected" "Disconnected from $connected_ssid."
+            rm -f "$CACHE_FILE"
             exit
         } || {
             notify-send -i network-error "Error" "Failed to disconnect from $connected_ssid."
@@ -134,6 +193,7 @@ case "$selection" in
         if nmcli connection show "$ssid_selected" >/dev/null 2>&1; then
             if timeout "$CONNECTION_TIMEOUT" nmcli connection up "$ssid_selected"; then
                 notify-send -i network-wireless-connected "Connected" "Successfully connected to $ssid_selected."
+                rm -f "$CACHE_FILE"
                 exit
             else
                 # Delete misconfigured profile and try connecting with a new password
@@ -149,6 +209,7 @@ case "$selection" in
         if timeout "$CONNECTION_TIMEOUT" nmcli device wifi connect "$(printf '%q' "$ssid_selected")" password "$(printf '%q' "$password")"; then
             notify-send -i network-wireless-connected "Connected" "Successfully connected to $ssid_selected."
             unset password
+            rm -f "$CACHE_FILE"
             exit
         else
             notify-send -i network-error "Connection Failed" "Failed to connect to $ssid_selected. Check password or signal strength."

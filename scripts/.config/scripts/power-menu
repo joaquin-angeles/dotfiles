@@ -34,8 +34,8 @@ mainbox {
     children: [listview];
 }
 window {
-    width: 250px;
-    height: 300px;
+    width: 180px;
+    height: 260px;
     location: northeast;
     anchor: northeast;
     x-offset: -4; y-offset: 6;
@@ -43,13 +43,13 @@ window {
 ')"
 
 case "$choice" in
-    "⏻  Shutdown")
+    "󰐥   Shutdown")
         systemctl poweroff
         ;;
-    "   Reboot")
+    "󰜉   Reboot")
         systemctl reboot
         ;;
-    "   Lock")
+    "󰌾   Lock")
         if command -v gtklock >/dev/null; then
             gtklock
         elif command -v hyprlock >/dev/null; then
@@ -62,10 +62,10 @@ case "$choice" in
             notify-send "No lock utility found."
         fi
         ;;
-    "   Suspend")
+    "󰽥   Suspend")
         systemctl suspend
         ;;
-    "   Logout")
+    "󰍃   Logout")
         if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
             if command -v hyprctl >/dev/null; then
                 hyprctl dispatch exit
