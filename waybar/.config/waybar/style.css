@@ -31,12 +31,12 @@ window#waybar {
 #system {
     background: @bg-light;
     border-radius: 12px;
-    border: 1px solid @bg-light;
+    border: 1px solid @inactive;
 }
 
 #workspaces {
     background: @bg-light;
-    border: 1px solid @bg-light;
+    border: 1px solid @inactive;
     border-radius: 12px;
     padding: 0px 4px 0px 4px;
 }
@@ -83,6 +83,7 @@ window#waybar {
 #clock {
     background: @bg-light;
     margin-left: 6px;
+    border: 1px solid @inactive;
     border-radius: 12px;
     padding-right: 10px;
     padding-left: 10px;

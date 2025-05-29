@@ -5,8 +5,8 @@ notify-send "Wi-Fi scan in progress.." "Checking for available connections.."
 nmcli dev wifi rescan
 
 # Configuration
-CONNECTION_TIMEOUT=10  # Seconds to wait for connection
-RESCAN_TIMEOUT=2       # Reduced timeout for quick rescan
+CONNECTION_TIMEOUT=15  # Seconds to wait for connection
+RESCAN_TIMEOUT=3       # Reduced timeout for quick rescan
 RETRY_ATTEMPTS=2       # Number of retry attempts for scanning
 CACHE_FILE="/tmp/wifi_scan_cache"
 CACHE_TIMEOUT=10       # Seconds before cache is considered stale
