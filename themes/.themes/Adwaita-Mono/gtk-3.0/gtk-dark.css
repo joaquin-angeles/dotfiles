@@ -58,7 +58,7 @@
 @define-color error_bg_color @red_4;
 @define-color error_fg_color white;
 @define-color error_color #ff7b63;
-@define-color window_bg_color #252527;
+@define-color window_bg_color #1e1e20;
 @define-color window_fg_color white;
 @define-color view_bg_color #1e1e20;
 @define-color view_fg_color white;
