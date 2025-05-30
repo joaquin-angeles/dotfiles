@@ -22,12 +22,13 @@ cmd open ${{
 
 # Keymaps and options
 map . set hidden!
+map E $nautilus "$(realpath)" >/dev/null 2>&1 &
 map D delete
 map p paste
 map x cut
 map y copy
-map a push $touch<space>
-map A push $mkdir<space>-p<space>
+map n push $touch<space>
+map N push $mkdir<space>-p<space>
 map <enter> open
 map r rename
 map H top
