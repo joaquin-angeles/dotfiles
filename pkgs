@@ -62,6 +62,7 @@ packages=(
     qt6ct
     rofi-emoji
     rofi-wayland
+    swayosd
     slurp
     tlp
     upower
