@@ -1,43 +1,104 @@
-# Default binds and apps
-set $mod Mod4
-set $browser zen-browser
-set $menu rofi -show drun -disable-history
-set $fm footclient -e lf
-
-# Start-up applications 
-exec_always ~/.config/scripts/power-saver_sway
-exec_always autotiling
+# ========================
+# Startup Applications
+# ========================
+exec --no-startup-id autotiling 2 3 4 5
+exec --no-startup-id foot --server
+exec mako
 exec_always swayosd-server
-exec_always foot --server
-exec_always waybar -c ~/.config/waybar/sway_config.jsonc
-exec_always mako
-exec swaybg -i ~/Pictures/Wallpapers/sunny.png -m fill
-exec wl-paste --type text --watch cliphist store
+exec_always ~/.config/scripts/power-saver_sway
+exec waybar -c ~/.config/waybar/sway_config.jsonc
+exec swaybg -i ~/Pictures/Wallpapers/idk.png -m fill
 exec wl-paste --type image --watch cliphist store
+exec wl-paste --type text --watch cliphist store
 
-# Disable mouse accel
+# ========================
+# Variables
+# ========================
+set $browser zen-browser
+set $fm footclient -e lf
+set $fm-gui nautilus
+set $menu rofi -show drun -disable-history
+set $mod Mod4
+floating_modifier $mod
+
+# ========================
+# Borders and Gaps
+# ========================
+client.focused          #3f4044 #3f4044 #3f4044 #3f4044
+client.focused_inactive #1e1e20 #1e1e20 #1e1e20 #1e1e20
+client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
+client.unfocused        #1e1e20 #1e1e20 #1e1e20 #1e1e20
+default_border pixel 2
+gaps inner 8
+gaps outer 4
+
+# ========================
+# Input Configuration
+# ========================
 input * {
     accel_profile flat
-        pointer_accel 0
-        xkb_options caps:escape
+    pointer_accel 0
+    xkb_options caps:escape
 }
 
-# Keybinds
-bindsym $mod+Shift+c kill
+input "type:mouse" {
+    tap enabled
+}
+
+# ========================
+# Keybindings - Focus and Move
+# ========================
+# Move focused window in directions
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Move focus in directions
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+semicolon splitv
+bindsym $mod+apostrophe splith
+
+# ========================
+# Keybindings - General
+# ========================
+bindsym --whole-window $mod+button3 resize
+bindsym --whole-window $mod+button1 move
+bindsym Control_L+Mod4+Delete exec ~/.config/scripts/power-menu
+bindsym Mod1+return fullscreen toggle
+bindsym $mod+period exec rofi -modi emoji -show emoji -no-show-icons
 bindsym $mod+return exec footclient
-bindsym $mod+space exec $menu
+bindsym $mod+Shift+c kill
+bindsym $mod+Shift+s exec hyprshot -o ~/Pictures/Screenshots -m region -z
+bindsym $mod+Shift+space floating toggle
 bindsym $mod+b exec $browser
 bindsym $mod+e exec $fm
-bindsym Mod1+return fullscreen toggle
-bindsym $mod+v exec cliphist list | rofi -dmenu -p "Clipboard history:" | cliphist decode | wl-copy
-bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
-bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume lower
-bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
-bindsym Ctrl+Mod4+Delete ~/.config/scripts/power-menu
-bindsym $mod+Shift+e toggle split
+bindsym $mod+Shift+e exec $fm-gui
+bindsym $mod+Shift+f exec hyprpicker
 bindsym $mod+s exec hyprshot -o ~/Pictures/Screenshots -m output -z
-bindsym $mod+Shift+s exec hyprshot -o ~/Pictures/Screenshots -m region -z
-bindsym $mod+period exec rofi -modi emoji -show emoji -no-show-icons
+bindsym $mod+space exec $menu
+bindsym $mod+v exec cliphist list | rofi -dmenu -p "Clipboard history:" | cliphist decode | wl-copy
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+
+# ========================
+# Keybindings - Workspaces
+# ========================
+# Move focused window to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
@@ -51,42 +112,14 @@ bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
-# Move focused window to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
-# Workspace 2
-assign [app_id="zen"] workspace 2
-assign [class="vesktop"] workspace 3
-assign [class="Caprine"] workspace  3
-assign [class="Spotify"] workspace 4
+# ========================
+# Workspace Assignments
+# ========================
 assign [app_id="com.obsproject.Studio"] workspace 4
-assign [class="steam"] workspace 5
-assign [class="org.vinegarhq.Sober"] workspace 5
 assign [app_id="io.mrarm.mcpelauncher-ui-qt"] workspace 5
-
-# Borders
-default_border pixel 2
-client.focused          #3f4044 #3f4044 #3f4044 #3f4044
-client.unfocused        #1e1e20 #1e1e20 #1e1e20 #1e1e20
-client.focused_inactive #1e1e20 #1e1e20 #1e1e20 #1e1e20
-client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
-gaps inner 5
-gaps outer 4
-
-# Move focus in directions
-bindsym $mod+h focus left
-bindsym $mod+l focus right
-bindsym $mod+k focus up
-bindsym $mod+j focus down
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+l move right
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+j move down
+assign [app_id="zen"] workspace 2
+assign [class="Caprine"] workspace 3
+assign [class="Spotify"] workspace 4
+assign [class="steam"] workspace 5
+assign [class="vesktop"] workspace 3
+assign [class="org.vinegarhq.Sober"] workspace 5
