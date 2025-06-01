@@ -51,6 +51,10 @@ window#waybar {
     color: @lime;
 }
 
+#workspaces button.focused {
+    color: @lime;
+}
+
 #workspaces button:hover {
     background: transparent;
 }
