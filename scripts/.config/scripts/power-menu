@@ -66,14 +66,6 @@ case "$choice" in
         systemctl suspend
         ;;
     "󰍃   Logout")
-        if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-            if command -v hyprctl >/dev/null; then
-                hyprctl dispatch exit
-            elif command -v swaymsg >/dev/null; then
-                swaymsg exit
-            fi
-        else
             pkill -KILL -u "$USER"
-        fi
         ;;
 esac

@@ -1,13 +1,13 @@
 # ========================
 # Startup Applications
 # ========================
-exec --no-startup-id autotiling 2 3 4 5
+# exec --no-startup-id autotiling
 exec --no-startup-id foot --server
 exec mako
 exec_always swayosd-server
 exec_always ~/.config/scripts/power-saver_sway
 exec waybar -c ~/.config/waybar/sway_config.jsonc
-exec swaybg -i ~/Pictures/Wallpapers/idk.png -m fill
+exec swaybg -i ~/Pictures/Wallpapers/pure.png -m fill
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
 
@@ -67,7 +67,7 @@ bindsym $mod+apostrophe splith
 # ========================
 bindsym --whole-window $mod+button3 resize
 bindsym --whole-window $mod+button1 move
-bindsym Control_L+Mod4+Delete exec ~/.config/scripts/power-menu
+bindsym $mod+Shift+d exec ~/.config/scripts/power-menu
 bindsym Mod1+return fullscreen toggle
 bindsym $mod+period exec rofi -modi emoji -show emoji -no-show-icons
 bindsym $mod+return exec footclient
