@@ -14,13 +14,13 @@ upower --monitor | grep --line-buffered "changed.*$BATTERY_DEVICE" | while read 
                 brightnessctl set 40%
                 brightnessctl --device="$KBD_DEVICE" set 0
             fi
-            wlr-randr --output eDP-1 --mode 1920x1080@60
+            swaymsg output eDP-1 mode 1920x1080@60Hz
         else
             if [ "$current_brightness" != "80" ]; then
                 brightnessctl set 80%
                 brightnessctl --device="$KBD_DEVICE" set 80%
             fi
-            wlr-randr --output eDP-1 --mode 1920x1080@144
+            swaymsg output eDP-1 mode 1920x1080@144Hz
         fi
     fi
 done &

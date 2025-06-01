@@ -5,6 +5,7 @@ set $menu rofi -show drun -disable-history
 set $fm footclient -e lf
 
 # Start-up applications 
+exec_always ~/.config/scripts/power-saver_sway
 exec_always autotiling
 exec_always swayosd-server
 exec_always foot --server
@@ -36,6 +37,7 @@ bindsym Ctrl+Mod4+Delete ~/.config/scripts/power-menu
 bindsym $mod+Shift+e toggle split
 bindsym $mod+s exec hyprshot -o ~/Pictures/Screenshots -m output -z
 bindsym $mod+Shift+s exec hyprshot -o ~/Pictures/Screenshots -m region -z
+bindsym $mod+period exec rofi -modi emoji -show emoji -no-show-icons
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
@@ -60,6 +62,15 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
+# Workspace 2
+assign [app_id="zen"] workspace 2
+assign [class="vesktop"] workspace 3
+assign [class="Caprine"] workspace  3
+assign [class="Spotify"] workspace 4
+assign [app_id="com.obsproject.Studio"] workspace 4
+assign [class="steam"] workspace 5
+assign [class="org.vinegarhq.Sober"] workspace 5
+assign [app_id="io.mrarm.mcpelauncher-ui-qt"] workspace 5
 
 # Borders
 default_border pixel 2
