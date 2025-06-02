@@ -30,14 +30,14 @@ window#waybar {
 
 #system {
     background: @bg-light;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid @inactive;
 }
 
 #workspaces {
     background: @bg-light;
     border: 1px solid @inactive;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 0px 4px 0px 4px;
 }
 
@@ -88,7 +88,7 @@ window#waybar {
     background: @bg-light;
     margin-left: 6px;
     border: 1px solid @inactive;
-    border-radius: 12px;
+    border-radius: 10px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -98,7 +98,7 @@ window#waybar {
     color: @red;
     border: 2px solid #573437;
     margin-right: 6px;
-    border-radius: 12px;  
+    border-radius: 10px;  
     padding-right: 10px;
     padding-left: 9px;
     font-size: 13.4pt;

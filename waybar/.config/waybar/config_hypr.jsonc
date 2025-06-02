@@ -1,5 +1,5 @@
 {
-    "include": "~/.config/waybar/modules.json",
+    "include": "~/.config/waybar/modules_hypr.json",
     "layer": "top",
     "position": "top",
     "height": 30,

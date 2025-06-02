@@ -6,8 +6,8 @@ exec --no-startup-id foot --server
 exec mako
 exec_always swayosd-server
 exec_always ~/.config/scripts/power-saver_sway
-exec waybar -c ~/.config/waybar/sway_config.jsonc
-exec swaybg -i ~/Pictures/Wallpapers/pure.png -m fill
+exec waybar -c ~/.config/waybar/config_sway.jsonc
+exec swaybg -m fill -c '#18181a'
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
 
@@ -19,7 +19,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec systemctl enable --user --now xdg-desktop-portal-wlr.service
 set $browser zen-browser
 set $fm footclient -e lf
-set $fm-gui nautilus
+set $fm-gui thunar
 set $menu rofi -show drun -disable-history
 set $mod Mod4
 floating_modifier $mod
@@ -27,10 +27,10 @@ floating_modifier $mod
 # ========================
 # Borders and Gaps
 # ========================
-client.focused          #3f4044 #3f4044 #3f4044 #3f4044
-client.focused_inactive #1e1e20 #1e1e20 #1e1e20 #1e1e20
+client.focused          #3f4044 #3f4044 #ffffff #3f4044
+client.focused_inactive #1e1e20 #1e1e20 #ffffff #1e1e20
 client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
-client.unfocused        #1e1e20 #1e1e20 #1e1e20 #1e1e20
+client.unfocused        #1e1e20 #1e1e20 #ffffff #1e1e20
 default_border pixel 2
 gaps inner 8
 gaps outer 2
@@ -42,8 +42,12 @@ input * {
     accel_profile flat
     xkb_options caps:escape
 }
-input "type:mouse" {
+
+input type:touchpad {
+    pointer_accel 1
+    accel_profile flat
     tap enabled
+    natural_scroll enabled
 }
 
 # ========================
@@ -60,8 +64,8 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+semicolon splitv
-bindsym $mod+apostrophe splith
+# bindsym $mod+semicolon splitv
+# bindsym $mod+apostrophe splith
 
 # ========================
 # Keybindings - General
