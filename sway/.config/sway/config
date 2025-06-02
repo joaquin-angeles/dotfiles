@@ -7,7 +7,7 @@ exec mako
 exec_always swayosd-server
 exec_always ~/.config/scripts/power-saver_sway
 exec waybar -c ~/.config/waybar/sway_config.jsonc
-exec swaybg -i ~/Pictures/Wallpapers/pure.png -m fill
+exec swaybg -i ~/Pictures/Wallpapers/trees.png -m fill
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
 
@@ -32,8 +32,8 @@ client.focused_inactive #1e1e20 #1e1e20 #1e1e20 #1e1e20
 client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
 client.unfocused        #1e1e20 #1e1e20 #1e1e20 #1e1e20
 default_border pixel 2
-gaps inner 5
-gaps outer 5
+gaps inner 8
+gaps outer 2
 
 # ========================
 # Input Configuration
