@@ -63,8 +63,8 @@ bindsym $mod+apostrophe splith
 # ========================
 # Keybindings - General
 # ========================
-bindsym --whole-window $mod+button3 resize
-bindsym --whole-window $mod+button1 move
+bindsym $mod+button3 resize
+bindsym $mod+button1 move
 bindsym $mod+Shift+d exec ~/.config/scripts/power-menu
 bindsym Mod1+return fullscreen toggle
 bindsym $mod+period exec rofi -modi emoji -show emoji -no-show-icons
