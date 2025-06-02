@@ -36,7 +36,7 @@ fi
 
 # List of packages to install
 packages=(
-    autotiling-git
+    autotiling
     bat
     brightnessctl
     bibata-cursor-theme
@@ -67,7 +67,7 @@ packages=(
     upower
     waybar
     xdg-desktop-portal-wlr
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     zen-browser-bin
     zoxide
     zsh

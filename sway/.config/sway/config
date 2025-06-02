@@ -30,7 +30,7 @@ client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
 client.unfocused        #1e1e20 #1e1e20 #1e1e20 #1e1e20
 default_border pixel 2
 gaps inner 8
-gaps outer 4
+gaps outer 2
 
 # ========================
 # Input Configuration
