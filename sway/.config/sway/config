@@ -14,6 +14,9 @@ exec wl-paste --type text --watch cliphist store
 # ========================
 # Variables
 # ========================
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec systemctl enable --user --now xdg-desktop-portal-wlr.service
 set $browser zen-browser
 set $fm footclient -e lf
 set $fm-gui nautilus
@@ -29,8 +32,8 @@ client.focused_inactive #1e1e20 #1e1e20 #1e1e20 #1e1e20
 client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
 client.unfocused        #1e1e20 #1e1e20 #1e1e20 #1e1e20
 default_border pixel 2
-gaps inner 8
-gaps outer 2
+gaps inner 5
+gaps outer 5
 
 # ========================
 # Input Configuration
@@ -113,11 +116,9 @@ bindsym $mod+0 workspace number 10
 # ========================
 # Workspace Assignments
 # ========================
-assign [app_id="com.obsproject.Studio"] workspace 4
-assign [app_id="io.mrarm.mcpelauncher-ui-qt"] workspace 5
 assign [app_id="zen"] workspace 2
 assign [class="Caprine"] workspace 3
+assign [class="vesktop"] workspace 3
+assign [app_id="com.obsproject.Studio"] workspace 4
 assign [class="Spotify"] workspace 4
 assign [class="steam"] workspace 5
-assign [class="vesktop"] workspace 3
-assign [class="org.vinegarhq.Sober"] workspace 5

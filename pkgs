@@ -67,6 +67,7 @@ packages=(
     tlp
     upower
     waybar
+    xdg-desktop-portal
     xdg-desktop-portal-hyprland
     zen-browser-bin
     zoxide
