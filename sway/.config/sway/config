@@ -7,7 +7,7 @@ exec mako
 exec_always swayosd-server
 exec_always ~/.config/scripts/power-saver_sway
 exec waybar -c ~/.config/waybar/sway_config.jsonc
-exec swaybg -i ~/Pictures/Wallpapers/trees.png -m fill
+exec swaybg -i ~/Pictures/Wallpapers/pure.png -m fill
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
 
