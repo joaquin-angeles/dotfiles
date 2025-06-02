@@ -1,7 +1,7 @@
 # ========================
 # Startup Applications
 # ========================
-# exec --no-startup-id autotiling
+exec --no-startup-id autotiling --l 2
 exec --no-startup-id foot --server
 exec mako
 exec_always swayosd-server
@@ -37,10 +37,8 @@ gaps outer 4
 # ========================
 input * {
     accel_profile flat
-    pointer_accel 0
     xkb_options caps:escape
 }
-
 input "type:mouse" {
     tap enabled
 }
