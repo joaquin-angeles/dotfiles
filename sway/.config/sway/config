@@ -14,6 +14,7 @@ exec wl-paste --type text --watch cliphist store
 # ========================
 # Variables
 # ========================
+seat * xcursor_theme Bibata-Modern-Classic 24
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl enable --user --now xdg-desktop-portal-wlr.service

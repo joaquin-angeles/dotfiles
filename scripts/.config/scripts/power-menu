@@ -22,7 +22,7 @@ entry {
     enabled: false;
 }
 listview {
-    spacing: 6px;
+    spacing: 2px;
     lines: 7;
     columns: 1;
 }
@@ -38,7 +38,7 @@ window {
     height: 260px;
     location: northeast;
     anchor: northeast;
-    x-offset: -4; y-offset: 6;
+    x-offset: -6; y-offset: 6;
 }
 ')"
 

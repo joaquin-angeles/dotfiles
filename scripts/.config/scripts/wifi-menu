@@ -88,7 +88,7 @@ while IFS=':' read -r ssid signal security; do
 
     # Set icon based on connection status and profile (original glyphs)
     if [[ "$ssid" == "$connected_ssid" || -n "${saved_profiles[$ssid]}" ]]; then
-        if (( signal == 100 )); then
+        if (( signal >= 81 )); then
             icon="󰤨   "
         elif (( signal >= 76 )); then
             icon="󰤥   "
@@ -130,17 +130,17 @@ inputbar {
     enabled: false;
 }
 listview {
-    spacing: 3px;
+    spacing: 0px;
 }
 mainbox {
     children: [listview];
 }
 window {
-    width: 380px;
-    height: 500px;
+    width: 350px;
+    height: 450px;
     location: northeast;
     anchor: northeast;
-    x-offset: -4;
+    x-offset: -6;
     y-offset: 6;
 }
 ')
