@@ -44,6 +44,10 @@ window {
     border: 2px solid;
     border-color: #3f4044;
     padding: 8px;
+    location: northwest;
+    anchor: northwest;
+    x-offset: 6;
+    y-offset: 6;
 }
 
 prompt {
@@ -70,7 +74,7 @@ mainbox {
     spacing: @g-spacing;
     margin: @g-margin;
     padding: 8px;
-    children: ["inputbar", "listview", "message"];
+    children: ["listview", "inputbar", "message"];
 }
 
 element {

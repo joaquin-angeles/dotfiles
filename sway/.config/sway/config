@@ -41,14 +41,14 @@ gaps outer 2
 # ========================
 input * {
     accel_profile flat
-    xkb_options caps:escape
+        xkb_options caps:escape
 }
 
 input type:touchpad {
     pointer_accel 1
-    accel_profile flat
-    tap enabled
-    natural_scroll enabled
+        accel_profile flat
+        tap enabled
+        natural_scroll enabled
 }
 
 # ========================
