@@ -20,8 +20,8 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec systemctl enable --user --now xdg-desktop-portal-wlr.service
 set $browser zen-browser
 set $fm footclient -e lf
-set $fm-gui thunar
-set $menu rofi -show drun -disable-history
+set $fm-gui nemo
+set $menu tofi-drun
 set $mod Mod4
 floating_modifier $mod
 
@@ -109,7 +109,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
+bindsym $mod+3 workspace number 3; layout tabbed
 bindsym $mod+4 workspace number 4
 bindsym $mod+5 workspace number 5
 bindsym $mod+6 workspace number 6

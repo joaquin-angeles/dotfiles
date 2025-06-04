@@ -15,6 +15,7 @@ tooltip {
     font-size: 13px;
 }
 
+
 window#waybar {
     color: @fg;
     padding-left: 2px;
@@ -30,14 +31,14 @@ window#waybar {
 
 #system {
     background: @bg-light;
-    border-radius: 7px;
+    border-radius: 12px;
     border: 1px solid @inactive;
 }
 
 #workspaces {
     background: @bg-light;
     border: 1px solid @inactive;
-    border-radius: 7px;
+    border-radius: 12px;
     padding: 0px 4px 0px 4px;
 }
 
@@ -88,7 +89,7 @@ window#waybar {
     background: @bg-light;
     margin-left: 6px;
     border: 1px solid @inactive;
-    border-radius: 7px;
+    border-radius: 12px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -98,7 +99,7 @@ window#waybar {
     color: @red;
     border: 2px solid #573437;
     margin-right: 6px;
-    border-radius: 7px;  
+    border-radius: 12px;  
     padding-right: 10px;
     padding-left: 9px;
     font-size: 13.4pt;

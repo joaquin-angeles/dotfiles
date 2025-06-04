@@ -22,7 +22,7 @@ entry {
     enabled: false;
 }
 listview {
-    spacing: 2px;
+    spacing: 5px;
     lines: 7;
     columns: 1;
 }
