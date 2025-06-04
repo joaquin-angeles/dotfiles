@@ -15,7 +15,6 @@ tooltip {
     font-size: 13px;
 }
 
-
 window#waybar {
     color: @fg;
     padding-left: 2px;
