@@ -1,5 +1,5 @@
 * {
-    font: "Rubik 13.5";
+    font: "Rubik 13";
     text-color: #eeeeee;
     foreground: #865054;
     g-spacing: 10px;
@@ -37,8 +37,8 @@ listview {
 
 window {
     transparency: "real";
-    width: 510px;
-    height: 550px;
+    width: 450px;
+    height: 500px;
     border-radius: 7px;
     background-color: @wbg-color;
     border: 2px solid;

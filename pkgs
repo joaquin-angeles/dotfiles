@@ -29,6 +29,10 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
     # Add chaotic-aur to pacman.conf if not already present
     echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
 
+    # Update the package database with the new repo
+    echo "󰚰 Updating package database with Chaotic AUR..."
+    sudo pacman -Sy
+
     echo " Chaotic AUR added successfully."
 else
     echo "󰋑 Chaotic AUR is already configured."
@@ -52,7 +56,7 @@ packages=(
     kvantum-qt5
     libnotify
     mako
-    nautilus
+    nemo
     file-roller
     neovim
     nwg-look
@@ -69,6 +73,7 @@ packages=(
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
     zen-browser-bin
     zoxide
     zsh

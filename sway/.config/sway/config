@@ -1,12 +1,12 @@
 # ========================
 # Startup Applications
 # ========================
-exec --no-startup-id autotiling --l 2
+exec --no-startup-id ~/.config/sway/addons/autotiling --l 2
 exec --no-startup-id foot --server
 exec mako
 exec_always swayosd-server
-exec_always ~/.config/scripts/power-saver_sway
-exec waybar -c ~/.config/waybar/config_sway.jsonc
+exec_always ~/.config/scripts/power-saver
+exec waybar -c ~/.config/waybar/sway/config.jsonc
 exec swaybg -m fill -c '#18181a'
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
@@ -86,7 +86,7 @@ bindsym $mod+Shift+e exec $fm-gui
 bindsym $mod+Shift+f exec hyprpicker
 bindsym $mod+s exec hyprshot -o ~/Pictures/Screenshots -m output -z
 bindsym $mod+space exec $menu
-bindsym $mod+v exec cliphist list | rofi -dmenu -p "Clipboard history:" | cliphist decode | wl-copy
+bindsym $mod+v exec cliphist list | rofi -dmenu -p "Cliphist:" | cliphist decode | wl-copy
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower
 bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
 bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise

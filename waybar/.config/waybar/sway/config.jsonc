@@ -1,5 +1,5 @@
 {
-    "include": "~/.config/waybar/modules_hypr.json",
+    "include": "~/.config/waybar/sway/modules.json",
     "layer": "top",
     "position": "top",
     "height": 30,
@@ -7,10 +7,10 @@
     "modules-left": [
         "custom/space",
         "clock",
-        "hyprland/workspaces",
+        "sway/workspaces",
     ],
     "modules-center": [
-        "hyprland/window"
+        "sway/window"
     ],
     "modules-right": [
         "tray",
