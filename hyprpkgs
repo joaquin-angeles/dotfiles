@@ -36,20 +36,18 @@ packages=(
     brightnessctl
     bibata-cursor-theme
     chafa
+    catfish
     eza
     grim
     hyprland
     hyprlock
     hyprshot
-    hyprpaper
     hyprpolkitagent
     inotify-tools
     kvantum
     kvantum-qt5
     libnotify
     mako
-    nemo
-    file-roller
     neovim
     nwg-look
     nwg-displays
@@ -60,8 +58,9 @@ packages=(
     rofi-wayland
     swayosd
     slurp
-    tlp
-    upower
+    thunar
+    thunar-archive-plugin
+    tumbler
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-hyprland

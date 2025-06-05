@@ -38,6 +38,7 @@ packages=(
     supergfxctl
     tlp
     tlp-rdw
+    upower
 )
 
 # Install packages

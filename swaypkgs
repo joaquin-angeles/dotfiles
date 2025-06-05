@@ -37,6 +37,7 @@ packages=(
     brightnessctl
     bibata-cursor-theme
     chafa
+    catfish
     eza
     grim
     hyprlock
@@ -47,8 +48,6 @@ packages=(
     lf
     libnotify
     mako
-    nemo
-    nemo-fileroller
     neovim
     nwg-look
     pavucontrol
@@ -62,8 +61,9 @@ packages=(
     swayosd
     swaybg
     slurp
-    tlp
-    upower
+    thunar
+    thunar-archive-plugin
+    tumbler
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-wlr
