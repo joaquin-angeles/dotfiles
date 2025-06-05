@@ -117,13 +117,3 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-
-# ========================
-# Workspace Assignments
-# ========================
-assign [app_id="zen"] workspace 2
-assign [app_id="Caprine"] workspace 3
-assign [app_id="vesktop"] workspace 3
-assign [app_id="spotify"] workspace 4
-assign [app_id="steam"] workspace 5
-assign [app_id="com.obsproject.Studio"] workspace 6
