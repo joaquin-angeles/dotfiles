@@ -3,13 +3,14 @@
 # ========================
 exec --no-startup-id ~/.config/sway/addons/autotiling --l 2
 exec --no-startup-id foot --server
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec_always swayosd-server
-exec_always ~/.config/scripts/power-saver
 exec waybar -c ~/.config/waybar/sway/config.jsonc
 exec swaybg -m fill -c '#18181a'
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
+exec_always swayosd-server
+exec_always ~/.config/scripts/power-saver
 
 # ========================
 # Variables
@@ -23,7 +24,6 @@ set $fm footclient -e lf
 set $fm-gui nemo
 set $menu tofi-drun
 set $mod Mod4
-floating_modifier $mod
 
 # ========================
 # Borders and Gaps
@@ -109,7 +109,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3; layout tabbed
+bindsym $mod+3 workspace number 3
 bindsym $mod+4 workspace number 4
 bindsym $mod+5 workspace number 5
 bindsym $mod+6 workspace number 6
@@ -122,8 +122,8 @@ bindsym $mod+0 workspace number 10
 # Workspace Assignments
 # ========================
 assign [app_id="zen"] workspace 2
-assign [class="Caprine"] workspace 3
-assign [class="vesktop"] workspace 3
-assign [app_id="com.obsproject.Studio"] workspace 4
-assign [class="Spotify"] workspace 4
-assign [class="steam"] workspace 5
+assign [app_id="Caprine"] workspace 3
+assign [app_id="vesktop"] workspace 3
+assign [app_id="spotify"] workspace 4
+assign [app_id="steam"] workspace 5
+assign [app_id="com.obsproject.Studio"] workspace 6
