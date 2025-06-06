@@ -32,11 +32,11 @@ exec_always ~/.config/scripts/power-saver
 # ──────────────────────────────
 font pango:monospace 11
 client.focused          #3f4044 #3f4044 #ffffff #3f4044
-client.focused_inactive #1e1e20 #1e1e20 #ffffff #1e1e20
-client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
-client.unfocused        #1e1e20 #1e1e20 #ffffff #1e1e20
+client.focused_inactive #18181a #18181a #ffffff #18181a
+client.urgent           #865054 #18181a #18181a #18181a
+client.unfocused        #18181a #18181a #ffffff #18181a
 default_border pixel 2
-gaps inner 8
+gaps inner 7
 gaps outer 2
 
 # ──────────────────────────────

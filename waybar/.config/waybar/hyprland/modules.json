@@ -72,7 +72,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "󰅐 {:%I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%a, %b %d %Y}"
     },

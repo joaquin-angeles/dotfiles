@@ -79,7 +79,7 @@ window#waybar {
 }
 
 #pulseaudio {
-    font-size: 13.6pt;
+    font-size: 13.5pt;
     padding-right: 22px;
     color: @yellow
 }
