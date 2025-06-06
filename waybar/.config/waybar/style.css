@@ -2,7 +2,7 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 13pt;
+    font-size: 13.15pt;
     font-weight: 400;
 }
 
@@ -66,7 +66,7 @@ window#waybar {
 }
 
 #network {
-    padding-right: 22px;
+    padding-right: 24px;
     padding-left: 11px;
     font-size: 13.4pt;
     color: @cyan
@@ -80,7 +80,7 @@ window#waybar {
 
 #pulseaudio {
     font-size: 13.7pt;
-    padding-right: 20px;
+    padding-right: 22px;
     color: @yellow
 }
 
