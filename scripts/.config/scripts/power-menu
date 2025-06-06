@@ -1,55 +1,26 @@
 #!/bin/bash
 
-# Power menu options
+# Define power menu options
 options=(
-    "󰐥   Shutdown"
-    "󰜉   Reboot"
-    "󰌾   Lock"
-    "󰽥   Suspend"
-    "󰍃   Logout"
+    "󰐥 Shutdown"
+    "󰜉 Reboot"
+    "󰌾 Lock"
+    "󰽥 Suspend"
+    "󰍃 Logout"
 )
 
-# Show Rofi with two columns, no input bar, and large font
-choice="$(printf '%s\n' "${options[@]}" | rofi -dmenu \
-    -p 'Power menu' \
-    -no-custom \
-    -filter "" \
-    -theme-str '
-* {
-    font: "Rubik 13.15";
-}
-entry {
-    enabled: false;
-}
-listview {
-    spacing: 5px;
-    lines: 7;
-    columns: 1;
-}
-element {
-    padding: 8px;
-    horizontal-align: 0.5;
-}
-mainbox {
-    children: [listview];
-}
-window {
-    width: 180px;
-    height: 260px;
-    location: northeast;
-    anchor: northeast;
-    x-offset: -6; y-offset: 6;
-}
-')"
+# Present the menu using tofi
+choice="$(printf '%s\n' "${options[@]}" | tofi --prompt-text='' --min-input-width='690' --hide-input=true)"
 
+# Execute the selected option
 case "$choice" in
-    "󰐥   Shutdown")
+    "󰐥 Shutdown")
         systemctl poweroff
         ;;
-    "󰜉   Reboot")
+    "󰜉 Reboot")
         systemctl reboot
         ;;
-    "󰌾   Lock")
+    "󰌾 Lock")
         if command -v gtklock >/dev/null; then
             gtklock
         elif command -v hyprlock >/dev/null; then
@@ -62,10 +33,10 @@ case "$choice" in
             notify-send "No lock utility found."
         fi
         ;;
-    "󰽥   Suspend")
+    "󰽥 Suspend")
         systemctl suspend
         ;;
-    "󰍃   Logout")
-            pkill -KILL -u "$USER"
+    "󰍃 Logout")
+        pkill -KILL -u "$USER"
         ;;
 esac
