@@ -7,10 +7,10 @@
     "modules-left": [
         "custom/space",
         "clock",
+        "hyprland/workspaces",
     ],
     "modules-center": [
-        "hyprland/workspaces",
-
+        "hyprland/window"
     ],
     "modules-right": [
         "tray",
