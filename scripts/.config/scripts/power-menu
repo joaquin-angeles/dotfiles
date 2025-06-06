@@ -10,7 +10,7 @@ options=(
 )
 
 # Present the menu using tofi
-choice="$(printf '%s\n' "${options[@]}" | tofi --prompt-text='' --min-input-width='690' --hide-input=true)"
+choice="$(printf '%s\n' "${options[@]}" | tofi --prompt-text='' --min-input-width='690' --hide-input=true --late-keyboard-init)"
 
 # Execute the selected option
 case "$choice" in
