@@ -29,21 +29,20 @@ window#waybar {
 }
 
 #system {
-    background: @bg-light;
+    background: @bg;
     border-radius: 12px;
-    border: 1px solid @inactive;
+    border: 0px solid @inactive;
 }
 
 #workspaces {
-    background: @bg-light;
-    border: 1px solid @inactive;
+    background: @bg;
     border-radius: 12px;
-    padding: 0px 4px 0px 4px;
+    padding: 0px 0px 0px 0px;
 }
 
 #workspaces button {
-    min-width: 16px;
-    padding: 0 8px;
+    min-width: 18px;
+    padding: 0 9px;
     color: @inactive;
 }
 
@@ -60,9 +59,8 @@ window#waybar {
 }
 
 #tray {
-    padding-top: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
+    /* margin-left: 6px; */
+    /* margin-right: 6px; */
 }
 
 #network {
@@ -79,34 +77,31 @@ window#waybar {
 }
 
 #pulseaudio {
-    font-size: 13.6pt;
+    font-size: 13.5pt;
     padding-right: 22px;
     color: @yellow
 }
 
 #clock {
-    background: @bg-light;
+    background: @bg;
     margin-left: 6px;
-    border: 1px solid @inactive;
+    border: 0px solid @inactive;
     border-radius: 12px;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-left: 14px;
 }
 
 #custom-power {
-    background-color: @bg-light;
-    color: @red;
-    border: 2px solid #573437;
-    margin-right: 6px;
-    border-radius: 12px;  
-    padding-right: 10px;
-    padding-left: 9px;
+    background-color: @red;
+    color: @bg;
+    padding-right: 12px;
+    padding-left: 10px;
     padding-bottom: 1px;
-    font-size: 13.25pt;
+    margin-right: 6px;
+    font-size: 13.5pt;
 }
 
 #battery {
-    padding-right: 12px;
+    padding-right: 10px;
     font-size: 13.25pt;
     color: @green
 }
