@@ -29,7 +29,7 @@ floating_modifier $mod
 # ========================
 # Borders and Gaps
 # ========================
-font pango:monospace 12
+font pango:monospace 11
 client.focused          #3f4044 #3f4044 #ffffff #3f4044
 client.focused_inactive #1e1e20 #1e1e20 #ffffff #1e1e20
 client.urgent           #865054 #1e1e20 #1e1e20 #1e1e20
