@@ -7,7 +7,7 @@ set cleaner ~/.config/lf/cleaner
 set sixel true
 
 # Options
-# set drawbox true
+set drawbox true
 
 # Custom functions
 cmd open ${{

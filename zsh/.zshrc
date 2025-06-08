@@ -63,7 +63,7 @@ zinit light zsh-users/zsh-history-substring-search
 # ──────────────────────────────
 # Autoload
 # ──────────────────────────────
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 
 # ──────────────────────────────
 # P10K configuration
@@ -111,6 +111,7 @@ alias pkg-rm='sudo pacman -Rns'
 alias pkg-sync='sudo pacman -Syu'
 alias pkg-grep='pacman -Q'
 alias pkg-info='pacman -Qi'
+alias pkg-list='pacman -Q'
 alias pkg-orphan='pacman -Qdt'
 alias pkg-clean='sudo pacman -Rns $(pacman -Qdtq)'
 alias pkg-files='pacman -Ql'
