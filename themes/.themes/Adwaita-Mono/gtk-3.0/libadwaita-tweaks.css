@@ -2,7 +2,7 @@
   This file will fix some legacy widget styles that aren't styled in libadwaita
 */
 
-@define-color accent_bg_color @blue_3;
+@define-color accent_bg_color #8a8a8c;
 @define-color accent_fg_color white;
 
 /* add a bg color to notebook headers */
