@@ -47,7 +47,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @lime;
+    color: @bright-magenta;
 }
 
 #workspaces button.focused {
