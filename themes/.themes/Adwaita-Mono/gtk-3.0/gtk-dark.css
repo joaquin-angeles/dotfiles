@@ -1,6 +1,6 @@
 @define-color blue_1 #99c1f1;
 @define-color blue_2 #62a0ea;
-@define-color blue_3 #6a6a6c;
+@define-color blue_3 #7a7a7c;
 @define-color blue_4 #1c71d8;
 @define-color blue_5 #1a5fb4;
 @define-color green_1 #8ff0a4;
@@ -43,7 +43,7 @@
 @define-color dark_3 #3d3846;
 @define-color dark_4 #241f31;
 @define-color dark_5 #000000;
-@define-color accent_bg_color #6a6a6c;
+@define-color accent_bg_color #7a7a7c;
 @define-color accent_fg_color white;
 @define-color accent_color #8a8a8c;
 @define-color destructive_bg_color @red_4;

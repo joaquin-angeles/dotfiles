@@ -99,7 +99,6 @@ alias lla='eza -la'
 alias paru='paru --skipreview'
 alias pk=pkill
 alias swaybar='waybar -c ~/.config/waybar/sway/config.jsonc'
-alias sudo=sudo-rs
 alias hyprbar='waybar -c ~/.config/waybar/hyprland/config.jsonc'
 alias vim=nvim
 alias yz=yazi
@@ -109,13 +108,13 @@ alias yz=yazi
 # ──────────────────────────────
 alias pkg-add='paru -S'
 alias pkg-search='paru -Ss'
-alias pkg-rm='sudo-rs pacman -Rns'
+alias pkg-rm='sudo pacman -Rns'
 alias pkg-sync='paru -Syu'
 alias pkg-grep='pacman -Q'
 alias pkg-info='pacman -Qi'
 alias pkg-list='pacman -Q'
 alias pkg-orphan='pacman -Qdt'
-alias pkg-clean='sudo-rs pacman -Rns $(pacman -Qdtq)'
+alias pkg-clean='sudo pacman -Rns $(pacman -Qdtq)'
 alias pkg-files='pacman -Ql'
 alias pkg-own='pacman -Qo'
 

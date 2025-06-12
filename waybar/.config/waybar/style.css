@@ -1,8 +1,8 @@
 @import url("./colors.css");
 
 * {
-    font-family: "Rubik";
-    font-size: 14pt;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13pt;
     font-weight: 400;
 }
 
@@ -44,15 +44,15 @@ window#waybar {
 #workspaces button {
     min-width: 18px;
     padding: 0 9px;
-    color: @inactive;
+    color: #404042;
 }
 
 #workspaces button.active {
-    color: @fg;
+    color: @magenta;
 }
 
 #workspaces button.focused {
-    color: @fg;
+    color: @magenta;
 }
 
 #workspaces button:hover {

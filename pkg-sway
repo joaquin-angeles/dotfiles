@@ -30,6 +30,7 @@ fi
 # List of packages to install
 packages=(
     sudo-rs
+    sudo-rs-symlink
     autotiling
     bat
     brightnessctl
