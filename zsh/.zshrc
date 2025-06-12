@@ -107,10 +107,10 @@ alias yz=yazi
 # ──────────────────────────────
 # Package aliases
 # ──────────────────────────────
-alias pkg-add='sudo-rs pacman -S'
-alias pkg-search='pacman -Ss'
+alias pkg-add='paru -S'
+alias pkg-search='paru -Ss'
 alias pkg-rm='sudo-rs pacman -Rns'
-alias pkg-sync='sudo-rs pacman -Syu'
+alias pkg-sync='paru -Syu'
 alias pkg-grep='pacman -Q'
 alias pkg-info='pacman -Qi'
 alias pkg-list='pacman -Q'
@@ -118,10 +118,6 @@ alias pkg-orphan='pacman -Qdt'
 alias pkg-clean='sudo-rs pacman -Rns $(pacman -Qdtq)'
 alias pkg-files='pacman -Ql'
 alias pkg-own='pacman -Qo'
-# AUR
-alias aur-add='paru --skipreview --aur -S'
-alias aur-search='paru --skipreview --aur -Ss'
-alias aur-sync='paru -Sua'
 
 # ──────────────────────────────
 # History
