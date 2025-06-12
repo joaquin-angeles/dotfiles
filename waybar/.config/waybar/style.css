@@ -48,11 +48,11 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @lime;
+    color: @fg;
 }
 
 #workspaces button.focused {
-    color: @lime;
+    color: @fg;
 }
 
 #workspaces button:hover {
@@ -69,7 +69,7 @@ window#waybar {
     padding-right: 24px;
     padding-left: 11px;
     font-size: 13.25pt;
-    color: @cyan
+    color: @fg
 }
 
 #bluetooth {
@@ -81,10 +81,11 @@ window#waybar {
 #pulseaudio {
     font-size: 13.5pt;
     padding-right: 22px;
-    color: @yellow
+    color: @fg
 }
 
 #clock {
+    color: @fg;
     background: @bg-light;
     margin-left: 6px;
     border: 1px solid @inactive;
@@ -95,7 +96,7 @@ window#waybar {
 
 #custom-power {
     background-color: @bg-light;
-    color: @red;
+    color: @fg;
     border: 2px solid #573437;
     margin-right: 6px;
     border-radius: 12px;  
@@ -108,5 +109,5 @@ window#waybar {
 #battery {
     padding-right: 12px;
     font-size: 13.25pt;
-    color: @green
+    color: @fg
 }

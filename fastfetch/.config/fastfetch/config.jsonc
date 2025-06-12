@@ -50,7 +50,7 @@
         {
             "type": "wm",
             "key": "wm    ",
-            "format": "{2} ({3})"
+            "format": "{2} {5} ({3})"
         },
         {
             "type": "uptime",

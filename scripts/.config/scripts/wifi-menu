@@ -15,10 +15,10 @@ CACHE_TIMEOUT=10       # Seconds before cache is considered stale
 SCAN_ICON="Scan for networks.."
 WIFI_ON_ICON="Disable Wi-Fi"
 WIFI_OFF_ICON="Enable Wi-Fi"
-CHECKMARK_ICON="* "
+CHECKMARK_ICON="*"
 DISCONNECT_ICON="Disconnect"
-ERROR_ICON=" "
-LOCK_ICON="󰌾  "
+ERROR_ICON=""
+LOCK_ICON="󰌾"
 
 # Check dependencies
 command -v nmcli >/dev/null 2>&1 || { notify-send -i error "Error" "nmcli not found. Please install NetworkManager."; exit 1; }
@@ -89,15 +89,15 @@ while IFS=':' read -r ssid signal security; do
     # Set icon based on connection status and profile (original glyphs)
     if [[ "$ssid" == "$connected_ssid" || -n "${saved_profiles[$ssid]}" ]]; then
         if (( signal >= 81 )); then
-            icon="󰤨   "
+            icon="󰤨 "
         elif (( signal >= 76 )); then
-            icon="󰤥   "
+            icon="󰤥 "
         elif (( signal >= 51 )); then
-            icon="󰤢   "
+            icon="󰤢 "
         elif (( signal >= 26 )); then
-            icon="󰤟   "
+            icon="󰤟 "
         else
-            icon="󰤯   "
+            icon="󰤯 "
         fi
     else
         icon="$LOCK_ICON"
@@ -124,7 +124,7 @@ menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
 menu_items+=("${ssid_menu[@]}")
 selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "$prompt" -theme-str '
 * {
-    font: "Rubik 13.15";
+    font: "JetBrainsMono Nerd Font 13";
 }
 inputbar {
     enabled: false;
@@ -136,7 +136,7 @@ mainbox {
     children: [listview];
 }
 window {
-    width: 350px;
+    width: 375px;
     height: 450px;
     location: northeast;
     anchor: northeast;

@@ -1,10 +1,11 @@
 @define-color bg         #1e1e20;
 @define-color bg-light   #252527;
-@define-color fg         #eeeeee;
+@define-color fg         #dddddf;
 @define-color inactive   #444446;
 @define-color red        #865054;
 @define-color green      #5f7a5f;
 @define-color blue       #5f7a8c;
+@define-color magenta    #75607a;
 @define-color cyan       #6a8b8b;
 @define-color yellow     #a4965f;
 @define-color lime       #8e9760;
