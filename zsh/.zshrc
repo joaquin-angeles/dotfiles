@@ -55,11 +55,11 @@ zinit snippet OMZP::command-not-found
 # ──────────────────────────────
 # Plugins (Zinit)
 # ──────────────────────────────
-zinit light romkatv/powerlevel10k
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-history-substring-search
+zinit light romkatv/powerlevel10k # P10K
+zinit light zsh-users/zsh-syntax-highlighting # Syntax highlighting
+zinit light zsh-users/zsh-completions # Autocompletions
+zinit light zsh-users/zsh-autosuggestions # Autosuggestions
+zinit light zsh-users/zsh-history-substring-search # History search
 
 # ──────────────────────────────
 # Autoload

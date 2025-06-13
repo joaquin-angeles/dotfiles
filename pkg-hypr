@@ -28,6 +28,7 @@ fi
 
 # List of packages to install
 packages=(
+    sudo-rs-symlink
     bat
     brightnessctl
     bibata-cursor-theme

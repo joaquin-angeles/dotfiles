@@ -3,11 +3,9 @@ set preview true
 set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 
-# Sixel support
-set sixel true
-
 # Options
 set drawbox true
+set sixel true
 
 # Custom functions
 cmd open ${{
@@ -23,7 +21,7 @@ cmd open ${{
 
 # Keymaps and options
 map . set hidden!
-map E $nautilus "$(realpath)" >/dev/null 2>&1 &
+map E $thunar "$(realpath)" >/dev/null 2>&1 &
 map D delete
 map p paste
 map x cut
