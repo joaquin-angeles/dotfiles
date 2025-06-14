@@ -1,12 +1,12 @@
 {
     "sway/window": {
-        "max-length": 72,
+        "max-length": 64,
         "format": "{}"
     },
 
     "group/system": {
         "orientation": "horizontal",
-        "modules": [ "network",  "pulseaudio", "battery" ]
+        "modules": [ "network", "pulseaudio", "battery" ]
     },
 
     "network": {
@@ -72,9 +72,9 @@
     },
 
     "clock": {
-        "format": "󰅐 {:%I:%M %p}",
+        "format": "{:%I:%M %p · %a, %b %d}",
         "tooltip": true,
-        "tooltip-format": "{:%d %B, %Y on a %A}"
+        "tooltip-format": "{:%Y}"
     },
 
     "tray": {
@@ -88,7 +88,12 @@
         "tooltip-format": "Power menu",
         "on-click": "~/.config/scripts/power-menu"
     },
-
+    "custom/menu": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "drun",
+        "on-click": "tofi-drun"
+    },
     "backlight": {
         "format": "{icon}",
         "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],

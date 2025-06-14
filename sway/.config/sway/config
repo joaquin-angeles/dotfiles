@@ -29,7 +29,7 @@ exec_always ~/.config/scripts/power-saver
 # ──────────────────────────────
 # Appearance | Borders and Gaps
 # ──────────────────────────────
-font pango:monospace 11
+font pango:monospace 0.001
 client.focused          #3f4044 #3f4044 #ffffff #3f4044
 client.focused_inactive #232325 #232325 #ffffff #232325
 client.urgent           #865054 #232325 #232325 #232325

@@ -5,12 +5,11 @@
     "height": 30,
     "spacing": 6,
     "modules-left": [
-        "custom/space",
-        "clock",
+        "custom/menu",
         "sway/workspaces",
     ],
     "modules-center": [
-        "sway/window"
+        "clock",
     ],
     "modules-right": [
         "tray",
