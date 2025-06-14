@@ -5,12 +5,11 @@
     "height": 30,
     "spacing": 6,
     "modules-left": [
-        "custom/space",
-        "clock",
+        "custom/menu",
         "hyprland/workspaces",
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock",
     ],
     "modules-right": [
         "tray",

@@ -34,9 +34,9 @@ window#waybar {
 }
 
 #workspaces {
-    background: @bright-bg;
-    border: 1px solid @inactive;
+    background-color: #252527;
     border-radius: 12px;
+    border: 1px solid @inactive;
     padding: 0px 2px 0px 2px;
 }
 
@@ -103,6 +103,17 @@ window#waybar {
     padding-left: 9px;
     padding-bottom: 1px;
     font-size: 13.25pt;
+}
+
+#custom-menu {
+    background-color: @bright-bg;
+    border: 1px solid @active;
+    padding-left: 10px;
+    padding-right: 14px;
+    border: 1px solid @inactive;
+    border-radius: 12px;
+    margin-left: 6px;
+    font-size: 15pt;
 }
 
 #battery {
