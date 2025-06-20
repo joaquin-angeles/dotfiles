@@ -37,7 +37,7 @@ window#waybar {
     background-color: @bright-bg;
     border-radius: 12px;
     border: 1px solid @inactive;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #workspaces button {
@@ -80,7 +80,7 @@ window#waybar {
 #pulseaudio {
     font-size: 13.5pt;
     padding-right: 22px;
-    color: @lime
+    color: @yellow
 }
 
 #clock {

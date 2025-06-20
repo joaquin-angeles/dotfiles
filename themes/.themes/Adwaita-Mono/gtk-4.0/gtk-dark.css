@@ -60,7 +60,7 @@
     from var(--warning-bg-color) var(--standalone-color-oklab)
   ); --error-color: oklab(
     from var(--error-bg-color) var(--standalone-color-oklab)
-  ); --active-toggle-bg-color: rgb(255 255 255 / 20%); --active-toggle-fg-color: #ffffff; --overview-bg-color: #2a2a2c; --overview-fg-color: #ffffff; }
+  ); --active-toggle-bg-color: rgb(255 255 255 / 20%); --active-toggle-fg-color: #d3d3d5; --overview-bg-color: #2a2a2c; --overview-fg-color: #d3d3d5; }
 
 @import '../gtk-3.0/libadwaita.css';
 @import '../gtk-3.0/libadwaita-tweaks.css';

@@ -72,7 +72,7 @@
     },
 
     "clock": {
-        "format": "󰅐 {:%I:%M %p · 󱨰 %a, %b %d}",
+        "format": "{:%I:%M %p · %a, %b %d}",
         "tooltip": true,
         "tooltip-format": "{:%a, %b %d %Y}"
     },
@@ -89,7 +89,7 @@
         "on-click": "~/.config/scripts/power-menu"
     },
     "custom/menu": {
-        "format": "󰍜",
+        "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "drun",
         "on-click": "tofi-drun"
