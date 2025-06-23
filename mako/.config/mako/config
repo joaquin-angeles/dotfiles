@@ -1,5 +1,6 @@
 layer=overlay
 margin=6,6,6,12
+height=125
 default-timeout=3000
 background-color=#1e1e20
 border-color=#3f4044
