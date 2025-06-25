@@ -1,5 +1,7 @@
 # Auto-start
-fastfetch
+if [ -f /usr/bin/fastfetch ]; then
+    fastfetch
+fi
 printf '\e[1 q'
 echo ''
 

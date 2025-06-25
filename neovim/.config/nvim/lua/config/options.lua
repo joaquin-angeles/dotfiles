@@ -1,32 +1,27 @@
--- Indentations 
-vim.opt.tabstop = 4
-vim.opt.termguicolors = true
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-
--- General options
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.statuscolumn = "%s%l "
-vim.opt.expandtab = true
-vim.opt.showmode = false
-vim.opt.clipboard = "unnamedplus"
-vim.opt.fillchars = { eob = " " }
+vim.opt.termguicolors = true
 vim.opt.cursorline = true
+vim.opt.showmode = false
+vim.opt.fillchars = { eob = " " }
+vim.opt.clipboard = "unnamedplus"
 
--- Define the undo directory path
+-- Indentation
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- Persistent undo
 local undodir = vim.fn.stdpath("cache") .. "/nvim/undodir"
-
--- Check if the directory exists; if not, create it
 if vim.fn.isdirectory(undodir) == 0 then
-  vim.fn.mkdir(undodir, "p", 0700)
+    vim.fn.mkdir(undodir, "p")
 end
-
--- Enable persistent undo and set the undo directory
 vim.opt.undofile = true
 vim.opt.undodir = undodir
 
--- Cursor adjustments
+-- Cursor appearance
 vim.opt.guicursor = {
     "n-v-c:block",
     "i-ci-ve:block-blinkwait100-blinkon500-blinkoff500",
@@ -34,7 +29,10 @@ vim.opt.guicursor = {
     "o:hor50-blinkwait100-blinkon500-blinkoff500"
 }
 
+-- Reset cursor on exit to avoid terminal cursor issues
 vim.api.nvim_create_autocmd("VimLeave", {
     pattern = "*",
-    command = "set guicursor=a:block"
+    callback = function()
+        vim.opt.guicursor = { "a:block" }
+    end
 })
