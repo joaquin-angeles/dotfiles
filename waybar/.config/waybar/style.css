@@ -2,17 +2,8 @@
 
 * {
     font-family: "MesloLGS Nerd Font";
-    font-size: 13pt;
+    font-size: 12pt;
     font-weight: 400;
-}
-
-tooltip {
-    background-color: #2a2a2c; /* Tooltip background */
-    color: @bright-bg;
-    border: 1px solid #383839;
-    border-radius: 8px;
-    padding: 5px 10px;
-    font-size: 13px;
 }
 
 window#waybar {

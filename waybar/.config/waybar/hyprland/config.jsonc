@@ -2,7 +2,7 @@
     "include": "~/.config/waybar/hyprland/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 28,
     "spacing": 6,
     "modules-left": [
         "custom/menu",

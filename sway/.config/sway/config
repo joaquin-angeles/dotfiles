@@ -29,7 +29,7 @@ exec_always ~/.config/scripts/power-saver
 # ──────────────────────────────
 # Appearance | Borders and Gaps
 # ──────────────────────────────
-font pango:monospace 0.001
+font pango:monospace 0.01
 client.focused          #454547 #454547 #ffffff #454547
 client.focused_inactive #232325 #232325 #ffffff #232325
 client.urgent           #865054 #232325 #232325 #232325
@@ -77,7 +77,7 @@ bindsym $mod+apostrophe splith
 # ──────────────────────────────
 bindsym $mod+button3 resize
 bindsym $mod+button1 move
-bindsym $mod+Shift+d exec ~/.config/scripts/power-menu
+bindsym $mod+Shift+x exec ~/.config/scripts/power-menu
 bindsym Mod1+return fullscreen toggle
 bindsym $mod+period exec rofi -modi emoji -show emoji -no-show-icons
 bindsym $mod+return exec footclient
