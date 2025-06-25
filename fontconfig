@@ -41,8 +41,7 @@ fi
 font_packages=(
     otf-noto-sans-cjk
     ttf-apple-emoji
-    ttf-jetbrains-mono-nerd
-    ttf-jetbrains-mono
+    ttf-meslo-nerd
 )
 
 # Install each font package if not already installed
@@ -93,7 +92,7 @@ cat <<EOL > "$fontconfig_dir/fonts.conf"
       <string>monospace</string>
     </test>
     <edit name="family" mode="prepend" binding="same">
-      <string>JetBrainsMono Nerd Font Mono</string>
+      <string>MesloLGS Nerd Font Mono</string>
     </edit>
   </match>
 
