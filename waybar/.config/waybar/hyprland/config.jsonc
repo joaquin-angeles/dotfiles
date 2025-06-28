@@ -2,10 +2,9 @@
     "include": "~/.config/waybar/hyprland/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 28,
+    "height": 30,
     "spacing": 6,
     "modules-left": [
-        "custom/menu",
         "hyprland/workspaces",
     ],
     "modules-center": [

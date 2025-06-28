@@ -2,7 +2,7 @@
 
 * {
     font-family: "MesloLGS Nerd Font";
-    font-size: 12pt;
+    font-size: 13pt;
     font-weight: 400;
 }
 
@@ -20,12 +20,6 @@ window#waybar {
 
 #system {
     background: @bright-bg;
-    border-radius: 12px;
-    border: 1px solid @inactive;
-}
-
-#workspaces {
-    background-color: @bright-bg;
     border-radius: 12px;
     border: 1px solid @inactive;
 }

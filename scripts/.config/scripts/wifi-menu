@@ -124,7 +124,7 @@ menu_items=("$TOGGLE_WIFI" "$SCAN_ICON")
 menu_items+=("${ssid_menu[@]}")
 selection=$(printf '%s\n' "${menu_items[@]}" | rofi -dmenu -p "$prompt" -theme-str '
 * {
-    font: "JetBrainsMono Nerd Font 13";
+    font: "MesloLGS Nerd Font 13";
 }
 inputbar {
     enabled: false;
