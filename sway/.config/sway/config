@@ -69,8 +69,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # Split containers
-bindsym $mod+semicolon splitv
-bindsym $mod+apostrophe splith
+bindsym $mod+w splitv
+bindsym $mod+d splith
 
 # ──────────────────────────────
 # Keybinds | General
