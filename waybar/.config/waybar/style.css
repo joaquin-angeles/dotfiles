@@ -10,19 +10,20 @@ window#waybar {
     color: @fg;
     padding-left: 2px;
     padding-right: 2px;
-    background-color: @bg
+    background-color: @bg;
+    border-bottom: 1px solid @inactive
+}
+
+#clock,
+#system,
+#workspaces {
+    padding-bottom: 1px;
 }
 
 #custom-clipboard {
     padding-left: 13px;
     padding-right: 14px
 }
-
-/* #system {
-    background: @bright-bg;
-    border-radius: 12px;
-    border: 1px solid @inactive;
-} */
 
 #workspaces button {
     min-width: 16px;
@@ -31,21 +32,15 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @bright-magenta;
+    color: @lime;
 }
 
 #workspaces button.focused {
-    color: @bright-magenta;
+    color: @lime;
 }
 
 #workspaces button:hover {
     background: transparent;
-}
-
-#tray {
-    padding-top: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 #network {

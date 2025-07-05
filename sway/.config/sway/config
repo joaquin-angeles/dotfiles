@@ -8,7 +8,7 @@ exec systemctl enable --user --now xdg-desktop-portal-wlr.service
 set $browser zen-browser
 set $fm footclient -e lf
 set $fm-gui nemo
-set $menu tofi-drun
+set $menu rofi -show drun
 set $mod Mod4
 floating_modifier $mod
 
@@ -85,9 +85,9 @@ bindsym $mod+Shift+c kill
 bindsym $mod+Shift+s exec hyprshot -o ~/Pictures/Screenshots -m region -z
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+b exec $browser
-bindsym $mod+e exec $fm
-bindsym $mod+Shift+e exec $fm-gui
-bindsym $mod+Shift+f exec hyprpicker
+bindsym $mod+f exec $fm
+bindsym $mod+Shift+f exec $fm-gui
+bindsym Mod1+d exec hyprpicker
 bindsym $mod+s exec hyprshot -o ~/Pictures/Screenshots -m output -z
 bindsym $mod+space exec $menu
 bindsym $mod+v exec cliphist list | rofi -dmenu -p "Cliphist:" | cliphist decode | wl-copy

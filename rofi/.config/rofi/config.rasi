@@ -11,7 +11,7 @@
     hlt-color: #8c729a;
     alt-color: #444444CC;
     wbg-color: #1e1e20;
-    w-border: 2px solid;
+    w-border: 1px solid;
     w-border-color: #d3d3d5;
     w-padding: 12px;
 }
@@ -44,9 +44,8 @@ window {
     border: 2px solid;
     border-color: #454547;
     padding: 8px;
-    location: northwest;
-    anchor: northwest;
-    x-offset: 6;
+    location: north;
+    anchor: north;
     y-offset: 6;
 }
 
