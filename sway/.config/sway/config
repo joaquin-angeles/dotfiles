@@ -20,7 +20,7 @@ exec --no-startup-id foot --server
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec waybar -c ~/.config/waybar/sway/config.jsonc
-exec swaybg -m fill -c '#18181a'
+exec swaybg -m fill -c '#161618'
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
 exec_always swayosd-server

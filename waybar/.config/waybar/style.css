@@ -18,11 +18,11 @@ window#waybar {
     padding-right: 14px
 }
 
-#system {
+/* #system {
     background: @bright-bg;
     border-radius: 12px;
     border: 1px solid @inactive;
-}
+} */
 
 #workspaces button {
     min-width: 16px;

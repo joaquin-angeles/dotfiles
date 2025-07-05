@@ -28,7 +28,6 @@ fi
 
 # List of packages to install
 packages=(
-    sudo-rs-symlink
     bat
     brightnessctl
     bibata-cursor-theme
@@ -39,7 +38,6 @@ packages=(
     hyprland
     hyprlock
     hyprshot
-    hyprpolkitagent
     inotify-tools
     kvantum
     kvantum-qt5
@@ -49,15 +47,15 @@ packages=(
     nwg-look
     nwg-displays
     pavucontrol
+    polkit-gnome
     qt5ct
     qt6ct
     rofi-emoji
     rofi-wayland
     swayosd
     slurp
-    thunar
-    thunar-archive-plugin
-    tumbler
+    nemo
+    nemo-fileroller
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-hyprland

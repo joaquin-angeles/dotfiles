@@ -29,13 +29,11 @@ fi
 
 # List of packages to install
 packages=(
-    sudo-rs-symlink
     autotiling
     bat
     brightnessctl
     bibata-cursor-theme
     chafa
-    catfish
     eza
     grim
     hyprlock
@@ -59,9 +57,8 @@ packages=(
     swayosd
     swaybg
     slurp
-    thunar
-    thunar-archive-plugin
-    tumbler
+    nemo
+    nemo-fileroller
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-wlr
