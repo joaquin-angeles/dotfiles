@@ -10,31 +10,31 @@ return {
                 component_separators = { left = '::', right = '::' },
                 theme = {
                     normal = {
-                        a = { fg = '#eeeeee', bg = '#333335' },
-                        b = { fg = '#eeeeee', bg = '#252527' },
+                        a = { fg = '#d3d3d5', bg = '#333335' },
+                        b = { fg = '#d3d3d5', bg = '#252527' },
                         c = { bg = 'NONE' }
                     },
                     insert = {
-                        a = { fg = '#eeeeee', bg = '#5f7a5f' },
-                        b = { fg = '#eeeeee', bg = '#252527' },
+                        a = { fg = '#1e1e20', bg = '#5f7a5f' },
+                        b = { fg = '#d3d3d5', bg = '#252527' },
                         c = { bg = 'NONE' },
                     },
 
                     visual = {
                         a = { fg = '#1e1e20', bg = '#7a8a4f' },
-                        b = { fg = '#eeeeee', bg = '#252527' },
+                        b = { fg = '#d3d3d5', bg = '#252527' },
                         c = { bg = 'NONE' },
                     },
 
                     replace = {
                         a = { fg = '#1e1e20', bg = '#865054' },
-                        b = { fg = '#eeeeee', bg = '#252527' },
+                        b = { fg = '#d3d3d5', bg = '#252527' },
                         c = { bg = 'NONE' },
                     },
 
                     command = {
                         a = { fg = '#1e1e20', bg = '#a4965f' },
-                        b = { fg = '#eeeeee', bg = '#252527' },
+                        b = { fg = '#d3d3d5', bg = '#252527' },
                         c = { bg = 'NONE' },
                     },
 

@@ -1,5 +1,5 @@
 * {
-    font: "Rubik 13.15";
+    font: "Rubik 13.5";
     text-color: #d3d3d5;
     foreground: #865054;
     g-spacing: 10px;

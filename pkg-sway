@@ -54,7 +54,6 @@ packages=(
     rofi-emoji
     sway
     swayosd
-    swaybg
     slurp
     nemo
     nemo-fileroller

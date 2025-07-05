@@ -32,7 +32,6 @@ packages=(
     brightnessctl
     bibata-cursor-theme
     chafa
-    catfish
     eza
     grim
     hyprland
