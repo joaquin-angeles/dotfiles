@@ -50,7 +50,6 @@ packages=(
     polkit-gnome
     qt5ct
     qt6ct
-    tofi
     rofi-wayland
     rofi-emoji
     sway
