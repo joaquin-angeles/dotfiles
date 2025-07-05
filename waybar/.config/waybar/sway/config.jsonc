@@ -1,6 +1,6 @@
 {
     "include": "~/.config/waybar/sway/modules.json",
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "height": 30,
     "spacing": 6,

@@ -34,7 +34,7 @@ client.focused          #454547 #454547 #ffffff #454547
 client.focused_inactive #232325 #232325 #ffffff #232325
 client.urgent           #865054 #232325 #232325 #232325
 client.unfocused        #232325 #232325 #ffffff #232325
-default_border pixel 2
+default_border pixel 1.5
 gaps inner 8
 gaps outer 2
 

@@ -21,7 +21,6 @@ cmd open ${{
 
 # Keymaps and options
 map . set hidden!
-map E $thunar "$(realpath)" >/dev/null 2>&1 &
 map D delete
 map p paste
 map x cut

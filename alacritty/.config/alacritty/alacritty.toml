@@ -6,11 +6,6 @@ general.import = [
 size = 13.15
 builtin_box_drawing = true 
 
-[cursor]
-style = { shape = "Block", blinking = "On" }
-blink_interval = 500
-blink_timeout = 5
-
 [window]
 padding.x = 5
 padding.y = 5

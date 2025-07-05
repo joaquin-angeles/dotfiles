@@ -1,18 +1,18 @@
 * {
     font: "Rubik 13.15";
-    text-color: #eeeeee;
+    text-color: #d3d3d5;
     foreground: #865054;
     g-spacing: 10px;
     g-margin: 0;
     b-color: #1e1e20;
-    fg-color: #3f4044;
+    fg-color: #454547;
     fgp-color: #888888FF;
     hl-color: transparent;
-    hlt-color: #eeeeee;
+    hlt-color: #8c729a;
     alt-color: #444444CC;
     wbg-color: #1e1e20;
     w-border: 2px solid;
-    w-border-color: #eeeeee;
+    w-border-color: #d3d3d5;
     w-padding: 12px;
 }
 
@@ -42,7 +42,7 @@ window {
     border-radius: 7px;
     background-color: @wbg-color;
     border: 2px solid;
-    border-color: #3f4044;
+    border-color: #454547;
     padding: 8px;
     location: northwest;
     anchor: northwest;
@@ -51,7 +51,7 @@ window {
 }
 
 prompt {
-    text-color: #eeeeee;
+    text-color: #d3d3d5;
 }
 
 inputbar {
@@ -60,14 +60,14 @@ inputbar {
     padding: 14px 16px;
     border-radius: 24px;
     border: 2px solid;
-    border-color: #3f4044;
+    border-color: #454547;
     background-color: #252527;
 }
 
 entry {
     placeholder: "";
     placeholder-color: #555555;
-    text-color: #eeeeee;
+    text-color: #d3d3d5;
 }
 
 mainbox {
