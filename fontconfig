@@ -39,6 +39,7 @@ fi
 
 # Sorted list of font packages in alphabetical order
 font_packages=(
+    inter-font
     otf-noto-sans-cjk
     ttf-apple-emoji
     ttf-meslo-nerd

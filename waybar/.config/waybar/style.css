@@ -1,8 +1,8 @@
 @import url("./colors.css");
 
 * {
-    font-family: "MesloLGS Nerd Font";
-    font-size: 13pt;
+    font-family: "Inter";
+    font-size: 13.5pt;
     font-weight: 400;
 }
 
@@ -17,7 +17,7 @@ window#waybar {
 #clock,
 #system,
 #workspaces {
-    padding-bottom: 1px;
+    padding-bottom: 1.5px;
 }
 
 #custom-clipboard {

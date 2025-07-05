@@ -21,6 +21,11 @@ configuration {
     show-icons: false;
     display-drun: "Apps:";
     display-emoji: "Emojis:";
+    disable-history: true;
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+    kb-accept-entry: "Return,Control+m";
+    kb-remove-to-eol: "";
 }
 
 listview {
