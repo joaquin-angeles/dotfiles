@@ -1,5 +1,5 @@
 * {
-    font: "Rubik 13.5";
+    font: "Inter 13.5";
     text-color: #d3d3d5;
     foreground: #865054;
     g-spacing: 10px;
@@ -48,10 +48,11 @@ window {
     background-color: @wbg-color;
     border: 2px solid;
     border-color: #454547;
-    padding: 8px;
+    padding: 3px;
     location: north;
     anchor: north;
     y-offset: 6;
+    x-offset: 6;
 }
 
 prompt {

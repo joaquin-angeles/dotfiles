@@ -33,6 +33,7 @@ packages=(
     bibata-cursor-theme
     chafa
     eza
+    file-roller
     grim
     hyprland
     hyprlock
@@ -53,8 +54,7 @@ packages=(
     rofi-wayland
     swayosd
     slurp
-    nemo
-    nemo-fileroller
+    nautilus
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-hyprland

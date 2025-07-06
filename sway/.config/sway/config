@@ -7,7 +7,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 exec systemctl enable --user --now xdg-desktop-portal-wlr.service
 set $browser zen-browser
 set $fm footclient -e lf
-set $fm-gui nemo
+set $fm-gui nautilus
 set $menu rofi -show drun
 set $mod Mod4
 output * bg #161618 solid_color

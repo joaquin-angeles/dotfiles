@@ -35,6 +35,7 @@ packages=(
     bibata-cursor-theme
     chafa
     eza
+    file-roller
     grim
     hyprlock
     hyprshot
@@ -55,8 +56,7 @@ packages=(
     sway
     swayosd
     slurp
-    nemo
-    nemo-fileroller
+    nautilus
     waybar
     xdg-desktop-portal
     xdg-desktop-portal-wlr
