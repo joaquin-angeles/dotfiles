@@ -1,0 +1,23 @@
+#!/bin/bash
+
+timestamp=$(date +'%Y-%m-%d_%H-%M-%S')
+screenshot_dir="${XDG_PICTURES_DIR:-$(xdg-user-dir PICTURES)}/Screenshots"
+mkdir -p "$screenshot_dir"
+filepath="$screenshot_dir/screenshot_$timestamp.png"
+
+# Screenshot history log file
+history_log="$HOME/.cache/screenshot_history.log"
+
+# Freeze screen, select region, take screenshot, save, copy, notify, log, play sound, etc.
+wayfreeze --hide-cursor --after-freeze-cmd "
+    region=\$(slurp)
+    if [ -z \"\$region\" ]; then
+        killall wayfreeze
+        exit 1
+    fi
+    grim -g \"\$region\" - | tee \"$filepath\" | wl-copy
+    notify-send \"Screenshot Taken\" \"$filepath\" -i \"$filepath\"
+    paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga &>/dev/null &
+    echo \"$filepath\" >> \"$history_log\"
+    killall wayfreeze
+" &

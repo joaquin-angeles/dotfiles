@@ -86,7 +86,7 @@ alias yz=yazi
 
 # History
 HISTSIZE=5000
-HISTFILE=~/.zhistory
+HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory

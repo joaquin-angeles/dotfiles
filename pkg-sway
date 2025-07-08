@@ -38,7 +38,6 @@ packages=(
     file-roller
     grim
     hyprlock
-    hyprshot
     inotify-tools
     kvantum
     kvantum-qt5
@@ -58,6 +57,7 @@ packages=(
     slurp
     nautilus
     waybar
+    wayfreeze-git
     xdg-desktop-portal
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk

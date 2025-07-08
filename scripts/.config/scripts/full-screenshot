@@ -1,0 +1,19 @@
+#!/bin/bash
+
+timestamp=$(date +'%Y-%m-%d_%H-%M-%S')
+screenshot_dir="${XDG_PICTURES_DIR:-$(xdg-user-dir PICTURES)}/Screenshots"
+mkdir -p "$screenshot_dir"
+filepath="$screenshot_dir/screenshot_$timestamp.png"
+
+# Screenshot history log file
+history_log="$HOME/.cache/screenshot_history.log"
+
+# Get the currently focused output using swaymsg
+focused_output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name')
+
+# Take fullscreen screenshot of focused output
+grim -o "$focused_output" "$filepath"
+wl-copy < "$filepath"
+notify-send "Screenshot Taken" "$filepath" -i "$filepath"
+paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga &>/dev/null &
+echo "$filepath" >> "$history_log"

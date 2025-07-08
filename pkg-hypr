@@ -37,7 +37,6 @@ packages=(
     grim
     hyprland
     hyprlock
-    hyprshot
     inotify-tools
     kvantum
     kvantum-qt5
@@ -56,6 +55,7 @@ packages=(
     slurp
     nautilus
     waybar
+    wayfreeze-git
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
