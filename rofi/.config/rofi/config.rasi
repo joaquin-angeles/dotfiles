@@ -51,8 +51,8 @@ window {
     padding: 3px;
     location: north;
     anchor: north;
-    y-offset: 6;
-    x-offset: 6;
+    y-offset: 8;
+    x-offset: 8;
 }
 
 prompt {

@@ -45,7 +45,7 @@ window#waybar {
 
 #network {
     padding-right: 24px;
-    padding-left: 11px;
+    padding-left: 8px;
     font-size: 13.25pt;
     color: @cyan
 }
