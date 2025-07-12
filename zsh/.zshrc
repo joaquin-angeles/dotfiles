@@ -1,9 +1,9 @@
 # Auto-start
 if [ -f /usr/bin/fastfetch ]; then
     fastfetch
+    echo ''
 fi
 printf '\e[1 q'
-echo ''
 
 # P10K Instant Prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
