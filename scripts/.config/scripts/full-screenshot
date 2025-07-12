@@ -1,11 +1,28 @@
 #!/bin/bash
 
+# Required commands
+required_cmds=(jq grim wl-copy libnotify paplay)
+
+missing=()
+
+for cmd in "${required_cmds[@]}"; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        missing+=("$cmd")
+    fi
+done
+
+if [ "${#missing[@]}" -ne 0 ]; then
+    notify-send "Screenshot Tool Error" \
+        "Missing dependencies:\n$(printf '%s\n' "${missing[@]}")" \
+        -u critical
+    exit 1
+fi
+
+# Timestamp and paths
 timestamp=$(date +'%Y-%m-%d_%H-%M-%S')
 screenshot_dir="${XDG_PICTURES_DIR:-$(xdg-user-dir PICTURES)}/Screenshots"
 mkdir -p "$screenshot_dir"
 filepath="$screenshot_dir/screenshot_$timestamp.png"
-
-# Screenshot history log file
 history_log="$HOME/.cache/screenshot_history.log"
 
 # Get the currently focused output using swaymsg
