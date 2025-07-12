@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Required commands
-required_cmds=(jq grim wl-copy libnotify paplay)
+required_cmds=(jq grim wl-copy notify-send paplay)
 
 missing=()
 
