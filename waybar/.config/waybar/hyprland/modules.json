@@ -15,7 +15,7 @@
             "󰤠", "󰤢", "󰤥", "󰤨" 
         ],
         "format-disconnected": "󰤭",
-        "on-click": "~/.config/scripts/wifi-menu",
+        "on-click": "footclient -e nmtui",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
     },

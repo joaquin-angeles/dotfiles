@@ -38,8 +38,8 @@ client.focused_inactive #232325 #232325 #ffffff #232325
 client.urgent           #865054 #232325 #232325 #232325
 client.unfocused        #232325 #232325 #ffffff #232325
 default_border pixel 1.5
-gaps inner 8
-gaps outer 2
+gaps inner 9
+gaps outer 1
 
 # ──────────────────────────────
 # Input Configuration
