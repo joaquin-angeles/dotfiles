@@ -33,10 +33,14 @@ window#waybar {
 
 #workspaces button.active {
     color: @lime;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #workspaces button.focused {
     color: @lime;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #workspaces button:hover {
