@@ -9,4 +9,3 @@ builtin_box_drawing = true
 [window]
 padding.x = 5
 padding.y = 5
-opacity = 0.8

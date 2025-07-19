@@ -1,7 +1,7 @@
 @import url("./colors.css");
 
 * {
-    font-family: "Inter";
+    font-family: "Rubik";
     font-size: 13.5pt;
     font-weight: 400;
 }
@@ -12,17 +12,6 @@ window#waybar {
     padding-right: 2px;
     background-color: @bg;
     border-bottom: 1px solid @inactive
-}
-
-#clock,
-#system,
-#workspaces {
-    padding-bottom: 1.5px;
-}
-
-#custom-clipboard {
-    padding-left: 13px;
-    padding-right: 14px
 }
 
 #workspaces button {
