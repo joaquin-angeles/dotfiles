@@ -1,5 +1,5 @@
 {
-    "sway/window": {
+    "hyprland/window": {
         "max-length": 64,
         "format": "{}"
     },

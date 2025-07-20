@@ -24,10 +24,6 @@ window#waybar {
     color: @fg;
 }
 
-#workspaces button.focused {
-    color: @fg;
-}
-
 #workspaces button:hover {
     background: transparent;
 }

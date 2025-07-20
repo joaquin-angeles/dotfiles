@@ -1,11 +1,11 @@
 {
     "include": "~/.config/waybar/modules.json",
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "height": 26,
     "spacing": 6,
     "modules-left": [
-        "sway/workspaces",
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "clock",
