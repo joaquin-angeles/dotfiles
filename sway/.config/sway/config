@@ -33,12 +33,12 @@ exec_always ~/.config/scripts/power-saver
 # ──────────────────────────────
 # Appearance | Borders and Gaps
 # ──────────────────────────────
-font pango:monospace 0.01
 client.focused          #454547 #454547 #ffffff #454547
 client.focused_inactive #232325 #232325 #ffffff #232325
 client.urgent           #865054 #232325 #232325 #232325
 client.unfocused        #232325 #232325 #ffffff #232325
 default_border pixel 1
+default_floating_border pixel 1
 gaps inner 9
 gaps outer 1
 

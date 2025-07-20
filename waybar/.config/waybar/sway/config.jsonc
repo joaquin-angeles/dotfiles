@@ -2,7 +2,7 @@
     "include": "~/.config/waybar/sway/modules.json",
     "layer": "bottom",
     "position": "top",
-    "height": 30,
+    "height": 26,
     "spacing": 6,
     "modules-left": [
         "sway/workspaces",

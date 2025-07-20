@@ -34,6 +34,7 @@ window#waybar {
 
 #network {
     padding-right: 18px;
+    font-size: 12.5pt
 }
 
 #bluetooth {
