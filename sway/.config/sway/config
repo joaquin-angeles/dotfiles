@@ -19,11 +19,13 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # ──────────────────────────────
 # Startup Applications
 # ──────────────────────────────
+bar {
+    swaybar_command waybar
+}
 exec --no-startup-id ~/.config/sway/addons/autotiling --l 2
 exec --no-startup-id foot --server
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec_always waybar -c ~/.config/waybar/sway/config.jsonc
 exec_always nm-applet
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
