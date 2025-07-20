@@ -1,6 +1,6 @@
-@define-color bg         #1e1e20;
-@define-color fg         #d3d3d5;
-@define-color inactive   #454547;
+@define-color bg         #1c1c1c;
+@define-color fg         #d2d2d2;
+@define-color inactive   #404042;
 @define-color red        #865054;
 @define-color green      #5f7a5f;
 @define-color blue       #5f7a8c;
@@ -8,11 +8,11 @@
 @define-color cyan       #6a8b8b;
 @define-color yellow     #a4965f;
 @define-color lime       #8e9760;
-@define-color bright-bg       #252527;
+@define-color bright-bg       #232323;
 @define-color bright-red      #976061;
 @define-color bright-green    #729a72;
 @define-color bright-yellow   #a49a72;
 @define-color bright-cyan     #729a96;
 @define-color bright-magenta  #8c729a;
 @define-color bright-blue     #72949a;
-@define-color bright-fg       #f1f1f1;
+@define-color bright-fg       #eeeeee;

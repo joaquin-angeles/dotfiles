@@ -6,16 +6,15 @@
 
     "group/system": {
         "orientation": "horizontal",
-        "modules": [ "network", "pulseaudio", "battery" ]
+        "modules": [ "network", "battery" ]
     },
 
     "network": {
         "format": "{icon}",
         "format-icons": [
-            "󰤠", "󰤢", "󰤥", "󰤨" 
+            "󰣴", "󰣶", "󰣸", "󰣺" 
         ],
-        "format-disconnected": "󰤭",
-        "on-click": "footclient -e nmtui",
+        "format-disconnected": "󰣼",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0"
     },
@@ -51,17 +50,16 @@
     },
 
     "battery": {
-        "format": "{icon}",
+        "format": "{icon}  {capacity}%",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-charging": "󰂄",
-        "format-full": "󱟢",
-        "format-warning": "󰂃",
+        "format-charging": "󰂄  {capacity}%",
+        "format-warning": "󰂃  {capacity}%",
         "tooltip": true,
-        "tooltip-format": "Discharging ({capacity}%)",
-        "tooltip-format-charging": "Charging ({capacity}%)",
-        "tooltip-format-full": "Full ({capacity}%)"
+        "tooltip-format": "Discharging",
+        "tooltip-format-charging": "Charging",
+        "tooltip-format-full": "Full"
     },
 
     "custom/clipboard": {
@@ -72,14 +70,15 @@
     },
 
     "clock": {
-        "format": "{:%b %d  %I:%M %p}",
+        "format": "{:%b %d    %I:%M %p}",
         "tooltip": true,
         "tooltip-format": "{:%A, %Y}"
     },
 
     "tray": {
-        "icon-size": 18,
-        "spacing": 12
+        "icon-size": 24,
+        "spacing": 4,
+        "reverse-direction": true
     },
 
     "custom/power": {

@@ -10,7 +10,7 @@ set $fm footclient -e lf
 set $fm-gui nautilus
 set $menu rofi -show drun
 set $mod Mod4
-output * bg #161618 solid_color
+output * bg #151515 solid_color
 floating_modifier $mod
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
@@ -23,7 +23,8 @@ exec --no-startup-id ~/.config/sway/addons/autotiling --l 2
 exec --no-startup-id foot --server
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec waybar -c ~/.config/waybar/sway/config.jsonc
+exec_always waybar -c ~/.config/waybar/sway/config.jsonc
+exec_always nm-applet
 exec wl-paste --type image --watch cliphist store
 exec wl-paste --type text --watch cliphist store
 exec_always swayosd-server
@@ -37,7 +38,7 @@ client.focused          #454547 #454547 #ffffff #454547
 client.focused_inactive #232325 #232325 #ffffff #232325
 client.urgent           #865054 #232325 #232325 #232325
 client.unfocused        #232325 #232325 #ffffff #232325
-default_border pixel 1.5
+default_border pixel 1
 gaps inner 9
 gaps outer 1
 

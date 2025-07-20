@@ -1,53 +1,53 @@
 /* GTK NAMED COLORS ---------------- use responsibly! */
 @define-color destructive_bg_color @red_4;
-@define-color destructive_fg_color white;
+@define-color destructive_fg_color #d2d2d2;
 @define-color success_bg_color @green_5;
-@define-color success_fg_color white;
+@define-color success_fg_color #d2d2d2;
 @define-color warning_bg_color #cd9309;
 @define-color warning_fg_color RGB(0 0 0 / 80%);
 @define-color error_bg_color @red_4;
-@define-color error_fg_color white;
-@define-color accent_color #8a8a8c;
+@define-color error_fg_color #d2d2d2;
+@define-color accent_color #8c8c8c;
 @define-color accent_bg_color #7a7a7c;
 @define-color destructive_color oklab(from @destructive_bg_color max(l, 0.85) a b);
 @define-color success_color oklab(from @success_bg_color max(l, 0.85) a b);
 @define-color warning_color oklab(from @warning_bg_color max(l, 0.85) a b);
 @define-color error_color oklab(from @error_bg_color max(l, 0.85) a b);
-@define-color window_bg_color #1e1e20;
-@define-color window_fg_color white;
-@define-color view_bg_color #1e1e20;
-@define-color view_fg_color white;
-@define-color headerbar_bg_color #252527;
-@define-color headerbar_fg_color white;
-@define-color headerbar_border_color #3f4044;
-@define-color headerbar_backdrop_color #1e1e20;
-@define-color headerbar_shade_color #3f4044;
-@define-color headerbar_darker_shade_color #3f4044;
-@define-color sidebar_bg_color #252527;
-@define-color sidebar_fg_color white;
-@define-color sidebar_backdrop_color #252527;
-@define-color sidebar_shade_color #3f4044;
-@define-color sidebar_border_color #3f4044;
-@define-color secondary_sidebar_bg_color #252527;
-@define-color secondary_sidebar_fg_color white;
-@define-color secondary_sidebar_backdrop_color #252527;
-@define-color secondary_sidebar_shade_color #3f4044;
-@define-color secondary_sidebar_border_color #3f4044;
+@define-color window_bg_color #232323;
+@define-color window_fg_color #d2d2d2;
+@define-color view_bg_color #1c1c1c;
+@define-color view_fg_color #d2d2d2;
+@define-color headerbar_bg_color #232323;
+@define-color headerbar_fg_color #d2d2d2;
+@define-color headerbar_border_color #323232;
+@define-color headerbar_backdrop_color #1c1c1c;
+@define-color headerbar_shade_color #323232;
+@define-color headerbar_darker_shade_color #323232;
+@define-color sidebar_bg_color #232323;
+@define-color sidebar_fg_color #d2d2d2;
+@define-color sidebar_backdrop_color #232323;
+@define-color sidebar_shade_color #323232;
+@define-color sidebar_border_color #323232;
+@define-color secondary_sidebar_bg_color #232323;
+@define-color secondary_sidebar_fg_color #d2d2d2;
+@define-color secondary_sidebar_backdrop_color #232323;
+@define-color secondary_sidebar_shade_color #323232;
+@define-color secondary_sidebar_border_color #323232;
 @define-color card_bg_color RGB(255 255 255/8%);
-@define-color card_fg_color white;
-@define-color card_shade_color #3f4044;
-@define-color dialog_bg_color #2a2a2c;
-@define-color dialog_fg_color white;
-@define-color popover_bg_color #2a2a2c;
-@define-color popover_fg_color white;
+@define-color card_fg_color #d2d2d2;
+@define-color card_shade_color #323232;
+@define-color dialog_bg_color #2c2c2c;
+@define-color dialog_fg_color #d2d2d2;
+@define-color popover_bg_color #2c2c2c;
+@define-color popover_fg_color #d2d2d2;
 @define-color popover_shade_color RGB(0 0 6/25%);
-@define-color thumbnail_bg_color #1e1e20;
-@define-color thumbnail_fg_color white;
+@define-color thumbnail_bg_color #1c1c1c;
+@define-color thumbnail_fg_color #d2d2d2;
 @define-color shade_color RGB(0 0 6/25%);
 @define-color scrollbar_outline_color RGB(0 0 12/95%);
 
 * {
-    color: white;
+    color: #d2d2d2;
 }
 
 :root { --standalone-color-oklab: max(l, 0.85) a b; --accent-color: oklab(
@@ -60,7 +60,7 @@
     from var(--warning-bg-color) var(--standalone-color-oklab)
   ); --error-color: oklab(
     from var(--error-bg-color) var(--standalone-color-oklab)
-  ); --active-toggle-bg-color: rgb(255 255 255 / 20%); --active-toggle-fg-color: #ffffff; --overview-bg-color: #2a2a2c; --overview-fg-color: #ffffff; }
+  ); --active-toggle-bg-color: rgb(255 255 255 / 20%); --active-toggle-fg-color: #d2d2d2; --overview-bg-color: #2c2c2c; --overview-fg-color: #d2d2d2; }
 
 @import '../gtk-3.0/libadwaita.css';
 @import '../gtk-3.0/libadwaita-tweaks.css';
