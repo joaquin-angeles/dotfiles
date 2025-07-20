@@ -1,8 +1,0 @@
-layer=overlay
-margin=6,6,6,12
-height=150
-default-timeout=3000
-background-color=#1e1e20
-border-color=#3f4044
-border-radius=7
-font=Rubik, monospace 13
