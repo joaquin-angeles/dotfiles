@@ -1,17 +1,17 @@
 {
     "include": "~/.config/waybar/modules.json",
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "height": 26,
-    "spacing": 6,
+    "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
     ],
     "modules-center": [
-        "clock",
     ],
     "modules-right": [
+        "battery",
+        "clock",
         "tray",
-        "group/system",
     ],
 }

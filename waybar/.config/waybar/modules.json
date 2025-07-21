@@ -3,10 +3,13 @@
         "max-length": 64,
         "format": "{}"
     },
-
-    "group/system": {
-        "orientation": "horizontal",
-        "modules": [ "network", "battery" ]
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
     },
 
     "network": {
@@ -50,12 +53,12 @@
     },
 
     "battery": {
-        "format": "{icon}  {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-charging": "󰂄  {capacity}%",
-        "format-warning": "󰂃  {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-warning": "󰂃 {capacity}%",
         "tooltip": true,
         "tooltip-format": "Discharging",
         "tooltip-format-charging": "Charging",
@@ -70,14 +73,14 @@
     },
 
     "clock": {
-        "format": "{:%b %d    %I:%M %p}",
+        "format": "[ {:%b %d, %I:%M %p} ]",
         "tooltip": true,
         "tooltip-format": "{:%A, %Y}"
     },
 
     "tray": {
-        "icon-size": 24,
-        "spacing": 4,
+        "icon-size": 18,
+        "spacing": 9,
         "reverse-direction": true
     },
 

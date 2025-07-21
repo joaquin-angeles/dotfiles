@@ -2,8 +2,8 @@
 
 * {
     font-family: "Rubik";
-    font-size: 13pt;
     font-weight: 400;
+    color: @fg;
 }
 
 window#waybar {
@@ -15,9 +15,9 @@ window#waybar {
 }
 
 #workspaces button {
-    min-width: 14px;
-    padding: 0 8px;
-    color: @inactive;
+    min-width: 12px;
+    padding: 0 6px;
+    font-size: 12pt;
 }
 
 #workspaces button.active {
@@ -29,51 +29,21 @@ window#waybar {
 }
 
 #network {
-    padding-right: 18px;
+    padding-right: 12px;
     font-size: 12.5pt
 }
 
-#bluetooth {
-    font-size: 13.25pt;
-    padding-right: 17px;
-    color: @blue;
+#tray {
+   padding-right: 6px;
 }
 
 #pulseaudio {
-    font-size: 13.5pt;
-    padding-right: 16px;
-    color: @yellow
+    font-size: 14pt;
+    padding-right: 12px;
+    padding-left: 4px;
 }
 
 #clock {
-    color: @fg;
-    border-radius: 12px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-#custom-power {
-    background-color: @bright-bg;
-    color: @red;
-    border: 2px solid #573437;
-    margin-right: 6px;
-    border-radius: 12px;  
-    padding-right: 10px;
-    padding-left: 9px;
-    font-size: 13.5pt;
-}
-
-#custom-menu {
-    background-color: @bright-bg;
-    color: @blue;
-    padding-left: 8px;
-    padding-right: 11.75px;
-    border: 2px solid #303d46;
-    border-radius: 12px;
-    margin-left: 6px;
-    font-size: 13.5pt;
-}
-
-#battery {
-    padding-right: 8px;
+    padding-left: 2px;
+    padding-right: 4px;
 }
