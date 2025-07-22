@@ -1,10 +1,9 @@
 #!/bin/bash
 
 # Required commands
-required_cmds=(jq grim wl-copy notify-send paplay)
+required_cmds=(jq grim wl-copy notify-send paplay hyprctl)
 
 missing=()
-
 for cmd in "${required_cmds[@]}"; do
     if ! command -v "$cmd" >/dev/null 2>&1; then
         missing+=("$cmd")
@@ -25,8 +24,19 @@ mkdir -p "$screenshot_dir"
 filepath="$screenshot_dir/screenshot_$timestamp.png"
 history_log="$HOME/.cache/screenshot_history.log"
 
-# Get the currently focused output using swaymsg
-focused_output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name')
+# Get the focused monitor (Hyprland)
+focused_output=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .name')
+
+# Fallback to swaymsg if hyprctl fails and swaymsg is available
+if [ -z "$focused_output" ] && command -v swaymsg >/dev/null 2>&1; then
+    focused_output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused == true) | .name')
+fi
+
+# If no focused output found
+if [ -z "$focused_output" ]; then
+    notify-send "Screenshot Tool Error" "Could not determine the focused output." -u critical
+    exit 1
+fi
 
 # Take fullscreen screenshot of focused output
 grim -o "$focused_output" "$filepath"
