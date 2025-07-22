@@ -1,8 +1,6 @@
 @import url("./colors.css");
 
 * {
-    font-family: "Rubik";
-    font-weight: 400;
     color: @fg;
 }
 

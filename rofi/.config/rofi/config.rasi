@@ -1,72 +1,76 @@
 * {
     font: "Inter 13.5";
-    text-color: #dfdfdf;
-    foreground: #865054;
+
+    /* Colors */
+    text-color:      #dfdfdf;
+    foreground:      #865054;
+    fg-color:        #404040;
+    fgp-color:       #888888FF;
+    alt-color:       #444444CC;
+    b-color:         #1c1c1c;
+
+    /* Spacing */
     g-spacing: 10px;
-    g-margin: 0;
-    b-color: #1c1c1c;
-    fg-color: #404040;
-    fgp-color: #888888FF;
-    hl-color: transparent;
-    hlt-color: #dfdfdf;
-    alt-color: #444444CC;
-    wbg-color: #1c1c1c;
-    w-border: 1px solid;
+    g-margin:  0;
+
+    /* Window padding and border */
+    w-padding:      12px;
+    w-border:       1px solid;
     w-border-color: #dfdfdf;
-    w-padding: 12px;
 }
 
+/* Configuration */
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun: "Apps:";
+    display-drun:  "Apps:";
     display-emoji: "Emojis:";
     disable-history: true;
-    kb-row-up: "Up,Control+k";
-    kb-row-down: "Down,Control+j";
-    kb-accept-entry: "Return,Control+m";
+
+    kb-row-up:        "Up,Control+k";
+    kb-row-down:      "Down,Control+j";
+    kb-accept-entry:  "Return,Control+m";
     kb-remove-to-eol: "";
 }
 
-listview {
-    columns: 1;
-    spacing: 6px;
-    lines: 7;
-    fixed-height: true;
-    fixed-columns: false;
-    scrollbar: false;
-    cycle: false;
-    border: 0px solid;
-    layout: "vertical";
-}
-
+/* Window appearance */
 window {
-    transparency: "real";
-    width: 450px;
-    height: 500px;
-    border-radius: 7px;
-    background-color: @wbg-color;
-    border: 2px solid;
-    border-color: #424244;
-    padding: 3px;
-    location: north;
-    anchor: north;
-    y-offset: 6;
-    x-offset: 6;
+    transparency:   "real";
+    width:          450px;
+    height:         500px;
+    border-radius:  7px;
+    background-color: #1c1c1c;
+    border:         2px solid;
+    border-color:   #424244;
+    padding:        3px;
+
+    location:       north;
+    anchor:         north;
+    y-offset:       6;
+    x-offset:       6;
 }
 
-prompt {
-    text-color: #dfdfdf;
+/* Layout */
+mainbox {
+    spacing: 10px;
+    margin:  0;
+    padding: 8px;
+    children: ["listview", "inputbar", "message"];
 }
 
+/* Input bar */
 inputbar {
     children: ["prompt", "entry"];
-    spacing: @g-spacing;
-    padding: 14px 16px;
+    spacing:  10px;
+    padding:  14px 16px;
     border-radius: 24px;
     border: 2px solid;
     border-color: #424244;
     background-color: #232323;
+}
+
+prompt {
+    text-color: #dfdfdf;
 }
 
 entry {
@@ -75,39 +79,43 @@ entry {
     text-color: #dfdfdf;
 }
 
-mainbox {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: 8px;
-    children: ["listview", "inputbar", "message"];
+/* List view */
+listview {
+    columns:       1;
+    lines:         7;
+    spacing:       6px;
+    fixed-height:  true;
+    fixed-columns: false;
+    scrollbar:     false;
+    cycle:         false;
+    border:        0px solid;
+    layout:        "vertical";
 }
 
+/* Elements */
 element {
-    spacing: @g-spacing;
-    margin: @g-margin;
+    spacing: 10px;
+    margin:  0;
     padding: 8px;
 }
 
 element normal.normal {
     background-color: transparent;
-    text-color: @fg-color;
+    text-color:       #404040;
 }
 
 element alternate.normal {
     background-color: transparent;
-    text-color: @fg-color;
+    text-color:       #404040;
 }
 
+element selected.normal,
 element selected.active {
-    background-color: @hl-color;
-    text-color: @hlt-color;
+    background-color: transparent;
+    text-color:       #dfdfdf;
 }
 
-element selected.normal {
-    background-color: @hl-color;
-    text-color: @hlt-color;
-}
-
+/* Message area */
 message {
     border: 8px solid;
     text-color: #865054;
