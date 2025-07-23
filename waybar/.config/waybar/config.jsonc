@@ -1,6 +1,6 @@
 {
     "include": "~/.config/waybar/modules.json",
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "height": 26,
     "spacing": 4,
@@ -10,8 +10,8 @@
     "modules-center": [
     ],
     "modules-right": [
+        "tray",
         "battery",
         "clock",
-        "tray",
     ],
 }

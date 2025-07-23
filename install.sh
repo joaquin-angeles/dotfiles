@@ -45,6 +45,7 @@ packages=(
     neovim
     nwg-look
     nwg-displays
+    network-manager-applet
     pavucontrol
     polkit-gnome
     qt5ct
