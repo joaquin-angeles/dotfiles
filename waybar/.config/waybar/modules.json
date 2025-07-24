@@ -73,14 +73,14 @@
     },
 
     "clock": {
-        "format": "[ {:%d-%m-%y, %I:%M %p} ]",
+        "format": "[ {:%d-%m-%y  %I:%M %p} ]",
         "tooltip": true,
         "tooltip-format": "{:%A}"
     },
 
     "tray": {
         "icon-size": 24,
-        "spacing": 6,
+        "spacing": 4,
         "reverse-direction": true
     },
 
