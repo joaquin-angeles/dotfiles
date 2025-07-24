@@ -1,0 +1,17 @@
+{
+    "include": "~/.config/waybar/modules.json",
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 4,
+    "modules-left": [
+        "sway/workspaces",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "tray",
+        "battery",
+        "clock",
+    ],
+}
