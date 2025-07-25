@@ -4,7 +4,7 @@ vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'StatusLine', { bg = nil })
 vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = '#18181a' })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#232323', cterm = { bg = nil } })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#252525', cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#444444' })
 
 -- telescope.nvim

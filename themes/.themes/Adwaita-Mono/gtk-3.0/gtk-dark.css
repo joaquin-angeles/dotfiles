@@ -58,7 +58,7 @@
 @define-color error_bg_color @red_4;
 @define-color error_fg_color #dfdfdf;
 @define-color error_color #ff7b63;
-@define-color window_bg_color #252525;
+@define-color window_bg_color #1c1c1c;
 @define-color window_fg_color #dfdfdf;
 @define-color view_bg_color #1c1c1c;
 @define-color view_fg_color #dfdfdf;
