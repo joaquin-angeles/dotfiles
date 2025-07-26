@@ -36,6 +36,7 @@ packages=(
     file-roller
     grim
     hyprland
+    hyprpaper
     hyprlock
     inotify-tools
     kvantum
