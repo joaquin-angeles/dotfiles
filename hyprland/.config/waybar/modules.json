@@ -15,11 +15,12 @@
     "network": {
         "format": "{icon}",
         "format-icons": [
-            "󰣴", "󰣶", "󰣸", "󰣺" 
+            "󰤟", "󰤢", "󰤥", "󰤨" 
         ],
-        "format-disconnected": "󰣼",
+        "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
-        "interface": "wlan0"
+        "interface": "wlan0",
+        "on-click": "iwdgui"
     },
 
     "bluetooth": {
@@ -80,8 +81,8 @@
     },
 
     "tray": {
-        "icon-size": 24,
-        "spacing": 4,
+        "icon-size": 23,
+        "spacing": 6,
         "reverse-direction": true
     },
 
