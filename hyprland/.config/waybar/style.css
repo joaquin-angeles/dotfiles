@@ -1,9 +1,5 @@
 @import url("./colors.css");
 
-* {
-    color: @fg;
-}
-
 window#waybar {
     color: @fg;
     padding-left: 2px;
@@ -24,6 +20,11 @@ window#waybar {
 
 #workspaces button:hover {
     background: transparent;
+}
+
+#window {
+    padding-left: 6px;
+    color: #6f6f6f
 }
 
 #network {

@@ -65,12 +65,12 @@
 @define-color headerbar_bg_color #252525;
 @define-color headerbar_fg_color #dfdfdf;
 @define-color headerbar_border_color #dfdfdf;
-@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_backdrop_color #1c1c1c;
 @define-color headerbar_shade_color #323232;
 @define-color headerbar_darker_shade_color #1c1c1c;
 @define-color sidebar_bg_color #252525;
 @define-color sidebar_fg_color #dfdfdf;
-@define-color sidebar_backdrop_color #28282c;
+@define-color sidebar_backdrop_color #1c1c1c;
 @define-color sidebar_shade_color #323232;
 @define-color sidebar_border_color #323232;
 @define-color card_bg_color #323232;

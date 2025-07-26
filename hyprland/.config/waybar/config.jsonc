@@ -6,6 +6,7 @@
     "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
     ],
