@@ -28,30 +28,15 @@ precmd() {
     print -Pn "\e]0;%n@%m:%~\a"
 }
 
-# Zinit (Plugin Manager)
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
-
-# Snippets (Zinit)
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
-zinit snippet OMZP::command-not-found
-
-# Plugins (Zinit)
-zinit light romkatv/powerlevel10k # P10K
-zinit light zsh-users/zsh-syntax-highlighting # Syntax highlighting
-zinit light zsh-users/zsh-completions # Autocompletions
-zinit light zsh-users/zsh-autosuggestions # Autosuggestions
-zinit light zsh-users/zsh-history-substring-search # History search
-
 # Autoload
 autoload -Uz compinit && compinit
 
-# P10K configuration
+# Plugins
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fpath=(~/.zsh/plugins/completions/src $fpath)
+source ~/.zsh/plugins/p10k/powerlevel10k.zsh-theme
+source ~/.zsh/plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/plugins/autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'

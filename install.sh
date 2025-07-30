@@ -33,6 +33,7 @@ packages=(
     bibata-cursor-theme
     chafa
     eza
+    fish
     file-roller
     grim
     hyprland
@@ -63,7 +64,6 @@ packages=(
     xdg-desktop-portal-gtk
     zen-browser-bin
     zoxide
-    zsh
     yazi
 )
 
