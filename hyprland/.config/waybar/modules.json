@@ -20,7 +20,7 @@
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0",
-        "on-click": "foot -e sh -c 'sleep 0.25 && /usr/bin/nmtui'"
+        "on-click": "foot -e sh -c 'sleep 0.125 && ~/.config/waybar/scripts/network'"
     },
 
     "bluetooth": {
@@ -83,7 +83,6 @@
     "tray": {
         "icon-size": 18,
         "spacing": 6,
-        "reverse-direction": true
     },
 
     "custom/power": {

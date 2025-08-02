@@ -27,6 +27,12 @@ window#waybar {
     color: #6f6f6f
 }
 
+#tray {
+    background-color: @inactive;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
 #network {
     padding-right: 8px;
 }
