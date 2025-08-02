@@ -29,43 +29,43 @@ fi
 # List of packages to install
 packages=(
     bat
-    brightnessctl
     bibata-cursor-theme
+    brightnessctl
     chafa
     eza
     expect
-    fish
     file-roller
+    fish
     grim
     hyprland
-    hyprpaper
     hyprlock
+    hyprpaper
     inotify-tools
     kvantum
     kvantum-qt5
+    lf
     libnotify
     mako
+    nautilus
     neovim
-    nwg-look
-    nwg-displays
     network-manager-applet
+    nwg-displays
+    nwg-look
     polkit-gnome
     qt5ct
     qt6ct
     rofi-emoji
     rofi-wayland
-    swayosd
     slurp
-    nautilus
+    swayosd
     waybar
-    wiremix
     wayfreeze-git
+    wiremix
     xdg-desktop-portal
-    xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
     zen-browser-bin
     zoxide
-    yazi
 )
 
 # Install packages
