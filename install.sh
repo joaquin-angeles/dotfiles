@@ -33,6 +33,7 @@ packages=(
     bibata-cursor-theme
     chafa
     eza
+    expect
     fish
     file-roller
     grim
@@ -48,7 +49,6 @@ packages=(
     nwg-look
     nwg-displays
     network-manager-applet
-    pavucontrol
     polkit-gnome
     qt5ct
     qt6ct
@@ -58,6 +58,7 @@ packages=(
     slurp
     nautilus
     waybar
+    wiremix
     wayfreeze-git
     xdg-desktop-portal
     xdg-desktop-portal-hyprland

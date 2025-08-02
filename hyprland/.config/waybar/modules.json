@@ -20,7 +20,7 @@
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0",
-        "on-click": "foot -e sh -c 'sleep 0.125 && ~/.config/waybar/scripts/network'"
+        "on-click": "foot -e sh -c 'sleep 0.0625 && ~/.config/waybar/scripts/network'"
     },
 
     "bluetooth": {
@@ -49,7 +49,7 @@
                 "󰕾"
             ]
         },
-        "on-click": "pavucontrol",
+        "on-click": "foot -e wiremix",
         "tooltip-format": "Volume ({volume}%)"
     },
 
