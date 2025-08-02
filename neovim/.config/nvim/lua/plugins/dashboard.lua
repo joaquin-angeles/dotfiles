@@ -32,7 +32,7 @@ return {
         vim.api.nvim_set_hl(0, "AlphaShortcut", { fg = "#5f5f5f" })
         dashboard.section.buttons.val = {
             (function()
-                local b = dashboard.button("/", "  Find File", "<cmd>Telescope find_files hidden=true cwd=~/<CR>")
+                local b = dashboard.button("f", "  Find File", "<cmd>Telescope find_files hidden=true cwd=~/<CR>")
                 b.opts.hl_shortcut = "AlphaShortcut"
                 return b
             end)(),
@@ -47,7 +47,7 @@ return {
                 return b
             end)(),
             (function()
-                local b = dashboard.button("g", "󱎸  Find Text", "<cmd>Telescope live_grep<CR>")
+                local b = dashboard.button("/", "󱎸  Find Text", "<cmd>Telescope live_grep<CR>")
                 b.opts.hl_shortcut = "AlphaShortcut"
                 return b
             end)(),

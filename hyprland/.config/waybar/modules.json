@@ -20,7 +20,7 @@
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0",
-        "on-click": "foot -e sh -c 'sleep 0.0625 && ~/.config/waybar/scripts/network'"
+        "on-click": "foot -e impala"
     },
 
     "bluetooth": {
@@ -75,7 +75,7 @@
     },
 
     "clock": {
-        "format": "[ {:%d-%m-%y  %I:%M %p} ]",
+        "format": "[ {:%d.%m.%y  %I:%M %p} ]",
         "tooltip": true,
         "tooltip-format": "{:%A}"
     },
