@@ -2,24 +2,24 @@
 
 # Power menu options
 options=(
-    "󰐥 Shutdown"
-    "󰜉 Reboot"
-    "󰌾 Lock"
-    "󰽥 Suspend"
-    "󰍃 Logout"
+    "Shutdown"
+    "Reboot"
+    "Lock"
+    "Suspend"
+    "Logout"
 )
 
 # Show Rofi with two columns, no input bar, and large font
 choice="$(printf '%s\n' "${options[@]}" | tofi )"
 
 case "$choice" in
-    "󰐥 Shutdown")
+    "Shutdown")
         systemctl poweroff
         ;;
-    "󰜉 Reboot")
+    "Reboot")
         systemctl reboot
         ;;
-    "󰌾 Lock")
+    "Lock")
         if command -v gtklock >/dev/null; then
             gtklock
         elif command -v hyprlock >/dev/null; then
@@ -32,10 +32,10 @@ case "$choice" in
             notify-send "No lock utility found."
         fi
         ;;
-    "󰽥 Suspend")
+    "Suspend")
         systemctl suspend
         ;;
-    "󰍃 Logout")
+    "Logout")
             pkill -KILL -u "$USER"
         ;;
 esac

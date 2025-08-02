@@ -20,7 +20,7 @@
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0",
-        "on-click": "iwdgui"
+        "on-click": "foot -e sh -c 'sleep 0.25 && /usr/bin/nmtui'"
     },
 
     "bluetooth": {
@@ -81,7 +81,7 @@
     },
 
     "tray": {
-        "icon-size": 23,
+        "icon-size": 18,
         "spacing": 6,
         "reverse-direction": true
     },

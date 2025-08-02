@@ -3,7 +3,7 @@
     "layer": "top",
     "position": "top",
     "height": 26,
-    "spacing": 4,
+    "spacing": 6,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"
@@ -12,6 +12,8 @@
     ],
     "modules-right": [
         "tray",
+        "network",
+        "pulseaudio",
         "battery",
         "clock",
     ],

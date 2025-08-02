@@ -1,22 +1,14 @@
+# Fish preferences
 if status is-interactive
     set -g fish_greeting ""
     function cd
         z $argv && eza
     end
-    # function fish_postexec --on-event fish_postexec
-    #     set cmd (status current-command)
-    #     switch $cmd
-    #         case 'clear'
-    #             return
-    #     end
-    #     echo
-    # end
 end
 
 # Fetch
 if test -f /usr/bin/fastfetch
     fastfetch
-    echo ''
 end
 
 # Zoxide shell integrations
