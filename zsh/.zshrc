@@ -4,6 +4,7 @@ if [ -f /usr/bin/fastfetch ]; then
     echo ''
 fi
 printf '\e[1 q'
+stty intr '^G'
 
 # P10K Instant Prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -16,9 +17,9 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 
 # Binds 
+bindkey '^C' kill-whole-line
 bindkey "^a" beginning-of-line
 bindkey "^e" end-of-line
-bindkey "^k" kill-line
 bindkey "^J" history-search-forward
 bindkey "^K" history-search-backward
 bindkey "^R" fzf-history-widget
@@ -40,7 +41,6 @@ source ~/.zsh/plugins/autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'
-alias cat='bat --color=always --theme=base16 --style=plain'
 alias c=clear
 cd() {
     z "$@" && eza
