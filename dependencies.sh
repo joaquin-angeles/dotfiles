@@ -14,14 +14,16 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
         echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
         sudo pacman -Sy
     } &> /dev/null
-echo " Chaotic AUR added successfully."
+    echo " Chaotic AUR added successfully."
 else
     echo "󰋑 Chaotic AUR is already configured."
 fi
+
+# paru installation with progress
 if ! command -v paru &> /dev/null; then
     echo "󰏗 Installing paru..."
     sudo pacman -S --noconfirm paru &> /dev/null
-    echo -e " Successfully installed $package.\n"
+    echo -e " Successfully installed paru.\n"
 else
     echo "󰋑 paru is already installed."
 fi
@@ -48,7 +50,6 @@ packages=(
     mako
     nautilus
     neovim
-    network-manager-applet
     nwg-displays
     nwg-look
     polkit-gnome
@@ -66,12 +67,18 @@ packages=(
     zoxide
 )
 
-# Install packages
+# Update total_packages for progress tracking
+total_packages=$((total_packages + ${#packages[@]}))
+
+# Install packages with progress
 for package in "${packages[@]}"; do
+    progress_count=$((progress_count + 1))
+    percent=$((100 * progress_count / total_packages))
+
     if pacman -Q "$package" &>/dev/null; then
-        echo "󰋑 $package is already installed."
+        echo "󰋑 $package is already installed. ($progress_count/$total_packages) [$percent%]"
     else
-        echo -e "󰏗 Installing $package..."
+        echo -e "󰏗 Installing $package... ($progress_count/$total_packages) [$percent%]"
         if paru -S --noconfirm --quiet "$package" &>/dev/null; then
             echo -e " Successfully installed $package.\n"
         else
@@ -83,9 +90,8 @@ done
 # Set zsh as the default shell if it's not already set
 if [ "$SHELL" != "/usr/bin/zsh" ]; then
     echo "󰖷 Setting zsh as the default shell..."
-    echo -n "[sudo] password for $USER: "
     chsh -s $(which zsh) &>/dev/null
-    echo -e "\n  zsh has been set as the default shell."
+    echo -e "\n zsh has been set as the default shell."
 else
     echo -e "󰋑 zsh is already the default shell."
 fi

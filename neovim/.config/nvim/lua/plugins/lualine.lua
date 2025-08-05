@@ -9,30 +9,30 @@ return {
                 component_separators = { left = '::', right = '::' },
                 theme = {
                     normal = {
-                        a = { fg = '#dfdfdf', bg = '#323232' },
+                        a = { fg = '#dfdfdf', bg = '#353535' },
                         b = { fg = '#dfdfdf', bg = '#252525' },
                         c = { bg = 'NONE' }
                     },
                     insert = {
-                        a = { fg = '#729a72', bg = '#323232' },
+                        a = { fg = '#729a72', bg = '#353535' },
                         b = { fg = '#dfdfdf', bg = '#252525' },
                         c = { bg = 'NONE' },
                     },
 
                     visual = {
-                        a = { fg = '#5F7A5F', bg = '#323232' },
+                        a = { fg = '#5F7A5F', bg = '#353535' },
                         b = { fg = '#dfdfdf', bg = '#252525' },
                         c = { bg = 'NONE' },
                     },
 
                     replace = {
-                        a = { fg = '#976061', bg = '#323232' },
+                        a = { fg = '#976061', bg = '#353535' },
                         b = { fg = '#dfdfdf', bg = '#252525' },
                         c = { bg = 'NONE' },
                     },
 
                     command = {
-                        a = { fg = '#a49a72', bg = '#323232' },
+                        a = { fg = '#a49a72', bg = '#353535' },
                         b = { fg = '#dfdfdf', bg = '#252525' },
                         c = { bg = 'NONE' },
                     },
