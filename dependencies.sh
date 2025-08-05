@@ -60,11 +60,9 @@ packages=(
     swayosd
     waybar
     wayfreeze-git
-    wiremix
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
-    zen-browser-bin
     zoxide
 )
 
@@ -76,16 +74,8 @@ for package in "${packages[@]}"; do
         echo -e "󰏗 Installing $package..."
         if paru -S --noconfirm --quiet "$package" &>/dev/null; then
             echo -e " Successfully installed $package.\n"
-
-    # Enable services if needed
-    case "$package" in
-        auto-cpufreq)
-            echo "󰈆 Enabling and starting hyprpolkitagent..."
-            systemctl --user enable --now hyprpolkitagent.service &>/dev/null
-            ;;
-    esac
-else
-    echo " Failed to install $package." >&2
+        else
+            echo " Failed to install $package." >&2
         fi
     fi
 done
