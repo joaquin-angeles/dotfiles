@@ -30,14 +30,13 @@ fi
 
 # List of packages to install
 packages=(
+    zsh
     bat
     bibata-cursor-theme
     brightnessctl
     chafa
     eza
     expect
-    file-roller
-    fish
     grim
     hyprland
     hyprlock
@@ -48,7 +47,6 @@ packages=(
     lf
     libnotify
     mako
-    nautilus
     neovim
     nwg-displays
     nwg-look
@@ -59,6 +57,8 @@ packages=(
     rofi-wayland
     slurp
     swayosd
+    thunar
+    thunar-archive-plugin
     waybar
     wayfreeze-git
     xdg-desktop-portal

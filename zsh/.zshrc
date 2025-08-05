@@ -14,7 +14,6 @@ fi
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-source <(fzf --zsh)
 
 # Binds 
 bindkey '^C' kill-whole-line
@@ -56,7 +55,7 @@ alias ff=fastfetch
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
-alias lf=~/.config/lf/lfrun
+alias lf="$HOME/.config/lf/lfrun"
 alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'
