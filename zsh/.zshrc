@@ -6,10 +6,11 @@ fi
 printf '\e[1 q'
 stty intr '^G'
 
-# P10K Instant Prompt
+# P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -31,11 +32,9 @@ precmd() {
 # Autoload
 autoload -Uz compinit && compinit
 
-# Plugins 
-source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.zsh/syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/autosuggestions/zsh-autosuggestions.zsh
+# Antidote plugin manager
+source ~/.antidote/antidote.zsh
+antidote load
 
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'
@@ -75,5 +74,3 @@ HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
-source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-
