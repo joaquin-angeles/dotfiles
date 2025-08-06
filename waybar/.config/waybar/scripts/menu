@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Define menu options
+options=(
+    "Network Management"
+    "Bluetooth"
+    "Audio Control"
+    "GTK Settings"
+    "Qt5 Settings"
+    "Qt6 Settings"
+)
+
+# Display the Tofi menu with min-input-width 800
+choice=$(printf '%s\n' "${options[@]}" | tofi)
+
+# Handle the selection
+case "$choice" in
+    "Network Management")
+        foot -e impala &
+        ;;
+    "Bluetooth")
+        blueberry &
+        ;;
+    "Audio Control")
+        foot -e wiremix &
+        ;;
+    "GTK Settings")
+        nwg-look &
+        ;;
+    "Qt5 Settings")
+        qt5ct &
+        ;;
+    "Qt6 Settings")
+        qt6ct &
+        ;;
+    *)
+        exit 1
+        ;;
+esac

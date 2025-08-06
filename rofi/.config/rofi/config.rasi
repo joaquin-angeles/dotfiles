@@ -43,11 +43,6 @@ window {
     border:         2px solid;
     border-color:   #424244;
     padding:        3px;
-
-    location:       north;
-    anchor:         north;
-    y-offset:       6;
-    x-offset:       6;
 }
 
 /* Layout */

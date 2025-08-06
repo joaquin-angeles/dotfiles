@@ -5,6 +5,7 @@ if [ -f /usr/bin/fastfetch ]; then
 fi
 printf '\e[1 q'
 stty intr '^G'
+unset COLORTERM
 
 # P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -42,7 +43,7 @@ alias c=clear
 cd() {
     z "$@" && eza
 }
-alias fzf="command fzf --preview '
+alias fzf="fzf --preview '
 if [ -d {} ]; then
 eza -l --color=always {} || ls -la {}
 else

@@ -18,6 +18,10 @@ window#waybar {
     color: @fg;
 }
 
+#workspaces button.empty {
+    color: #595959;
+}
+
 #workspaces button:hover {
     background: transparent;
 }
