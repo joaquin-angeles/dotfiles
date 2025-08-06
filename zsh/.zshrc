@@ -7,9 +7,9 @@ printf '\e[1 q'
 stty intr '^G'
 
 # P10K Instant Prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -32,11 +32,6 @@ precmd() {
 autoload -Uz compinit && compinit
 
 # Plugins
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-fpath=(~/.zsh/plugins/completions/src $fpath)
-source ~/.zsh/plugins/p10k/powerlevel10k.zsh-theme
-source ~/.zsh/plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/plugins/autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'
