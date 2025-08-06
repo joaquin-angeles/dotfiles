@@ -1,5 +1,4 @@
 @import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
-@import url('https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css');
 
 :root {
     --guildbar-avatar-size: 48px;
@@ -11,12 +10,11 @@
 .visual-refresh section.panels_c48ade {
   left: calc(var(--custom-guild-list-width) + var(--space-xs));
   width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
-  box-sizing: content-box;
+  box-sizing: border-box;
 
   .actionButtons_e131a9 button {
     padding: 0;
   }
-
   /* GameActivityToggle Fix (delete if you don't use) */
   .container__37e49 {
     padding: var(--space-xxs);
@@ -54,4 +52,22 @@ nav.guilds_c48ade {
 .button_f7ecac.hoverBarButton_f84418:nth-of-type(3),
 .separator_f84418 {
    display: none;
+}
+
+/* Hide nameplates */
+[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
+[class*="dm_"]:has([class*="linkPlated_"]) {
+    & [class*="linkPlated_"] { padding-right: var(--space-16); }
+    & [class*="closeButtonPlated_"] {
+        opacity: 0.7;
+        &:hover { opacity: 1; }
+        & [class^="innerCloseButtonPlated"] {
+            opacity: unset; 
+            background: none;
+            & svg {
+                color: inherit;
+                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
+            }
+        }
+    }
 }
