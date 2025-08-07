@@ -62,8 +62,6 @@ alias lla='eza -la'
 alias paru='paru --skipreview'
 alias pacman='paru --skipreview'
 alias pk=pkill
-alias swaybar='waybar -c ~/.config/waybar/sway/config.jsonc'
-alias hyprbar='waybar -c ~/.config/waybar/hyprland/config.jsonc'
 alias vim=nvim
 alias yz=yazi
 
