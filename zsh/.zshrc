@@ -5,7 +5,6 @@ if [ -f /usr/bin/fastfetch ]; then
 fi
 printf '\e[1 q'
 stty intr '^G'
-unset COLORTERM
 
 # P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -19,19 +18,25 @@ eval "$(zoxide init zsh)"
 
 # Binds 
 bindkey '^C' kill-whole-line
-bindkey "^a" beginning-of-line
-bindkey "^e" end-of-line
-bindkey "^J" history-search-forward
-bindkey "^K" history-search-backward
-bindkey "^R" fzf-history-widget
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+bindkey '^J' history-search-forward
+bindkey '^K' history-search-backward
+bindkey '^R' fzf-history-widget
 
 # Set window titles
 precmd() {
     print -Pn "\e]0;%n@%m:%~\a"
 }
 
-# Autoload
-autoload -Uz compinit && compinit
+# Faster compinit
+autoload -Uz compinit
+if [[ -n "$ZSH_COMPDUMP" && -f "$ZSH_COMPDUMP" ]]; then
+    compinit -d "$ZSH_COMPDUMP"
+else
+    compinit
+fi
+ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
 
 # Antidote plugin manager
 source ~/.antidote/antidote.zsh
