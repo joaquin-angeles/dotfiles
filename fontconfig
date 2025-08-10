@@ -16,29 +16,49 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
         echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
         sudo pacman -Sy
     } &> /dev/null
-echo " Chaotic AUR added successfully."
+    echo " Chaotic AUR added successfully."
 else
     echo "󰋑 Chaotic AUR is already configured."
 fi
+
+# paru installation with progress
 if ! command -v paru &> /dev/null; then
     echo "󰏗 Installing paru..."
     sudo pacman -S --noconfirm paru &> /dev/null
-    echo -e " Successfully installed $package.\n"
+    echo -e " Successfully installed paru.\n"
 else
     echo "󰋑 paru is already installed."
 fi
 
+# Install Rubik font manually if not already present
+if fc-list | grep -i "Rubik" &>/dev/null; then
+    echo " Rubik font is already installed."
+else
+    echo " Installing Rubik font..."
+    temp_dir=$(mktemp -d)
+    git clone --depth 1 https://github.com/googlefonts/rubik.git "$temp_dir" &>/dev/null
+    mkdir -p "$font_dir/Rubik"
+    cp -r "$temp_dir/fonts/variable/"*.ttf "$font_dir/Rubik"
+    rm -rf "$temp_dir"
+    fc-cache -r
+    echo " Rubik font installed successfully."
+fi
+
+# Apply Rubik font for GNOME if running GNOME
+if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
+    echo "󰖷 Applying Rubik font to GTK..."
+    gsettings set org.gnome.desktop.interface font-name 'Rubik 13' &>/dev/null
+fi
 
 # Sorted list of font packages in alphabetical order
-fonts=(
-    inter-font
+font_packages=(
     otf-noto-sans-cjk
     ttf-apple-emoji
     ttf-meslo-nerd
 )
 
 # Install each font package if not already installed
-for font in "${fonts[@]}"; do
+for font in "${font_packages[@]}"; do
     if pacman -Q "$font" &>/dev/null; then
         echo " $font is already installed."
     else
@@ -73,10 +93,10 @@ cat <<EOL > "$fontconfig_dir/fonts.conf"
 <fontconfig>
   <match>
     <test name="family" qual="any">
-      <string>Inter</string>
+      <string>Rubik</string>
     </test>
     <edit name="family" mode="prepend" binding="same">
-      <string>Inter</string>
+      <string>Rubik</string>
     </edit>
   </match>
 
@@ -117,12 +137,6 @@ cat <<EOL > "$fontconfig_dir/fonts.conf"
   </match>
 </fontconfig>
 EOL
+
 fc-cache -r
-
-# Apply Inter font for GNOME if running GNOME
-if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
-    echo "󰖷 Applying Inter font to GTK..."
-    gsettings set org.gnome.desktop.interface font-name 'Inter 13' &>/dev/null
-fi
-
 echo -e " Font configuration applied successfully."

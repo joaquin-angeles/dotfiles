@@ -39,7 +39,6 @@ window#waybar {
 
 #network {
     padding-right: 10px;
-    color: #808080
 }
 
 #pulseaudio {
@@ -56,5 +55,4 @@ window#waybar {
 
 #battery {
     padding-left: 5px;
-    color: #808080
 }

@@ -19,4 +19,4 @@ vim.api.nvim_set_hl(0, 'TelescopeResultsTitle', { bg = nil, cterm = { bg = nil }
 vim.api.nvim_set_hl(0, 'TelescopePreviewNormal', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'TelescopePreviewBorder', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'TelescopePreviewTitle', { bg = nil, cterm = { bg = nil } })
-vim.api.nvim_set_hl(0, 'TelescopeSelection', { fg = '#eeeeee', bg = '#353537', bold = true })
+vim.api.nvim_set_hl(0, 'TelescopeSelection', { fg = '#eeeeee', bg = '#323232', bold = true })

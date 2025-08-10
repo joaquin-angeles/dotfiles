@@ -29,14 +29,14 @@ precmd() {
     print -Pn "\e]0;%n@%m:%~\a"
 }
 
-# Faster compinit
+# Compinit
+ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
 autoload -Uz compinit
 if [[ -n "$ZSH_COMPDUMP" && -f "$ZSH_COMPDUMP" ]]; then
     compinit -d "$ZSH_COMPDUMP"
 else
     compinit
 fi
-ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
 
 # Antidote plugin manager
 source ~/.antidote/antidote.zsh
