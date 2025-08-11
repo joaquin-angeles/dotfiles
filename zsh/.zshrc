@@ -65,6 +65,7 @@ alias lsa='eza -a'
 alias ll='eza -l'
 alias lla='eza -la'
 alias paru='paru --skipreview'
+alias paruf=~/.bin/parufzf
 alias pacman='paru --skipreview'
 alias pk=pkill
 alias vim=nvim

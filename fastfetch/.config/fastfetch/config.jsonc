@@ -29,7 +29,7 @@
         {
             "type": "packages",
             "key": "pkgs  ",
-            "format": "{1}"
+            "format": "{2}"
         },
         {
             "type": "shell",

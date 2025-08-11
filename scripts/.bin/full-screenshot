@@ -19,7 +19,7 @@ fi
 
 # Timestamp and paths
 timestamp=$(date +'%Y-%m-%d_%H-%M-%S')
-screenshot_dir="${XDG_PICTURES_DIR:-$(xdg-user-dir PICTURES)}/Screenshots"
+screenshot_dir="$HOME/.cache/screenshots"
 mkdir -p "$screenshot_dir"
 filepath="$screenshot_dir/screenshot_$timestamp.png"
 history_log="$HOME/.cache/screenshot_history.log"
