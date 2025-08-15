@@ -28,7 +28,7 @@ window#waybar {
 
 #window {
     padding-left: 5px;
-    color: @inactive
+    color: #6f6f6f
 }
 
 #tray {

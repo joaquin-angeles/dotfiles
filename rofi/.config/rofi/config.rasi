@@ -23,8 +23,8 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    display-drun:  "Apps:";
-    display-emoji: "Emojis:";
+    display-drun:  "";
+    display-emoji: "";
     disable-history: true;
 
     kb-row-up:        "Up,Control+k";
@@ -41,8 +41,8 @@ window {
     border-radius:  7px;
     background-color: #1c1c1c;
     border:         2px solid;
-    border-color:   #424244;
-    padding:        3px;
+    border-color:   #404040;
+    padding:        6px;
 }
 
 /* Layout */
@@ -57,10 +57,10 @@ mainbox {
 inputbar {
     children: ["prompt", "entry"];
     spacing:  10px;
-    padding:  14px 16px;
-    border-radius: 24px;
+    padding:  12px 14px;
+    border-radius: 18px;
     border: 2px solid;
-    border-color: #424244;
+    border-color: #404040;
     background-color: #232323;
 }
 
@@ -69,8 +69,8 @@ prompt {
 }
 
 entry {
-    placeholder: "";
-    placeholder-color: #555555;
+    placeholder: "Type to search...";
+    placeholder-color: #404040;
     text-color: #dfdfdf;
 }
 

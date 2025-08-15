@@ -3,7 +3,7 @@ vim.api.nvim_set_hl(0, 'Normal', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'FloatBorder', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'StatusLine', { bg = nil })
-vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = '#18181a' })
+vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = '#181818' })
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = nil, cterm = { bg = nil } })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#4f4f4f' })
 
