@@ -20,6 +20,7 @@
     },
 
     "network": {
+        "interface": "wlan0",
         "format": "{icon}",
         "format-icons": [
             "󰤟", "󰤢", "󰤥", "󰤨" 
@@ -82,9 +83,9 @@
     },
 
     "clock": {
-        "format": "[ {:%d.%m.%Y · %I:%M %p} ]",
+        "format": "󰅐  {:%I:%M %p}  ",
         "tooltip": true,
-        "tooltip-format": "{:%A}"
+        "tooltip-format": "{:%d-%m-%y, %A}"
     },
 
     "tray": {

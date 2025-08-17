@@ -1,5 +1,5 @@
 * {
-    font: "Inter 13.5";
+    font: "Inter 14";
 
     /* Colors */
     text-color:      #dfdfdf;
@@ -26,7 +26,6 @@ configuration {
     display-drun:  "";
     display-emoji: "";
     disable-history: true;
-
     kb-row-up:        "Up,Control+k";
     kb-row-down:      "Down,Control+j";
     kb-accept-entry:  "Return,Control+m";
@@ -42,7 +41,7 @@ window {
     background-color: #1c1c1c;
     border:         2px solid;
     border-color:   #404040;
-    padding:        6px;
+    padding:        8px;
 }
 
 /* Layout */
@@ -61,7 +60,7 @@ inputbar {
     border-radius: 18px;
     border: 2px solid;
     border-color: #404040;
-    background-color: #232323;
+    background-color: #252525;
 }
 
 prompt {
@@ -70,7 +69,7 @@ prompt {
 
 entry {
     placeholder: "Type to search...";
-    placeholder-color: #404040;
+    placeholder-color: #595959;
     text-color: #dfdfdf;
 }
 

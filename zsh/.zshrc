@@ -17,12 +17,12 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # Binds 
-bindkey '^C' kill-whole-line
+bindkey '^c' kill-whole-line
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
-bindkey '^J' history-search-forward
-bindkey '^K' history-search-backward
-bindkey '^R' fzf-history-widget
+bindkey '^j' history-search-forward
+bindkey '^k' history-search-backward
+bindkey '^r' fzf-history-widget
 
 # Set window titles
 precmd() {

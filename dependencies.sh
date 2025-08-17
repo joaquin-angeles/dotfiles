@@ -48,7 +48,6 @@ packages=(
     libnotify
     mako
     neovim
-    nwg-displays
     nwg-look
     polkit-gnome
     qt5ct

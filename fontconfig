@@ -32,9 +32,9 @@ fi
 # Sorted list of font packages in alphabetical order
 fonts=(
     inter-font
-    otf-noto-sans-cjk
-    ttf-apple-emoji
     ttf-meslo-nerd
+    ttf-apple-emoji
+    otf-noto-sans-cjk
 )
 
 # Install each font package if not already installed
@@ -71,50 +71,58 @@ cat <<EOL > "$fontconfig_dir/fonts.conf"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE fontconfig PUBLIC "-//Freetype//DTD FONTCONFIG 2.12//EN" "http://www.freedesktop.org/standards/fontconfig/fontconfig.dtd">
 <fontconfig>
-  <match>
-    <test name="family" qual="any">
-      <string>Inter</string>
-    </test>
-    <edit name="family" mode="prepend" binding="same">
-      <string>Inter</string>
-    </edit>
-  </match>
+    <match>
+        <test name="family" qual="any">
+            <string>Inter</string>
+        </test>
+        <edit name="family" mode="prepend" binding="same">
+            <string>Inter</string>
+        </edit>
+    </match>
 
-  <match>
-    <test name="family" qual="any">
-      <string>monospace</string>
-    </test>
-    <edit name="family" mode="prepend" binding="same">
-      <string>MesloLGS Nerd Font Mono</string>
-    </edit>
-  </match>
+    <match>
+        <test name="family" qual="any">
+            <string>monospace</string>
+        </test>
+        <edit name="family" mode="prepend" binding="same">
+            <string>MesloLGS Nerd Font Mono</string>
+        </edit>
+    </match>
 
-  <match>
-    <test name="family" qual="any">
-      <string>emoji</string>
-    </test>
-    <edit name="family" mode="prepend" binding="same">
-      <string>Apple Color Emoji</string>
-    </edit>
-  </match>
+    <match>
+        <test name="family" qual="any">
+            <string>emoji</string>
+        </test>
+        <edit name="family" mode="prepend" binding="same">
+            <string>Apple Color Emoji</string>
+        </edit>
+    </match>
 
-  <match>
-    <test name="family" qual="any">
-      <string>sans-serif</string>
-    </test>
-    <edit name="family" mode="prepend" binding="same">
-      <string>Noto Sans CJK</string>
-    </edit>
-  </match>
+    <match>
+        <test name="family" qual="any">
+            <string>sans-serif</string>
+        </test>
+        <edit name="family" mode="prepend" binding="same">
+            <string>Noto Sans CJK</string>
+        </edit>
+    </match>
 
-  <match>
-    <test name="family" qual="any">
-      <string>serif</string>
-    </test>
-    <edit name="family" mode="prepend" binding="same">
-      <string>Noto Serif CJK</string>
-    </edit>
-  </match>
+    <match>
+        <test name="family" qual="any">
+            <string>serif</string>
+        </test>
+        <edit name="family" mode="prepend" binding="same">
+            <string>Noto Serif CJK</string>
+        </edit>
+    </match>
+</fontconfig>
+<test name="family" qual="any">
+<string>serif</string>
+</test>
+<edit name="family" mode="prepend" binding="same">
+<string>Noto Serif CJK</string>
+</edit>
+</match>
 </fontconfig>
 EOL
 fc-cache -r
