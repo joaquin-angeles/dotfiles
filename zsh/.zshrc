@@ -68,7 +68,8 @@ alias paru='paru --skipreview'
 alias paruf=~/.bin/parufzf
 alias pk=pkill
 alias vim=nvim
-alias yz=yazi
+alias v=nvim
+alias nv-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
 
 # History
 HISTSIZE=5000
