@@ -41,6 +41,7 @@ packages=(
     hyprland
     hyprlock
     inotify-tools
+    impala
     kvantum
     kvantum-qt5
     lf
@@ -58,6 +59,7 @@ packages=(
     thunar
     thunar-archive-plugin
     waybar
+    wiremix
     wbg
     wayfreeze-git
     xdg-desktop-portal
