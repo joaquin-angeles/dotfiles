@@ -86,7 +86,7 @@
     "clock": {
         "format": "󰅐  {:%I:%M %p}  ",
         "tooltip": true,
-        "tooltip-format": "{:%d-%m-%y, %A}"
+        "tooltip-format": "{:%d.%m.%y, %A}"
     },
 
     "tray": {
