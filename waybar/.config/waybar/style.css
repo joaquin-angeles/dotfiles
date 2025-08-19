@@ -31,23 +31,22 @@ window#waybar {
 }
 
 #tray {
-    padding-right: 7px;
+    padding-right: 4px;
+    padding-left: 4px;
+    background-color: #404040
 }
 
 #network {
-    padding-right: 15px;
+    padding-right: 16px;
 }
 
 #pulseaudio {
-    font-size: 14pt;
+    font-size: 14.5pt;
     padding-bottom: 1.5px;
-    padding-right: 7px;
-}
-
-#clock {
-    padding-left: 5px
+    padding-right: 8px;
 }
 
 #battery {
     padding-left: 5px;
+    padding-right: 5px;
 }
