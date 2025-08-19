@@ -100,7 +100,7 @@
         "format": "󰐥",
         "tooltip": true,
         "tooltip-format": "Power menu",
-        "on-click": "~/.config/scripts/power-menu"
+        "on-click": "~/.bin/power-menu"
     },
     "custom/menu": {
         "format": "󰣇",
