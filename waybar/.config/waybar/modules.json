@@ -51,11 +51,9 @@
         "format": "{icon}",
         "format-muted": "󰖁",
         "format-icons": {
-            "headphones": "󰋋",
-            "headset": "󰋋",
-            "headset-muted": "󰋋",
             "default": [
                 "󰝟",
+                "󰕿",
                 "󰖀",
                 "󰕾"
             ]
@@ -97,7 +95,7 @@
     },
 
     "custom/power": {
-        "format": "󰐥",
+        "format": "",
         "tooltip": true,
         "tooltip-format": "Power menu",
         "on-click": "~/.bin/power-menu"

@@ -40,7 +40,6 @@ packages=(
     grim
     hyprland
     hyprlock
-    hyprpaper
     inotify-tools
     kvantum
     kvantum-qt5
@@ -59,6 +58,7 @@ packages=(
     thunar
     thunar-archive-plugin
     waybar
+    wbg
     wayfreeze-git
     xdg-desktop-portal
     xdg-desktop-portal-gtk
