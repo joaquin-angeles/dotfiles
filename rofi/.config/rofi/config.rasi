@@ -1,5 +1,5 @@
 * {
-    font: "Inter 14";
+    font: "Inter 13";
 
     /* Colors */
     text-color:      #dfdfdf;
@@ -35,8 +35,8 @@ configuration {
 /* Window appearance */
 window {
     transparency:   "real";
-    width:          450px;
-    height:         500px;
+    width:          420px;
+    height:         480px;
     border-radius:  7px;
     background-color: #1c1c1c;
     border:         2px solid;
@@ -56,7 +56,7 @@ mainbox {
 inputbar {
     children: ["prompt", "entry"];
     spacing:  10px;
-    padding:  12px 14px;
+    padding:  12px 10px;
     border-radius: 18px;
     border: 2px solid;
     border-color: #404040;

@@ -4,43 +4,31 @@ BATTERY_DEVICE=$(upower -e | grep BAT)
 KBD_DEVICE="asus::kbd_backlight"
 current_state=""
 
-# Detect which compositor is in use
-if pgrep -x sway > /dev/null; then
-    WM="sway"
-elif pgrep -x Hyprland > /dev/null; then
-    WM="hyprland"
-else
-    echo "Unsupported or unknown Wayland compositor."
+# Ensure Hyprland is running
+if ! pgrep -x Hyprland > /dev/null; then
+    echo "Hyprland is not running. Exiting."
     exit 1
 fi
 
 # Start monitoring battery state
 upower --monitor | grep --line-buffered "changed.*$BATTERY_DEVICE" | while read -r line; do
-new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
-if [ "$new_state" != "$current_state" ]; then
-    current_state="$new_state"
-    current_brightness=$(brightnessctl get)
+    new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
+    if [ "$new_state" != "$current_state" ]; then
+        current_state="$new_state"
+        current_brightness=$(brightnessctl get)
 
-    if [ "$new_state" = "discharging" ]; then
-        if [ "$current_brightness" != "40" ]; then
-            brightnessctl set 40%
-            brightnessctl --device="$KBD_DEVICE" set 0
-        fi
-        if [ "$WM" = "hyprland" ]; then
+        if [ "$new_state" = "discharging" ]; then
+            if [ "$current_brightness" != "40" ]; then
+                brightnessctl set 40%
+                brightnessctl --device="$KBD_DEVICE" set 0
+            fi
             hyprctl keyword monitor ",1920x1080@60,auto,1.0"
-        elif [ "$WM" = "sway" ]; then
-            swaymsg output "*" mode 1920x1080@60Hz
-        fi
-    else
-        if [ "$current_brightness" != "80" ]; then
-            brightnessctl set 80%
-            brightnessctl --device="$KBD_DEVICE" set 80%
-        fi
-        if [ "$WM" = "hyprland" ]; then
+        else
+            if [ "$current_brightness" != "80" ]; then
+                brightnessctl set 80%
+                brightnessctl --device="$KBD_DEVICE" set 80%
+            fi
             hyprctl keyword monitor ",1920x1080@144,auto,1.0"
-        elif [ "$WM" = "sway" ]; then
-            swaymsg output "*" mode 1920x1080@144Hz
         fi
     fi
-fi
 done &
