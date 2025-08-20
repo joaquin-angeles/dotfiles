@@ -1,10 +1,8 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13pt "MesloLGS Nerd Font";
+    font: 13pt "Inter";
     color: @fg;
-    padding-left: 2px;
-    padding-right: 2px;
     background-color: @bg;
     border-bottom: 1px solid #404040
 }
@@ -29,7 +27,7 @@ window#waybar {
 
 #window {
     color: #6f6f6f;
-    padding-left: 6px
+    padding-left: 2px
 }
 
 #tray {
@@ -39,13 +37,14 @@ window#waybar {
 }
 
 #network {
-    padding-right: 20px;
-}
-
-#pulseaudio {
     padding-right: 16px;
 }
 
+#pulseaudio {
+    font-size: 14pt;
+    padding-right: 14px;
+}
+
 #battery {
-    padding-right: 8px;
+    padding-right: 5px;
 }

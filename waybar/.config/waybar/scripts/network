@@ -1,9 +1,0 @@
-#!/usr/bin/expect -f
-set timeout -1
-spawn nmtui
-interact {
-    j     { send "\033\[B" } ;# Down
-    k     { send "\033\[A" } ;# Up
-    h     { send "\033\[D" } ;# Left
-    l     { send "\033\[C" } ;# Right
-}
