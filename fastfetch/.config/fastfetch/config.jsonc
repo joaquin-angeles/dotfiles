@@ -3,9 +3,8 @@
     "display": {
         "separator": " "
     },
-
     "logo": {
-        "source": "/home/joaquin/.config/fastfetch/logo.txt"
+        "source": "$HOME/.config/fastfetch/logo.txt"
     },
 
     "modules": [
