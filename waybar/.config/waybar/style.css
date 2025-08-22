@@ -31,8 +31,8 @@ window#waybar {
 }
 
 #tray {
-    padding-right: 4px;
-    padding-left: 4px;
+    padding-right: 6px;
+    padding-left: 6px;
     background-color: #404040
 }
 

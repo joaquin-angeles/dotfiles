@@ -84,14 +84,14 @@
     },
 
     "clock": {
-        "format": "󰅐  {:%I:%M %p}  ",
+        "format": "  {:%I:%M %p}  ",
         "tooltip": true,
         "tooltip-format": "{:%d.%m.%y, %A}"
     },
 
     "tray": {
         "icon-size": 18,
-        "spacing": 6,
+        "spacing": 10,
     },
 
     "custom/power": {
