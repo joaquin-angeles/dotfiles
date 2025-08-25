@@ -33,16 +33,17 @@ window#waybar {
 }
 
 #tray-expander {
+    font-size: 12pt;
     margin-right: 16px;
 }
 
 
 #tray {
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
 #network {
-    padding-right: 17.5px;
+    padding-right: 18px;
 }
 
 #pulseaudio {
@@ -51,5 +52,5 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 5px;
+    padding-right: 6px;
 }
