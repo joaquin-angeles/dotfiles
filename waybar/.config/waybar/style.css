@@ -4,14 +4,14 @@ window#waybar {
     font: 13pt "Inter";
     color: @fg;
     background-color: @bg;
-    border-bottom: 1px solid #404040
+    border-bottom: 1pt solid #404040
 }
 
 #workspaces button {
     color: @fg;
     min-width: 12px;
     padding: 0 6px;
-    padding-top: 0.25px;
+    padding-top: 0.25pt;
     font-size: 12pt;
 }
 
@@ -29,28 +29,28 @@ window#waybar {
 
 #window {
     color: #6f6f6f;
-    padding-left: 2px
+    padding-left: 2pt
 }
 
 #tray-expander {
     font-size: 12pt;
-    margin-right: 16px;
+    margin-right: 10pt;
 }
 
 
 #tray {
-    padding-left: 18px;
+    padding-left: 18pt;
 }
 
 #network {
-    padding-right: 18px;
+    padding-right: 16pt;
 }
 
 #pulseaudio {
     font-size: 14pt;
-    padding-right: 14px;
+    padding-right: 14pt;
 }
 
 #battery {
-    padding-right: 6px;
+    padding-right: 6pt;
 }
