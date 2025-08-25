@@ -1,3 +1,3 @@
-[submodule "/home/joaquin/.dots/zsh/.antidote"]
-	path = /home/joaquin/.dots/zsh/.antidote
-	url = https://github.com/mattmc3/antidote.git
+[submodule "zsh/.antidote"]
+    path = zsh/.antidote
+    url = https://github.com/mattmc3/antidote.git

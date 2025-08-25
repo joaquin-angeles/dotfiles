@@ -3,7 +3,7 @@
         "max-length": 64,
         "format": "{}"
     },
-    
+
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -94,6 +94,22 @@
         "spacing": 10,
     },
 
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 600,
+            "children-class": "tray-group-item"
+        },
+        "modules": [
+            "custom/expand-icon",
+            "tray"
+        ]
+    },
+
+    "custom/expand-icon": {
+        "format": "",
+        "tooltip": false
+    },
     "custom/power": {
         "format": "",
         "tooltip": true,

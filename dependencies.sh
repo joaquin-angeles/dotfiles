@@ -52,8 +52,8 @@ packages=(
     polkit-gnome
     qt5ct
     qt6ct
-    rofi-emoji
     rofi-wayland
+    rofi-emoji
     slurp
     swayosd
     thunar

@@ -8,6 +8,7 @@ window#waybar {
 }
 
 #workspaces button {
+    color: @fg;
     min-width: 12px;
     padding: 0 6px;
     font-size: 12pt;
@@ -30,14 +31,17 @@ window#waybar {
     padding-left: 2px
 }
 
+#tray-expander {
+    margin-right: 16px;
+}
+
+
 #tray {
-    padding-right: 6px;
-    padding-left: 6px;
-    background-color: #404040
+    padding-left: 20px;
 }
 
 #network {
-    padding-right: 17px;
+    padding-right: 17.5px;
 }
 
 #pulseaudio {
