@@ -7,7 +7,7 @@ export XCURSOR_SIZE=24
 # Editor and terminal
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
-export TERM=foot
+export TERM=xterm-256color
 export TERMINAL=/usr/bin/foot
 
 # Language locales
