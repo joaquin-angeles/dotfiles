@@ -11,6 +11,7 @@ window#waybar {
     color: @fg;
     min-width: 12px;
     padding: 0 6px;
+    padding-top: 0.25px;
     font-size: 12pt;
 }
 
