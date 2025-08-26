@@ -1,17 +1,15 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13pt "Inter";
     color: @fg;
     background-color: @bg;
-    border-bottom: 1pt solid #404040
+    border-bottom: 1px solid #404040
 }
 
 #workspaces button {
     color: @fg;
     min-width: 12px;
     padding: 0 6px;
-    padding-top: 0.25pt;
     font-size: 12pt;
 }
 
@@ -33,13 +31,12 @@ window#waybar {
 }
 
 #tray-expander {
-    font-size: 12pt;
     margin-right: 10pt;
 }
 
 
 #tray {
-    padding-left: 18pt;
+    padding-left: 10pt;
 }
 
 #network {

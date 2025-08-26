@@ -116,14 +116,6 @@ cat <<EOL > "$fontconfig_dir/fonts.conf"
         </edit>
     </match>
 </fontconfig>
-<test name="family" qual="any">
-<string>serif</string>
-</test>
-<edit name="family" mode="prepend" binding="same">
-<string>Noto Serif CJK</string>
-</edit>
-</match>
-</fontconfig>
 EOL
 fc-cache -r
 
