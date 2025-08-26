@@ -37,6 +37,7 @@ packages=(
     chafa
     eza
     expect
+    file-roller
     grim
     hyprland
     hyprlock
@@ -47,6 +48,7 @@ packages=(
     lf
     libnotify
     mako
+    nautilus
     neovim
     nwg-look
     polkit-gnome
@@ -56,8 +58,6 @@ packages=(
     rofi-emoji
     slurp
     swayosd
-    thunar
-    thunar-archive-plugin
     waybar
     wiremix
     wbg
