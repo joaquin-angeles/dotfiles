@@ -31,12 +31,12 @@ window#waybar {
 }
 
 #tray-expander {
-    margin-right: 10pt;
+    margin-right: 12pt;
 }
 
 
 #tray {
-    padding-left: 10pt;
+    padding-left: 14pt;
 }
 
 #network {
