@@ -1,5 +1,4 @@
 # Core theming
-# export GTK_THEME=Adwaita-Mono:dark
 export QT_QPA_PLATFORMTHEME=qt6ct
 export XCURSOR_THEME=Bibata-Modern-Classic
 export XCURSOR_SIZE=24

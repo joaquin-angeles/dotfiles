@@ -2,7 +2,7 @@
 
 window#waybar {
     color: @fg;
-    background-color: rgba(28, 28, 28, 0.8);
+    background-color: @bg;
     border-bottom: 1px solid #404040
 }
 
@@ -30,13 +30,14 @@ window#waybar {
     padding-left: 2pt
 }
 
-#tray-expander {
-    margin-right: 12pt;
+#custom-expand-icon {
+    font-size: 12pt;
+    margin-right: 10pt;
 }
 
-
 #tray {
-    padding-left: 14pt;
+    padding-left: 5pt;
+    margin-right: 8pt;
 }
 
 #network {

@@ -30,7 +30,6 @@ fi
 
 # List of packages to install
 packages=(
-    zsh
     bat
     bibata-cursor-theme
     brightnessctl
@@ -66,6 +65,7 @@ packages=(
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     zoxide
+    zsh
 )
 
 # Update total_packages for progress tracking
