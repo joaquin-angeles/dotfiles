@@ -1,24 +1,24 @@
 @import url("./colors.css");
 
 window#waybar {
-    color: @fg;
+    color: #8f8f8f;
     background-color: @bg;
     border-bottom: 1px solid @inactive
 }
 
 #workspaces button {
-    color: @fg;
-    min-width: 12px;
-    padding: 0 5px;
+    color: #8f8f8f;
+    min-width: 10px;
+    padding: 0 6px;
     font-size: 12pt;
 }
 
 #workspaces button.active {
-    color: @fg;
+    color: #8f8f8f;
 }
 
 #workspaces button.empty {
-    color: #505050;
+    color: #494949;
 }
 
 #workspaces button:hover {
