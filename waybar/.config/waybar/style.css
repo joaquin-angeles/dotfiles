@@ -3,13 +3,13 @@
 window#waybar {
     color: @fg;
     background-color: @bg;
-    border-bottom: 1px solid #404040
+    border-bottom: 1px solid @inactive
 }
 
 #workspaces button {
     color: @fg;
     min-width: 12px;
-    padding: 0 6px;
+    padding: 0 5px;
     font-size: 12pt;
 }
 
@@ -18,7 +18,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-    color: @inactive;
+    color: #505050;
 }
 
 #workspaces button:hover {
@@ -26,8 +26,7 @@ window#waybar {
 }
 
 #window {
-    color: #6f6f6f;
-    padding-left: 2pt
+    padding-left: 5pt
 }
 
 #custom-expand-icon {
@@ -50,5 +49,9 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 6pt;
+    padding-right: 7pt;
+}
+
+#clock {
+    padding-right: 8pt
 }

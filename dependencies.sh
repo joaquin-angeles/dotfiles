@@ -30,6 +30,8 @@ fi
 
 # List of packages to install
 packages=(
+    adwaita-qt5-git
+    adwaita-qt6-git
     bat
     bibata-cursor-theme
     brightnessctl
@@ -42,8 +44,6 @@ packages=(
     hyprlock
     inotify-tools
     impala
-    kvantum
-    kvantum-qt5
     lf
     libnotify
     mako
