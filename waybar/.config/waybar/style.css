@@ -1,6 +1,7 @@
 @import url("./colors.css");
 
 window#waybar {
+    font: 13pt "MesloLGS Nerd Font";
     color: @fg;
     background-color: @bg;
     border-bottom: 1px solid @inactive
