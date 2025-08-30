@@ -1,24 +1,24 @@
 @import url("./colors.css");
 
 window#waybar {
-    color: #8f8f8f;
+    color: @fg;
     background-color: @bg;
     border-bottom: 1px solid @inactive
 }
 
 #workspaces button {
-    color: #8f8f8f;
+    color: @fg;
     min-width: 10px;
     padding: 0 6px;
     font-size: 12pt;
 }
 
 #workspaces button.active {
-    color: #8f8f8f;
+    color: @fg;
 }
 
 #workspaces button.empty {
-    color: #494949;
+    color: #505050;
 }
 
 #workspaces button:hover {
@@ -26,6 +26,7 @@ window#waybar {
 }
 
 #window {
+    color: #808080;
     padding-left: 5pt
 }
 
@@ -35,12 +36,12 @@ window#waybar {
 }
 
 #tray {
-    padding-left: 5pt;
-    margin-right: 8pt;
+    padding-left: 3pt;
+    margin-right: 5pt;
 }
 
 #network {
-    padding-right: 16pt;
+    padding-right: 15pt;
 }
 
 #pulseaudio {
@@ -49,7 +50,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 7pt;
+    padding-right: 4pt;
 }
 
 #clock {
