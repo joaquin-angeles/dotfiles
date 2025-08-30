@@ -1,7 +1,7 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13pt "MesloLGS Nerd Font";
+    font: 13.5pt "MesloLGS Nerd Font";
     color: @fg;
     background-color: @bg;
     border-bottom: 1px solid @inactive
@@ -11,7 +11,7 @@ window#waybar {
     color: @fg;
     min-width: 10px;
     padding: 0 6px;
-    font-size: 12pt;
+    font-size: 12.25pt;
 }
 
 #workspaces button.active {
@@ -41,7 +41,7 @@ window#waybar {
 }
 
 #network {
-    padding-right: 15pt;
+    padding-right: 16pt;
 }
 
 #pulseaudio {
@@ -50,7 +50,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 5pt;
+    padding-right: 6pt;
 }
 
 #clock {
