@@ -18,7 +18,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-    color: #505050;
+    color: #595959;
 }
 
 #workspaces button:hover {
@@ -26,7 +26,6 @@ window#waybar {
 }
 
 #window {
-    color: #808080;
     padding-left: 5pt
 }
 
@@ -50,7 +49,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 4pt;
+    padding-right: 5pt;
 }
 
 #clock {
