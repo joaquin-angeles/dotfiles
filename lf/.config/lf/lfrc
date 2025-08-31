@@ -18,6 +18,16 @@ cmd open ${{
         esac
     fi
 }}
+cmd mkdir ${{
+    printf "directory name: "
+    read ans
+    mkdir $ans
+}}
+cmd touch ${{
+    printf "file name: "
+    read ans
+    $EDITOR $ans
+}}
 
 # Keymaps and options
 map . set hidden!
@@ -26,7 +36,7 @@ map p paste
 map x cut
 map y copy
 map n push $touch<space>
-map N push $mkdir<space>-p<space>
+map N push $mkdir<space>
 map <enter> open
 map r rename
 map H top

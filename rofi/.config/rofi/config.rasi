@@ -23,6 +23,7 @@
 configuration {
     modi: "drun";
     show-icons: false;
+    display-run:  "";
     display-drun:  "";
     display-emoji: "";
     disable-history: true;
