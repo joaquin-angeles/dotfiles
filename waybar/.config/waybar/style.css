@@ -1,7 +1,6 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13pt "MesloLGS Nerd Font";
     color: @fg;
     background-color: @bg;
     border-bottom: 1px solid @inactive;
@@ -50,7 +49,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 6pt;
+    padding-right: 5pt;
 }
 
 #clock {
