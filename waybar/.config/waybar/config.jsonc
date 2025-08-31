@@ -1,6 +1,6 @@
 {
     "include": "~/.config/waybar/modules.json",
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "height": 28,
     "spacing": 6,
