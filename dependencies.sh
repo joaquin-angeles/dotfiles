@@ -42,11 +42,11 @@ packages=(
     grim
     hyprland
     hyprlock
-    impala
     inotify-tools
     lf
     libnotify
     mako
+    nmgui-bin
     nautilus
     neovim
     nwg-look

@@ -31,7 +31,7 @@
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0",
-        "on-click": "foot --title=iwctl -e impala"
+        "on-click": "nmgui"
     },
 
     "bluetooth": {
