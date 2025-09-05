@@ -3,10 +3,10 @@ if [ -f /usr/bin/fastfetch ]; then
     fastfetch
     echo ''
 fi
-printf '\e[1 q'
 stty intr '^G'
 
 # P10K
+source ~/.p10k/powerlevel10k.zsh-theme
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -38,9 +38,9 @@ else
     compinit
 fi
 
-# Antidote plugin manager
-source ~/.antidote/antidote.zsh
-antidote load
+# Plugins
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'
