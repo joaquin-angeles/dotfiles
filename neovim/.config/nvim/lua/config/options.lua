@@ -6,12 +6,23 @@ vim.opt.cursorline = true
 vim.opt.showmode = false
 vim.opt.fillchars = { eob = " " }
 vim.opt.clipboard = "unnamedplus"
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", extends = ">", precedes = "<" }
 
 -- Indentation
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.breakindent = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+require'nvim-treesitter.configs'.setup {
+    highlight = { enable = true },
+    indent = { enable = true },
+}
 
 -- Persistent undo
 local undodir = vim.fn.stdpath("cache") .. "/nvim/undodir"

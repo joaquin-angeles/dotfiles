@@ -43,10 +43,10 @@ packages=(
     hyprland
     hyprlock
     inotify-tools
+    impala
     lf
     libnotify
     mako
-    nmgui-bin
     nautilus
     neovim
     nwg-look
