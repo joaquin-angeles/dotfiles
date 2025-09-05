@@ -66,6 +66,9 @@ packages=(
     xdg-desktop-portal-hyprland
     zoxide
     zsh
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-history-substring-search
 )
 
 # Update total_packages for progress tracking
