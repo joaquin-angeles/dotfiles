@@ -1,17 +1,17 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13.5pt "MesloLGS Nerd Font";
+    font: 13pt "MesloLGS Nerd Font";
     color: @fg;
     background-color: @bg;
-    border-bottom: 1px solid @inactive;
+    border-bottom: 1px solid @inactive
 }
 
 #workspaces button {
     color: @fg;
     min-width: 10px;
     padding: 0 6px;
-    font-size: 12pt;
+    font-size: 12.5pt
 }
 
 #workspaces button.active {
@@ -24,10 +24,6 @@ window#waybar {
 
 #workspaces button:hover {
     background: transparent;
-}
-
-#window {
-    padding-left: 2pt
 }
 
 #custom-expand-icon {
