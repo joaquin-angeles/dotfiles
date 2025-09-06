@@ -53,6 +53,7 @@ packages=(
     qt6ct
     rofi-wayland
     rofi-emoji
+    ripgrep
     slurp
     swayosd
     wbg
