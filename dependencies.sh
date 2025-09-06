@@ -14,7 +14,7 @@ if ! grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
         echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
         sudo pacman -Sy
     } &> /dev/null
-    echo " Chaotic AUR added successfully."
+echo " Chaotic AUR added successfully."
 else
     echo "󰋑 Chaotic AUR is already configured."
 fi
@@ -30,20 +30,18 @@ fi
 
 # List of packages to install
 packages=(
-    adwaita-qt5-git
-    adwaita-qt6-git
     bat
     bibata-cursor-theme
     brightnessctl
     chafa
     eza
-    expect
-    file-roller
     grim
     hyprland
     hyprlock
-    inotify-tools
     impala
+    kf5-kwallet
+    kvantum
+    kvantum-qt5
     lf
     libnotify
     mako
@@ -57,9 +55,8 @@ packages=(
     rofi-emoji
     slurp
     swayosd
-    waybar
-    wiremix
     wbg
+    waybar
     wayfreeze-git
     xdg-desktop-portal
     xdg-desktop-portal-gtk

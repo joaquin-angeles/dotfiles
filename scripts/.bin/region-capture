@@ -1,14 +1,11 @@
 #!/bin/bash
 
 # Required commands
-required_cmds=(wayfreeze slurp grim wl-copy notify-send paplay)
+required_cmds=(grim slurp wl-copy wayfreeze notify-send paplay)
 
 missing=()
-
 for cmd in "${required_cmds[@]}"; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        missing+=("$cmd")
-    fi
+    command -v "$cmd" >/dev/null 2>&1 || missing+=("$cmd")
 done
 
 if [ "${#missing[@]}" -ne 0 ]; then
@@ -25,14 +22,15 @@ mkdir -p "$screenshot_dir"
 filepath="$screenshot_dir/screenshot_$timestamp.png"
 history_log="$HOME/.cache/screenshot_history.log"
 
-# Screenshot with frozen screen
+# Freeze screen and select region
 wayfreeze --hide-cursor --after-freeze-cmd "
     region=\$(slurp)
     if [ -z \"\$region\" ]; then
         killall wayfreeze
         exit 1
     fi
-    grim -g \"\$region\" - | tee \"$filepath\" | wl-copy
+    grim -g \"\$region\" \"$filepath\"
+    wl-copy < \"$filepath\"
     notify-send \"Screenshot Taken\" \"$filepath\" -i \"$filepath\"
     paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga &>/dev/null &
     echo \"$filepath\" >> \"$history_log\"
