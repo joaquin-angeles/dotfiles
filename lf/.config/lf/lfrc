@@ -31,6 +31,7 @@ cmd touch ${{
 
 # Keymaps and options
 map . set hidden!
+map <esc> quit
 map D delete
 map p paste
 map x cut

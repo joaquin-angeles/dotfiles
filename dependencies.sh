@@ -39,7 +39,6 @@ packages=(
     hyprland
     hyprlock
     impala
-    kf5-kwallet
     kvantum
     kvantum-qt5
     lf
@@ -91,7 +90,7 @@ done
 
 # Set zsh as the default shell if it's not already set
 if [ "$SHELL" != "/usr/bin/zsh" ]; then
-    echo "󰖷 Setting zsh as the default shell..."
+    echo "󰖷 Setting zsh as the default shell... (Please type in your password)"
     chsh -s $(which zsh) &>/dev/null
     echo -e "\n zsh has been set as the default shell."
 else

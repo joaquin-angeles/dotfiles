@@ -36,6 +36,20 @@ precmd() {
     print -Pn "\e]0;%n@%m:%~\a"
 }
 
+# Lf file manager
+lfcd () {
+    tmp="$(mktemp)"
+    $HOME/.config/lf/lfrun -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            cd "$dir"
+        fi
+    fi
+}
+alias lf=lfcd
+
 # Compinit
 ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
 autoload -Uz compinit
@@ -77,7 +91,7 @@ fi
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
-alias lf="$HOME/.config/lf/lfrun"
+# alias lf="$HOME/.config/lf/lfrun"
 alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'

@@ -7,8 +7,9 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": "",
+            "active": "",
+            "default": "",
+            "empty": "",
             "7": "7",
             "8": "8",
             "9": "9"
@@ -87,7 +88,7 @@
         "format": "{:%I:%M:%S %p}",
         "interval": 1,
         "tooltip": true,
-        "tooltip-format": "{:%d.%m.%y, %A}"
+        "tooltip-format": "{:%b %d, %Y on a %A}"
     },
 
     "tray": {
