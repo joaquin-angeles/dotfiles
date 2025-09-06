@@ -1,6 +1,6 @@
 {
     "hyprland/window": {
-        "max-length": 64,
+        "max-length": 128,
         "format": "{}"
     },
 

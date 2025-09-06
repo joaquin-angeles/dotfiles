@@ -1,6 +1,13 @@
-# Auto-start
+# Auto-fetch
 if [ -f /usr/bin/fastfetch ]; then
-    fastfetch
+    distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
+    if [[ "$distro" == "arch" ]]; then
+        fastfetch --logo $HOME/.config/fastfetch/arch.txt
+    elif [[ "$distro" == "fedora" ]]; then
+        fastfetch --logo $HOME/.config/fastfetch/fedora.txt
+    else
+        fastfetch
+    fi
     echo ''
 fi
 stty intr '^G'
@@ -56,7 +63,17 @@ else
 bat --color=always --theme=base16 --style=plain {}
 fi
 '"
-alias ff=fastfetch
+distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
+if [[ "$distro" == "arch" ]]; then
+    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
+    alias ff='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
+elif [[ "$distro" == "fedora" ]]; then
+    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
+    alias ff='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
+else
+    alias fastfetch='fastfetch'
+    alias ff='fastfetch'
+fi
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill

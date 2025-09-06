@@ -3,9 +3,6 @@
     "display": {
         "separator": " "
     },
-    "logo": {
-        "source": "$HOME/.config/fastfetch/logo.txt"
-    },
     "modules": [
         {
             "type": "title",
