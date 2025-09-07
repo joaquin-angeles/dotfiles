@@ -1,0 +1,28 @@
+#!/bin/bash
+BATTERY_DEVICE=$(upower -e | grep BAT)
+
+get_battery_percentage() {
+    upower -i "$BATTERY_DEVICE" | awk '/percentage:/ {print $2}' | tr -d '%'
+}
+
+get_battery_state() {
+    upower -i "$BATTERY_DEVICE" | awk '/state:/ {print $2}'
+}
+
+low_batt_notified=0
+
+while true; do
+    percent=$(get_battery_percentage)
+    state=$(get_battery_state)
+
+    if [ "$state" = "discharging" ] && [ "$percent" -le 19 ]; then
+        if [ $low_batt_notified -eq 0 ]; then
+            notify-send -u critical "🪫 Low Battery" "Battery at ${percent}%"
+            paplay /usr/share/sounds/freedesktop/stereo/dialog-warning.oga
+            low_batt_notified=1
+        fi
+    else
+        low_batt_notified=0
+    fi
+    sleep 60
+done

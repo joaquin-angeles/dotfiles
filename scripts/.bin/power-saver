@@ -1,5 +1,4 @@
 #!/bin/bash
-
 BATTERY_DEVICE=$(upower -e | grep BAT)
 KBD_DEVICE="asus::kbd_backlight"
 current_state=""
@@ -16,7 +15,6 @@ upower --monitor | grep --line-buffered "changed.*$BATTERY_DEVICE" | while read 
     if [ "$new_state" != "$current_state" ]; then
         current_state="$new_state"
         current_brightness=$(brightnessctl get)
-
         if [ "$new_state" = "discharging" ]; then
             if [ "$current_brightness" != "40" ]; then
                 brightnessctl set 40%

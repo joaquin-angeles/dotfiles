@@ -1,4 +1,4 @@
-# Auto-fetch
+# Fetch
 if [ -f /usr/bin/fastfetch ]; then
     distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
     if [[ "$distro" == "arch" ]]; then
@@ -10,6 +10,19 @@ if [ -f /usr/bin/fastfetch ]; then
     fi
     echo ''
 fi
+distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
+if [[ "$distro" == "arch" ]]; then
+    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
+    alias ff='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
+elif [[ "$distro" == "fedora" ]]; then
+    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
+    alias ff='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
+else
+    alias fastfetch='fastfetch'
+    alias ff='fastfetch'
+fi
+
+# Unbinding
 stty intr '^G'
 
 # P10K
@@ -77,21 +90,11 @@ else
 bat --color=always --theme=base16 --style=plain {}
 fi
 '"
-distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
-if [[ "$distro" == "arch" ]]; then
-    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
-    alias ff='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
-elif [[ "$distro" == "fedora" ]]; then
-    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
-    alias ff='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
-else
-    alias fastfetch='fastfetch'
-    alias ff='fastfetch'
-fi
 alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
 # alias lf="$HOME/.config/lf/lfrun"
+alias btop='btop -t'
 alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'

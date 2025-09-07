@@ -2,7 +2,7 @@
 
 window#waybar {
     font: 13.5pt "MesloLGS Nerd Font";
-    color: #afafaf;
+    color: #dfdfdf;
     background-color: @bg;
     border-bottom: 1px solid @inactive
 }
@@ -12,8 +12,6 @@ window#waybar {
 }
 
 #workspaces button {
-    font-size: 13pt;
-    color: #afafaf;
     min-width: 10px;
     padding: 0 6px;
 }
