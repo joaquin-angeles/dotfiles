@@ -35,6 +35,7 @@ packages=(
     brightnessctl
     chafa
     eza
+    foot
     grim
     hyprland
     hyprlock

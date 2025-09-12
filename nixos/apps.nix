@@ -1,0 +1,43 @@
+{ config, pkgs, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    bat
+    bibata-cursor-theme
+    brightnessctl
+    chafa
+    eza
+    foot
+    grim
+    hyprland
+    hyprlock
+    impala
+    kvantum
+    kvantum-qt5
+    lf
+    libnotify
+    mako
+    nautilus
+    neovim
+    nwg-look
+    polkit_gnome
+    qt5ct
+    qt6ct
+    rofi-wayland
+    rofi-emoji
+    ripgrep
+    slurp
+    swayosd
+    wbg
+    waybar
+    wayfreeze # note: “-git” packages don’t usually exist in nixpkgs
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    zoxide
+    zsh
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-history-substring-search
+  ];
+}

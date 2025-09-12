@@ -1,25 +1,7 @@
 # Fetch
 if [ -f /usr/bin/fastfetch ]; then
-    distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
-    if [[ "$distro" == "arch" ]]; then
-        fastfetch --logo $HOME/.config/fastfetch/arch.txt
-    elif [[ "$distro" == "fedora" ]]; then
-        fastfetch --logo $HOME/.config/fastfetch/fedora.txt
-    else
-        fastfetch
-    fi
+    fastfetch --logo linux
     echo ''
-fi
-distro=$(awk -F= '/^ID=/{print $2}' /usr/lib/os-release | tr -d '"')
-if [[ "$distro" == "arch" ]]; then
-    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
-    alias ff='fastfetch --logo $HOME/.config/fastfetch/arch.txt'
-elif [[ "$distro" == "fedora" ]]; then
-    alias fastfetch='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
-    alias ff='fastfetch --logo $HOME/.config/fastfetch/fedora.txt'
-else
-    alias fastfetch='fastfetch'
-    alias ff='fastfetch'
 fi
 
 # Unbinding

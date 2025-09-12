@@ -2,7 +2,6 @@
 
 window#waybar {
     font: 13.5pt "MesloLGS Nerd Font";
-    color: #dfdfdf;
     background-color: @bg;
     border-bottom: 1px solid @inactive
 }
