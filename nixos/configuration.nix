@@ -5,13 +5,30 @@
         [
             ./packages.nix
             ./fonts.nix
+            ./nvidia.nix
             ./hardware-configuration.nix
         ];
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
     networking.hostName = "nixos"; # Define your hostname.
     networking.wireless.iwd.enable = true;
-    time.timeZone = "Hongkong";
+
+    services.tlp.enable = true;
+    services.tlp.settings = {
+        CPU_SCALING_GOVERNOR = "performance";
+        CPU_SCALING_DRIVER = "none";
+    };
+    services.auto-cpufreq.enable = true;
+    services.auto-cpufreq.settings = {
+        battery = {
+            governor = "powersave";
+            turbo = "never";
+        };
+        charger = {
+            governor = "performance";
+            turbo = "auto";
+        };
+    };
     services.upower.enable = true;
     services.displayManager.ly.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
@@ -21,11 +38,13 @@
         enable = false;
     };
 
+    hardware.bluetooth.enable = true;
     services.pipewire = {
         enable = true;
         pulse.enable = true;
     };
     services.libinput.enable = true;
+    time.timeZone = "Hongkong";
 
     users.defaultUserShell = pkgs.zsh;
     environment.shells = with pkgs; [ zsh ];
@@ -42,24 +61,6 @@
         extraGroups = [ "wheel" "sandbox"];
     };
     
-    hardware.graphics.enable = true;
-    hardware.nvidia.modesetting.enable = true;
-    hardware.nvidia.open = false;
-    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-    hardware.bluetooth.enable = true;
-    hardware.graphics.enable32Bit = true;
-
-    boot.blacklistedKernelModules = [ "nouveau" ];
-    boot.kernelParams = [ "nvidia-drm.modeset=1" "modprobe.blacklist=nouveau" "nouveau.modeset=0" ];
-    boot.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
-
-    environment.variables = {
-        MUTTER_ALLOW_HYBRID_GPUS = "1";
-        EGL_PLATFORM = "wayland";
-        MOZ_ENABLE_WAYLAND = "1";
-        MOZ_WEBRENDER = "1";
-    };
-
     nixpkgs.config.allowUnfree = true;
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
