@@ -1,0 +1,51 @@
+{ config, pkgs, ... }:
+
+{
+    environment.systemPackages = with pkgs; [
+        auto-cpufreq
+        bat
+        bibata-cursors
+        brightnessctl
+        chafa
+        cliphist
+        curl
+        eza
+        foot
+        git
+        grim
+        hyprcursor
+        hyprlock
+        hyprshot
+        impala
+        iwd
+        libsForQt5.qt5ct
+        libsForQt5.qtstyleplugin-kvantum
+        lf
+        mako
+        nautilus
+        neovim
+        nwg-look
+        papirus-folders
+        papirus-icon-theme
+        polkit_gnome
+        rofi-emoji
+        rofi-wayland
+        ripgrep
+        slurp
+        swayosd
+        tlp
+        upower
+        wl-clipboard-rs
+        waybar
+        wayfreeze
+        wbg
+        wget
+        xdg-desktop-portal
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
+        zsh
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        zoxide
+    ];
+}

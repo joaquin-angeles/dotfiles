@@ -1,9 +1,3 @@
-# Fetch
-if [ -f /usr/bin/fastfetch ]; then
-    fastfetch --logo linux
-    echo ''
-fi
-
 # Unbinding
 stty intr '^G'
 

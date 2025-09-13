@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 BATTERY_DEVICE=$(upower -e | grep BAT)
 
 get_battery_percentage() {

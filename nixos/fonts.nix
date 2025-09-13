@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-        inter
-        nerd-fonts.meslo-lg
-        noto-fonts-emoji-blob-bin
-        noto-fonts-cjk-sans
-  ];
+    fonts = {
+        enableDefaultPackages = true;
+        packages = with pkgs; [
+            inter
+            noto-fonts-cjk-sans
+            noto-fonts-emoji-blob-bin
+            nerd-fonts.meslo-lg
+        ];
+    };
 }
