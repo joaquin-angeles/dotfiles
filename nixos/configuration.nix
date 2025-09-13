@@ -13,6 +13,10 @@
     networking.hostName = "nixos"; # Define your hostname.
     networking.wireless.iwd.enable = true;
 
+    zramSwap.algorithm = "zstd";
+    zramSwap.memoryPercent = 50;
+    zramSwap.swapDevices = 1;
+
     services.tlp.enable = true;
     services.tlp.settings = {
         CPU_SCALING_GOVERNOR = "performance";
