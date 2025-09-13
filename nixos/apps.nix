@@ -30,7 +30,7 @@
     swayosd
     wbg
     waybar
-    wayfreeze # note: “-git” packages don’t usually exist in nixpkgs
+    wayfreeze
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
