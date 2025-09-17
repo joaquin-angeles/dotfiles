@@ -1,2 +1,2 @@
-# Wayland dots for Arch Linux (btw)
-Joaquin's Arch Linux (WL) dotfiles.
+# Wayland dots for NixOS
+Joaquin's Nix (WL) dotfiles.
