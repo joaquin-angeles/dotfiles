@@ -48,14 +48,6 @@ else
     compinit
 fi
 
-# Plugins
-[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
-  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && \
-  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'
 alias c=clear
@@ -73,7 +65,6 @@ alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
 # alias lf="$HOME/.config/lf/lfrun"
-alias btop='btop -t'
 alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'

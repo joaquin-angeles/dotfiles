@@ -1,0 +1,38 @@
+{ config, pkgs, ... }:
+
+{
+    environment.systemPackages = with pkgs; [
+        autoconf
+        automake
+        bat
+        binutils
+        bison
+        curl
+        eza
+        foot
+        fakeroot
+        file
+        findutils
+        flex
+        git
+        gawk
+        gcc
+        gettext
+        ripgrep
+        groff
+        gzip
+        libtool
+        lf
+        m4
+        neovim
+        gnumake
+        patch
+        pkgconf
+        gnused
+        texinfo
+        wget
+        which
+        zsh
+        zoxide
+    ];
+}

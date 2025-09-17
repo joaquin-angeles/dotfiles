@@ -1,51 +1,40 @@
 { config, pkgs, ... }:
 
+let
+    unstable = import (builtins.fetchTarball {
+        url = "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
+    }) {};
+in
+
+
 {
     environment.systemPackages = with pkgs; [
         auto-cpufreq
-        bat
         bibata-cursors
         brightnessctl
         chafa
         cliphist
-        curl
-        eza
-        foot
-        git
-        grim
         hyprcursor
         hyprlock
         hyprshot
         impala
-        iwd
+        kdePackages.qt6ct
+        kdePackages.qtstyleplugin-kvantum
+        libnotify
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
-        lf
         mako
-        nautilus
-        neovim
         nwg-look
-        papirus-folders
-        papirus-icon-theme
         polkit_gnome
-        rofi-emoji
         rofi-wayland
-        ripgrep
-        slurp
-        swayosd
+        rofimoji
+        snapper
+        unstable.swayosd
+        nautilus
         tlp
         upower
-        wl-clipboard-rs
-        waybar
-        wayfreeze
         wbg
-        wget
-        xdg-desktop-portal
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-hyprland
-        zsh
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-        zoxide
+        waybar
+        wl-clipboard-rs
     ];
 }
