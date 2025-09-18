@@ -2,10 +2,12 @@
 
 {
     imports = [
-        ./development-tools.nix
-        ./packages.nix
-        ./fonts.nix
-        ./nvidia.nix
+        ./modules/development-tools.nix
+        ./modules/fonts.nix
+        ./modules/laptop.nix
+        ./modules/nvidia.nix
+        ./modules/packages.nix
+        ./modules/services.nix
         /etc/nixos/hardware-configuration.nix
     ];
 
@@ -27,51 +29,10 @@
         priority = 50;
     };
 
-    # Power-saving agents
-    services.power-profiles-daemon.enable = false;
-    services.tlp.enable = true;
-    services.tlp.settings = {
-        CPU_SCALING_GOVERNOR_ON_AC = "";
-        CPU_SCALING_GOVERNOR_ON_BAT = "";
-        CPU_SCALING_DRIVER = "";
-    };
-    services.auto-cpufreq.enable = true;
-    services.auto-cpufreq.settings = {
-        battery = {
-            governor = "powersave";
-            turbo = "never";
-        };
-        charger = {
-            governor = "performance";
-            turbo = "auto";
-        };
-    };
-    services.upower.enable = true;
-
-    # Display Manager
-    services.displayManager.ly.enable = true;
-    services.xserver.xkb.layout = "us";
-    services.xserver.xkb.options = "eurosign:e,caps:escape";
-    services.xserver = {
-        enable = true;
-        windowManager.i3.enable = true;
-    };
-
-    # Connectivity configurations
-    hardware.bluetooth.enable = true;
-    services.pipewire = {
-        enable = true;
-        pulse.enable = true;
-    };
-    services.libinput.enable = true;
-
     # User configurations
     time.timeZone = "Hongkong";
     users.defaultUserShell = pkgs.zsh;
     environment.shells = with pkgs; [ zsh ];
-    environment.variables = {
-        ROFI_PLUGIN_PATH = "${pkgs.rofi-emoji}/lib/rofi";
-    };
     programs.zsh = {
         enable = true;
         autosuggestions.enable = true;
