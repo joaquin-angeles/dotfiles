@@ -31,7 +31,8 @@
     services.power-profiles-daemon.enable = false;
     services.tlp.enable = true;
     services.tlp.settings = {
-        CPU_SCALING_GOVERNOR = "";
+        CPU_SCALING_GOVERNOR_ON_AC = "";
+        CPU_SCALING_GOVERNOR_ON_BAT = "";
         CPU_SCALING_DRIVER = "";
     };
     services.auto-cpufreq.enable = true;

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Required commands
-required_cmds=(grim wl-copy notify-send paplay)
+required_cmds=(grim wl-copy notify-send)
 for cmd in "${required_cmds[@]}"; do
     command -v "$cmd" >/dev/null 2>&1 || {
         notify-send "Screenshot Tool Error" "Missing: $cmd" -u critical
@@ -24,7 +24,6 @@ wl-copy < "$filepath"
 
 # Notify and play sound
 notify-send "Screenshot Taken" "$filepath" -i "$filepath"
-paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga &>/dev/null &
 
 # Log history
 echo "$filepath" >> "$history_log"

@@ -7,13 +7,14 @@ let
 in
 
 
-{
+    {
     environment.systemPackages = with pkgs; [
         auto-cpufreq
         bibata-cursors
         brightnessctl
         chafa
         cliphist
+        grim
         hyprcursor
         hyprlock
         hyprshot
@@ -24,17 +25,18 @@ in
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
         mako
+        nautilus
         nwg-look
         polkit_gnome
-        rofi-wayland
         rofimoji
+        rofi-wayland
+        slurp
         snapper
-        unstable.swayosd
-        nautilus
         tlp
+        unstable.swayosd
         upower
-        wbg
         waybar
-        wl-clipboard-rs
+        wbg
+        wl-clipboard
     ];
 }
