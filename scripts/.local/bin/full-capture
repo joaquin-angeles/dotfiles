@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Required commands
+required_cmds=(grim wl-copy notify-send)
+for cmd in "${required_cmds[@]}"; do
+    command -v "$cmd" >/dev/null 2>&1 || {
+        notify-send "Screenshot Tool Error" "Missing: $cmd" -u critical
+        exit 1
+    }
+done
+
+# Paths
+timestamp=$(date +'%Y-%m-%d_%H-%M-%S')
+screenshot_dir="$HOME/.cache/screenshots"
+mkdir -p "$screenshot_dir"
+filepath="$screenshot_dir/screenshot_$timestamp.png"
+history_log="$HOME/.cache/screenshot_history.log"
+
+# Take fullscreen screenshot (all monitors)
+grim "$filepath"
+
+# Copy to clipboard
+wl-copy < "$filepath"
+
+# Notify and play sound
+notify-send "Screenshot Taken" "$filepath" -i "$filepath"
+
+# Log history
+echo "$filepath" >> "$history_log"

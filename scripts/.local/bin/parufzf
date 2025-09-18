@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Simple bash script that utilizes fzf and paru to list arch packages to be installed or deleted.
+
+# If empty parufzf will list all main repo and AUR packages to be installed.
+[ $# -eq 0 ] && paru -Sl | awk '{print $2($4 =="" ? "" : " *" )}' | fzf -e -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' --layout=reverse | xargs -ro -n1 paru --skipreview -S
+# If -r is given parufzf will list all installed packages to be removed.
+[[ $1 = "-r" ]] && paru -Sl | awk '{if ($4 != "") print $2}' | fzf -e -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' --layout=reverse | xargs -ro -n1 paru -R
+# If -r is given parufzf will list all packages installed by the user and their dependancies to be removed.
+[[ $1 = "-q" ]] && paru -Qqet | fzf -e -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' --layout=reverse | xargs -ro -n1 paru -Rs
+# If -r is given parufzf will list all packages installed and their dependancies to be removed.
+[[ $1 = "-Q" ]] && pacman -Q | fzf -e -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk "{print \$2}")' --layout=reverse | xargs -ro -n1 paru -Rs

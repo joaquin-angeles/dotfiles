@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+BATTERY_DEVICE=$(upower -e | grep BAT)
+KBD_DEVICE="asus::kbd_backlight"
+current_state=""
+
+# Ensure Hyprland is running
+if [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
+    echo "Hyprland is not running. Exiting."
+    exit 1
+fi
+
+# Get the connected monitor name
+MONITOR=$(hyprctl monitors | awk '/Monitor/ {print $2}' | head -n 1)
+
+# Ensure upower is working
+if [ -z "$BATTERY_DEVICE" ]; then
+    echo "Battery device not found. Is upower enabled?"
+    exit 1
+fi
+
+# Start monitoring battery state
+upower --monitor | grep --line-buffered "$BATTERY_DEVICE" | while read -r _; do
+    new_state=$(upower -i "$BATTERY_DEVICE" | grep -m1 "state:" | awk '{print $2}')
+    if [ "$new_state" != "$current_state" ]; then
+        current_state="$new_state"
+        if [ "$new_state" = "discharging" ]; then
+            brightnessctl set 40%
+            brightnessctl --device="$KBD_DEVICE" set 0
+            hyprctl keyword monitor "$MONITOR,1920x1080@60,auto,1.0"
+        else
+            brightnessctl set 80%
+            brightnessctl --device="$KBD_DEVICE" set 80%
+            hyprctl keyword monitor "$MONITOR,1920x1080@144,auto,1.0"
+        fi
+    fi
+done &

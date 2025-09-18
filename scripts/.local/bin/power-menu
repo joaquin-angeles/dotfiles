@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# Power menu options
+options=(
+    "Shutdown"
+    "Reboot"
+    "Lock"
+    "Suspend"
+    "Logout"
+)
+
+# Show Rofi with two columns, no input bar, and large font
+choice="$(printf '%s\n' "${options[@]}" | rofi -dmenu -p '' )"
+
+case "$choice" in
+    "Shutdown")
+        systemctl poweroff
+        ;;
+    "Reboot")
+        systemctl reboot
+        ;;
+    "Lock")
+        if command -v gtklock >/dev/null; then
+            gtklock
+        elif command -v hyprlock >/dev/null; then
+            hyprlock
+        elif command -v i3lock >/dev/null; then
+            i3lock
+        elif command -v betterlockscreen >/dev/null; then
+            betterlockscreen -l
+        else
+            notify-send "No lock utility found."
+        fi
+        ;;
+    "Suspend")
+        systemctl suspend
+        ;;
+    "Logout")
+            pkill -KILL -u "$USER"
+        ;;
+esac
