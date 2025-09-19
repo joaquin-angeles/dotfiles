@@ -53,10 +53,10 @@
         "format-muted": "󰖁",
         "format-icons": {
             "default": [
-                "󰝟",
-                "󰕿",
-                "󰖀",
-                "󰕾"
+                "",
+                "",
+                "",
+                ""
             ]
         },
         "on-click": "foot --title=Wiremix -e wiremix",

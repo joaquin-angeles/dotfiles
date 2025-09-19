@@ -5,8 +5,6 @@ let
         url = "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
     }) {};
 in
-
-
     {
     environment.systemPackages = with pkgs; [
         auto-cpufreq
@@ -15,6 +13,7 @@ in
         chafa
         cliphist
         grim
+        gvfs
         hyprcursor
         hyprlock
         hyprshot
@@ -37,6 +36,7 @@ in
         upower
         waybar
         wbg
+        unstable.wiremix
         wl-clipboard
     ];
 }

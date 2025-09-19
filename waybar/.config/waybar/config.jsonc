@@ -12,6 +12,7 @@
     ],
     "modules-right": [
         "network",
+        "pulseaudio",
         "battery",
         "clock",
         "group/tray-expander",
