@@ -33,10 +33,11 @@ in
         snapper
         tlp
         unstable.swayosd
+        unstable.wayfreeze
+        unstable.wiremix
         upower
         waybar
         wbg
-        unstable.wiremix
         wl-clipboard
     ];
 }

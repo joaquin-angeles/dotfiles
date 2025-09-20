@@ -20,6 +20,7 @@
     # Networking options
     networking.hostName = "nixos"; # Define your hostname.
     networking.wireless.iwd.enable = true;
+
     # Fail2Ban
     services.fail2ban = {
         enable = true;
@@ -36,6 +37,7 @@
             overalljails = true;
         };
     };
+
     # Firewall
     networking.nftables.enable = true;
     networking.nftables.ruleset = ''
@@ -65,17 +67,25 @@
         priority = 50;
     };
 
-    # User configurations
+    # Timezone
     time.timeZone = "Hongkong";
-    users.defaultUserShell = pkgs.zsh;
-    environment.shells = with pkgs; [ zsh ];
+
+    # Zsh
     programs.zsh = {
         enable = true;
         autosuggestions.enable = true;
         syntaxHighlighting.enable = true;
     };
+    users.defaultUserShell = pkgs.zsh;
+    environment.shells = with pkgs; [ zsh ];
+
+    # Hyprland
     programs.hyprland.enable = true;
+
+    # Flatpak
     services.flatpak.enable = true;
+
+    # User configurations
     users.users.joaquin = {
         isNormalUser = true;
         extraGroups = [ "wheel" "sandbox"];
