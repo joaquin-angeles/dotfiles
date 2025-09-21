@@ -50,7 +50,7 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "format-muted": "󰖁",
+        "format-muted": "",
         "format-icons": {
             "default": [
                 "",
@@ -109,7 +109,7 @@
     },
 
     "custom/expand-icon": {
-        "format": "",
+        "format": "…",
         "tooltip": false
     },
     "custom/power": {

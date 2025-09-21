@@ -3,7 +3,7 @@
 window#waybar {
     font: 13.5pt "MesloLGS Nerd Font";
     background-color: @bg;
-    border-bottom: 1px solid lighter(@bright-bg)
+    border-bottom: 1px solid #393939
 }
 
 #window {
@@ -26,16 +26,17 @@ window#waybar {
 
 #custom-expand-icon {
     font-size: 12pt;
-    margin-right: 9pt;
+    margin-right: 8pt;
 }
 
 #tray {
-    padding-left: 3pt;
-    margin-right: 5pt;
+    padding-left: 3.5pt;
+    padding-right: 3.5pt;
+    background-color: #393939;
 }
 
 #network {
-    padding-right: 15pt;
+    padding-right: 14pt;
 }
 
 #bluetooth {
@@ -44,8 +45,8 @@ window#waybar {
 }
 
 #pulseaudio {
-    font-size: 11.5pt;
-    padding-right: 17pt;
+    font-size: 11pt;
+    padding-right: 16pt;
 }
 
 #battery {
@@ -53,5 +54,5 @@ window#waybar {
 }
 
 #clock {
-    padding-right: 8pt
+    padding-right: 6.5pt
 }

@@ -7,11 +7,14 @@ let
 in
     {
     environment.systemPackages = with pkgs; [
+        acpi
         auto-cpufreq
         bibata-cursors
         brightnessctl
         chafa
         cliphist
+        glib
+        glibc
         grim
         gvfs
         hyprcursor

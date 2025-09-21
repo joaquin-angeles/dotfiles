@@ -28,6 +28,7 @@
         gnumake
         patch
         pkgconf
+        python3Full
         gnused
         texinfo
         wget

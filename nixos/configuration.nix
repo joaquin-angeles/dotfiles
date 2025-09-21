@@ -13,13 +13,37 @@
     ];
 
     # Boot options
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader = {
+        systemd-boot.enable = true;
+        efi.canTouchEfiVariables = true;
+    };
     boot.kernelModules = [ "zram" ];
 
     # Networking options
-    networking.hostName = "nixos"; # Define your hostname.
-    networking.wireless.iwd.enable = true;
+    networking = {
+        hostName = "nixos"; # Define your hostname.
+        wireless.iwd.enable = true;
+
+        # Firewall
+        nftables.enable = true;
+        nftables.ruleset = ''
+    table inet filter {
+      chain input {
+        iifname lo accept
+        ct state {established, related} accept
+        ip protocol icmp accept
+        ip6 nexthdr icmpv6 accept
+      }
+      chain output {
+        type filter hook output priority 0; policy accept;
+      }
+      chain forward {
+        type filter hook forward priority 0; policy drop;
+      }
+    }
+        '';
+        nftables.checkRuleset = true;
+    };
 
     # Fail2Ban
     services.fail2ban = {
@@ -37,26 +61,6 @@
             overalljails = true;
         };
     };
-
-    # Firewall
-    networking.nftables.enable = true;
-    networking.nftables.ruleset = ''
-    table inet filter {
-      chain input {
-        iifname lo accept
-        ct state {established, related} accept
-        ip protocol icmp accept
-        ip6 nexthdr icmpv6 accept
-      }
-      chain output {
-        type filter hook output priority 0; policy accept;
-      }
-      chain forward {
-        type filter hook forward priority 0; policy drop;
-      }
-    }
-    '';
-    networking.nftables.checkRuleset = true;
 
     # Zram
     zramSwap = {
@@ -96,7 +100,16 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     # Container portals
-    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    xdg.portal.config.common.default = "gtk";
+    xdg.portal = {
+        enable = true;
+        extraPortals = [
+            pkgs.xdg-desktop-portal-hyprland
+            pkgs.xdg-desktop-portal-gtk
+        ];
+        config = {
+            common.default = [ "gtk" ];
+            hyprland.default = [ "gtk" "hyprland" ];
+        };
+    };
     system.stateVersion = "25.05";
 }

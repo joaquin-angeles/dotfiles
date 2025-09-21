@@ -15,6 +15,6 @@
         "pulseaudio",
         "battery",
         "clock",
-        "group/tray-expander",
+        "tray",
     ],
 }

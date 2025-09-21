@@ -3,17 +3,36 @@
 {
     # Display Manager
     services.displayManager.ly.enable = true;
-    services.xserver.xkb.layout = "us";
-    services.xserver.xkb.options = "eurosign:e,caps:escape";
+
+    # X.org server
     services.xserver = {
         enable = true;
+        xkb.layout = "us";
+        xkb.options = "eurosign:e,caps:escape";
         windowManager.i3.enable = true;
+    };
+
+    # Polkit
+    security.polkit.enable = true;
+    systemd.user.services.polkit-gnome-authentication-agent-1 = {
+        description = "polkit-gnome-authentication-agent-1";
+        wantedBy = [ "graphical-session.target" ];
+        wants = [ "graphical-session.target" ];
+        after = [ "graphical-session.target" ];
+        serviceConfig = {
+            Type = "simple";
+            ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+            Restart = "on-failure";
+            RestartSec = 1;
+            TimeoutStopSec = 10;
+        };
     };
 
     # Connectivity configurations
     hardware.bluetooth.enable = true;
     services.pipewire = {
         enable = true;
+        alsa.enable = true;
         pulse.enable = true;
     };
     services.libinput.enable = true;

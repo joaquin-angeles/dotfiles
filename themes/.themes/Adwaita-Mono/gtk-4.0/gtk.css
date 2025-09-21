@@ -7,8 +7,8 @@
 @define-color warning_fg_color RGB(0 0 0 / 80%);
 @define-color error_bg_color @red_4;
 @define-color error_fg_color #dfdfdf;
-@define-color accent_color #8c8c8c;
-@define-color accent_bg_color #7a7a7c;
+@define-color accent_color #9f9f9f;
+@define-color accent_bg_color #9f9f9f;
 @define-color destructive_color oklab(from @destructive_bg_color max(l, 0.85) a b);
 @define-color success_color oklab(from @success_bg_color max(l, 0.85) a b);
 @define-color warning_color oklab(from @warning_bg_color max(l, 0.85) a b);
