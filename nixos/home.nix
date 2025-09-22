@@ -9,19 +9,38 @@
         enable = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
-        initContent = "source ${pkgs.powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        initContent = "
+        source ${pkgs.powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    alias bat='bat --color=always --theme=base16 --style=plain'
+    alias c=clear
+    alias ls=eza
+    alias ll='eza -l'
+    alias lla='eza -la'
+    alias lsa='eza -a'
+    alias lf=lfcd
+    alias vim=nvim
+    alias v=nvim
+    alias grep=rg
+    alias k=kill
+    alias pk=pkill
+    alias paru='paru --skipreview'
+    alias paruf=~/.bin/parufzf
+    alias flatpak='flatpak --user'
+    alias nv-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
+
+    HISTSIZE=5000
+    HISTFILE=~/.zsh_history
+    SAVEHIST=$HISTSIZE
+    HISTDUP=erase
+    setopt appendhistory
+    setopt sharehistory
+    setopt hist_ignore_space
+            ";
+        powerlevel10k = {
+            enable = true;
+            instantPrompt = true;
+        };
         shellInit = ''
-    # Fetch util
-    nitch
-
-    # Insta-prompt
-    if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-      source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-    fi
-
-    # Unbinding
-    stty intr '^G'
-
     # Shell integrations
     eval "$(fzf --zsh)"
     eval "$(zoxide init zsh)"
@@ -51,7 +70,6 @@
             fi
         fi
     }
-    alias lf=lfcd
 
     # Compinit
     ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump"
