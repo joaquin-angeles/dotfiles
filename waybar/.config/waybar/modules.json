@@ -64,13 +64,13 @@
     },
 
     "battery": {
-        "format": "{icon} {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-icons": [
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ],
-        "format-full": "󱈑 {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-warning": "󰂃 {capacity}%",
+        "format-full": "󱈑 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-warning": "󰂃 {capacity}%",
         "tooltip": true,
         "tooltip-format": "Discharging",
         "tooltip-format-charging": "Charging",
