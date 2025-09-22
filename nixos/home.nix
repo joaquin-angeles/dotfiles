@@ -12,8 +12,7 @@
         enable = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
-        # Aliases, environment variables, and simple settings
-        initExtra = ''
+        initContent = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
       alias bat='bat --color=always --theme=base16 --style=plain'
