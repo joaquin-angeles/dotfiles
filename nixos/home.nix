@@ -10,12 +10,6 @@
         enable = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
-
-        powerlevel10k = {
-            enable = true;
-            instantPrompt = true;
-        };
-
         # Aliases, environment variables, and simple settings
         initExtra = ''
       source ${pkgs.powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
