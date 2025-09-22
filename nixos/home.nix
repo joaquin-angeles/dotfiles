@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 
 {
-    home.username = "joaquin";
-    home.homeDirectory = "/home/joaquin";
-    programs.git.enable = true;
-    home.stateVersion = "25.05";
+    home = { 
+        username = "joaquin";
+        homeDirectory = "/home/joaquin";
+        stateVersion = "25.05";
+    };
 
+    programs.git.enable = true;
     programs.zsh = {
         enable = true;
         autosuggestion.enable = true;
@@ -82,7 +84,7 @@
       else
           compinit
       fi
-      '';
+        '';
     };
 
     home.packages = with pkgs; [

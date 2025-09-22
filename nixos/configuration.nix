@@ -75,6 +75,7 @@
     time.timeZone = "Hongkong";
 
     # Zsh
+    programs.zsh.enable = true
     environment.shells = with pkgs; [ zsh ];
 
     # Hyprland
