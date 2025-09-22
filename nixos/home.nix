@@ -83,6 +83,9 @@
       else
           compinit
       fi
+
+      # P10K
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
         '';
     };
 
