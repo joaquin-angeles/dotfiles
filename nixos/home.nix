@@ -38,10 +38,7 @@
       setopt appendhistory
       setopt sharehistory
       setopt hist_ignore_space
-        '';
 
-        # Functions, multi-line logic, and shell integrations
-        shellInit = ''
       # Fetch util
       nitch
 
@@ -78,14 +75,14 @@
           fi
       }
 
-  # Compinit
-  ZSH_COMPDUMP="$HOME/.cache/zcompdump"
-  if [[ -n "$ZSH_COMPDUMP" && -f "$ZSH_COMPDUMP" ]]; then
-      compinit -d "$ZSH_COMPDUMP"
-  else
-      compinit
-  fi
-        '';
+      # Compinit
+      ZSH_COMPDUMP="$HOME/.cache/zcompdump"
+      if [[ -n "$ZSH_COMPDUMP" && -f "$ZSH_COMPDUMP" ]]; then
+          compinit -d "$ZSH_COMPDUMP"
+      else
+          compinit
+      fi
+      '';
     };
 
     home.packages = with pkgs; [
