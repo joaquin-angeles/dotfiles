@@ -34,6 +34,7 @@
         wget
         which
         zsh
+        zsh-powerlevel10k
         zoxide
     ];
 }

@@ -7,10 +7,10 @@ export XCURSOR_THEME=Bibata-Modern-Classic
 export XCURSOR_SIZE=24
 
 # Editor and terminal
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
+export EDITOR="nvim"
+export VISUAL="nvim"
 export TERM=xterm-256color
-export TERMINAL=/usr/bin/foot
+export TERMINAL="foot"
 
 # Language locales
 export LANG=en_US.UTF-8

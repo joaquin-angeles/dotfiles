@@ -75,24 +75,16 @@
     time.timeZone = "Hongkong";
 
     # Zsh
-    programs.zsh = {
-        enable = true;
-        autosuggestions.enable = true;
-        syntaxHighlighting.enable = true;
-    };
-    users.defaultUserShell = pkgs.zsh;
     environment.shells = with pkgs; [ zsh ];
 
     # Hyprland
     programs.hyprland.enable = true;
 
-    # Flatpak
-    services.flatpak.enable = true;
-
     # User configurations
     users.users.joaquin = {
         isNormalUser = true;
         extraGroups = [ "wheel" "sandbox"];
+        shell = pkgs.zsh;
     };
 
     # Nix package manager
