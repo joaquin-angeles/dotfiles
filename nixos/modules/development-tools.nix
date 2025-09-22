@@ -14,6 +14,7 @@
         file
         findutils
         flex
+        fzf
         git
         gawk
         gcc
