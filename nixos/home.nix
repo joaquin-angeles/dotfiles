@@ -1,23 +1,23 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "joaquin";
-  home.homeDirectory = "/home/joaquin";
-  programs.git.enable = true;
-  home.stateVersion = "25.05";
+    home.username = "joaquin";
+    home.homeDirectory = "/home/joaquin";
+    programs.git.enable = true;
+    home.stateVersion = "25.05";
 
-  programs.zsh = {
-    enable = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+    programs.zsh = {
+        enable = true;
+        autosuggestion.enable = true;
+        syntaxHighlighting.enable = true;
 
-    powerlevel10k = {
-      enable = true;
-      instantPrompt = true;
-    };
+        powerlevel10k = {
+            enable = true;
+            instantPrompt = true;
+        };
 
-    # Aliases, environment variables, and simple settings
-    initExtra = ''
+        # Aliases, environment variables, and simple settings
+        initExtra = ''
       source ${pkgs.powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
       alias bat='bat --color=always --theme=base16 --style=plain'
@@ -44,10 +44,10 @@
       setopt appendhistory
       setopt sharehistory
       setopt hist_ignore_space
-    '';
+        '';
 
-    # Functions, multi-line logic, and shell integrations
-    shellInit = ''
+        # Functions, multi-line logic, and shell integrations
+        shellInit = ''
       # Fetch util
       nitch
 
@@ -84,21 +84,17 @@
           fi
       }
 
-      # Compinit
-      ZSH_COMPDUMP="\${XDG_CACHE_HOME:-\$HOME/.cache}/zcompdump"
-      autoload -Uz compinit
-      if [[ -n "\$ZSH_COMPDUMP" && -f "\$ZSH_COMPDUMP" ]]; then
-          compinit -d "\$ZSH_COMPDUMP"
-      else
-          compinit
-      fi
+  # Compinit
+  ZSH_COMPDUMP="$HOME/.cache/zcompdump"
+  if [[ -n "$ZSH_COMPDUMP" && -f "$ZSH_COMPDUMP" ]]; then
+      compinit -d "$ZSH_COMPDUMP"
+  else
+      compinit
+  fi
+        '';
+    };
 
-      # P10K
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    '';
-  };
-
-  home.packages = with pkgs; [
-    # add user packages here
-  ];
+    home.packages = with pkgs; [
+        # add user packages here
+    ];
 }
