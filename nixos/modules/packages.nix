@@ -20,7 +20,6 @@ in
         hyprcursor
         hyprlock
         hyprshot
-        impala
         kdePackages.qt6ct
         kdePackages.qtstyleplugin-kvantum
         libnotify
@@ -35,6 +34,7 @@ in
         slurp
         snapper
         tlp
+        unstable.impala
         unstable.swayosd
         unstable.wayfreeze
         unstable.wiremix
