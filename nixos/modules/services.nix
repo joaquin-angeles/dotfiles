@@ -46,4 +46,10 @@
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
       '';
     };
+
+    # GVFS
+    services.gvfs = {
+        enable = true;
+        package = lib.mkForce pkgs.gnome.gvfs;
+    };
 }

@@ -2,8 +2,8 @@
     "include": "~/.config/waybar/modules.json",
     "layer": "top",
     "position": "top",
-    "height": 24,
-    "spacing": 8,
+    "height": 28,
+    "spacing": 6,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"

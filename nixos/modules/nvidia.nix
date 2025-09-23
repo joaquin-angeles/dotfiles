@@ -15,6 +15,8 @@
     };
 
     # Kernel modules
-    boot.blacklistedKernelModules = [ "nouveau" ];
-    boot.kernelModules = [ "nvidia" "nvidia_uvm" "nvidia_drm" ];
+    boot = {
+        blacklistedKernelModules = [ "nouveau" ];
+        kernelModules = [ "nvidia" "nvidia_uvm" "nvidia_drm" ];
+    };
 }

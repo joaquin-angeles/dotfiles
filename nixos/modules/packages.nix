@@ -13,10 +13,10 @@ in
         brightnessctl
         chafa
         cliphist
+        file-roller
         glib
         glibc
         grim
-        gvfs
         hyprcursor
         hyprlock
         hyprshot
@@ -26,7 +26,6 @@ in
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
         mako
-        nautilus
         nwg-look
         polkit_gnome
         rofimoji
@@ -42,5 +41,9 @@ in
         waybar
         wbg
         wl-clipboard
+        xfce.thunar
+        xfce.thunar-archive-plugin
+        xfce.thunar-volman
+        xfce.xfconf
     ];
 }

@@ -1,14 +1,15 @@
-# Fetch util
-nitch
-
-# Insta-prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
 fi
-
 
 # Unbinding
 stty intr '^G'
+
+# P10K
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -86,6 +87,3 @@ HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
-
-# P10K
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

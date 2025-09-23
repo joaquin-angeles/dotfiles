@@ -3,11 +3,11 @@
 window#waybar {
     font: 13.5pt "JetBrainsMono Nerd Font";
     background-color: @bg;
-    border-bottom: 1px solid #393939
+    border-bottom: 1px solid lighter(@bright-bg);
 }
 
 #window {
-    color: #797979;
+    color: #7f7f7f;
     padding-left: 3pt
 }
 
@@ -26,17 +26,17 @@ window#waybar {
 
 #custom-expand-icon {
     font-size: 12pt;
-    margin-right: 8pt;
+    padding-right: 8pt;
 }
 
 #tray {
-    padding-left: 3.5pt;
-    padding-right: 3.5pt;
-    background-color: #393939;
+    padding-left: 4pt;
+    padding-right: 4pt;
+    background-color: lighter(@bright-bg);
 }
 
 #network {
-    padding-right: 12pt;
+    padding-right: 12.5pt;
 }
 
 #bluetooth {
@@ -45,14 +45,14 @@ window#waybar {
 }
 
 #pulseaudio {
-    font-size: 11.125pt;
-    padding-right: 13.5pt;
+    font-size: 11.25pt;
+    padding-right: 14.5pt;
 }
 
 #battery {
-    padding-right: 7pt;
+    padding-right: 8.5pt;
 }
 
 #clock {
-    padding-right: 6.5pt
+    padding-right: 8pt
 }
