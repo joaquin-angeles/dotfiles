@@ -109,6 +109,8 @@ table inet filter {
       eza
       foot
       fzf
+      grim
+      hyprpicker
       hyprshot
       lf
       neovim
