@@ -22,7 +22,14 @@
     # Networking options
     networking = {
         hostName = "nixos"; # Define your hostname.
-        wireless.iwd.enable = true;
+        networkmanager = {
+            enable = true;
+            wifi.backend = "iwd";
+        };
+        wireless = {
+            enable = false;
+            iwd.enable = true;
+        };
 
         # Firewall
         nftables.enable = true;
@@ -89,11 +96,28 @@ table inet filter {
     # Hyprland
     programs.hyprland.enable = true;
 
-    # User configurations
+    # User configuration
     users.users.joaquin = {
         isNormalUser = true;
-        extraGroups = [ "wheel" "sandbox"];
+        extraGroups = [ "wheel" "sandbox" ];
         shell = pkgs.zsh;
+        packages = with pkgs; [
+            bat
+            bibata-cursors
+            chafa
+            cliphist
+            eza
+            foot
+            fzf
+            hyprshot
+            lf
+            neovim
+            nwg-look
+            rofimoji
+            zoxide
+            zsh
+            zsh-powerlevel10k
+        ];
     };
 
     # Nix package manager

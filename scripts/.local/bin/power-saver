@@ -29,8 +29,8 @@ upower --monitor | grep --line-buffered "$BATTERY_DEVICE" | while read -r _; do
             brightnessctl --device="$KBD_DEVICE" set 0
             hyprctl keyword monitor "$MONITOR,1920x1080@60,auto,1.0"
         else
-            brightnessctl set 80%
-            brightnessctl --device="$KBD_DEVICE" set 80%
+            brightnessctl set 70%
+            brightnessctl --device="$KBD_DEVICE" set 100%
             hyprctl keyword monitor "$MONITOR,1920x1080@120,auto,1.0"
         fi
     fi

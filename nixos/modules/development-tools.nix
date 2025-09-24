@@ -4,38 +4,16 @@
     environment.systemPackages = with pkgs; [
         autoconf
         automake
-        bat
-        binutils
         bison
         curl
-        eza
-        foot
-        fakeroot
-        file
-        findutils
         flex
-        fzf
-        git
-        gawk
         gcc
-        gettext
-        ripgrep
-        groff
-        gzip
-        libtool
-        lf
-        m4
-        neovim
+        git
         gnumake
-        patch
+        lf
+        libtool
         pkgconf
         python3Full
-        gnused
-        texinfo
         wget
-        which
-        zsh
-        zsh-powerlevel10k
-        zoxide
     ];
 }
