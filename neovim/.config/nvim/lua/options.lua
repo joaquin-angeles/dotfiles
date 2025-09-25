@@ -7,8 +7,9 @@ require "nvchad.options"
 
 -- Transparent background
 vim.cmd [[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NonText guibg=NONE ctermbg=NONE
+  hi Normal guibg=NONE ctermbg=NONE
+  hi NonText guibg=NONE ctermbg=NONE
+  hi BufferLineBufferSelected guibg=NONE ctermbg=NONE
 ]]
 
 -- Relative line numbers

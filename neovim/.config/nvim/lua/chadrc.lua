@@ -5,12 +5,6 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.general = {
-  n = {
-    ["<leader>u"] = { "<cmd>UndotreeToggle<CR>", "Toggle UndoTree" },
-  },
-}
-
 M.base46 = {
   theme = "monochrome",
   hl_override = {
@@ -19,11 +13,14 @@ M.base46 = {
   },
 }
 
--- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
+M.nvdash = { 
+  load_on_startup = false,
+}
+
+M.ui = {
+     --  tabufline = {
+     --     lazyload = false
+     -- }
+}
 
 return M
