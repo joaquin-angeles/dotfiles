@@ -11,7 +11,6 @@ in
     auto-cpufreq
     brightnessctl
     file-roller
-    glib
     hyprlock
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
