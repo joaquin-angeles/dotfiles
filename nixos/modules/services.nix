@@ -9,7 +9,7 @@
     enable = true;
     xkb.layout = "us";
     xkb.options = "eurosign:e,caps:escape";
-    windowManager.i3.enable = true;
+    desktopManager.cinnamon.enable = true;
   };
 
   # Polkit

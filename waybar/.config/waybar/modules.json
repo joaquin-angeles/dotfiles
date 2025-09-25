@@ -74,7 +74,8 @@
         "tooltip": true,
         "tooltip-format": "Discharging",
         "tooltip-format-charging": "Charging",
-        "tooltip-format-full": "Full"
+        "tooltip-format-full": "Full",
+        "interval": 1,
     },
 
     "custom/clipboard": {
