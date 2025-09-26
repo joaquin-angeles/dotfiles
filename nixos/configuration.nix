@@ -100,11 +100,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "sandbox" ];
     shell = pkgs.zsh;
-    let
-    unstable = import (builtins.fetchTarball {
-      url = "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
-    }) {};
-    in
     packages = with pkgs; [
       bat
       bibata-cursors
