@@ -74,8 +74,17 @@ alias paruf=~/.bin/parufzf
 alias pk=pkill
 alias vim=nvim
 alias v=nvim
+alias nix-shell='nix-shell --run $SHELL'
 cd() {
   z "$@" && eza
+}
+nix() {
+  if [[ $1 == "develop" ]]; then
+    shift
+    command nix develop -c $SHELL "$@"
+  else
+    command nix "$@"
+  fi
 }
 
 # History
