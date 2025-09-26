@@ -112,12 +112,15 @@
       grim
       hyprpicker
       hyprshot
+      imv
       lf
       neovim
       nwg-look
       ripgrep
       rofimoji
+      stow
       tmux
+      xdg-user-dirs
       zoxide
       zsh-powerlevel10k
     ];
