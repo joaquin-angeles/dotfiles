@@ -82,7 +82,7 @@
   };
 
   # Timezone
-  time.timeZone = "Hongkong";
+  time.timeZone = "Asia/Hong_kong";
 
   # Zsh
   programs.zsh = {
@@ -117,6 +117,7 @@
       nwg-look
       ripgrep
       rofimoji
+      tmux
       zoxide
       zsh-powerlevel10k
     ];
