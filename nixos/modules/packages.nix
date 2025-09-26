@@ -21,6 +21,7 @@ in
     polkit_gnome
     rofi-wayland
     tlp
+    tofi
     unstable.impala
     unstable.swayosd
     unstable.wayfreeze
