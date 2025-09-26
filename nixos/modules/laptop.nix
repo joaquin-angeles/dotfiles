@@ -1,6 +1,15 @@
 { config, lib, pkgs, ... }:
 
 {
+  # Packages
+  environment.systemPackages = with pkgs; [
+    acpi
+    auto-cpufreq
+    polkit_gnome
+    tlp
+    upower
+  ];
+
   # Power-savers
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;

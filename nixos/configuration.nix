@@ -7,7 +7,6 @@
     ./modules/fonts.nix
     ./modules/laptop.nix
     ./modules/nvidia.nix
-    ./modules/packages.nix
     ./modules/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
@@ -101,27 +100,50 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "sandbox" ];
     shell = pkgs.zsh;
+    let
+    unstable = import (builtins.fetchTarball {
+      url = "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
+    }) {};
+    in
     packages = with pkgs; [
       bat
       bibata-cursors
+      brightnessctl
       celluloid
       chafa
       cliphist
       eza
+      file-roller
       foot
       fzf
       grim
+      hyprlock
       hyprpicker
       hyprshot
       imv
+      kdePackages.qt6ct
+      kdePackages.qtstyleplugin-kvantum
       lf
+      libnotify
+      libsForQt5.qt5ct
+      libsForQt5.qtstyleplugin-kvantum
+      mako
       neovim
       nwg-look
       ripgrep
       rofimoji
+      rofi-wayland
       stow
       tmux
+      tofi
+      waybar
+      wbg
+      wl-clipboard
       xdg-user-dirs
+      xfce.thunar
+      xfce.thunar-archive-plugin
+      xfce.thunar-volman
+      xfce.xfconf
       zoxide
       zsh-powerlevel10k
     ];
