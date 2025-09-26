@@ -54,5 +54,6 @@ window#waybar {
 }
 
 #clock {
-    padding-right: 8pt
+    padding-right: 8pt;
+    font: 13.125pt "monospace"
 }

@@ -11,7 +11,7 @@ in
     auto-cpufreq
     brightnessctl
     file-roller
-    hyprlock
+    unstable.hyprlock
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     libnotify

@@ -82,7 +82,7 @@
   };
 
   # Timezone
-  time.timeZone = "Asia/Hong_kong";
+  time.timeZone = "Hongkong";
 
   # Zsh
   programs.zsh = {
