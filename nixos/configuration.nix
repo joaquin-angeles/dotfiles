@@ -104,6 +104,7 @@
     packages = with pkgs; [
       bat
       bibata-cursors
+      celluloid
       chafa
       cliphist
       eza

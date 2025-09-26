@@ -1,7 +1,7 @@
 @import url("./colors.css");
 
 window#waybar {
-    font: 13.125pt "JetBrainsMono Nerd Font";
+    font: 13.5pt "Inter";
     background-color: @bg;
     border-bottom: 1px solid lighter(@bright-bg);
 }

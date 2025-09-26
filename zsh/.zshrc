@@ -54,9 +54,7 @@ fi
 # Aliases
 alias bat='bat --color=always --theme=base16 --style=plain'
 alias c=clear
-cd() {
-  z "$@" && eza
-}
+alias flatpak='flatpak --user'
 alias fzf="fzf --preview '
 if [ -d {} ]; then
   eza -l --color=always {} || ls -la {}
@@ -64,20 +62,21 @@ else
   bat --color=always --theme=base16 --style=plain {}
 fi
 '"
-alias flatpak='flatpak --user'
 alias grep=rg
 alias k=kill
-# alias lf="$HOME/.config/lf/lfrun"
-alias ls=eza
 alias lsa='eza -a'
 alias ll='eza -l'
 alias lla='eza -la'
+alias ls=eza
+alias nv-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
 alias paru='paru --skipreview'
 alias paruf=~/.bin/parufzf
 alias pk=pkill
 alias vim=nvim
 alias v=nvim
-alias nv-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
+cd() {
+  z "$@" && eza
+}
 
 # History
 HISTSIZE=5000
