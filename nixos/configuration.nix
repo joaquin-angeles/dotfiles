@@ -130,10 +130,12 @@ in
       mako
       neovim
       nwg-look
+      pavucontrol
       ripgrep
       rofimoji
       rofi-wayland
       stow
+      unstable.nmgui
       unstable.swayosd
       tmux
       tofi

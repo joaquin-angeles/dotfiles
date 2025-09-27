@@ -32,7 +32,7 @@
         "format-disconnected": "󰤭",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "interface": "wlan0",
-        "on-click": "foot --title=iwctl -e impala"
+        "on-click": "nmgui"
     },
 
     "bluetooth": {
@@ -59,7 +59,7 @@
                 ""
             ]
         },
-        "on-click": "foot --title=Wiremix -e wiremix",
+        "on-click": "pavucontrol",
         "tooltip-format": "Playing at {volume}%",
     },
 
