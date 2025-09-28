@@ -1,138 +1,138 @@
 {
-    "hyprland/window": {
-        "max-length": 128,
-        "format": "{}"
-    },
+  "hyprland/window": {
+    "max-length": 128,
+    "format": "{}"
+  },
 
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": "",
-            "empty": "",
-            "7": "7",
-            "8": "8",
-            "9": "9"
-        },
-        "disable-scroll": true,
-        "all-outputs": true,
-        "active-only": false,
-        "on-click": "activate",
-        "persistent-workspaces": {
-            "*": 6
-        }
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": "",
+      "7": "7",
+      "8": "8",
+      "9": "9"
     },
-
-    "network": {
-        "interface": "wlan0",
-        "format": "{icon}",
-        "format-icons": [
-            "󰤟", "󰤢", "󰤥", "󰤨" 
-        ],
-        "format-disconnected": "󰤭",
-        "tooltip-format": "{essid} ({signalStrength}%)",
-        "interface": "wlan0",
-        "on-click": "nmgui"
-    },
-
-    "bluetooth": {
-        "format": "{icon}",
-        "format-icons": [ "󰂲", "󰂯" ],
-        "format-connected": "󰂯",
-        "format-disconnected": "󰂲",
-        "format-disabled": "󰂲",
-        "tooltip-format": "Active",
-        "tooltip-format-disabled": "Inactive",
-        "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)",
-        "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
-        "on-click": "blueman-manager"
-    },
-
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-muted": "",
-        "format-icons": {
-            "default": [
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click": "pavucontrol",
-        "tooltip-format": "Playing at {volume}%",
-    },
-
-    "battery": {
-        "format": "{icon} {capacity}%",
-        "format-icons": [
-            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
-        ],
-        "format-full": "󱈑 {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-warning": "󰂃 {capacity}%",
-        "tooltip": true,
-        "tooltip-format": "Discharging",
-        "tooltip-format-charging": "Charging",
-        "tooltip-format-full": "Full",
-        "interval": 1,
-    },
-
-    "custom/clipboard": {
-        "format": "",
-        "on-click": "cliphist list | rofi -dmenu -p 'Clipboard history:' | cliphist decode | wl-copy",
-        "tooltip": true,
-        "tooltip-format": "Clipboard history"
-    },
-
-    "clock": {
-        "format": "{:%I:%M:%S %p}",
-        "interval": 1,
-        "tooltip": true,
-        "tooltip-format": "{:%b %d, %Y on a %A}"
-    },
-
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10,
-    },
-
-    "group/tray-expander": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 600,
-            "children-class": "tray-group-item"
-        },
-        "modules": [
-            "custom/expand-icon",
-            "tray"
-        ]
-    },
-
-    "custom/expand-icon": {
-        "format": "…",
-        "tooltip": false
-    },
-    "custom/power": {
-        "format": "",
-        "tooltip": true,
-        "tooltip-format": "Power menu",
-        "on-click": "~/.bin/power-menu"
-    },
-    "custom/menu": {
-        "format": "󰣇",
-        "tooltip": true,
-        "tooltip-format": "drun",
-        "on-click": "tofi-drun"
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-        "interval": 2,
-        "on-click": "hyprsunset -t 3750",
-        "on-scroll-up": "brightnessctl s +5%",
-        "on-scroll-down": "brightnessctl s 5%-",
-        "tooltip": true,
-        "tooltip-format": "Current brightness: {percent}%"
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 6
     }
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "{icon}",
+    "format-icons": [
+      "󰤟", "󰤢", "󰤥", "󰤨" 
+    ],
+    "format-disconnected": "󰤭",
+    "format-ethernet": "󰈀",
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "interface": "wlan0",
+    "on-click": "nmgui"
+  },
+
+  "bluetooth": {
+    "format": "{icon}",
+    "format-icons": [ "󰂲", "󰂯" ],
+    "format-connected": "󰂯",
+    "format-disconnected": "󰂲",
+    "format-disabled": "󰂲",
+    "tooltip-format": "Active",
+    "tooltip-format-disabled": "Inactive",
+    "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)",
+    "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol",
+    "tooltip-format": "Playing at {volume}%",
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+    ],
+    "format-full": "󱈑 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-warning": "󰂃 {capacity}%",
+    "tooltip": true,
+    "tooltip-format": "Discharging",
+    "tooltip-format-charging": "Charging",
+    "tooltip-format-full": "Full",
+    "interval": 1,
+  },
+
+  "custom/clipboard": {
+    "format": "",
+    "on-click": "cliphist list | rofi -dmenu -p 'Clipboard history:' | cliphist decode | wl-copy",
+    "tooltip": true,
+    "tooltip-format": "Clipboard history"
+  },
+
+  "clock": {
+    "format": "󰅐  {:%I:%M %p}",
+    "tooltip": true,
+    "tooltip-format": "{:%b %d, %Y on a %A}"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": [
+      "custom/expand-icon",
+      "tray"
+    ]
+  },
+
+  "custom/expand-icon": {
+    "format": "…",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Power menu",
+    "on-click": "~/.bin/power-menu"
+  },
+  "custom/menu": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "drun",
+    "on-click": "tofi-drun"
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
+    "interval": 2,
+    "on-click": "hyprsunset -t 3750",
+    "on-scroll-up": "brightnessctl s +5%",
+    "on-scroll-down": "brightnessctl s 5%-",
+    "tooltip": true,
+    "tooltip-format": "Current brightness: {percent}%"
+  }
 }

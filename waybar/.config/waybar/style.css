@@ -50,10 +50,9 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 8.5pt;
+    padding-right: 4pt;
 }
 
 #clock {
     padding-right: 8pt;
-    font: 13.125pt "monospace"
 }
