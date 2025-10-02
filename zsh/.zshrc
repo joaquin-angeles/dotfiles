@@ -22,6 +22,12 @@ bindkey '^e' end-of-line
 bindkey '^j' history-search-forward
 bindkey '^k' history-search-backward
 bindkey '^r' fzf-history-widget
+_lit_clear() {
+  clear
+  zle reset-prompt
+}
+zle -N _lit_clear
+bindkey '^L' _lit_clear
 
 # Set window titles
 precmd() {

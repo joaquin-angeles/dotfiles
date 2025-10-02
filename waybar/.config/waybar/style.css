@@ -50,7 +50,7 @@ window#waybar {
 }
 
 #battery {
-    padding-right: 4pt;
+    padding-right: 6pt;
 }
 
 #clock {
