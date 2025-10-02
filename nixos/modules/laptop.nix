@@ -5,7 +5,6 @@
   environment.systemPackages = with pkgs; [
     acpi
     auto-cpufreq
-    polkit_gnome
     tlp
     upower
   ];

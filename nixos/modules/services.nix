@@ -1,6 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    polkit_gnome
+  ];
   # Display Manager
   services.displayManager.ly.enable = true;
 
@@ -36,7 +39,7 @@
     path = [ pkgs.flatpak ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
+      '';
   };
 
   # GVFS
