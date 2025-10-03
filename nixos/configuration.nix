@@ -12,6 +12,7 @@ in
     ./modules/fonts.nix
     ./modules/laptop.nix
     ./modules/nvidia.nix
+    ./modules/packages.nix
     ./modules/services.nix
     /etc/nixos/hardware-configuration.nix
   ];
@@ -108,7 +109,6 @@ in
     packages = with pkgs; [
       bat
       bibata-cursors
-      brightnessctl
       celluloid
       chafa
       cliphist
@@ -124,25 +124,18 @@ in
       kdePackages.qt6ct
       kdePackages.qtstyleplugin-kvantum
       lf
-      libnotify
       libsForQt5.qt5ct
       libsForQt5.qtstyleplugin-kvantum
-      mako
       neovim
       nwg-look
-      pavucontrol
       ripgrep
       rofimoji
-      rofi-wayland
       stow
-      unstable.nmgui
       unstable.swayosd
       tmux
       tofi
       waybar
       wbg
-      wl-clipboard
-      xdg-user-dirs
       xfce.thunar
       xfce.thunar-archive-plugin
       xfce.thunar-volman

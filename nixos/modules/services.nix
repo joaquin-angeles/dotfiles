@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    gtk3
+    gtk4
     polkit_gnome
   ];
   # Display Manager
