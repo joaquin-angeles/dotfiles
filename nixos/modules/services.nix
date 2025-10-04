@@ -11,10 +11,7 @@
 
   # X.org server
   services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    xkb.options = "eurosign:e,caps:escape";
-    desktopManager.xfce.enable = true;
+    enable = false;
   };
 
   # Polkit
@@ -49,6 +46,7 @@
     path = [ pkgs.flatpak ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-bet
       '';
   };
 
