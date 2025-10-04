@@ -1,7 +1,6 @@
-if command -v tmux >/dev/null 2>&1; then
-  if [ -z "$TMUX" ]; then
-    tmux attach-session -t main 2>/dev/null || tmux new-session -s main
-  fi
+if command -v fastfetch >/dev/null 2>&1; then
+  fastfetch
+  echo ''
 fi
 
 # Unbinding

@@ -33,7 +33,7 @@
     "format-ethernet": "󰈀",
     "tooltip-format": "{essid} ({signalStrength}%)",
     "interface": "wlan0",
-    "on-click": "nmgui"
+    "on-click": "foot -t=NetworkManager -e impala"
   },
 
   "bluetooth": {
@@ -60,7 +60,7 @@
         ""
       ]
     },
-    "on-click": "pavucontrol",
+    "on-click": "foot -t=Wiremix -e wiremix",
     "tooltip-format": "Playing at {volume}%",
   },
 

@@ -11,10 +11,10 @@
     libsForQt5.qtstyleplugin-kvantum
     mako
     nwg-look
-    pavucontrol
     rofi-wayland
     tofi
-    unstable.nmgui
+    unstable.impala
+    unstable.wiremix
     waybar
     wl-clipboard
     xdg-user-dirs
