@@ -20,7 +20,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.tony = import ./home.nix;
+            home-manager.users.joaquin = import ./home.nix;
             home-manager.backupFileExtension = "backup";
           }
           ({ pkgs, ... }: {
