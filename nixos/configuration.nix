@@ -21,7 +21,7 @@
 
   # Networking options
   networking = {
-    hostName = "nixos"; # Define your hostname.
+    hostName = "home"; # Define your hostname.
     networkmanager = {
       enable = true;
       wifi.backend = "iwd";

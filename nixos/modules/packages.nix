@@ -5,13 +5,25 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     libnotify
+    kdePackages.qt6ct
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
     mako
+    nwg-look
     pavucontrol
     rofi-wayland
+    tofi
     unstable.nmgui
     vulkan-tools
+    waybar
+    wbg
     wl-clipboard
     xdg-user-dirs
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
+    xfce.xfconf
   ];
 
   # User packages
@@ -31,25 +43,13 @@
       hyprpicker
       hyprshot
       imv
-      kdePackages.qt6ct
-      kdePackages.qtstyleplugin-kvantum
       lf
-      libsForQt5.qt5ct
-      libsForQt5.qtstyleplugin-kvantum
       neovim
-      nwg-look
       ripgrep
       rofimoji
       stow
       unstable.swayosd
       tmux
-      tofi
-      waybar
-      wbg
-      xfce.thunar
-      xfce.thunar-archive-plugin
-      xfce.thunar-volman
-      xfce.xfconf
       zoxide
       zsh-powerlevel10k
     ];
