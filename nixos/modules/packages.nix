@@ -1,11 +1,6 @@
 { config, lib, pkgs, ... }:
 
-let
-  unstable = import (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
-  }) {};
-in
-  {
+{
   # System packages
   environment.systemPackages = with pkgs; [
     brightnessctl
