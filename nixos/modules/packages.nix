@@ -15,9 +15,7 @@
     rofi-wayland
     tofi
     unstable.nmgui
-    vulkan-tools
     waybar
-    wbg
     wl-clipboard
     xdg-user-dirs
     xfce.thunar
@@ -50,6 +48,7 @@
       stow
       unstable.swayosd
       tmux
+      wbg
       zoxide
       zsh-powerlevel10k
     ];
