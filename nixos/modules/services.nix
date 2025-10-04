@@ -9,6 +9,14 @@
   # Display Manager
   services.displayManager.ly.enable = true;
 
+  # X.org server
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    xkb.options = "eurosign:e,caps:escape";
+    desktopManager.xfce.enable = true;
+  };
+
   # Polkit
   security.polkit.enable = true;
   systemd.user.services.polkit-gnome-authentication-agent-1 = {

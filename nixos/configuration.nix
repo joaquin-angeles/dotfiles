@@ -104,45 +104,8 @@ in
   # User configuration
   users.users.joaquin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "sandbox" ];
+    extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      bat
-      bibata-cursors
-      celluloid
-      chafa
-      cliphist
-      eza
-      file-roller
-      foot
-      fzf
-      grim
-      hyprlock
-      hyprpicker
-      hyprshot
-      imv
-      kdePackages.qt6ct
-      kdePackages.qtstyleplugin-kvantum
-      lf
-      libsForQt5.qt5ct
-      libsForQt5.qtstyleplugin-kvantum
-      neovim
-      nwg-look
-      ripgrep
-      rofimoji
-      stow
-      unstable.swayosd
-      tmux
-      tofi
-      waybar
-      wbg
-      xfce.thunar
-      xfce.thunar-archive-plugin
-      xfce.thunar-volman
-      xfce.xfconf
-      zoxide
-      zsh-powerlevel10k
-    ];
   };
 
   # Nix package manager

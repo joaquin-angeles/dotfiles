@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BATTERY_DEVICE=$(upower -e | grep BAT)
-KBD_DEVICE=$(brightnessctl --list | awk -F\' '/kbd_backlight/ {print $2; exit}')
+KBD_DEVICE=$(brightnessctl --list | grep 'kbd_backlight' | awk -F"'" '{print $2}')
 current_state=""
 
 # Ensure Hyprland is running
