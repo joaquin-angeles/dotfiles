@@ -18,10 +18,13 @@
     waybar
     wl-clipboard
     xdg-user-dirs
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-volman
-    xfce.xfconf
+  ];
+
+  # Thunar plugins
+  programs.xfconf.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
   ];
 
   # User packages
@@ -49,6 +52,7 @@
       unstable.swayosd
       tmux
       wbg
+      xfce.thunar
       zoxide
       zsh-powerlevel10k
     ];
