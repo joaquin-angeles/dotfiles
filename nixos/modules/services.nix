@@ -51,8 +51,5 @@
   };
 
   # GVFS
-  services.gvfs = {
-    enable = true;
-    package = lib.mkForce pkgs.gnome.gvfs;
-  };
+  services.gvfs.enable = true;
 }

@@ -26,6 +26,7 @@
     thunar-archive-plugin
     thunar-volman
   ];
+  services.tumbler.enable = true;
 
   # User packages
   users.users.joaquin = {
