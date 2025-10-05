@@ -18,4 +18,14 @@
     wl-clipboard
     xdg-user-dirs
   ];
+
+  # Thunar
+  programs.xfconf.enable = true;
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  services.tumbler.enable = true;
+  services.gvfs.enable = true;
 }

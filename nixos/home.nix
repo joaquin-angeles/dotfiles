@@ -6,21 +6,6 @@
   home.homeDirectory = "/home/joaquin";
   home.stateVersion = "25.05";
 
-  # Thunar
-  programs.xfconf.enable = true;
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-volman
-    ];
-  };
-  # Thunar thumbnail previews
-  services.tumbler.enable = true;
-
-  # GVFS
-  services.gvfs.enable = true;
-
   # Rofi
   programs.rofi = {
     enable = true;
