@@ -26,6 +26,4 @@
     thunar-archive-plugin
     thunar-volman
   ];
-  services.tumbler.enable = true;
-  services.gvfs.enable = true;
 }

@@ -12,6 +12,10 @@
     package = pkgs.rofi-wayland;
     plugins = [pkgs.rofi-emoji];
   };
+  
+  # Services
+  services.tumbler.enable = true;
+  services.gvfs.enable = true;
 
   # User packages
   home.packages = with pkgs; [
