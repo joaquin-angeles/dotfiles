@@ -1,1 +1,5 @@
 nixos/flake.lock
+systemd/user/*
+!systemd/user/
+!systemd/user/battery-alert.service
+!systemd/user/battery-alert.timer

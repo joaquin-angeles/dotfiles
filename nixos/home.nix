@@ -21,6 +21,7 @@
   home.file.".config/nvim".source = ../neovim;
   home.file.".config/rofi".source = ../rofi;
   home.file.".config/swayosd".source = ../swayosd;
+  home.file.".config/systemd".source = ../systemd;
   home.file.".config/tmux".source = ../tmux;
   home.file.".config/waybar".source = ../waybar;
   
