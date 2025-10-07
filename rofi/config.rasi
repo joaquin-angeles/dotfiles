@@ -27,7 +27,7 @@ window {
     background-color: #1c1c1c;
     border:         2px solid;
     border-color:   #404040;
-    padding:        5px;
+    padding:        6px;
 }
 
 /* Layout */
