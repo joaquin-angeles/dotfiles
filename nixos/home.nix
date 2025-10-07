@@ -15,6 +15,7 @@
 
   # Configurations
   home.file.".config/hypr".source = ../hyprland;
+  home.file.".config/waybar".source = ../waybar;
   home.file.".config/rofi".source = ../rofi;
   home.file.".config/swayosd".source = ../swayosd;
   home.file.".config/nvim".source = ../neovim;
