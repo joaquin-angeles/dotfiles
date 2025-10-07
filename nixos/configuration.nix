@@ -61,7 +61,6 @@
     maxretry = 3;
     ignoreIP = [
       "10.0.0.0/8" "172.16.0.0/12" "192.168.0.0/16"
-      "8.8.8.8"
     ];
     bantime = "30m";
     bantime-increment = {
@@ -82,7 +81,8 @@
   };
 
   # Timezone
-  time.timeZone = "Hongkong";
+  time.timeZone = "Asia/Manila";
+  services.timesyncd.enable = true;
 
   # Zsh
   programs.zsh = {
