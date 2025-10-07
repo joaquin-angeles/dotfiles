@@ -1,22 +1,7 @@
 * {
     font: "Monospace 13.125";
-
-    /* Colors */
     text-color:      #dfdfdf;
     foreground:      #865054;
-    fg-color:        #393939;
-    fgp-color:       #888888FF;
-    alt-color:       #444444CC;
-    b-color:         #1c1c1c;
-
-    /* Spacing */
-    g-spacing: 10px;
-    g-margin:  0;
-
-    /* Window padding and border */
-    w-padding:      12px;
-    w-border:       1px solid;
-    w-border-color: #dfdfdf;
 }
 
 /* Configuration */
@@ -42,7 +27,7 @@ window {
     background-color: #1c1c1c;
     border:         2px solid;
     border-color:   #404040;
-    padding:        8px;
+    padding:        5px;
 }
 
 /* Layout */
