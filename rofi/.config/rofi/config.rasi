@@ -1,5 +1,5 @@
 * {
-    font: "Inter 13.125";
+    font: "Monospace 13.125";
 
     /* Colors */
     text-color:      #dfdfdf;
@@ -37,7 +37,7 @@ configuration {
 window {
     transparency:   "real";
     width:          435px;
-    height:         540px;
+    height:         560px;
     border-radius:  7px;
     background-color: #1c1c1c;
     border:         2px solid;
@@ -78,7 +78,7 @@ entry {
 listview {
     columns:       1;
     lines:         7;
-    spacing:       6px;
+    spacing:       2px;
     fixed-height:  true;
     fixed-columns: false;
     scrollbar:     false;

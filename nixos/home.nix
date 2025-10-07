@@ -13,10 +13,6 @@
     plugins = [pkgs.rofi-emoji];
   };
   
-  # Services
-  services.tumbler.enable = true;
-  services.gvfs.enable = true;
-
   # User packages
   home.packages = with pkgs; [
     bat
@@ -29,11 +25,13 @@
     foot
     fzf
     grim
+    gvfs
     hyprlock
     hyprpicker
     hyprshot
     imv
     lf
+    nemo-with-extensions
     neovim
     ripgrep
     stow
@@ -43,4 +41,9 @@
     zoxide
     zsh-powerlevel10k
   ];
+
+  # Variables
+  home.sessionVariables = {
+    GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules";
+  };
 }
