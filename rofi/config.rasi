@@ -21,7 +21,7 @@ configuration {
 /* Window appearance */
 window {
     transparency:   "real";
-    width:          435px;
+    width:          445px;
     height:         560px;
     border-radius:  7px;
     background-color: #1c1c1c;

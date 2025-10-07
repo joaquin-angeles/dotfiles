@@ -12,6 +12,17 @@
     package = pkgs.rofi-wayland;
     plugins = [pkgs.rofi-emoji];
   };
+
+  # Configurations
+  home.file.".config/hypr".source = ../hyprland;
+  home.file.".config/rofi".source = ../rofi;
+  home.file.".config/swayosd".source = ../swayosd;
+  home.file.".config/nvim".source = ../neovim;
+  home.file.".config/mako".source = ../mako;
+  home.file.".config/lf".source = ../lf;
+  home.file.".config/fontconfig".source = ../fonts;
+  home.file.".config/foot".source = ../foot;
+  home.file.".config/tmux".source = ../tmux;
   
   # User packages
   home.packages = with pkgs; [
