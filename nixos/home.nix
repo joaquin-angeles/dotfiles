@@ -20,7 +20,6 @@
   home.file.".config/nvim".source = ../neovim;
   home.file.".config/mako".source = ../mako;
   home.file.".config/lf".source = ../lf;
-  home.file.".config/fontconfig".source = ../fonts;
   home.file.".config/foot".source = ../foot;
   home.file.".config/tmux".source = ../tmux;
   
