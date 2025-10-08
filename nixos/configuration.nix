@@ -70,16 +70,6 @@
     '';
   };
 
-  # Nix-LD
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    xorg.libX11
-    xorg.libXcursor
-    xorg.libXrandr
-    xorg.libXinerama
-    xorg.libXi
-  ];
-
   # Nix package manager
   nix.optimise.automatic = true;
   nix.settings = {
