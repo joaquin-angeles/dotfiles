@@ -26,10 +26,6 @@
       enable = true;
       wifi.backend = "iwd";
     };
-    wireless = {
-      # enable = true;
-      iwd.enable = true;
-    };
 
     # Firewall
     nftables.enable = true;
