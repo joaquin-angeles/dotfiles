@@ -28,10 +28,13 @@
   home.packages = with pkgs; [
     bat
     bibata-cursors
+    blueman
+    btop
     celluloid
     chafa
     cliphist
     eza
+    fastfetchMinimal
     file-roller
     foot
     fzf
@@ -41,14 +44,19 @@
     hyprpicker
     hyprshot
     imv
+    lazygit
     lf
+    mako
     nemo-with-extensions
     neovim
     ripgrep
     stow
+    unstable.impala
     unstable.swayosd
+    unstable.wiremix
     tmux
     wbg
+    wl-clipboard
     zoxide
     zsh-powerlevel10k
   ];

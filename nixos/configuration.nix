@@ -95,7 +95,7 @@
   # User configuration
   users.users.joaquin = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" "libvirtd" ];
     shell = pkgs.zsh;
   };
 
@@ -106,14 +106,16 @@
   # Container portals
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
     ];
     config = {
-      common.default = [ "gtk" ];
-      hyprland.default = [ "gtk" "hyprland" ];
+      common.default = [ "hyprland" "gtk" ];
     };
   };
+
+  # System version
   system.stateVersion = "25.05";
 }

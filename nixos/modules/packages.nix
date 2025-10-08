@@ -9,12 +9,7 @@
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
-    mako
     nwg-look
-    tofi
-    unstable.impala
-    unstable.wiremix
-    waybar
     wl-clipboard
     xdg-user-dirs
   ];
