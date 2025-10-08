@@ -6,13 +6,6 @@
   home.homeDirectory = "/home/joaquin";
   home.stateVersion = "25.05";
 
-  # Rofi
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-    plugins = [pkgs.rofi-emoji];
-  };
-
   # Configurations
   home.file.".config/foot".source = ../foot;
   home.file.".config/hypr".source = ../hyprland;
@@ -24,22 +17,26 @@
   home.file.".config/tmux".source = ../tmux;
   home.file.".config/waybar".source = ../waybar;
   
-  # User packages
+  # Rofi
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+    plugins = [pkgs.rofi-emoji];
+  };
+
+  # Packages
   home.packages = with pkgs; [
     bat
     bibata-cursors
-    blueman
     btop
     celluloid
     chafa
     cliphist
     eza
     fastfetchMinimal
-    file-roller
     foot
     fzf
     grim
-    gvfs
     hyprlock
     hyprpicker
     hyprshot
@@ -47,10 +44,8 @@
     lazygit
     lf
     mako
-    nemo-with-extensions
     neovim
     ripgrep
-    stow
     unstable.impala
     unstable.swayosd
     unstable.wiremix

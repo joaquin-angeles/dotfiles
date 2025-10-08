@@ -6,13 +6,50 @@
     gtk4
     polkit_gnome
   ];
+
+  # Connectivity configurations
+  hardware.bluetooth.enable = true;
+  services.libinput.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
+
   # Display Manager
   services.displayManager.ly.enable = true;
 
-  # X.org server
-  services.xserver = {
-    enable = false;
+  # Fail2Ban
+  services.fail2ban = {
+    enable = true;
+    maxretry = 3;
+    ignoreIP = [
+      "10.0.0.0/8"
+      "172.16.0.0/12"
+      "192.168.0.0/16"
+    ];
+    bantime = "30m";
+    bantime-increment = {
+      enable = true;
+      multipliers = "1 2 4 8 16 32 64";
+      maxtime = "24h";
+      overalljails = true;
+    };
   };
+
+  # Flatpak
+  services.flatpak.enable = true;
+  systemd.services.flatpak-repo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+      '';
+  };
+
+  # GVFS
+  services.gvfs.enable = true;
 
   # Polkit
   security.polkit.enable = true;
@@ -30,26 +67,8 @@
     };
   };
 
-  # Connectivity configurations
-  hardware.bluetooth.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
+  # X.org server
+  services.xserver = {
+    enable = false;
   };
-  services.libinput.enable = true;
-
-  # Flatpak
-  services.flatpak.enable = true;
-  systemd.services.flatpak-repo = {
-    wantedBy = [ "multi-user.target" ];
-    path = [ pkgs.flatpak ];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-      flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-      '';
-  };
-
-  # GVFS
-  services.gvfs.enable = true;
 }
