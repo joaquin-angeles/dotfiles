@@ -50,6 +50,7 @@
     unstable.swayosd
     unstable.wiremix
     tmux
+    waybar
     wbg
     wl-clipboard
     zoxide
